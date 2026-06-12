@@ -7,7 +7,8 @@ const Whatsapp = () => {
     <>
       
       <a
-        href="https://wa.me/+918810422935"
+        href="https://wa.me/919582911766
+"
         target="_blank"
         rel="noopener noreferrer"
         aria-label="Chat on WhatsApp with sangam plastic "
@@ -18,7 +19,7 @@ const Whatsapp = () => {
 
 
       <a
-        href="tel:+918810422935"
+        href="tel:+919717159766"
         aria-label="Call sangam plastic"
         className="fixed bottom-21 right-4 z-50 bg-red-500 text-white p-3 rounded-full shadow-lg hover:bg-red-600 transition animate-bounce"
       >

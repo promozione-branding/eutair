@@ -116,8 +116,8 @@ export default function ContactForm() {
       setLoading(true);
 
       const formData = {
-        platform: "Sangam Garbage Bag popup Form",
-        platformEmail: "info@polywell.co.in",
+        platform: "eutair popup Form",
+        platformEmail: "sales@eutair.com",
         name,
         phone,
         email,
@@ -144,7 +144,8 @@ Contact: ${phone}`;
 
         setTimeout(() => {
           window.open(
-            `https://wa.me/918810422935?text=${encodeURIComponent(
+            `https://wa.me/919582911766
+?text=${encodeURIComponent(
               whatsappText
             )}`,
             "_blank"
@@ -196,8 +197,7 @@ Contact: ${phone}`;
   return (
     <div className="fixed z-[99999] inset-0 flex items-center justify-center bg-black/40">
       <div
-        className="relative rounded-3xl shadow-2xl p-10 max-w-sm md:max-w-2xl text-white bg-cover bg-center"
-        style={{ backgroundImage: "url(/bag/try2.webp)" }}
+        className="relative rounded-3xl shadow-2xl p-10 max-w-sm md:max-w-2xl text-white bg-cyan-600"
       >
         {/* Close button */}
         <button
@@ -212,7 +212,7 @@ Contact: ${phone}`;
           Get In Touch With Us
         </h2>
 
-        <div className="w-28 h-[4px] bg-blue-600 mx-auto mt-3 mb-8 rounded-full"></div>
+        <div className="w-28 h-[4px] bg-white mx-auto mt-3 mb-8 rounded-full"></div>
 
         <form className="space-y-4" onSubmit={handleSubmit}>
           <div className="flex gap-3 max-md:flex-col">

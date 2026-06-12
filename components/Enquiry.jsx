@@ -252,11 +252,11 @@ Contact: ${values.phone}`;
         className="relative z-[1000] rounded-3xl shadow-2xl p-6 md:p-10 w-full max-w-[570px] text-white bg-cover bg-center"
         style={{
           backgroundImage:
-            "url(/bag/descbg.png)",
+            "url(/formbg.jpg)",
         }}
       >
         {/* OVERLAY */}
-        <div className="absolute z-[1000] inset-0 bg-black/20 rounded-3xl"></div>
+        <div className="absolute z-[1000] inset-0 bg-black/70 rounded-3xl"></div>
 
         {/* CONTENT */}
         <div className="relative z-[10001]">
@@ -273,7 +273,7 @@ Contact: ${values.phone}`;
             Get In Touch With Us
           </h2>
 
-          <div className="w-28 h-[4px] bg-cyan-600 mx-auto mt-3 mb-8 rounded-full"></div>
+          <div className="w-28 h-[4px] bg-white mx-auto mt-3 mb-8 rounded-full"></div>
 
           {!submitted ? (
             <form

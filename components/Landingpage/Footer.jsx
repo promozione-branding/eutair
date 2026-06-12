@@ -6,7 +6,10 @@ import {
   Mail,
   MapPin,
   ArrowRight,
+  MessageCircle
+  
 } from "lucide-react";
+import { FaWhatsapp } from "react-icons/fa";
 import Image from "next/image";
 
 export default function Footer() {
@@ -49,16 +52,9 @@ export default function Footer() {
               Air Compressors, Air Dryers, Air Line Filters,
               Drain Valves and Industrial Filtration Solutions.
             </p>
+    {/* Email Contacts */}
+  
 
-            <div className="mt-6">
-              <a
-                href="/products"
-                className="inline-flex items-center gap-2 text-cyan-400 font-medium"
-              >
-                Explore Products
-                <ArrowRight size={18} />
-              </a>
-            </div>
           </div>
 
           {/* Quick Links */}
@@ -107,54 +103,137 @@ export default function Footer() {
           </div>
 
           {/* Contact */}
-          <div>
-            <h4 className="text-xl font-semibold mb-6">
-              Contact Information
-            </h4>
+         <div>
+  <h4 className="text-xl font-semibold mb-5">
+    Contact Information
+  </h4>
 
-            <div className="space-y-5">
+  <div className="space-y-6">
 
-              <div className="flex gap-4">
-                <MapPin
-                  className="text-cyan-500 shrink-0 mt-1"
-                  size={20}
-                />
-                <p className="text-slate-300">
-                  Add Your Office Address Here
-                </p>
-              </div>
+  
 
-              <div className="flex gap-4">
-                <Phone
-                  className="text-cyan-500 shrink-0"
-                  size={20}
-                />
-                <a
-                  href="tel:+919999999999"
-                  className="text-slate-300"
-                >
-                  +91 99999 99999
-                </a>
-              </div>
+    {/* Phone */}
+    <div className="flex items-start gap-4">
+      <Phone
+        className="text-cyan-500 shrink-0 mt-1"
+        size={20}
+      />
+      <div>
+        <p className="font-semibold text-white">
+          Phone
+        </p>
+        <a
+          href="tel:+919717159766"
+          className="text-slate-300 hover:text-cyan-400 transition-colors"
+        >
+          +91 9717159766
+        </a>
+      </div>
+    </div>
 
-              <div className="flex gap-4">
-                <Mail
-                  className="text-cyan-500 shrink-0"
-                  size={20}
-                />
-                <a
-                  href="mailto:info@eutair.com"
-                  className="text-slate-300"
-                >
-                  info@eutair.com
-                </a>
-              </div>
+    {/* WhatsApp */}
+    <div className="flex items-start gap-4">
+      <FaWhatsapp
+        className="text-cyan-500 shrink-0 mt-1"
+        size={20}
+      />
+      <div>
+        <p className="font-semibold text-white">
+          WhatsApp
+        </p>
+        <a
+          href="https://wa.me/919582911766"
+          className="text-slate-300 hover:text-cyan-400 transition-colors"
+        >
+          +91 958 2911766
+        </a>
+      </div>
+    </div>
 
-            </div>
-          </div>
+
+  </div>
+
+
+
+  <div className="flex items-start gap-4 mt-3">
+      <Mail
+        className="text-cyan-500 shrink-0 mt-1"
+        size={20}
+      />
+      <div>
+        <p className="font-semibold text-white  mb-2">
+          Email Contacts
+        </p>
+
+        <div className="space-y-1 text-slate-300">
+        
+
+          <a
+            href="mailto:support@eutair.com"
+            className="block hover:text-cyan-400 transition-colors"
+          >
+            support@eutair.com
+          </a>
+
+          <a
+            href="mailto:sales@eutair.com"
+            className="block hover:text-cyan-400 transition-colors"
+          >
+            sales@eutair.com
+          </a>
+        </div>
+      </div>
+    </div>
+
+</div>
 
         </div>
       </div>
+
+<div className="h-px w-full  bg-gray-50/40"></div>
+
+
+<div className="flex py-5  gap-4 justify-center items-center max-w-7xl mx-auto">
+
+
+  {/* Registered Address */}
+    <div className="flex  items-start gap-4">
+      <MapPin
+        className="text-cyan-500 shrink-0 mt-1"
+        size={20}
+      />
+      <div>
+        <p className="font-semibold text-white">
+          Regd. Address
+        </p>
+        <p className="text-slate-300 leading-relaxed">
+          37C, 2nd Floor, Gate No. 3, Opp. IDBI Bank,
+          Chaudhary Balbir Singh Marg, A3 Block,
+          Paschim Vihar, New Delhi - 110063
+        </p>
+      </div>
+    </div>
+
+    {/* Office Address */}
+    <div className="flex items-start gap-4">
+      <MapPin
+        className="text-cyan-500 shrink-0 mt-1"
+        size={20}
+      />
+      <div>
+        <p className="font-semibold text-white">
+          Office Address
+        </p>
+        <p className="text-slate-300 leading-relaxed">
+          T-3, Third Floor, Ansal Utility Tower,
+          A2 Block, Paschim Vihar,
+          New Delhi, Delhi - 110063
+        </p>
+      </div>
+    </div>
+</div>
+
+
 
       {/* Bottom Bar */}
       <div className="border-t border-white/10">
@@ -164,7 +243,7 @@ export default function Footer() {
           </p>
 
           <p>
-            Designed & Developed by Promozione Branding Pvt. Ltd.
+            Website Designed By Inquiry Bazaar Pvt. Ltd. <a className="underline text-cyan-500" href="https://inquirybazaar.com/">B2B Marketplace</a> 
           </p>
         </div>
       </div>

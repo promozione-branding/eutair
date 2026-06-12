@@ -7,11 +7,24 @@ import {
   Facebook,
   Instagram,
   Youtube,
-  MapPin 
+  MapPin ,
+  MessageCircle
 } from "lucide-react";
-
+import { FaWhatsapp } from "react-icons/fa";
+import { useState } from "react";
+import Enquiry from "@/components/Enquiry"
 export default function Navbar() {
+
+
+ const [open, setOpen] =
+    useState(false);
+
+
   return (
+<>
+
+
+
   <header className="sticky top-0 z-50 bg-white/95 backdrop-blur-xl border-b border-slate-200/60">
   {/* Top Info Bar */}
 
@@ -24,7 +37,7 @@ export default function Navbar() {
       <div className="flex items-center gap-6 text-[14px] text-slate-600">
         <div className="flex items-center gap-2">
           <Building2 className="w-4 h-4 text-blue-600" />
-          <span>GSTIN: 24ABCDE1234F1Z5</span>
+          <span>GSTIN: 07AAGFE0760M2ZB</span>
         </div>
 
           <div className="w-px h-4 bg-slate-200" />
@@ -33,8 +46,7 @@ export default function Navbar() {
 
   <MapPin className="w-4 h-4 text-blue-600 mt-0.5 flex-shrink-0" />
   <span>
-    123 Business Park, SG Highway,
-    Ahmedabad, Gujarat - 380015
+ Paschim Vihar, New Delhi-110063
   </span>
 </div>
 
@@ -42,7 +54,8 @@ export default function Navbar() {
 
         <div className="flex items-center gap-2">
           <Phone className="w-4 h-4 text-blue-600" />
-          <span>+91 98765 43210</span>
+          <span>Phone
++91 9717159766</span>
         </div>
 
         <div className="w-px h-4 bg-slate-200" />
@@ -67,6 +80,14 @@ export default function Navbar() {
           className="flex h-8 w-8 items-center justify-center rounded-full border  transition-all duration-300 border-blue-600 text-blue-600 hover:-translate-y-0.5"
         >
           <Facebook className="w-4 h-4" />
+        </a>
+
+
+          <a
+          href="#"
+          className="flex h-8 w-8 items-center justify-center rounded-full border  transition-all duration-300 border-green-600 text-green-600 hover:-translate-y-0.5"
+        >
+          <FaWhatsapp className="w-4 h-4" />
         </a>
 
         <a
@@ -147,6 +168,8 @@ export default function Navbar() {
 
       {/* CTA */}
       <button
+
+      onClick={()=> setOpen(true)}
         className="
           relative overflow-hidden
           rounded-full
@@ -163,10 +186,22 @@ export default function Navbar() {
           hover:-translate-y-0.5
         "
       >
+
+
         GET A QUOTE
       </button>
     </div>
   </div>
 </header>
+
+
+<Enquiry
+  isOpen={open}
+  onClose={() => setOpen(false)}
+/>
+
+
+</>
+
   );
 }
