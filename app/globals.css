@@ -57,3 +57,27 @@ ol {
   border-radius: 9999px;
   background: #0a63ff;
 }
+
+
+
+
+
+
+
+
+.heroSwiper .swiper-pagination {
+  bottom: 0 !important;
+}
+
+.heroSwiper .swiper-pagination-bullet {
+  width: 10px;
+  height: 10px;
+  background: #93c5fd;
+  opacity: 1;
+}
+
+.heroSwiper .swiper-pagination-bullet-active {
+  width: 30px;
+  border-radius: 20px;
+  background: #0ea5e9;
+}

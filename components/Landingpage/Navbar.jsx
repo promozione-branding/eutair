@@ -25,11 +25,11 @@ export default function Navbar() {
     const products = [
   {
     title: "Mark Compressors",
-    href: "/products/screw-air-compressors",
+    href: "/mark-compressor",
   },
   {
     title: "Chicago Pneumatic",
-    href: "/products/oil-free-compressors",
+    href: "/chicago-pneumatic",
   },
   {
     title: "Air Treatment",
@@ -250,7 +250,7 @@ export default function Navbar() {
                       flex items-center justify-between
                       rounded-xl
                       px-4 py-3
-                      text-slate-700
+                      text-black
                       hover:bg-blue-50
                       hover:text-blue-600
                       transition-all

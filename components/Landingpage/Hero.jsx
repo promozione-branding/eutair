@@ -27,8 +27,7 @@ const slides = [
 
     title: "SCREW AIR\nCOMPRESSORS",
 
-    subtitle:
-      "BUILT FOR RELIABILITY.\nDESIGNED FOR EFFICIENCY.",
+
 
     description:
       "Energy efficient, low maintenance and reliable air solutions for every industry.",
@@ -78,9 +77,6 @@ const slides = [
 
     title: "OIL FREE\nCOMPRESSORS",
 
-    subtitle:
-      "ZERO CONTAMINATION.\nMAXIMUM RELIABILITY.",
-
     description:
       "Designed for pharmaceutical, food processing and critical manufacturing industries.",
 
@@ -129,8 +125,7 @@ const slides = [
 
     title: "VFD AIR\nCOMPRESSORS",
 
-    subtitle:
-      "LOWER ENERGY COSTS.\nHIGHER EFFICIENCY.",
+   
 
     description:
       "Advanced Variable Frequency Drive technology for intelligent air management.",
@@ -174,7 +169,7 @@ const slides = [
 ];
 export default function HeroSlider() {
   return (
-    <section className="relative h-[720px] overflow-hidden">
+    <section className="relative h-[620px] w-full overflow-hidden">
       <Swiper
         modules={[Autoplay, Pagination, EffectFade]}
         effect="fade"
@@ -190,7 +185,7 @@ export default function HeroSlider() {
       >
         {slides.map((slide, index) => (
           <SwiperSlide key={index}>
-            <div className="relative h-[720px]">
+            <div className="relative h-[620px]">
               {/* Background */}
               <img
                 src={slide.bg}
@@ -204,8 +199,8 @@ export default function HeroSlider() {
               <div className="absolute inset-0 bg-gradient-to-r from-[#001938]/90 via-[#001938]/55 to-transparent" />
 
               {/* Content */}
-              <div className="relative z-10 max-w-[1400px] mx-auto h-full px-8">
-                <div className="grid grid-cols-[1.1fr_1fr_320px] items-center h-full">
+              <div className="relative z-10 w-full mx-auto h-full px-12">
+                <div className="grid grid-cols-[1fr_1fr_320px] items-center h-full">
 
                   {/* LEFT */}
   <motion.div
@@ -222,8 +217,8 @@ export default function HeroSlider() {
     className="
       mt-5
       text-white
-      text-[76px]
-      xl:text-[88px]
+      text-[70px]
+      
       tracking-[-0.04em]
       leading-[0.9]
       font-black
@@ -235,15 +230,22 @@ export default function HeroSlider() {
     {slide.title}
   </h1>
 
-  <h2 className="mt-6 text-[#1d8fff] text-[34px] font-bold uppercase leading-tight whitespace-pre-line">
-    {slide.subtitle}
-  </h2>
 
-  <p className="mt-7 text-white/80 text-[20px] leading-relaxed">
+
+  <p className="mt-4 text-white/80 text-[20px] leading-relaxed">
     {slide.description}
   </p>
 
-  <div className="flex gap-5 mt-10">
+
+  <div className="flex gap-10 mt-4">
+
+  <Image width={150} height={120} src="/mark.jpg"></Image>
+    <Image width={150} height={120} src="/cp.jpeg"></Image>
+  </div>
+
+
+
+  <div className="flex gap-5 mt-7">
     <button
       className="
       group
@@ -304,7 +306,7 @@ export default function HeroSlider() {
   <Image
     src={slide.machine}
     alt=""
-    width={600}
+    width={800}
     height={700}
     className="
       
@@ -396,16 +398,6 @@ export default function HeroSlider() {
 
                 </div>
 
-                {/* Bottom Benefits */}
-                <div className="absolute bottom-8 left-8 right-8">
-                  <div className="flex flex-wrap gap-12 text-white">
-                    <Benefit title="Energy Efficient" />
-                    <Benefit title="Low Maintenance" />
-                    <Benefit title="Reliable Performance" />
-                    <Benefit title="PAN India Service Network" />
-                    <Benefit title="ISO Certified Company" />
-                  </div>
-                </div>
               </div>
             </div>
           </SwiperSlide>
@@ -432,19 +424,3 @@ function Feature({
   );
 }
 
-function Benefit({ title }) {
-  return (
-    <div className="flex items-center gap-3">
-      <div className="h-11 w-11 rounded-full border border-white/30 flex items-center justify-center">
-        <BadgeCheck
-          size={18}
-          className="text-[#1d8fff]"
-        />
-      </div>
-
-      <span className="text-[16px] font-medium">
-        {title}
-      </span>
-    </div>
-  );
-}
