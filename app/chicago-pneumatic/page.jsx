@@ -3,7 +3,7 @@
 import React, { useMemo, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Pagination } from "swiper/modules";
-
+import Link from "next/link";
 import "swiper/css";
 import "swiper/css/pagination";
 import Image from "next/image";
@@ -22,20 +22,29 @@ export default function Page() {
 const productsData = {
   "Diesel and electric powered compressor": [
     {
-      title: "Portable Diesel Air Compressor",
+      title: "CFM: 81 - 187, BAR: 7 - 12, PSI: 100 – 175",
       image: "/hero1.png",
+      desc:"Road Cleaning (Cfm: 150, Pressure (bar): 6-7) Jack Hammer drilling / Breaker (Quarry/Construction) (Cfm: 250-400, Pressure (bar): 7-8.5)"
     },
+
+
     {
-      title: "Electric Screw Air Compressor",
+      title: "CFM: 455 – 650, BAR: 10.5 - 14, PSI: 100 – 200",
       image: "/products/electric-compressor.webp",
+      desc:"Quarry/Mining (Cfm: 450-650, Pressure (bar): 10-15) Cable Blowing (Cfm: 400-500, Pressure (bar): 10)",
     },
+
     {
-      title: "High Pressure Diesel Compressor",
+      title: "CFM: 1000 – 1350, BAR: 19 – 29.3, PSI: 275 – 425",
       image: "/products/high-pressure-compressor.webp",
+      desc:"Heavy Industrial Sandblasting ,Large-scale Pipeline Testing, Deep Water Well Drilling"
     },
+
     {
-      title: "Industrial Electric Air Compressor",
+      title: "CFM: 1060 – 1200, BAR: 16 - 25, PSI: 232 – 355",
       image: "/products/industrial-compressor.webp",
+
+      desc:"Foundation Drilling, Pigging , CBM - Coal Bed Methane"
     },
   ],
 
@@ -202,7 +211,7 @@ const applications = [
    
 
 <section className="bg-gradient-to-b from-slate-50 via-white to-slate-100 py-10">
-  <div className="max-w-[1800px] mx-auto px-4">
+  <div className="max-w-[1400px] mx-auto px-4">
 
     {/* Categories */}
     <div className="sticky top-4 z-20 flex justify-center mb-14">
@@ -275,7 +284,7 @@ const applications = [
             <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-sky-500 to-cyan-500" />
 
             {/* Image */}
-        <div className="h-[220px] bg-gradient-to-b from-sky-50 via-white to-slate-50 flex items-center justify-center p-8 overflow-hidden">
+        <div className="h-[200px] bg-gradient-to-b from-sky-50 via-white to-slate-50 flex items-center justify-center p-8 overflow-hidden">
   <img
     src={item.image}
     alt={item.title}
@@ -295,7 +304,7 @@ const applications = [
 </div>
 
             {/* Content */}
-            <div className="p-7">
+            <div className="p-3">
               <h3
                 className="
                   text-[22px]
@@ -309,7 +318,11 @@ const applications = [
                 {item.title}
               </h3>
 
-              <div className="mt-6 flex justify-center">
+              <p className="text-gray-700 text-md text-center">{item.desc}</p>
+
+              <div className="mt-4 flex justify-center">
+<Link href="/chicago-product">
+
                 <button
                   className="
                     px-6
@@ -325,6 +338,8 @@ const applications = [
                 >
                   View Details
                 </button>
+</Link>
+
               </div>
             </div>
           </div>

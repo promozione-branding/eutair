@@ -280,7 +280,7 @@ export default function Navbar() {
 
     <li>
       <Link
-        href="/about-us"
+        href="/about"
         className="text-[17px] tracking-[0.12em] font-medium text-slate-700 hover:text-blue-600"
       >
         ABOUT US
@@ -298,7 +298,7 @@ export default function Navbar() {
 
     <li>
       <Link
-        href="/contact-us"
+        href="/contact"
         className="text-[17px] tracking-[0.12em] font-medium text-slate-700 hover:text-blue-600"
       >
         CONTACT US

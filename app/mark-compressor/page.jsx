@@ -7,7 +7,7 @@ import { Autoplay, Pagination } from "swiper/modules";
 
 import "swiper/css";
 import "swiper/css/pagination";
-
+  
 const page = () => {
 
 const heroImages = [
@@ -20,11 +20,22 @@ const heroImages = [
 
 
 const products = [
-  "MSS 37 Screw Air Compressor",
-  "Lubricated Screw Air Compressors",
-  "Mark MSS 30 Screw Air Compressor",
-  "Mark MSS 18.5 Screw Air Compressor",
-
+  {
+    title: "MSS 37 Screw Air Compressor",
+    image: "/mark.webp",
+  },
+  {
+    title: "Lubricated Screw Air Compressors",
+    image: "/mark2.webp",
+  },
+  {
+    title: "Mark MSS 30 Screw Air Compressor",
+    image: "/mark3.webp",
+  },
+  {
+    title: "Mark MSS 18.5 Screw Air Compressor",
+    image: "/mark.webp",
+  },
 ];
 
 
@@ -292,43 +303,66 @@ const applications = [
       <h2 className="text-4xl font-bold">
         Our MARK Compressor Range
       </h2>
-      <p className="mt-4 text-gray-600">
-        Showcase the Product of Mark Compressor
-      </p>
-    </div>
-
-    <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-5">
-      {products.map((item, index) => (
-    <div className="
     
-group
-bg-white
-rounded-[32px]
-overflow-hidden
-border
-border-sky-100
-shadow-[0_10px_30px_rgba(0,0,0,.06)]
-hover:shadow-[0_20px_50px_rgba(14,165,233,.15)]
-hover:-translate-y-3
-transition-all
-duration-500
-">
-       <div className="bg-gradient-to-br from-sky-50 to-blue-100 p-8">
-  <img
-    src="/images/compressor-product.png"
-    alt={item}
-    className="h-44 mx-auto object-contain group-hover:scale-105 transition-all"
-  />
-</div>
-
-         <div className="p-6">
-  <h3 className="font-semibold text-slate-800 text-lg">
-    {item}
-  </h3>
-</div>
-        </div>
-      ))}
     </div>
+<div className="grid md:grid-cols-2 xl:grid-cols-4 gap-8 mt-12">
+  {products.map((item, index) => (
+    <div
+      key={index}
+      className="
+        group
+        bg-white
+        rounded-[30px]
+        overflow-hidden
+        border
+        border-slate-200
+        shadow-[0_15px_40px_rgba(0,0,0,.06)]
+        hover:shadow-[0_25px_60px_rgba(14,165,233,.15)]
+        hover:-translate-y-2
+        transition-all
+        duration-500
+      "
+    >
+      <div className="bg-gradient-to-b from-sky-50 to-white p-8 h-[240px] flex items-center justify-center overflow-hidden">
+        <img
+          src={item.image}
+          alt={item.title}
+          className="
+            max-h-[280px]
+            object-cover
+            transition-all
+            duration-500
+            group-hover:scale-110
+          "
+        />
+      </div>
+
+      <div className="p-3 text-center">
+        <h3 className="text-xl font-bold text-slate-900 leading-snug">
+          {item.title}
+        </h3>
+
+        <button
+          className="
+            mt-5
+            px-5
+            py-3
+            rounded-xl
+            bg-gradient-to-r
+            from-sky-500
+            to-blue-600
+            text-white
+            font-semibold
+            hover:scale-105
+            transition-all
+          "
+        >
+          View Details
+        </button>
+      </div>
+    </div>
+  ))}
+</div>
   </div>
 </section>
 

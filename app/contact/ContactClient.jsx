@@ -76,161 +76,255 @@ export default function ContactPage() {
 
   return (
     <div>
-      {/* HERO SECTION */}
-      <section
-        style={{ backgroundImage: "url('/bag/bg-other.webp')" }}
-        className="w-full h-[55vh] md:h-[80vh] bg-cover bg-center relative flex items-center justify-center"
-      >
-        <div className="absolute inset-0 bg-black/60"></div>
-        <div className="relative text-center text-white px-6">
-          <h1 className="text-4xl md:text-5xl font-bold mb-4">
-            Contact Sangam Garbage Bag Manufacturer
+
+
+
+
+ <section className="relative w-full h-[400px] md:h-[400px] flex items-center justify-center overflow-hidden">
+        <div
+          className="absolute inset-0 bg-center bg-cover flex items-center justify-center"
+          style={{ backgroundImage: "url('/bghero1.webp')" }}
+        >
+          <div className="absolute inset-0 bg-black/50"></div>
+          <h1 className="px-10   text-center text-3xl md:text-7xl font-bold text-white z-10">
+        
+       Contact Us
           </h1>
-          <p className="text-lg md:text-xl max-w-2xl mx-auto">
-            Premium Quality Garbage Bags Manufacturer & Supplier in India
-          </p>
         </div>
       </section>
 
+
+
+
+
+
+
+      {/* HERO SECTION */}
+   <section className="relative -mt-24 z-20 px-4">
+  <div className="max-w-7xl mx-auto">
+
+    <div className="grid md:grid-cols-3 gap-6">
+
+      {[
+        {
+          title: "Call Us",
+          value: "+91 9717159766 , +91 958 2911766          ",
+          icon: <Phone size={32} />,
+        },
+        {
+          title: "Email Address",
+          value: "support@eutair.com",
+          icon: <Mail size={32} />,
+        },
+        {
+          title: "Office Address",
+          value:
+            "T-3, Third Floor, Ansal Utility Tower, A 2 Block, Paschim Vihar, New Delhi, Delhi 110063",
+          icon: <MapPin size={32} />,
+        },
+      ].map((item, i) => (
+        <div
+          key={i}
+          className="
+          bg-white
+          rounded-[32px]
+          p-8
+          shadow-[0_20px_60px_rgba(0,0,0,.08)]
+          border
+          border-slate-100
+          hover:-translate-y-2
+          transition-all
+        "
+        >
+          <div className="w-16 h-16 rounded-2xl bg-cyan-100 text-cyan-700 flex items-center justify-center">
+            {item.icon}
+          </div>
+
+          <h3 className="mt-6 text-2xl font-bold">
+            {item.title}
+          </h3>
+
+          <p className="mt-4 text-slate-600 whitespace-pre-line">
+            {item.value}
+          </p>
+        </div>
+      ))}
+    </div>
+
+  </div>
+</section>
+
       {/* CONTACT INFO */}
-      <section className="bg-gray-100 py-10 md:py-16 px-6 md:px-20">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-9 md:mb-16">
-          {/* Phone */}
-          <div className="bg-green-700 text-white p-6 md:p-8 rounded-2xl shadow-lg text-center">
-            <Phone size={40} className="mx-auto mb-4" />
-            <h3 className="text-xl font-bold mb-2">Call Us</h3>
-            <p className="text-lg">+91-8810422935</p>
-            <p className="text-lg">+91-9810057441</p>
+     <section className="py-24 bg-slate-50">
+
+  <div className="max-w-7xl mx-auto px-4">
+
+    <div className="grid lg:grid-cols-5 gap-10">
+
+      {/* Left */}
+      <div className="lg:col-span-2">
+
+        <span className="text-cyan-600 font-semibold">
+          Contact Sangam Industries
+        </span>
+
+        <h2 className="mt-4 text-5xl font-black text-slate-900">
+          Let's Discuss Your Requirements
+        </h2>
+
+        <p className="mt-6 text-lg text-slate-600 leading-relaxed">
+          Looking for premium-quality garbage bags, biomedical waste bags,
+          biodegradable bags, or customized packaging solutions?
+        </p>
+
+        <p className="mt-4 text-lg text-slate-600 leading-relaxed">
+          Our experts are ready to help you find the right product based
+          on your application, quantity, and specifications.
+        </p>
+
+        <div className="mt-10 space-y-6">
+
+          <div className="flex gap-4">
+            <div className="w-12 h-12 rounded-xl bg-cyan-100 flex items-center justify-center">
+              ✓
+            </div>
+
+            <div>
+              <h4 className="font-bold">
+                Fast Response
+              </h4>
+
+              <p className="text-slate-500">
+                Get a reply within 24 hours.
+              </p>
+            </div>
           </div>
 
-          {/* Email */}
-          <div className="bg-white border-2 border-green-700 p-6 md:p-8 rounded-2xl shadow-lg text-center">
-            <Mail size={40} className="mx-auto mb-4 text-green-700" />
-            <h3 className="text-xl font-bold text-green-700 mb-2">
-              Email Address
-            </h3>
-            <p className="text-gray-800 text-lg">info@polywell.co.in</p>
+          <div className="flex gap-4">
+            <div className="w-12 h-12 rounded-xl bg-cyan-100 flex items-center justify-center">
+              ✓
+            </div>
+
+            <div>
+              <h4 className="font-bold">
+                Bulk Order Support
+              </h4>
+
+              <p className="text-slate-500">
+                Best pricing for large requirements.
+              </p>
+            </div>
           </div>
 
-          {/* Address */}
-          <div className="bg-green-700 text-white p-6 md:p-8 rounded-2xl shadow-lg text-center">
-            <MapPin size={40} className="mx-auto mb-4" />
-            <h3 className="text-xl font-bold mb-2">Factory Address</h3>
-            <p>
-              Address - 110, Satya Bhawan, 36 Community Center, Wazirpur
-              Industrial Area, New Delhi-110052
-            </p>
+          <div className="flex gap-4">
+            <div className="w-12 h-12 rounded-xl bg-cyan-100 flex items-center justify-center">
+              ✓
+            </div>
+
+            <div>
+              <h4 className="font-bold">
+                Nationwide Supply
+              </h4>
+
+              <p className="text-slate-500">
+                Serving customers across India.
+              </p>
+            </div>
           </div>
+
         </div>
 
-        {/* FORM + MAP */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-12">
-          {/* FORM */}
-          <div className="bg-white p-10 rounded-2xl shadow-xl">
-            <h2 className="text-3xl font-bold mb-6 text-gray-900">
-              Send Us Your Requirement
-            </h2>
+      </div>
 
-            <form className="space-y-5" onSubmit={handleSubmit}>
-              <div className="grid grid-cols-2 gap-4">
-                <input
-                  type="text"
-                  required
-                  placeholder="Full Name"
-                  className="border rounded-lg px-4 py-3 w-full"
-                  value={name}
-                  onChange={(e) => setName(e.target.value)}
-                />
+      {/* Form */}
+      <div className="lg:col-span-3">
 
-                <input
-                  type="tel"
-                  required
-                  maxLength={10}
-                  pattern="[0-9]{10}"
-                  placeholder="Phone Number"
-                  className="border rounded-lg px-4 py-3 w-full"
-                  value={phone}
-                  onChange={(e) => setPhone(e.target.value)}
-                />
-              </div>
+        <div
+          className="
+          bg-white
+          rounded-[40px]
+          p-8 md:p-12
+          shadow-[0_20px_60px_rgba(0,0,0,.08)]
+        "
+        >
+          <h3 className="text-3xl font-black text-slate-900 mb-8">
+            Send Inquiry
+          </h3>
 
-              <div className="grid grid-cols-2 gap-4">
-                <input
-                  type="text"
-                  placeholder="City"
-                  className="border rounded-lg px-4 py-3 w-full"
-                  value={place}
-                  onChange={(e) => setplace(e.target.value)}
-                />
+          <form onSubmit={handleSubmit} className="space-y-5">
 
-                <select
-                  className="border rounded-lg px-4 py-3 w-full bg-green-700 text-white font-semibold"
-                  value={requirement}
-                  onChange={(e) => setRequirement(e.target.value)}
-                >
-                  <option value="">Select Product</option>
-                  <option value="Black Garbage Bags">
-                    Biodegradable Garbage Bags
-                  </option>
-                  <option value="Green Garbage Bags">
-                    Disposable Garbage Bags
-                  </option>
-                  <option value="Biomedical Waste Bags">
-                    Biomedical garbage bags
-                  </option>
-                </select>
-              </div>
+            <div className="grid md:grid-cols-2 gap-5">
+
+              <input
+                type="text"
+                placeholder="Full Name"
+                className="h-14 px-5 rounded-2xl border border-slate-200 outline-none focus:border-cyan-500"
+              />
+
+              <input
+                type="tel"
+                placeholder="Phone Number"
+                className="h-14 px-5 rounded-2xl border border-slate-200 outline-none focus:border-cyan-500"
+              />
+
+            </div>
+
+            <div className="grid md:grid-cols-2 gap-5">
 
               <input
                 type="email"
-                required
                 placeholder="Email Address"
-                className="border rounded-lg px-4 py-3 w-full"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
+                className="h-14 px-5 rounded-2xl border border-slate-200 outline-none focus:border-cyan-500"
               />
 
-              <textarea
-                rows={4}
-                placeholder="Message"
-                className="border rounded-lg px-4 py-3 w-full"
-                value={message}
-                onChange={(e) => setMessage(e.target.value)}
+              <input
+                type="text"
+                placeholder="City"
+                className="h-14 px-5 rounded-2xl border border-slate-200 outline-none focus:border-cyan-500"
               />
 
-              <button
-                type="submit"
-                disabled={loading}
-                className="bg-green-700 hover:bg-green-800 transition text-white px-6 py-3 rounded-lg font-semibold w-full"
-              >
-                {loading ? "Submitting..." : "Submit Inquiry"}
-              </button>
+            </div>
 
-              {status === "success" && (
-                <p className="text-green-600 font-semibold mt-2">
-                  Thank you! Our team will contact you shortly.
-                </p>
-              )}
-              {status === "error" && (
-                <p className="text-red-600 font-semibold mt-2">
-                  Something went wrong. Please try again.
-                </p>
-              )}
-            </form>
-          </div>
+            <select className="h-14 px-5 rounded-2xl border border-slate-200 w-full">
+              <option>Select Product</option>
+            </select>
 
-          {/* map */}
-          <div className="mt-5">
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2351.2848900849685!2d77.1662442!3d28.702004099999993!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d0223846e0903%3A0x6b8f0fbb73c40b4c!2sSangam%20Plastic%20Industries%20Pvt.%20Ltd.!5e1!3m2!1sen!2sin!4v1771318884119!5m2!1sen!2sin"
-              allowFullScreen=""
-              loading="lazy"
-              className="w-full h-100"
-              referrerPolicy="no-referrer-when-downgrade"
-            ></iframe>
-          </div>
+            <textarea
+              rows={5}
+              placeholder="Tell us your requirement..."
+              className="w-full rounded-2xl border border-slate-200 p-5"
+            />
+
+            <button
+              type="submit"
+              className="
+              h-14
+              w-full
+              rounded-2xl
+              bg-gradient-to-r
+              from-cyan-600
+              to-cyan-700
+              text-white
+              font-semibold
+              shadow-lg
+              hover:scale-[1.02]
+              transition-all
+            "
+            >
+              Submit Inquiry →
+            </button>
+
+          </form>
+
         </div>
-      </section>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
     </div>
   );
 }

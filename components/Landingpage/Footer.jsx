@@ -37,7 +37,7 @@ export default function Footer() {
         </div>
       </div>
 
-      <div className="max-w-7xl mx-auto px-4 py-16">
+      <div className="max-w-7xl mx-auto px-2 py-10">
         <div className="grid lg:grid-cols-4 gap-12">
 
           {/* Company */}
@@ -47,7 +47,7 @@ export default function Footer() {
 
           </Image>
 
-            <p className="text-slate-300 mt-8 leading-8">
+            <p className="text-white mt-8 leading-8">
               Leading Manufacturer, Trader, Exporter & Importer of
               Air Compressors, Air Dryers, Air Line Filters,
               Drain Valves and Industrial Filtration Solutions.
@@ -58,29 +58,29 @@ export default function Footer() {
           </div>
 
           {/* Quick Links */}
-          <div>
+          <div >
             <h4 className="text-xl font-semibold mb-6">
               Quick Links
             </h4>
 
-            <ul className="space-y-4 text-slate-300">
-              <li>
+            <ul className="space-y-4 text-white">
+              <li className="hover:text-cyan-500">
                 <Link href="/">Home</Link>
               </li>
 
-              <li>
+              <li className="hover:text-cyan-500">
                 <Link href="/about-us">About Us</Link>
               </li>
 
-              <li>
+               <li className="hover:text-cyan-500">
                 <Link href="/products">Products</Link>
               </li>
 
-              <li>
+                <li className="hover:text-cyan-500">
                 <Link href="/blogs">Blogs</Link>
               </li>
 
-              <li>
+                <li className="hover:text-cyan-500">
                 <Link href="/contact-us">Contact Us</Link>
               </li>
             </ul>
@@ -92,13 +92,13 @@ export default function Footer() {
               Our Products
             </h4>
 
-            <ul className="space-y-4 text-slate-300">
-              <li>Oil Injected Screw Compressors</li>
-              <li>VFD Screw Compressors</li>
-              <li>PM Screw Compressors</li>
-              <li>Oil Free Compressors</li>
-              <li>Air Dryers</li>
-              <li>Air Line Filters</li>
+            <ul className="space-y-4  cursor-pointer text-white">
+               <li className="hover:text-cyan-500">Oil Injected Screw Compressors</li>
+              <li className="hover:text-cyan-500">VFD Screw Compressors</li>
+               <li className="hover:text-cyan-500">PM Screw Compressors</li>
+                <li className="hover:text-cyan-500">Oil Free Compressors</li>
+                <li className="hover:text-cyan-500">Air Dryers</li>
+        
             </ul>
           </div>
 
