@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ArrowRight } from "lucide-react";
-
+import Image from "next/image";
 const products = [
   {
     name: "Oil Injected Screw Compressors",
@@ -37,7 +37,7 @@ const products = [
 
     frames: Array.from(
       { length: 36 },
-      (_, i) => `/360/vfd/${i + 1}.webp`
+      (_, i) => `/360/mark/${i + 1}.png`
     ),
   },
 
@@ -192,14 +192,16 @@ const handleMouseMove = (e) => {
               </span>
             </div>
 
-            <div className="flex items-center justify-center h-[520px]">
+            <div className="flex items-center justify-center h-[450px]">
               <AnimatePresence mode="wait">
-              <img
+              <Image
   src={activeProduct.frames[frameIndex]}
   alt={activeProduct.name}
   draggable={false}
+  width={1000}
+  height={1000}
   className="
-    h-[420px]
+    h-[620px]
     object-contain
     select-none
     pointer-events-none
