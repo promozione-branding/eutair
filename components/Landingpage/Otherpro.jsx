@@ -2,8 +2,9 @@
 
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { ArrowRight } from "lucide-react";
+
 import Image from "next/image";
+import { ArrowRight, RotateCw } from "lucide-react";
 const products = [
   {
     name: "Oil Injected Screw Compressors",
@@ -83,7 +84,7 @@ const products = [
 
 export default function ProductRange() {
   const [activeProduct, setActiveProduct] = useState(products[0]);
-
+const [hasInteracted, setHasInteracted] = useState(false);
 const [frameIndex, setFrameIndex] = useState(0);
 const [isDragging, setIsDragging] = useState(false);
 const [startX, setStartX] = useState(0);
@@ -91,6 +92,7 @@ const [startX, setStartX] = useState(0);
 const handleMouseDown = (e) => {
   setIsDragging(true);
   setStartX(e.clientX);
+  setHasInteracted(true);
 };
 
 const handleMouseUp = () => {
@@ -122,7 +124,7 @@ const handleMouseMove = (e) => {
 
 
   return (
-    <section className="py-15 bg-white">
+    <section className="py-6 bg-white">
       <div className="w-full mx-auto px-15">
         <div className="text-center">
           <p className="text-blue-600 uppercase tracking-[0.3em] text-sm font-medium">
@@ -138,18 +140,20 @@ const handleMouseMove = (e) => {
 
           {/* LEFT PRODUCT VIEWER */}
       <div
-  className="
-  lg:col-span-7
-  relative
-  overflow-hidden
-  rounded-[40px]
-  border
-  border-slate-200 hover:border-blue-300
- 
-  min-h-[650px]
-  bg-blue-200/20
+  className={`
+      lg:col-span-7
+    relative
+    overflow-hidden
+    rounded-[40px]
+    border
+    border-slate-200
+    hover:border-blue-300
+    min-h-[650px]
+    bg-blue-200/20
+    ${isDragging ? "cursor-grabbing" : "cursor-grab"}
+  `}
 
-"
+
   onMouseDown={handleMouseDown}
   onMouseMove={handleMouseMove}
   onMouseUp={handleMouseUp}
@@ -188,11 +192,52 @@ const handleMouseMove = (e) => {
                 text-black
               "
               >
-                Interactive Product View
+                Interactive Product View drag to see 
               </span>
             </div>
 
             <div className="flex items-center justify-center h-[450px]">
+
+{!hasInteracted && (
+  <motion.div
+    initial={{ opacity: 0 }}
+    animate={{
+      opacity: [0.7, 1, 0.7],
+      x: [-20, 20, -20],
+    }}
+    transition={{
+      duration: 2.5,
+      repeat: Infinity,
+      ease: "easeInOut",
+    }}
+    className="
+      absolute
+      left-1/2
+      top-1/2
+      z-30
+      -translate-x-1/2
+      -translate-y-1/2
+      pointer-events-none
+    "
+  >
+    <div
+      className="
+        rounded-full
+        bg-black/75
+        backdrop-blur-md
+        px-6
+        py-3
+        text-sm
+        font-medium
+        text-white
+        shadow-2xl
+      "
+    >
+      ← Drag to Rotate 360° →
+    </div>
+  </motion.div>
+)}
+
               <AnimatePresence mode="wait">
               <Image
   src={activeProduct.frames[frameIndex]}
@@ -212,46 +257,94 @@ const handleMouseMove = (e) => {
             
        </AnimatePresence>
             </div>
-
-          <div className="absolute bottom-20  left-10 right-10 z-20">
-  <h3 className="text-5xl font-black text-black leading-snug">
-    {activeProduct.name}
-  </h3>
-
- 
-
-   <p className="text-sm mt-4 font-black text-black">
-    {activeProduct.description}
-  </p>
-
-
-  <button
-    className="
-    group
-    mt-8
-    inline-flex
-    items-center
-    gap-3
-    rounded-full
-    bg-gradient-to-r
-    from-blue-600
-    to-cyan-500
-    px-7
-    py-4
-    font-semibold
-    text-white
-    shadow-[0_20px_50px_rgba(37,99,235,.35)]
-    hover:scale-105
-    transition-all
+<div
+  className="
+    absolute
+    inset-0
+    z-20
+    flex
+    flex-col
+    justify-between
+    pointer-events-none
+    p-8
   "
-  >
-    Explore Product
+>
+  {/* Top Right Badge */}
+  <div className="flex justify-end">
+    <div
+      className="
+        flex
+        items-center
+        gap-2
+        rounded-full
+        bg-white/80
+        backdrop-blur-md
+        px-4
+        py-2
+        text-sm
+        font-semibold
+        text-slate-800
+        shadow-lg
+      "
+    >
+      <RotateCw size={16} className="animate-spin" />
+      360° Interactive View
+    </div>
+  </div>
 
-    <ArrowRight
-      size={18}
-      className="group-hover:translate-x-1 transition"
-    />
-  </button>
+  {/* Bottom Content */}
+  <div className="max-w-[550px] pointer-events-auto">
+    <h3
+      className="
+        text-4xl
+        lg:text-5xl
+        font-black
+        text-slate-900
+        leading-tight
+      "
+    >
+      {activeProduct.name}
+    </h3>
+
+    <p
+      className="
+        mt-4
+        text-base
+        text-slate-600
+        leading-relaxed
+      "
+    >
+      {activeProduct.description}
+    </p>
+
+    <button
+      className="
+        group
+        mt-8
+        inline-flex
+        items-center
+        gap-3
+        rounded-full
+        bg-gradient-to-r
+        from-blue-600
+        to-cyan-500
+        px-7
+        py-4
+        font-semibold
+        text-white
+        shadow-[0_20px_50px_rgba(37,99,235,.35)]
+        hover:scale-105
+        transition-all
+      "
+    >
+      Explore Product
+
+      <ArrowRight
+        size={18}
+        className="group-hover:translate-x-1 transition"
+      />
+    </button>
+  </div>
 </div>
           </div>
 

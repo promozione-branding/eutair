@@ -1,86 +1,123 @@
-"use client";
-import Image from "next/image";
+import React from 'react'
 
-const industries = [
-  {
-    title: "Hospitals & Healthcare Facilities",
-    desc: "Maintain infection-free environments with hospital-grade garbage bags and bio dustbin bags, ideal for patient rooms, operation theaters, and labs.",
-    img: "/bag/indus1.png",
-  },
-  {
-    title: "Hotels & Hospitality",
-    desc: "Ergonomic waste solutions help housekeeping teams clean guest rooms, lobbies, banquet halls, and corridors efficiently.",
-    img: "/bag/indus2.jpg",
-  },
-  {
-    title: "Factories & Industrial Units",
-    desc: "Heavy-duty garbage bags withstand large-scale cleaning and industrial waste disposal in factories and warehouses.",
-    img: "/bag/indus4.jpg",
-  },
-  {
-    title: "Offices & Commercial Spaces",
-    desc: "Keep corporate offices, malls, and retail outlets clean and hygienic with easy-to-use waste management products.",
-    img: "/bag/indus3.webp",
-  },
-  {
-    title: "Educational Institutions",
-    desc: "Schools and universities rely on durable bins and bio dustbin bags for clean classrooms and laboratories.",
-    img: "/bag/indus5.jpg",
-  },
-  {
-    title: "Residential Complexes",
-    desc: "Eco-friendly garbage bags provide safe and convenient waste disposal for homes and apartment communities.",
-    img: "/bag/indus6.jpg",
-  },
-];
-
-export default function IndustriesSection() {
+const Whoweare = () => {
   return (
-    <section className="w-full relative py-10 px-6 md:px-16 lg:px-20 bg-gradient-to-b from-white to-gray-50">
+    <div>
+  <section className="py-10 bg-white">
+  <div className="w-full px-16 mx-auto ">
 
-      <Image alt="bin" width={300} height={300} src="/bag/bin2bg.png"
-        className="hidden xl:block absolute top-10 right-[0%]">
-      </Image>
+    <div className="grid lg:grid-cols-12 gap-18 items-center">
 
-      <div className="max-w-7xl mx-auto text-center mb-7 md:mb-14">
-        <p className="text-green-600 font-semibold uppercase text-sm mb-4">
-          Industries & Applications
-        </p>
-        <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-          Waste Management Solutions for Every Industry
-        </h2>
-        <p className="text-gray-800 max-w-3xl mx-auto">
-          Sangam Plastic Industries Pvt. Ltd provides durable and hygienic waste
-          management solutions, including disposable bio dustbin bags and
-          hospital garbage bags, for diverse professional settings.
-        </p>
-      </div>
+      {/* Image */}
+      <div className="lg:col-span-4">
+        <div className="relative">
+          <img
+            src="/iso.webp"
+            alt="ISO Certified"
+            className="
+              w-full
+              rounded-2xl
+              object-contain
+              border border-slate-200
+          
+            "
+          />
 
-      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-        {industries.map((item, i) => (
-          <div
-            key={i}
-            className="group rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition duration-300 bg-white"
-          >
-            <div className="relative w-full h-52">
-              <Image
-                src={item.img}
-                alt={item.title}
-                fill
-                className="object-cover group-hover:scale-105 transition duration-500"
-              />
+          <div className="
+            absolute
+            bottom-6
+            left-6
+            bg-white
+            px-5
+            py-4
+            rounded-xl
+            shadow-lg
+            border
+            border-slate-200
+          ">
+            <div className="text-sky-600 font-bold text-lg">
+              ISO 9001:2015
             </div>
-            <div className="p-6">
-              <h3 className="text-lg font-semibold text-gray-900 mb-2">
-                {item.title}
-              </h3>
-              <p className="text-black text-sm leading-relaxed">
-                {item.desc}
-              </p>
+            <div className="text-sm text-slate-500">
+              Certified Organization
             </div>
           </div>
-        ))}
+        </div>
       </div>
-    </section>
-  );
+
+      {/* Content */}
+      <div className="lg:col-span-8">
+
+        <span className="text-sky-600 font-semibold uppercase tracking-[3px] text-sm">
+          WHO WE ARE
+        </span>
+
+        <h2 className="mt-3 text-4xl font-bold text-slate-900 leading-tight">
+          Quality, Reliability &
+          Engineering Excellence
+        </h2>
+
+        <div className="w-20 h-1 bg-sky-600 mt-5 mb-8 rounded-full"></div>
+
+        {/* Content Block 1 */}
+        <div className="flex gap-5">
+          <div className="w-1 bg-sky-600 rounded-full shrink-0"></div>
+
+          <div>
+            <p className="text-slate-800 font-semibold text-lg">
+              Eutair is ISO 9001:2015 certified.
+            </p>
+
+            <p className="mt-3 text-black leading-8">
+              Our quality-focused approach reflects a commitment to structured
+              processes, consistency, reliability and continuous improvement
+              across engineering, products, services and project execution.
+            </p>
+          </div>
+        </div>
+
+        {/* Divider */}
+        <div className="h-px bg-slate-200 my-5"></div>
+
+        {/* Content Block 2 */}
+        <div className="flex gap-5">
+          <div className="w-1 bg-sky-600 rounded-full shrink-0"></div>
+
+          <div>
+            <p className="text-black leading-8">
+              We do designing, supply, erect and commission complete compressed
+              air systems along with heat exchangers, cooling towers, plant air
+              and water piping systems. We design, develop and charge up all
+              three sides: generation, distribution and demand.
+            </p>
+          </div>
+        </div>
+
+        {/* Standards */}
+        <div className="
+          mt-10
+          border-l-4
+          border-sky-600
+          bg-slate-50
+          p-6
+          rounded-r-xl
+        ">
+          <h3 className="font-semibold text-black mb-3">
+            Industry Codes and Standards adhered to by our Designers:
+          </h3>
+
+          <p className="text-slate-600 leading-8">
+            API 650, API 579, API 620, API 653, ASME Boiler & Pressure Vessel
+            Code, Section VIII, Div. – 1 & Div. – 2, PD 5500, TEMA
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+    </div>
+  )
 }
+
+export default Whoweare

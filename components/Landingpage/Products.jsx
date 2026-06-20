@@ -13,31 +13,30 @@ export default function ProductRange() {
 
 const products = [
   {
-    title: "OIL INJECTED SCREW COMPRESSORS",
+    title: "Chicago Pneumatic",
     image: "/hero1.png",
-    desc: "Advanced screw air compressors designed for continuous industrial applications.",
+    desc: "Industry-proven compressed air systems delivering superior efficiency, durability, and productivity for modern industrial operations.",
   },
   {
-    title: "VFD SCREW COMPRESSORS",
+    title: "MARK Compressors",
     image: "/hero2.png",
-    desc: "Energy-efficient compressors with variable frequency drive technology.",
+    desc: "Innovative compressor solutions combining energy savings, operational reliability, and long-term performance excellence.",
   },
   {
-    title: "PM SCREW COMPRESSORS",
+    title: "Air Treatment",
     image: "/hero3.png",
-    desc: "Permanent magnet compressors delivering maximum performance.",
+    desc: "Comprehensive air purification solutions ensuring clean, dry, and contaminant-free compressed air for sensitive applications.",
   },
   {
-    title: "OIL FREE COMPRESSORS",
+    title: "Spares and Consumables",
     image: "/pro3.png",
-    desc: "Contamination-free compressed air for critical industries.",
+    desc: "Premium-quality genuine parts and consumables designed to maintain peak compressor performance and reduce downtime.",
   },
   {
-    title: "AIR DRYERS",
+    title: "Piping and Distribution Lines",
     image: "/pro4.jpeg",
-    desc: "Reliable air treatment solutions for moisture removal.",
+    desc: "Customized air distribution networks engineered for maximum flow efficiency, reduced leakage, and optimal system performance.",
   },
- 
 ];
 
 

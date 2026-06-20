@@ -18,6 +18,7 @@ import Products from "@/components/Landingpage/Products";
 import Clients from "@/components/Landingpage/Clients"
 import TestimonialSlider from "@/components/Landingpage/Testimonials";
 import Bestseller from "@/components/Landingpage/Bestseller";
+import Whoweare from "@/components/Landingpage/Whoweare";
 export default function Home() {
   return (
     <>
@@ -27,6 +28,7 @@ export default function Home() {
      
      
 <About/>
+<Whoweare/>
   <Products></Products>
        <Cta></Cta>
       <Otherproduct></Otherproduct>
@@ -37,15 +39,11 @@ export default function Home() {
   
   <IndustriesSection/>
        <TestimonialSlider></TestimonialSlider>
-      {/* <Formsection></Formsection>
-   
-      <Whychoose /> */}
+
 
  
       <Faq></Faq>
-      {/* <Loactions /> */}
-
-      {/* <CityPage /> */}
+   
     </>
   );
 }

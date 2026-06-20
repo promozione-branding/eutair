@@ -236,12 +236,51 @@ export default function HeroSlider() {
     {slide.description}
   </p>
 
-
-  <div className="flex gap-10 mt-4">
-
-  <Image width={150} height={120} src="/mark.jpg"></Image>
-    <Image width={150} height={120} src="/cp.jpeg"></Image>
+<div className="flex flex-wrap items-center gap-5 mt-6">
+  {/* Mark Compressors */}
+  <div
+    className="
+      flex items-center justify-center
+      px-5 py-3
+      bg-white/90 backdrop-blur-md
+      border border-white/60
+      rounded-full
+      shadow-[0_8px_25px_rgba(0,0,0,0.15)]
+      hover:shadow-[0_12px_35px_rgba(0,0,0,0.2)]
+      transition-all duration-300
+    "
+  >
+    <Image
+      src="/mark-compressors-logo.png"
+      alt="Mark Compressors"
+      width={110}
+      height={60}
+      className="object-contain"
+    />
   </div>
+
+  {/* Chicago Pneumatic */}
+  <div
+    className="
+      flex items-center justify-center
+      px-5 py-3
+      bg-white/90 backdrop-blur-md
+      border border-white/60
+      rounded-full
+      shadow-[0_8px_25px_rgba(0,0,0,0.15)]
+      hover:shadow-[0_12px_35px_rgba(0,0,0,0.2)]
+      transition-all duration-300
+    "
+  >
+    <Image
+      src="/chicago-pneumatic-logo.png"
+      alt="Chicago Pneumatic"
+      width={100}
+      height={60}
+      className="object-contain"
+    />
+  </div>
+</div>
 
 
 
