@@ -56,13 +56,13 @@ export default function TestimonialSlider() {
 
     <>
     
-    <section className="relative h-full w-full  bg-[url('/TESTIMONIAL.avif')] bg-cover bg-fixed  bg-center py-8 md:py-16 text-white">
+    <section className="relative h-full w-full  bg-[url('/TESTIMONIAL.avif')] bg-cover bg-fixed  bg-center py-3 md:py-16 text-white">
       {/* Overlay */}
       <div className="absolute inset-0 bg-[#08372C]/50"></div>
 
       <div className="relative max-w-5xl mx-auto text-center px-6">
         {/* Heading */}
-        <h2 className="text-4xl md:text-5xl font-bold mb-12">
+        <h2 className="text-4xl md:text-5xl font-bold mb-3 md:mb-8">
           <span className="text-white">Our Testimonials</span>
         
         </h2>

@@ -62,40 +62,124 @@ const industries = [
 
 export default function IndustriesWeServe() {
   return (
-    <section className=" bg-gradient-to-b py-5 from-white to-slate-50">
-      <div className="container mx-auto px-4 lg:px-15">
+    <section className="bg-gradient-to-b from-white to-slate-50 pb-6 md:py-16 overflow-hidden">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 xl:px-16">
+        
         {/* Header */}
-        <div className="max-w-4xl mx-auto text-center mb-8">
-          <span className="inline-block px-4 py-2 rounded-full bg-cyan-100 text-cyan-700 text-sm font-semibold mb-4">
+        <div className="max-w-4xl mx-auto text-center mb-10 md:mb-14">
+          <span
+            className="
+              inline-block
+              px-4
+              py-2
+              rounded-full
+              bg-cyan-100
+              text-cyan-700
+              text-xs
+              sm:text-sm
+              font-semibold
+              mb-4
+            "
+          >
             Industries We Serve
           </span>
 
-          <h2 className="text-4xl leading-snug font-bold text-slate-900 mb-2">
-            Reliable Compressed Air & Industrial Filtration Solutions for Every Industry
+          <h2
+            className="
+              text-xl
+              sm:text-4xl
+              lg:text-5xl
+              font-bold
+              text-slate-900
+              leading-tight
+            "
+          >
+            Reliable Compressed Air &
+            <br className="hidden sm:block" />
+            Industrial Filtration Solutions
+            <br className="hidden lg:block" />
+            for Every Industry
           </h2>
-
-       
         </div>
 
         {/* Industries Grid */}
-        <div className="grid md:grid-cols-2 xl:grid-cols-4 gap-6">
+        <div
+          className="
+            grid
+           
+            grid-cols-2
+            xl:grid-cols-4
+            gap-5
+            lg:gap-6
+          "
+        >
           {industries.map((industry, index) => {
             const Icon = industry.icon;
 
             return (
               <div
                 key={index}
-                className="group bg-white border border-slate-200 rounded-3xl p-2 shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all duration-300"
+                className="
+                  group
+                  bg-white
+                  border
+                  border-slate-200
+                  rounded-2xl
+                  lg:rounded-3xl
+                  p-3
+                  lg:p-6
+                  shadow-sm
+                  hover:shadow-xl
+                  hover:-translate-y-2
+                  transition-all
+                  duration-300
+                  h-full
+                "
               >
-                <div className="w-12 h-12 rounded-2xl bg-cyan-600 flex items-center justify-center mb-5 group-hover:scale-110 transition-transform duration-300">
-                  <Icon className="w-7 h-7 text-white" />
+                {/* Icon */}
+                <div
+                  className="
+                    w-12
+                    h-12
+                    lg:w-14
+                    lg:h-14
+                    rounded-2xl
+                    bg-cyan-600
+                    flex
+                    items-center
+                    justify-center
+                    mb-4
+                    group-hover:scale-110
+                    transition-transform
+                    duration-300
+                  "
+                >
+                  <Icon className="w-6 h-6 lg:w-7 lg:h-7 text-white" />
                 </div>
 
-                <h3 className="text-xl font-bold text-slate-900 ">
+                {/* Title */}
+                <h3
+                  className="
+                    text-md
+                    sm:text-xl
+                    font-bold
+                    text-slate-900
+                    mb-3
+                    leading-snug
+                  "
+                >
                   {industry.title}
                 </h3>
 
-                <p className="text-slate-600 text-sm leading-relaxed">
+                {/* Description */}
+                <p
+                  className="hidden md:block
+                    text-slate-600
+                    text-sm
+                    sm:text-[15px]
+                    leading-7
+                  "
+                >
                   {industry.description}
                 </p>
               </div>

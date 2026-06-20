@@ -35,11 +35,11 @@ export default function FAQ() {
   };
 
   return (
-    <section className="py-8 md:py-16 relative px-4 md:px-8 lg:px-16 bg-white">
+    <section className="py-4 md:py-16 relative px-4 md:px-8 lg:px-16 bg-white">
       {/* Heading */}
 
 
-      <h2 className="text-4xl font-extrabold text-center mb-6 md:mb-12 text-[#07342A]">
+      <h2 className="text-2xl md:text-4xl font-extrabold text-center mb-3 md:mb-12 text-[#07342A]">
         Frequently Asked Questions
       </h2>
 
@@ -52,7 +52,7 @@ export default function FAQ() {
               onClick={() => toggleFAQ(index)}
               className="w-full flex justify-between items-center py-5 px-6 text-lg font-medium text-gray-900 hover:bg-cyan-600/30 transition"
             >
-              <span className="flex-1 text-xl text-left">
+              <span className="flex-1 text-base md:text-xl text-left">
                 {index + 1}. {faq.q}
               </span>
               <ChevronDown
@@ -69,7 +69,7 @@ export default function FAQ() {
 
               }`}
             >
-              <p className="text-gray-700 text-base leading-relaxed">{faq.a}</p>
+              <p className="text-gray-700 text-sm leading-relaxed">{faq.a}</p>
             </div>
           </div>
         ))}

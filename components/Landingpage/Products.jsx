@@ -41,48 +41,126 @@ const products = [
 
 
   return (
-   <section className="py-8 bg-white">
-  <div className=" mx-auto px-4 md:px-12">
+  <section className=" md:py-16 bg-white overflow-hidden">
+  <div className="mx-auto px-4 sm:px-6 lg:px-12">
+    
     {/* Heading */}
+    <h2 className="text-blue-600 font-bold text-xs sm:text-sm mb-4 text-center uppercase tracking-[0.25em]">
+      Our Products
+    </h2>
 
-
-    <h2 className="text-blue-600  font-bold text-xs mb-5 text-center uppercase tracking-widest">
-    Our Products
-      </h2>
-    <div className="text-center mb-12">
-      <h2 className="text-[#0B3A82] font-bold text-3xl md:text-5xl uppercase tracking-wider">
-    Our Screw Air Compressor Range
+    <div className="text-center mb-8 md:mb-12">
+      <h2
+        className="
+        text-[#0B3A82]
+        font-bold
+        text-2xl
+        sm:text-3xl
+        md:text-4xl
+        lg:text-5xl
+        uppercase
+        leading-tight
+      "
+      >
+        Our Screw Air Compressor Range
       </h2>
     </div>
 
-    {/* Products */}
-    <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 border border-cyan-400">
+    {/* Products Grid */}
+    <div
+      className="
+      grid
+      grid-cols-1
+      sm:grid-cols-2
+      lg:grid-cols-3
+      xl:grid-cols-5
+      border
+      border-cyan-400
+    "
+    >
       {products.map((item, index) => (
         <div
           key={index}
-          className="p-5 border-r border-b border-cyan-400 last:border-r-0 hover:bg-gray-100 transition-all duration-300 group"
+          className="
+          p-4
+          md:p-5
+          border-b
+          border-cyan-400
+          xl:border-r
+          xl:last:border-r-0
+          hover:bg-slate-50
+          transition-all
+          duration-300
+          group
+        "
         >
           {/* Image */}
-          <div className="h-52   flex items-center justify-center mb-4">
+          <div
+            className="
+            h-44
+            sm:h-52
+            md:h-56
+            flex
+            items-center
+            justify-center
+            mb-4
+            overflow-hidden
+          "
+          >
             <img
               src={item.image}
               alt={item.title}
-              className=" object-cover h-full w-full transition duration-300 group-hover:scale-105"
+              className="
+                object-contain
+                h-full
+                w-full
+                transition-all
+                duration-500
+                group-hover:scale-105
+              "
             />
           </div>
 
           {/* Title */}
-          <h3 className="text-[#0B3A82] font-bold text-lg uppercase leading-5 min-h-[48px]">
+          <h3
+            className="
+            text-[#0B3A82]
+            font-bold
+            text-base
+            sm:text-lg
+            uppercase
+            leading-snug
+            mb-3
+          "
+          >
             {item.title}
           </h3>
 
           {/* Description */}
-          <p className="text-gray-600 text-md mt-2 leading-5 min-h-[70px]">
+          <p
+            className="
+            text-gray-600
+            text-sm
+            sm:text-[15px]
+            leading-6
+            mb-4
+          "
+          >
             {item.desc}
           </p>
 
           {/* Link */}
-          <button className="mt-3 text-[#0B3A82] text-sm font-semibold uppercase tracking-wide hover:text-cyan-600">
+          <button
+            className="
+            text-[#0B3A82]
+            text-sm
+            font-semibold
+            uppercase
+            tracking-wide
+            hover:text-cyan-600
+            transition
+          "
+          >
             View Product →
           </button>
         </div>

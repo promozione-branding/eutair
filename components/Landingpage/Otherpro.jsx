@@ -124,7 +124,7 @@ const handleMouseMove = (e) => {
 
 
   return (
-    <section className="py-6 bg-white">
+    <section className="py-6 hidden md:block bg-white">
       <div className="w-full mx-auto px-15">
         <div className="text-center">
           <p className="text-blue-600 uppercase tracking-[0.3em] text-sm font-medium">

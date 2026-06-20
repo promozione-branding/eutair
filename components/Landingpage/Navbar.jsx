@@ -15,8 +15,11 @@ import { ChevronDown, ArrowRight } from "lucide-react";
 import { FaWhatsapp } from "react-icons/fa";
 import { useState } from "react";
 import Enquiry from "@/components/Enquiry"
-export default function Navbar() {
+import { Menu, X } from "lucide-react";
 
+export default function Navbar() {
+const [mobileMenu, setMobileMenu] = useState(false);
+const [productMenu, setProductMenu] = useState(false);
 
  const [open, setOpen] =
     useState(false);
@@ -52,12 +55,12 @@ export default function Navbar() {
 
 
 
-  <header className="sticky top-0 z-50 bg-white/95 backdrop-blur-xl border-b border-slate-200/60">
+  <header className=" sticky top-0 z-50 bg-white/95 backdrop-blur-xl border-b border-slate-200/60">
   {/* Top Info Bar */}
 
 
-<div className="border-b border-slate-100 bg-slate-50/50">
-  <div className="w-full mx-auto px-25">
+<div className="hidden md:block border-b border-slate-100 bg-slate-50/50">
+  <div className="w-full mx-auto px-4 sm:px-6 lg:px-12 xl:px-20">
     <div className="h-11 flex items-center justify-between">
       
       {/* Left Side */}
@@ -136,27 +139,30 @@ export default function Navbar() {
 </div>
 
   {/* Main Navbar */}
-  <div className="w-full mx-auto px-25">
-    <div className="h-23 flex items-center justify-between">
+  <div className="w-full mx-auto px-5 md:px-25">
+    <div className="h-16 sm:h-20 lg:h-23 flex items-center justify-between">
       {/* Logo */}
       <Link href="/" className="group">
         <img
           src="/logo.png"
           alt="EutAir"
-          className="h-16 w-auto transition-transform duration-500 group-hover:scale-[1.03]"
+          className="h-10 lg:h-16 w-auto transition-transform duration-500 group-hover:scale-[1.03] object-contain"
         />
       </Link>
 
       {/* Navigation */}
-   <nav>
+   <nav className="hidden lg:block">
   <ul className="flex items-center gap-12">
 
-    <li>
+
+
+
+  <li>
       <Link
-        href="/"
-        className="text-[17px] tracking-[0.12em] font-medium text-blue-600"
+        href="/about"
+        className="text-[17px] tracking-[0.12em] font-medium text-slate-700 hover:text-blue-600"
       >
-        HOME
+        ABOUT US
       </Link>
     </li>
 
@@ -278,12 +284,15 @@ export default function Navbar() {
       </div>
     </li>
 
-    <li>
+  
+
+
+      <li>
       <Link
-        href="/about"
+        href="/our-blogs"
         className="text-[17px] tracking-[0.12em] font-medium text-slate-700 hover:text-blue-600"
       >
-        ABOUT US
+        BLOGS
       </Link>
     </li>
 
@@ -308,24 +317,47 @@ export default function Navbar() {
   </ul>
 </nav>
 
+
+
+
+<div className="lg:hidden flex items-center gap-3">
+  <button
+    onClick={() => setOpen(true)}
+    className="bg-blue-600 text-white px-4 py-2 rounded-full text-xs font-semibold"
+  >
+    Quote
+  </button>
+
+  <button
+    onClick={() => setMobileMenu(!mobileMenu)}
+    className="p-2"
+  >
+    {mobileMenu ? (
+      <X className="w-7 h-7" />
+    ) : (
+      <Menu className="w-7 h-7" />
+    )}
+  </button>
+</div>
+
+
       {/* CTA */}
       <button
 
       onClick={()=> setOpen(true)}
         className="
-          relative overflow-hidden
-          rounded-full
-          px-7 py-3.5
-          text-sm font-semibold tracking-wide
-          text-white
-          bg-gradient-to-r
-          from-blue-600
-          via-blue-500
-          to-cyan-500
-          shadow-[0_10px_30px_rgba(37,99,235,0.25)]
-          hover:shadow-[0_15px_40px_rgba(37,99,235,0.35)]
-          transition-all duration-500
-          hover:-translate-y-0.5
+        hidden lg:block
+relative overflow-hidden
+rounded-full
+px-7 py-3.5
+text-sm font-semibold
+tracking-wide
+text-white
+bg-gradient-to-r
+from-blue-600
+via-blue-500
+to-cyan-500
+shadow-[0_10px_30px_rgba(37,99,235,0.25)]
         "
       >
 
@@ -334,6 +366,102 @@ export default function Navbar() {
       </button>
     </div>
   </div>
+
+
+
+{mobileMenu && (
+  <div className="lg:hidden border-t bg-white">
+    <div className="px-4 py-5">
+
+      <div className="flex flex-col gap-4">
+
+        <Link
+          href="/about"
+          onClick={() => setMobileMenu(false)}
+          className="font-medium text-slate-700"
+        >
+          ABOUT US
+        </Link>
+
+        {/* Products Accordion */}
+        <div>
+          <button
+            onClick={() => setProductMenu(!productMenu)}
+            className="flex items-center justify-between w-full font-medium text-slate-700"
+          >
+            OUR PRODUCTS
+
+            <ChevronDown
+              className={`w-4 h-4 transition ${
+                productMenu ? "rotate-180" : ""
+              }`}
+            />
+          </button>
+
+          {productMenu && (
+            <div className="mt-3 pl-4 flex flex-col gap-3 border-l">
+              {products.map((item) => (
+                <Link
+                  key={item.title}
+                  href={item.href}
+                  onClick={() => setMobileMenu(false)}
+                  className="text-slate-600"
+                >
+                  {item.title}
+                </Link>
+              ))}
+            </div>
+          )}
+        </div>
+
+        <Link
+          href="/our-blogs"
+          onClick={() => setMobileMenu(false)}
+          className="font-medium text-slate-700"
+        >
+          BLOGS
+        </Link>
+
+        <Link
+          href="/services"
+          onClick={() => setMobileMenu(false)}
+          className="font-medium text-slate-700"
+        >
+          OUR SERVICES
+        </Link>
+
+        <Link
+          href="/contact"
+          onClick={() => setMobileMenu(false)}
+          className="font-medium text-slate-700"
+        >
+          CONTACT US
+        </Link>
+
+        <button
+          onClick={() => {
+            setOpen(true);
+            setMobileMenu(false);
+          }}
+          className="mt-3 bg-gradient-to-r from-blue-600 to-cyan-500 text-white py-3 rounded-full font-semibold"
+        >
+          GET A QUOTE
+        </button>
+
+        {/* Social Icons */}
+        <div className="flex gap-3 pt-4 border-t">
+          <Linkedin className="w-5 h-5 text-blue-600" />
+          <Facebook className="w-5 h-5 text-blue-600" />
+          <FaWhatsapp className="w-5 h-5 text-green-600" />
+          <Instagram className="w-5 h-5 text-pink-500" />
+          <Youtube className="w-5 h-5 text-red-500" />
+        </div>
+      </div>
+    </div>
+  </div>
+)}
+
+
 </header>
 
 

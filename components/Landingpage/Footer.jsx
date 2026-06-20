@@ -14,10 +14,10 @@ import Image from "next/image";
 
 export default function Footer() {
   return (
-    <footer className="bg-[#081B2E] text-white relative overflow-hidden">
+    <footer className="bg-[#081B2E] px-2 text-white relative overflow-hidden">
       
       {/* CTA Strip */}
-      <div className="border-b border-white/10">
+      <div className="border-b hidden md:block border-white/10">
         <div className="max-w-7xl mx-auto px-4 py-8 flex flex-col lg:flex-row items-center justify-between gap-6">
           <div>
             <h3 className="text-3xl font-bold">
@@ -84,7 +84,7 @@ export default function Footer() {
                 <Link href="/contact-us">Contact Us</Link>
               </li>
             </ul>
-          </div>
+          </div>   
 
           {/* Products */}
           <div>
@@ -197,7 +197,11 @@ export default function Footer() {
 
 
   {/* Registered Address */}
-    <div className="flex  items-start gap-4">
+
+  <div className="flex flex-col md:flex-row">
+
+
+    <div className="flex   items-start gap-4">
       <MapPin
         className="text-cyan-500 shrink-0 mt-1"
         size={20}
@@ -232,6 +236,7 @@ export default function Footer() {
       </div>
     </div>
 </div>
+  </div>
 
 
 

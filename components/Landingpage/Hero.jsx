@@ -169,7 +169,7 @@ const slides = [
 ];
 export default function HeroSlider() {
   return (
-    <section className="relative h-[620px] w-full overflow-hidden">
+  <section className="relative h-[800px] lg:h-[720px] w-full overflow-hidden">
       <Swiper
         modules={[Autoplay, Pagination, EffectFade]}
         effect="fade"
@@ -185,7 +185,7 @@ export default function HeroSlider() {
       >
         {slides.map((slide, index) => (
           <SwiperSlide key={index}>
-            <div className="relative h-[620px]">
+         <div className="relative min-h-[700px] lg:h-[720px]">
               {/* Background */}
               <img
                 src={slide.bg}
@@ -199,44 +199,91 @@ export default function HeroSlider() {
               <div className="absolute inset-0 bg-gradient-to-r from-[#001938]/90 via-[#001938]/55 to-transparent" />
 
               {/* Content */}
-              <div className="relative z-10 w-full mx-auto h-full px-12">
-                <div className="grid grid-cols-[1fr_1fr_320px] items-center h-full">
+             <div className="relative z-10 w-full max-w-[1600px] mx-auto h-full px-4 sm:px-6 lg:px-12">
+<div
+  className="
+    grid
+    lg:grid-cols-[1fr_1fr_320px]
+    gap-8
+    lg:gap-6
+    items-center
+    h-full
+    pt-10
+    lg:py-0
+  "
+>
 
                   {/* LEFT */}
   <motion.div
   initial={{ opacity: 0, x: -80 }}
   animate={{ opacity: 1, x: 0 }}
   transition={{ duration: 0.8 }}
-  className="max-w-[620px]"
+className="
+  max-w-[620px]
+  text-center
+  lg:text-left
+  mx-auto
+  lg:mx-0
+"
 >
-  <span className="text-white/90 text-[18px] font-semibold tracking-[0.25em] uppercase">
+  <span className="
+  text-white/90
+  text-xs
+  sm:text-sm
+  md:text-base
+  lg:text-[18px]
+  font-semibold
+  tracking-[0.2em]
+  uppercase
+">
     {slide.tagline}
   </span>
 
   <h1
-    className="
-      mt-5
-      text-white
-      text-[70px]
-      
-      tracking-[-0.04em]
-      leading-[0.9]
-      font-black
-      uppercase
-      whitespace-pre-line
-      drop-shadow-[0_10px_40px_rgba(255,255,255,.15)]
-    "
+   className="
+  mt-4
+  text-white
+  text-[34px]
+  sm:text-[44px]
+  md:text-[58px]
+  lg:text-[70px]
+  tracking-[-0.04em]
+  leading-[1]
+  font-black
+  uppercase
+  whitespace-pre-line
+  drop-shadow-[0_10px_40px_rgba(255,255,255,.15)]
+"
   >
     {slide.title}
   </h1>
 
 
 
-  <p className="mt-4 text-white/80 text-[20px] leading-relaxed">
+  <p className="
+  mt-4
+  text-white/80
+  text-sm
+  sm:text-base
+  md:text-lg
+  lg:text-[20px]
+  leading-relaxed
+">
     {slide.description}
   </p>
 
-<div className="flex flex-wrap items-center gap-5 mt-6">
+<div
+  className="
+    flex
+    flex-wrap
+    justify-center
+    lg:justify-start
+    items-center
+    gap-3
+    sm:gap-5
+    mt-6
+  "
+>
   {/* Mark Compressors */}
   <div
     className="
@@ -284,9 +331,19 @@ export default function HeroSlider() {
 
 
 
-  <div className="flex gap-5 mt-7">
+<div
+  className="
+    flex
+    flex-col
+    sm:flex-row
+    justify-center
+    lg:justify-start
+    gap-4
+    mt-7
+  "
+>
     <button
-      className="
+      className="text-center
       group
       relative
       overflow-hidden
@@ -329,7 +386,7 @@ export default function HeroSlider() {
       />
     </button>
 
-    <button className="h-[62px] px-8 rounded-xl border border-white/30 bg-white/5 backdrop-blur-md text-white font-semibold hover:bg-white/10 transition">
+    <button className="hidden md:block h-[62px] px-8 rounded-xl border border-white/30 bg-white/5 backdrop-blur-md text-white font-semibold hover:bg-white/10 transition">
       DOWNLOAD CATALOGUE
     </button>
   </div>
@@ -347,12 +404,17 @@ export default function HeroSlider() {
     alt=""
     width={800}
     height={700}
-    className="
-      
-      object-cover
-      drop-shadow-[0_40px_80px_rgba(0,0,0,.45)]
+ className="
+w-[280px]
+sm:w-[380px]
+md:w-[500px]
+lg:w-[650px]
+h-auto
+mx-auto
+
+drop-shadow-[0_40px_80px_rgba(0,0,0,.45)]
+"
     
-    "
   />
 </motion.div>
 
@@ -361,7 +423,7 @@ export default function HeroSlider() {
   initial={{ opacity: 0, x: 100 }}
   animate={{ opacity: 1, x: 0 }}
   transition={{ duration: 0.8 }}
-  className="
+  className=" hidden md:block
     relative
     overflow-hidden
     rounded-[28px]
