@@ -19,7 +19,44 @@ import { Menu, X } from "lucide-react";
 
 export default function Navbar() {
 const [mobileMenu, setMobileMenu] = useState(false);
+
+
+
+
 const [productMenu, setProductMenu] = useState(false);
+
+
+
+
+
+
+
+
+const services = [
+  {
+    title: "AMC Service",
+    href: "/amc-service",
+  },
+  {
+    title: "Air Audit Services",
+    href: "/air-audit-service",
+  },
+  {
+    title: "Engineering Consultancy",
+    href: "/engineering-consultancy",
+  },
+  {
+    title: "Installation & Commissioning",
+    href: "/services/installation-commissioning",
+  },
+  {
+    title: "Preventive Maintenance",
+    href: "/services/preventive-maintenance",
+  },
+];
+
+
+
 
  const [open, setOpen] =
     useState(false);
@@ -296,14 +333,112 @@ const [productMenu, setProductMenu] = useState(false);
       </Link>
     </li>
 
-    <li>
-      <Link
-        href="/services"
-        className="text-[17px] tracking-[0.12em] font-medium text-slate-700 hover:text-blue-600"
-      >
-        OUR SERVICES
-      </Link>
-    </li>
+ <li className="relative group">
+  <button
+    className="
+      flex items-center gap-2
+      text-[17px]
+      tracking-[0.12em]
+      font-medium
+      text-slate-700
+      hover:text-blue-600
+      transition-all
+    "
+  >
+    OUR SERVICES
+
+    <ChevronDown
+      className="
+        w-4 h-4
+        transition-transform duration-300
+        group-hover:rotate-180
+      "
+    />
+  </button>
+
+  <div
+    className="
+      absolute left-1/2 top-full
+      -translate-x-1/2
+      pt-6
+      opacity-0 invisible
+      group-hover:opacity-100
+      group-hover:visible
+      transition-all duration-300
+    "
+  >
+    <div
+      className="
+        w-[650px]
+        rounded-3xl
+        bg-white
+        border border-slate-200
+        shadow-[0_20px_60px_rgba(0,0,0,0.08)]
+        overflow-hidden
+      "
+    >
+      <div className="grid grid-cols-2">
+
+        {/* Left */}
+        <div className="p-8 bg-gradient-to-br from-cyan-600 to-blue-600 text-white">
+          <h3 className="text-2xl font-bold mb-4">
+            Our Services
+          </h3>
+
+          <p className="text-white/90 leading-relaxed">
+            Professional compressed air system services,
+            maintenance, audits and installation support
+            for maximum efficiency and reliability.
+          </p>
+
+          <Link
+            href="/services"
+            className="inline-flex items-center gap-2 mt-6 font-semibold"
+          >
+            View All Services
+            <ArrowRight className="w-4 h-4" />
+          </Link>
+        </div>
+
+        {/* Right */}
+        <div className="p-8">
+          <div className="grid gap-2">
+
+            {services.map((service) => (
+              <Link
+                key={service.title}
+                href={service.href}
+                className="
+                  flex items-center justify-between
+                  rounded-xl
+                  px-4 py-3
+                  text-black
+                  hover:bg-cyan-50
+                  hover:text-cyan-600
+                  transition-all
+                  group/item
+                "
+              >
+                <span>{service.title}</span>
+
+                <ArrowRight
+                  className="
+                    w-4 h-4
+                    opacity-0
+                    group-hover/item:opacity-100
+                    transition-all
+                  "
+                />
+              </Link>
+            ))}
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</li>
 
     <li>
       <Link

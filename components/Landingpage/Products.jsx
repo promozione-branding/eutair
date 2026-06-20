@@ -40,8 +40,9 @@ const products = [
 ];
 
 
+
   return (
-  <section className=" md:py-16 bg-white overflow-hidden">
+  <section className=" md:py-6 bg-white overflow-hidden">
   <div className="mx-auto px-4 sm:px-6 lg:px-12">
     
     {/* Heading */}

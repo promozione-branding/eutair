@@ -58,9 +58,9 @@ export default function ProductPage() {
           Chicago Pneumatic
         </span>
 
-        <h1 className="mt-5 text-5xl  font-black text-slate-900 leading-tight">
+        <h2 className="mt-5 text-5xl  font-black text-slate-900 leading-tight">
    CFM: 81 - 187, BAR: 7 - 12, PSI: 100 – 175
-        </h1>
+        </h2>
 
         <p className="mt-6 text-lg text-slate-600 leading-relaxed">
           High-performance industrial air compressor engineered for
@@ -213,8 +213,8 @@ export default function ProductPage() {
             sticky top-24
           "
         >
-          <div className="bg-gradient-to-r from-sky-500 to-blue-600 px-8 py-5">
-            <h2 className="text-3xl font-bold text-white">
+          <div className="bg-gradient-to-r from-sky-500 to-blue-400 px-8 py-3">
+            <h2 className="text-2xl font-bold text-white">
               Specifications
             </h2>
           </div>
@@ -261,7 +261,7 @@ export default function ProductPage() {
       <div className="lg:col-span-8">
         <div className="bg-white rounded-[32px] border border-slate-200 shadow-[0_20px_60px_rgba(0,0,0,.08)] overflow-hidden">
 
-          <div className="bg-gradient-to-r from-sky-500 to-blue-600 py-5 px-8">
+          <div className="bg-gradient-to-r from-sky-500 to-blue-300 py-3 px-8">
             <h2 className="text-3xl md:text-4xl font-bold text-white">
               Product Description
             </h2>

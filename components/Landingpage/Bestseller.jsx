@@ -3,7 +3,7 @@ import React from "react";
 const Bestseller = () => {
   return (
     <section className="py-12 md:py-16 bg-white overflow-hidden">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 xl:px-16">
+      <div className="w-full px-5 md:px-19 mx-auto ">
         <div className="grid lg:grid-cols-2 gap-10 lg:gap-14 items-center">
 
           {/* Video - First on Mobile */}
@@ -14,8 +14,8 @@ const Bestseller = () => {
                   w-full
                   h-[250px]
                   sm:h-[350px]
-                  md:h-[450px]
-                  object-cover
+                  md:h-[360px]
+                  object-contain
                 "
                 autoPlay
                 muted

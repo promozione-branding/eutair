@@ -62,11 +62,11 @@ const industries = [
 
 export default function IndustriesWeServe() {
   return (
-    <section className="bg-gradient-to-b from-white to-slate-50 pb-6 md:py-16 overflow-hidden">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 xl:px-16">
+    <section className="bg-gradient-to-b from-white to-slate-50 pb-6  overflow-hidden">
+      <div className="w-full mx-auto px-4 sm:px-6 lg:px-12 xl:px-20">
         
         {/* Header */}
-        <div className="max-w-4xl mx-auto text-center mb-10 md:mb-14">
+        <div className="max-w-6xl mx-auto text-center mb-10 md:mb-14">
           <span
             className="
               inline-block
@@ -88,16 +88,16 @@ export default function IndustriesWeServe() {
             className="
               text-xl
               sm:text-4xl
-              lg:text-5xl
+           
               font-bold
               text-slate-900
               leading-tight
             "
           >
             Reliable Compressed Air &
-            <br className="hidden sm:block" />
+          
             Industrial Filtration Solutions
-            <br className="hidden lg:block" />
+         
             for Every Industry
           </h2>
         </div>
