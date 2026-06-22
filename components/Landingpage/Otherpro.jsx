@@ -25,8 +25,8 @@ const products = [
       "Variable frequency technology delivering superior energy savings.",
 
     frames: Array.from(
-      { length: 36 },
-      (_, i) => `/360/vfd/${i + 1}.webp`
+      { length: 10 },
+      (_, i) => `/3601/mark/${i + 1}.png`
     ),
   },
 

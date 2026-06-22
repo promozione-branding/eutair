@@ -37,8 +37,8 @@ export default function Footer() {
         </div>
       </div>
 
-      <div className="max-w-7xl mx-auto px-2 py-10">
-        <div className="grid lg:grid-cols-4 gap-12">
+      <div className="max-w-[1400px]  mx-auto px-2 py-10">
+     <div className="grid lg:grid-cols-5 gap-7">
 
           {/* Company */}
           <div >
@@ -185,6 +185,39 @@ export default function Footer() {
       </div>
     </div>
 
+</div>
+
+
+
+
+{/* Trust Elite Certificate */}
+<div className="relative overflow-hidden rounded-3xl  ">
+  {/* Background Glow */}
+
+
+  <div className="relative z-10">
+    <h4 className="text-xl ml-2 font-bold text-cyan-400 mb-3">
+      Trust Elite Certificate
+    </h4>
+
+    <div className="flex justify-center ">
+      <Image
+        src="/TRUST-ELITE.webp"
+        alt="Trust Elite Certificate"
+        width={120}
+        height={120}
+        className="object-contain"
+      />
+    </div>
+
+    <p className="text-slate-200 leading-8 text-[15px]">
+      We are proud to present the Trust Elite Certificate of
+      Excellence to Eutair , recognizing their
+      commitment to exceptional customer service, outstanding
+      business practices, and a dedication to building trust with
+      their customers.
+    </p>
+  </div>
 </div>
 
         </div>

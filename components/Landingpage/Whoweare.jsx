@@ -72,14 +72,14 @@ const Whoweare = () => {
                 mt-3
                 text-2xl
                 sm:text-4xl
-                lg:text-5xl
+              
                 font-bold
                 text-slate-900
                 leading-tight
               "
             >
               Quality, Reliability &
-              <br className="hidden sm:block" />
+             
               Engineering Excellence
             </h2>
 

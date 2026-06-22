@@ -46,12 +46,12 @@ const services = [
     href: "/engineering-consultancy",
   },
   {
-    title: "Installation & Commissioning",
-    href: "/services/installation-commissioning",
+    title: "Wastewater Engineering",
+    href: "/wastewater-engineering",
   },
   {
-    title: "Preventive Maintenance",
-    href: "/services/preventive-maintenance",
+    title: "Turnkey Project",
+    href: "/turnkey-project",
   },
 ];
 
@@ -272,9 +272,48 @@ const services = [
 
 
 <div className="flex gap-5 mt-6">
+<div
+    className="
+      flex items-center justify-center
+      px-5 py-3
+      bg-white/90 backdrop-blur-md
+      border border-white/60
+      rounded-full
+      shadow-[0_8px_25px_rgba(0,0,0,0.15)]
+      hover:shadow-[0_12px_35px_rgba(0,0,0,0.2)]
+      transition-all duration-300
+    "
+  >
+    <Image
+      src="/mark-compressors-logo.png"
+      alt="Mark Compressors"
+      width={110}
+      height={60}
+      className="object-contain"
+    />
+  </div>
 
-<Image width={100} height={100} src="/cp.jpeg"></Image>
-<Image width={100} height={100} src="/mark.jpg"></Image>
+  {/* Chicago Pneumatic */}
+  <div
+    className="
+      flex items-center justify-center
+      px-5 py-3
+      bg-white/90 backdrop-blur-md
+      border border-white/60
+      rounded-full
+      shadow-[0_8px_25px_rgba(0,0,0,0.15)]
+      hover:shadow-[0_12px_35px_rgba(0,0,0,0.2)]
+      transition-all duration-300
+    "
+  >
+    <Image
+      src="/chicago-pneumatic-logo.png"
+      alt="Chicago Pneumatic"
+      width={100}
+      height={60}
+      className="object-contain"
+    />
+  </div>
 </div>
 
 
