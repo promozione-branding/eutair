@@ -6,7 +6,7 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 
 import "swiper/css";
 import "swiper/css/navigation";
-
+import Reveal from "./Reveal";
 export default function ProductRange() {
 
 
@@ -42,6 +42,9 @@ const products = [
 
 
   return (
+
+<Reveal>
+
   <section className=" md:py-6 bg-white overflow-hidden">
   <div className="mx-auto px-4 sm:px-6 lg:px-12">
     
@@ -169,5 +172,9 @@ const products = [
     </div>
   </div>
 </section>
+</Reveal>
+
+
+
   );
 }

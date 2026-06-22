@@ -58,6 +58,7 @@ const About = () => {
 
 
 {/* who we work with section*/}
+<Reveal>
 
 
 <section className="relative py-3 bg-white overflow-hidden">
@@ -157,6 +158,9 @@ const About = () => {
     </div>
   </div>
 </section>
+</Reveal>
+
+
 
 
 

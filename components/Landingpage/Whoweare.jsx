@@ -1,8 +1,10 @@
 import React from "react";
-
+import Reveal from "./Reveal";
 const Whoweare = () => {
   return (
-    <section className="py-12 md:py-16 bg-white overflow-hidden">
+
+    <Reveal>
+ <section className="py-12 md:py-16 bg-white overflow-hidden">
       <div className="w-full px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 mx-auto">
         <div className="grid lg:grid-cols-12 gap-8 lg:gap-12 xl:gap-16 items-center">
           {/* Image */}
@@ -173,6 +175,9 @@ const Whoweare = () => {
         </div>
       </div>
     </section>
+
+    </Reveal>
+   
   );
 };
 

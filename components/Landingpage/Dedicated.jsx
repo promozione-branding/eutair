@@ -3,7 +3,7 @@
 import Image from "next/image";
 import { useState } from "react";
 import { ChevronDown } from "lucide-react";
-
+import Reveal from "./Reveal";
 export default function AirSystemSolution() {
   const [openIndex, setOpenIndex] = useState(0);
 
@@ -41,7 +41,10 @@ export default function AirSystemSolution() {
   ];
 
   return (
-    <section className="py-3 md:py-16 overflow-hidden">
+
+<Reveal>
+
+ <section className="py-3 md:py-16 overflow-hidden">
       <div className="w-full mx-auto px-4 sm:px-6 lg:px-12 xl:px-16">
         
         {/* Heading */}
@@ -212,5 +215,9 @@ export default function AirSystemSolution() {
         </div>
       </div>
     </section>
+
+</Reveal>
+
+   
   );
 }
