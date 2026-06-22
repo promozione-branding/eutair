@@ -1,9 +1,6 @@
 "use client";
 
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Autoplay } from "swiper/modules";
-import { ChevronLeft, ChevronRight } from "lucide-react";
-
+import Link from "next/link";
 import "swiper/css";
 import "swiper/css/navigation";
 import Reveal from "./Reveal";
@@ -15,30 +12,34 @@ const products = [
   {
     title: "Chicago Pneumatic",
     image: "/hero1.png",
+    link: "/chicago-pneumatic",
     desc: "Industry-proven compressed air systems delivering superior efficiency, durability, and productivity for modern industrial operations.",
   },
   {
     title: "MARK Compressors",
     image: "/hero2.png",
+    link: "/mark-compressor",
     desc: "Innovative compressor solutions combining energy savings, operational reliability, and long-term performance excellence.",
   },
   {
     title: "Air Treatment",
     image: "/hero3.png",
+    link: "/products/air-treatment",
     desc: "Comprehensive air purification solutions ensuring clean, dry, and contaminant-free compressed air for sensitive applications.",
   },
   {
     title: "Spares and Consumables",
     image: "/pro3.png",
+    link: "/spares-and-consumables",
     desc: "Premium-quality genuine parts and consumables designed to maintain peak compressor performance and reduce downtime.",
   },
   {
     title: "Piping and Distribution Lines",
     image: "/pro4.jpeg",
+    link: "/products/piping-and-distribution-lines",
     desc: "Customized air distribution networks engineered for maximum flow efficiency, reduced leakage, and optimal system performance.",
   },
 ];
-
 
 
   return (
@@ -154,8 +155,12 @@ const products = [
           </p>
 
           {/* Link */}
-          <button
+
+          <Link href={item.link}>
+          
+           <button
             className="
+            cursor-pointer
             text-[#0B3A82]
             text-sm
             font-semibold
@@ -167,6 +172,8 @@ const products = [
           >
             View Product →
           </button>
+          </Link>
+         
         </div>
       ))}
     </div>

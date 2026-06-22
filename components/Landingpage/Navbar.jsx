@@ -77,7 +77,7 @@ const services = [
   },
   {
     title: "Spares and Consumables",
-    href: "/products/pm-screw-compressors",
+    href: "/spares-and-consumables",
   },
   {
     title: "Piping and Distribution Lines",

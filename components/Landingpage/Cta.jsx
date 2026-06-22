@@ -22,18 +22,13 @@ const Cta = () => {
     <div className="mt-6 flex flex-col sm:flex-row items-center justify-center gap-4">
 <a
   href="tel:6564545454"
-  className="inline-flex items-center gap-2 px-6 py-3 bg-white text-cyan-700 font-semibold rounded-full animate-pulse"
+  className="inline-flex items-center gap-2 px-10 py-4 bg-white text-cyan-700 font-semibold rounded-full "
 >
   <Phone size={18} />
   Get Instant Price
 </a>
 
-  <a
-    href="/products"
-    className="inline-flex items-center justify-center px-6 py-3 border border-white text-white font-semibold rounded-full hover:bg-white hover:text-cyan-700 transition"
-  >
-    Our Products
-  </a>
+
 </div>
 
 

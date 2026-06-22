@@ -4,6 +4,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Pagination, EffectFade } from "swiper/modules";
 import { motion } from "framer-motion";
 import Image from "next/image";
+import Link from "next/link";
 import {
   ArrowRight,
   Download,
@@ -342,7 +343,8 @@ className="
     mt-7
   "
 >
-    <button
+<Link href="/contact">
+  <button
       className="text-center
       group
       relative
@@ -385,6 +387,11 @@ className="
       "
       />
     </button>
+
+</Link>
+
+
+  
 
     <button className="hidden md:block h-[62px] px-8 rounded-xl border border-white/30 bg-white/5 backdrop-blur-md text-white font-semibold hover:bg-white/10 transition">
       DOWNLOAD CATALOGUE

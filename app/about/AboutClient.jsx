@@ -80,7 +80,7 @@ export default function AboutPage() {
 
         <div className="relative rounded-[40px] overflow-hidden shadow-[0_30px_80px_rgba(0,0,0,.15)]">
           <Image
-            src="/about.jpg"
+            src="/unnamed(2).webp"
             width={900}
             height={1000}
             alt="Industrial Solutions"

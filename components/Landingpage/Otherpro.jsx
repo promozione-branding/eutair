@@ -2,16 +2,16 @@
 
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-
+import Link from "next/link";
 import Image from "next/image";
 import { ArrowRight, RotateCw } from "lucide-react";
 const products = [
   {
     name: "Oil Injected Screw Compressors",
+    link: "/chicago-pneumatic",
     thumbnail: "/hero1.png",
     description:
       "High performance industrial compressed air solutions engineered for maximum reliability.",
-
     frames: Array.from(
       { length: 7 },
       (_, i) => `/3601/oil-injected/${i + 1}.png`
@@ -20,61 +20,46 @@ const products = [
 
   {
     name: "VFD Screw Compressors",
+    link: "/mark-compressor",
     thumbnail: "/hero2.png",
     description:
       "Variable frequency technology delivering superior energy savings.",
-
     frames: Array.from(
       { length: 10 },
       (_, i) => `/3601/mark/${i + 1}.png`
     ),
   },
 
-    {
-    name: "VFD Screw Compressorsyhu",
-    thumbnail: "/hero2.png",
+  {
+    name: "Air Treatment Systems",
+    link: "/air-treatment",
+    thumbnail: "/hero3.png",
     description:
-      "Variable frequency technology delivering superior energy savings.",
-
+      "Advanced air treatment solutions for clean and efficient compressed air.",
     frames: Array.from(
       { length: 36 },
       (_, i) => `/360/mark/${i + 1}.png`
     ),
   },
 
-
-    {
-    name: "VFD Screw Compressorsyy",
-    thumbnail: "/hero2.png",
+  {
+    name: "Spares & Consumables",
+    link: "/spares-and-consumables",
+    thumbnail: "/pro3.png",
     description:
-      "Variable frequency technology delivering superior energy savings.",
-
+      "Premium-quality genuine parts and consumables for peak performance.",
     frames: Array.from(
       { length: 36 },
       (_, i) => `/360/vfd/${i + 1}.webp`
     ),
   },
 
-
-    {
-    name: "VFD Screw Compressorsfh",
-    thumbnail: "/hero2.png",
+  {
+    name: "Piping & Distribution Lines",
+    link: "/piping-and-distribution-lines",
+    thumbnail: "/pro4.jpeg",
     description:
-      "Variable frequency technology delivering superior energy savings.",
-
-    frames: Array.from(
-      { length: 36 },
-      (_, i) => `/360/vfd/${i + 1}.webp`
-    ),
-  },
-
-
-    {
-    name: "VFD Screw Compressorsfyh",
-    thumbnail: "/hero2.png",
-    description:
-      "Variable frequency technology delivering superior energy savings.",
-
+      "Efficient air distribution networks engineered for industrial applications.",
     frames: Array.from(
       { length: 36 },
       (_, i) => `/360/vfd/${i + 1}.webp`
@@ -83,9 +68,9 @@ const products = [
 ];
 
 export default function ProductRange() {
-  const [activeProduct, setActiveProduct] = useState(products[0]);
-const [hasInteracted, setHasInteracted] = useState(false);
+const [activeProduct, setActiveProduct] = useState(products[0]);
 const [frameIndex, setFrameIndex] = useState(0);
+const [hasInteracted, setHasInteracted] = useState(false);
 const [isDragging, setIsDragging] = useState(false);
 const [startX, setStartX] = useState(0);
 
@@ -125,7 +110,7 @@ const handleMouseMove = (e) => {
 
   return (
     <section className="py-6 hidden md:block bg-white">
-      <div className="w-full mx-auto px-15">
+  <div className="w-full mx-auto px-6 lg:px-12">
         <div className="text-center">
           <p className="text-blue-600 uppercase tracking-[0.3em] text-sm font-medium">
             Our Bestseller Portfolio
@@ -317,33 +302,41 @@ const handleMouseMove = (e) => {
       {activeProduct.description}
     </p>
 
-    <button
-      className="
-        group
-        mt-8
-        inline-flex
-        items-center
-        gap-3
-        rounded-full
-        bg-gradient-to-r
-        from-blue-600
-        to-cyan-500
-        px-7
-        py-4
-        font-semibold
-        text-white
-        shadow-[0_20px_50px_rgba(37,99,235,.35)]
-        hover:scale-105
-        transition-all
-      "
-    >
-      Explore Product
 
-      <ArrowRight
-        size={18}
-        className="group-hover:translate-x-1 transition"
-      />
-    </button>
+<Link href={activeProduct.link}>
+  <button
+    className="
+      group
+      mt-8
+      inline-flex
+      items-center
+      gap-3
+      rounded-full
+      bg-gradient-to-r
+      from-blue-600
+      to-cyan-500
+      px-7
+      py-4
+      font-semibold
+      text-white
+      shadow-[0_20px_50px_rgba(37,99,235,.35)]
+      hover:scale-105
+      transition-all
+    "
+  >
+    Explore Product
+
+    <ArrowRight
+      size={18}
+      className="group-hover:translate-x-1 transition"
+    />
+  </button>
+</Link>
+
+
+
+
+
   </div>
 </div>
           </div>
@@ -354,7 +347,10 @@ const handleMouseMove = (e) => {
               {products.map((product) => (
                 <button
                   key={product.name}
-                  onClick={() => setActiveProduct(product)}
+               onClick={() => {
+  setActiveProduct(product);
+  setFrameIndex(0);
+}}
                   className={`
                     group
                     rounded-3xl

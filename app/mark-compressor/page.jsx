@@ -1,7 +1,8 @@
 "use client"
 
 import React from 'react'
-
+import Link from "next/link";
+import markData from "@/lib/data2";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Pagination } from "swiper/modules";
 
@@ -9,7 +10,7 @@ import "swiper/css";
 import "swiper/css/pagination";
   
 const page = () => {
-
+const products = markData.products || [];
 const heroImages = [
   "/hero1.png",
   "/hero2.png",
@@ -18,25 +19,6 @@ const heroImages = [
 ];
 
 
-
-const products = [
-  {
-    title: "MSS 37 Screw Air Compressor",
-    image: "/mark.webp",
-  },
-  {
-    title: "Lubricated Screw Air Compressors",
-    image: "/mark2.webp",
-  },
-  {
-    title: "Mark MSS 30 Screw Air Compressor",
-    image: "/mark3.webp",
-  },
-  {
-    title: "Mark MSS 18.5 Screw Air Compressor",
-    image: "/mark.webp",
-  },
-];
 
 
 
@@ -305,6 +287,7 @@ const applications = [
       </h2>
     
     </div>
+
 <div className="grid md:grid-cols-2 xl:grid-cols-4 gap-8 mt-12">
   {products.map((item, index) => (
     <div
@@ -329,7 +312,7 @@ const applications = [
           alt={item.title}
           className="
             max-h-[280px]
-            object-cover
+            object-contain
             transition-all
             duration-500
             group-hover:scale-110
@@ -342,8 +325,10 @@ const applications = [
           {item.title}
         </h3>
 
-        <button
+        <Link
+          href={`/mark-compressor/${item.slug}`}
           className="
+            inline-block
             mt-5
             px-5
             py-3
@@ -358,11 +343,13 @@ const applications = [
           "
         >
           View Details
-        </button>
+        </Link>
       </div>
     </div>
   ))}
 </div>
+
+
   </div>
 </section>
 
