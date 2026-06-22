@@ -170,7 +170,7 @@ const slides = [
 ];
 export default function HeroSlider() {
   return (
-  <section className="relative h-[800px] lg:h-[720px] w-full overflow-hidden">
+  <section className="relative h-[800px] lg:h-[700px] w-full overflow-hidden">
       <Swiper
         modules={[Autoplay, Pagination, EffectFade]}
         effect="fade"

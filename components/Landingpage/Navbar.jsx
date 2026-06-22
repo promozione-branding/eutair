@@ -177,7 +177,7 @@ const services = [
 
   {/* Main Navbar */}
   <div className="w-full mx-auto px-5 md:px-25">
-    <div className="h-16 sm:h-20 lg:h-23 flex items-center justify-between">
+    <div className="h-16 sm:h-20 lg:h-19 flex items-center justify-between">
       {/* Logo */}
       <Link href="/" className="group">
         <img
