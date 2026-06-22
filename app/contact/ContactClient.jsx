@@ -108,7 +108,7 @@ export default function ContactPage() {
       {[
         {
           title: "Call Us",
-          value: "+91 9717159766 , +91 958 2911766          ",
+          value: "+91 971 7159766 , +91 958 2911766          ",
           icon: <Phone size={32} />,
         },
         {
@@ -323,6 +323,23 @@ export default function ContactPage() {
     </div>
 
   </div>
+
+
+
+      <section className="px-6  mt-6">
+        <div className="mx-auto max-w-7xl overflow-hidden rounded-[36px] border border-white shadow-[0_20px_80px_rgba(15,23,42,0.10)]">
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3500.6844037502146!2d77.1008313!3d28.6691669!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d03094528c4c1%3A0x69c9b8ffa8e38c25!2sEutAir%20Equipments%20LLP!5e0!3m2!1sen!2sin!4v1782110397372!5m2!1sen!2sin"
+
+  height="450"
+  style={{ border: 0 }}
+  allowFullScreen
+  loading="lazy"
+  referrerPolicy="no-referrer-when-downgrade"
+  className="w-full"
+
+
+></iframe>     </div>
+      </section>
 
 </section>
     </div>

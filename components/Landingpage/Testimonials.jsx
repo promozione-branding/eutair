@@ -1,127 +1,156 @@
 "use client";
-import React, { useState, useEffect } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+
+import { useState } from "react";
+import Image from "next/image";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
-const testimonials = [
-  {
-    text: "We purchased a Screw Air Compressor from Eutair Equipments LLP and have been extremely satisfied with its performance. The product is energy-efficient, reliable, and has significantly improved our operational efficiency. Their support team was professional throughout the process.",
-    name: "Operations Manager",
-    designation: "Manufacturing Industry",
-  },
-  {
-    text: "Eutair Equipments LLP provided us with high-quality Air Dryers and Air Line Filters that perfectly matched our requirements. The product quality and timely delivery exceeded our expectations. We highly recommend them for industrial compressed air solutions.",
-    name: "Purchase Head",
-    designation: "Engineering Company",
-  },
-  {
-    text: "As a trusted Screw Air Compressor Manufacturer, Eutair Equipments LLP delivers exactly what they promise. The compressor performance has been excellent, and their technical guidance helped us choose the right solution for our facility.",
-    name: "Plant Manager",
-    designation: "Automotive Sector",
-  },
-  {
-    text: "We have been sourcing industrial filtration products from Eutair Equipments LLP for several years. Their product quality, competitive pricing, and customer service make them a reliable business partner for our operations.",
-    name: "Procurement Manager",
-    designation: "Pharmaceutical Industry",
-  },
-  {
-    text: "The team at Eutair Equipments LLP was responsive, knowledgeable, and committed to meeting our requirements. From product selection to delivery, the entire experience was seamless. We look forward to continuing our business relationship with them.",
-    name: "Director",
-    designation: "Food Processing Company",
-  },
-];
+export default function Testimonials() {
+  const testimonials = [
+    {
+      company: "Delta Autocorp",
+      quote:
+        "Reliable compressor performance and low maintenance have made Eutair a trusted support partner for our operations.",
+      certificate: "/cert1.jpeg",
+    },
+    {
+      company: "Ganesh Foundry",
+      quote:
+        "The installation quality and technical support were excellent, and the team stayed responsive throughout the project.",
+      certificate: "/cert2.png",
+    },
+    {
+      company: "Kaleido Chemie",
+      quote:
+        "We appreciate the engineering support, reliable delivery, and continued service experience with Eutair.",
+      certificate: "/cert3.png",
+    },
+    {
+      company: "Metal Manufacturing",
+      quote:
+        "Eutair delivered dependable execution with strong service support, and we are happy to recommend their solutions.",
+      certificate: "/cert4.png",
+    },
+  ];
 
-export default function TestimonialSlider() {
-  const [index, setIndex] = useState(0);
+  const [start, setStart] = useState(0);
 
-  // Auto-slide every 5s
-  useEffect(() => {
-    const timer = setInterval(() => {
-      setIndex((prev) => (prev + 1) % testimonials.length);
-    }, 5000);
-    return () => clearInterval(timer);
-  }, []);
-
-  const prevSlide = () => {
-    setIndex(index === 0 ? testimonials.length - 1 : index - 1);
+  const next = () => {
+    setStart((prev) =>
+      prev + 2 >= testimonials.length ? 0 : prev + 2
+    );
   };
 
-  const nextSlide = () => {
-    setIndex((index + 1) % testimonials.length);
+  const prev = () => {
+    setStart((prev) =>
+      prev - 2 < 0
+        ? Math.max(testimonials.length - 2, 0)
+        : prev - 2
+    );
   };
 
-  const current = testimonials[index];
+  const visible = testimonials.slice(start, start + 2);
 
   return (
+    <section className="bg-[#f6f8fa] py-20">
+      <div className="w-full mx-auto px-24">
 
-    <>
-    
-    <section className="relative h-full w-full  bg-[url('/TESTIMONIAL.avif')] bg-cover bg-fixed  bg-center py-3 md:py-16 text-white">
-      {/* Overlay */}
-      <div className="absolute inset-0 bg-[#08372C]/50"></div>
+        <div className="flex items-center justify-between mb-10">
+       <div>
+  <span className="text-[#176BB0] uppercase tracking-[0.3em] text-sm font-semibold">
+    Customer Success Stories
+  </span>
 
-      <div className="relative max-w-5xl mx-auto text-center px-6">
-        {/* Heading */}
-        <h2 className="text-4xl md:text-5xl font-bold mb-3 md:mb-8">
-          <span className="text-white">Our Testimonials</span>
-        
-        </h2>
+  <h2 className="mt-3 text-5xl font-bold text-[#0d4976]">
+    Letters of Appreciation
+  </h2>
 
-        {/* Testimonial Content */}
-        <AnimatePresence mode="wait">
-          <motion.div
-            key={index}
-            initial={{ opacity: 0, x: 50 }}
-            animate={{ opacity: 1, x: 0 }}
-            exit={{ opacity: 0, x: -50 }}
-            transition={{ duration: 0.6 }}
-            className="space-y-6"
-          >
-            <p className="italic text-lg md:text-xl leading-relaxed max-w-3xl mx-auto">
-              {current.text}
-            </p>
+  <p className="mt-4 text-slate-500 max-w-2xl">
+    Trusted by manufacturing plants, engineering companies,
+    automotive facilities and industrial organizations across India.
+  </p>
+</div>
 
-            {/* Profile */}
-            <div className="flex flex-col items-center">
-           
-              <h4 className="text-lg font-semibold">{current.name}</h4>
-            </div>
-          </motion.div>
-        </AnimatePresence>
+          <div className="flex gap-3">
+            <button
+              onClick={prev}
+              className="w-12 h-12 rounded-full border border-slate-300 bg-white flex items-center justify-center hover:bg-slate-50"
+            >
+              <ChevronLeft />
+            </button>
 
-        {/* Controls */}
-        <div className="absolute top-1/2 left-6 -translate-y-1/2">
-          <button
-            onClick={prevSlide}
-            className="bg-white/20 hover:bg-white/40 p-3 rounded-full transition"
-          >
-            <ChevronLeft className="w-6 h-6 text-blue-500" />
-          </button>
-        </div>
-        <div className="absolute top-1/2 right-6 -translate-y-1/2">
-          <button
-            onClick={nextSlide}
-            className="bg-white/20 hover:bg-white/40 p-3 rounded-full transition"
-          >
-            <ChevronRight className="w-6 h-6 text-blue-500" />
-          </button>
+            <button
+              onClick={next}
+              className="w-12 h-12 rounded-full border border-slate-300 bg-white flex items-center justify-center hover:bg-slate-50"
+            >
+              <ChevronRight />
+            </button>
+          </div>
         </div>
 
-        {/* Dots */}
-        <div className="flex justify-center mt-6 space-x-2">
-          {testimonials.map((_, i) => (
-            <div
-              key={i}
-              className={`w-3 h-3 rounded-full transition ${
-                i === index ? "bg-[#176BB0]" : "bg-gray-400"
-              }`}
-            ></div>
+        <div className="grid lg:grid-cols-2 gap-8">
+          {visible.map((item, index) => (
+<div
+  key={index}
+  className="
+    group
+    rounded-[32px]
+    overflow-hidden
+    border
+    border-slate-200
+    bg-white
+    shadow-lg
+    hover:shadow-2xl
+    transition-all
+    duration-500
+  "
+>
+  {/* Certificate */}
+  <div className="relative bg-slate-50 p-4">
+    <div className="relative h-[500px] rounded-2xl overflow-hidden border border-slate-200">
+      <Image
+        src={item.certificate}
+        alt={item.company}
+        fill
+        className="
+          object-contain
+          bg-white
+          transition-transform
+          duration-700
+          group-hover:scale-[1.02]
+        "
+      />
+    </div>
+
+    <div className="absolute top-8 left-8">
+      <span className="bg-[#176BB0] text-white text-xs px-4 py-2 rounded-full font-medium">
+        Verified Client
+      </span>
+    </div>
+  </div>
+
+  {/* Content */}
+  <div className="p-8">
+    <h3 className="text-3xl font-bold text-[#0d4976]">
+      {item.company}
+    </h3>
+
+    <div className="mt-5 flex gap-3">
+      <div className="text-6xl leading-none text-[#176BB0]/20">
+        "
+      </div>
+
+      <p className="text-slate-600 italic leading-7">
+        {item.quote}
+      </p>
+    </div>
+
+  
+  </div>
+</div>
           ))}
         </div>
+
       </div>
     </section>
-
-
-    </>
   );
 }
