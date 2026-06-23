@@ -1,4 +1,4 @@
-import { categories } from "@/Data";
+
 import Link from "next/link";
 import Image from "next/image";
 

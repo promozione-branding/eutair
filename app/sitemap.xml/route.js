@@ -1,7 +1,7 @@
 export const dynamic = "force-dynamic";
 
-import { serviceLocations } from "@/Data";
-import { categories } from "@/Data";
+// import { serviceLocations } from "@/Data";
+// import { categories } from "@/Data";
 import { client } from "@/lib/sanity";
 import { groq } from "next-sanity";
 
