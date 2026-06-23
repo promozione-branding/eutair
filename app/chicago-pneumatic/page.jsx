@@ -48,7 +48,7 @@ export default function Page() {
       {/* ABOUT */}
     <section className="relative overflow-hidden bg-white">
    <div className="container mx-auto px-6 lg:px-18 py-10 relative z-10">
-     <div className="grid lg:grid-cols-2 gap-12 items-center">
+     <div className="grid lg:grid-cols-2 gap-10 items-center">
       
       {/* Left Content */}
       <div>
@@ -82,11 +82,11 @@ export default function Page() {
        {/* Right Image */}
        <div className="flex justify-center lg:justify-end">
          <Image
-           src="/hero1.png"
+           src="/drill-cp.jpeg"
            alt="Screw Air Compressor"
            width={1000}
            height={1000}
-           className="w-full max-w-lg h-auto object-cover"
+           className="w-full max-w-lg h-auto object-cover rounded-md"
            priority
          />
        </div>
@@ -147,9 +147,7 @@ export default function Page() {
                   <h3 className="text-xl font-bold text-center text-slate-900">
                     {item.title}
                   </h3>
-  <p className="mt-2 text-center text-md text-slate-600 leading-relaxed">
-                {item.shortDescription}
-              </p>
+ 
 
                   <div className="flex justify-center mt-2">
                  <Link href={`/chicago-pneumatic/${item.slug}`}>

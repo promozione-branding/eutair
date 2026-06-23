@@ -1,3 +1,5 @@
+"use client"
+
 import Image from "next/image";
 import { notFound } from "next/navigation";
 import details from "@/lib/Data";
@@ -6,8 +8,80 @@ import {
   FaPhoneAlt,
   FaDownload,
 } from "react-icons/fa";
-
+import { useState } from "react";
+import axios from "axios";
+import toast from "react-hot-toast";
 export default function ProductPage({ params }) {
+
+
+
+const [loading, setLoading] = useState(false);
+
+const [form, setForm] = useState({
+  name: "",
+  email: "",
+  phone: "",
+  requirement: "",
+});
+
+const handleChange = (e) => {
+  setForm({
+    ...form,
+    [e.target.name]: e.target.value,
+  });
+};
+
+const handleSubmit = async (e) => {
+  e.preventDefault();
+
+  if (!form.name || !form.phone) {
+    return toast.error("Please fill required fields");
+  }
+
+  try {
+    setLoading(true);
+
+    const formData = {
+      platform: "Chicago Pneumatic Compressors Landing Page",
+      platformEmail: "care@inquirybazaar.com",
+      name: form.name,
+      phone: form.phone,
+      email: form.email || "N/A",
+      place: "N/A",
+      product: "Chicago Pneumatic Compressors",
+      message: form.requirement,
+    };
+
+    const { data } = await axios.post(
+      "https://brandbnalo.com/api/form/add",
+      formData
+    );
+
+    if (data?.success) {
+      toast.success("Request Submitted Successfully");
+
+      setForm({
+        name: "",
+        email: "",
+        phone: "",
+        requirement: "",
+      });
+    } else {
+      toast.error("Failed to submit request");
+    }
+  } catch (error) {
+    console.log(error);
+    toast.error("Server Error");
+  } finally {
+    setLoading(false);
+  }
+};
+
+
+
+
+
+
   const allProducts = Object.values(details[0].products).flat();
 
   const product = allProducts.find(
@@ -31,7 +105,7 @@ export default function ProductPage({ params }) {
         <div className="max-w-[1800px] mx-auto px-14 relative z-10">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
 
-            <div className="bg-white rounded-[32px] p-8 border border-slate-200 shadow-[0_25px_80px_rgba(0,0,0,.08)]">
+            <div className="bg-white rounded-[32px] p-2 border border-slate-200 shadow-[0_25px_80px_rgba(0,0,0,.08)]">
               <div className="relative overflow-hidden rounded-3xl bg-gradient-to-b from-slate-50 to-white">
                 <Image
                   src={product.image}
@@ -48,11 +122,11 @@ export default function ProductPage({ params }) {
                 Chicago Pneumatic
               </span>
 
-              <h1 className="mt-5 text-5xl font-black text-slate-900 leading-tight">
+              <h1 className="mt-5 text-4xl font-black text-slate-900 leading-tight">
                 {product.title}
               </h1>
 
-              <p className="mt-6 text-lg text-slate-600 leading-relaxed">
+              <p className="mt-6 text-lg text-slate-900 leading-relaxed">
                 {product.shortDescription}
               </p>
 
@@ -307,107 +381,122 @@ export default function ProductPage({ params }) {
       </p>
 
       {/* Form */}
-      <form className="mt-9">
+   <form onSubmit={handleSubmit} className="mt-9">
 
         <div className="grid xl:grid-cols-5 gap-5">
 
-          <input
-            type="text"
-            placeholder="Full Name"
-            className="
-              h-16
-              rounded-2xl
-              bg-slate-50
-              border
-              border-slate-500
-              px-6
-              text-slate-800
-              outline-none
-              transition-all
-              focus:border-sky-500
-              focus:ring-4
-              focus:ring-sky-100
-            "
-          />
+       <input
+  type="text"
+  name="name"
+  value={form.name}
+  onChange={handleChange}
+  placeholder="Full Name"
+  className="
+    h-16
+    rounded-2xl
+    bg-slate-50
+    border
+    border-slate-500
+    px-6
+    text-slate-800
+    outline-none
+    transition-all
+    focus:border-sky-500
+    focus:ring-4
+    focus:ring-sky-100
+  "
+/>
 
-          <input
-            type="email"
-            placeholder="Email Address"
-            className="
-              h-16
-              rounded-2xl
-              bg-slate-50
-              border
-          border-slate-500
-              px-6
-              text-slate-800
-              outline-none
-              transition-all
-              focus:border-sky-500
-              focus:ring-4
-              focus:ring-sky-100
-            "
-          />
+<input
+  type="email"
+  name="email"
+  value={form.email}
+  onChange={handleChange}
+  placeholder="Email Address"
+  className="
+    h-16
+    rounded-2xl
+    bg-slate-50
+    border
+    border-slate-500
+    px-6
+    text-slate-800
+    outline-none
+    transition-all
+    focus:border-sky-500
+    focus:ring-4
+    focus:ring-sky-100
+  "
+/>
 
-          <input
-            type="tel"
-            placeholder="Phone Number"
-            className="
-              h-16
-              rounded-2xl
-              bg-slate-50
-              border
-            border-slate-500
-              px-6
-              text-slate-800
-              outline-none
-              transition-all
-              focus:border-sky-500
-              focus:ring-4
-              focus:ring-sky-100
-            "
-          />
+<input
+  type="tel"
+  name="phone"
+  value={form.phone}
+  onChange={handleChange}
+  placeholder="Phone Number"
+  className="
+    h-16
+    rounded-2xl
+    bg-slate-50
+    border
+    border-slate-500
+    px-6
+    text-slate-800
+    outline-none
+    transition-all
+    focus:border-sky-500
+    focus:ring-4
+    focus:ring-sky-100
+  "
+/>
 
-          <input
-            type="text"
-            placeholder="Your Requirement"
-            className="
-              h-16
-              rounded-2xl
-              bg-slate-50
-              border
-               border-slate-500
-              px-6
-              text-slate-800
-              outline-none
-              transition-all
-              focus:border-sky-500
-              focus:ring-4
-              focus:ring-sky-100
-            "
-          />
+<input
+  type="text"
+  name="requirement"
+  value={form.requirement}
+  onChange={handleChange}
+  placeholder="Your Requirement"
+  className="
+    h-16
+    rounded-2xl
+    bg-slate-50
+    border
+    border-slate-500
+    px-6
+    text-slate-800
+    outline-none
+    transition-all
+    focus:border-sky-500
+    focus:ring-4
+    focus:ring-sky-100
+  "
+/>
 
-          <button
-            type="submit"
-            className="
-              h-16
-              rounded-2xl
-              bg-gradient-to-r
-              from-sky-500
-              via-cyan-500
-              to-blue-600
-              text-white
-              font-bold
-              text-lg
-              shadow-lg
-              hover:shadow-sky-300/40
-              hover:scale-[1.03]
-              transition-all
-              duration-300
-            "
-          >
-            Request Quote →
-          </button>
+        <button
+  type="submit"
+  disabled={loading}
+  className="
+    h-16
+    rounded-2xl
+    bg-gradient-to-r
+    from-sky-500
+    via-cyan-500
+    to-blue-600
+    text-white
+    font-bold
+    text-lg
+    shadow-lg
+    hover:shadow-sky-300/40
+    hover:scale-[1.03]
+    transition-all
+    duration-300
+    disabled:opacity-70
+    disabled:cursor-not-allowed
+  "
+>
+  {loading ? "Submitting..." : "Request Quote →"}
+</button>
 
         </div>
 
@@ -447,18 +536,18 @@ export default function ProductPage({ params }) {
 
       {/* WHY CHOOSE */}
 
-      <section className="py-20 bg-white">
+      <section className="py-12 bg-white">
         <div className="w-full mx-auto px-15">
 
-          <div className="text-center mb-14">
-            <h2 className="text-5xl font-black text-slate-900">
+          <div className="text-center mb-10">
+            <h2 className="text-4xl font-black text-slate-900">
               Why Choose This Compressor
             </h2>
           </div>
 
           <div className="grid md:grid-cols-2 xl:grid-cols-4 gap-6">
 
-            {product.whyChoose?.map((item, index) => (
+            {product.whyChoose?.slice(0,4).map((item, index) => (
               <div
                 key={index}
                 className="group bg-white border border-slate-200 rounded-[30px] p-8 shadow-lg hover:-translate-y-2 hover:shadow-2xl transition-all"

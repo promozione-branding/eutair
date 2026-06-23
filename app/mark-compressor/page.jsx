@@ -16,10 +16,10 @@ const [isOpen, setOpen] = useState(false);
 
 const products = markData.products || [];
 const heroImages = [
-  "/hero1.png",
+ 
   "/hero2.png",
-  "/hero3.png",
-
+  "/unnamed(2).webp",
+"/unnamed (1).png"
 ];
 
 

@@ -1,7 +1,7 @@
 import { Roboto, Poppins } from "next/font/google";
 import "./globals.css";
 import LayoutWrapper from "@/components/LayoutWrapper";
-
+import { Toaster } from "react-hot-toast";
 
 import Whatsapp from "@/components/Whatsapp";
 
@@ -43,7 +43,12 @@ export default function RootLayout({ children }) {
 </head>
 
 
-  
+  <Toaster
+  position="top-center"
+  toastOptions={{
+    duration: 3000,
+  }}
+/>
 
       <body className={`${roboto.variable} ${poppins.variable} antialiased`}>
      
