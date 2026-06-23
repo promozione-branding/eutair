@@ -1,5 +1,5 @@
 "use client";
-
+import { useState } from "react";
 import Link from "next/link";
 import {
   CheckCircle,
@@ -8,8 +8,12 @@ import {
   Factory,
   ArrowRight,
 } from "lucide-react";
-
+import Enquiry from "@/components/Enquiry";
 export default function AMCServicesPage() {
+
+
+const [isOpen, setOpen] = useState(false);
+
   const benefits = [
     "Planned maintenance for improved operational uptime",
     "Reduced risk of unexpected breakdowns and production interruptions",
@@ -129,15 +133,15 @@ export default function AMCServicesPage() {
             </p>
 
             <div className="flex flex-wrap gap-4 mt-10">
-              <Link
-                href="#contact"
-                className="bg-white text-slate-900 px-7 py-4 rounded-xl font-semibold hover:scale-105 transition"
-              >
-                Request AMC Discussion
-              </Link>
+           <button
+  onClick={() => setOpen(true)}
+  className="bg-white text-slate-900 px-7 py-4 rounded-xl font-semibold hover:scale-105 transition"
+>
+  Request AMC Discussion
+</button>
 
               <Link
-                href="#contact"
+                href="/contact"
                 className="border border-white px-7 py-4 rounded-xl font-semibold hover:bg-white hover:text-slate-900 transition"
               >
                 Request Quote
@@ -288,9 +292,9 @@ export default function AMCServicesPage() {
       {/* CTA */}
       <section
         id="contact"
-        className="py-24 bg-gradient-to-r from-[#0B4A8B] to-slate-900 text-white"
+        className="py-8 bg-gradient-to-r from-[#0B4A8B] to-slate-900 text-white"
       >
-        <div className="max-w-5xl mx-auto px-4 text-center">
+        <div className="max-w-6xl mx-auto px-4 text-center">
           <h2 className="text-4xl md:text-5xl font-bold mb-8">
             Let's Discuss the Right Maintenance Strategy
           </h2>
@@ -302,23 +306,19 @@ export default function AMCServicesPage() {
             while minimizing operational risks and unplanned downtime.
           </p>
 
-          <p className="text-lg text-slate-200 leading-relaxed mb-10">
-            Connect with our team to discuss maintenance requirements, service
-            coverage, and support options tailored to your compressed air
-            system.
-          </p>
+   
 
           <div className="flex flex-wrap justify-center gap-4">
-            <Link
-              href="#"
+            <a
+              href="tel:919717159766"
               className="bg-white text-slate-900 px-8 py-4 rounded-xl font-semibold inline-flex items-center gap-2"
             >
               Schedule a Consultation
               <ArrowRight size={18} />
-            </Link>
+            </a>
 
             <Link
-              href="#"
+              href="/contact"
               className="border border-white px-8 py-4 rounded-xl font-semibold"
             >
               Request Quote
@@ -326,6 +326,10 @@ export default function AMCServicesPage() {
           </div>
         </div>
       </section>
+
+
+  <Enquiry isOpen={isOpen} onClose={() => setOpen(false)} />
+
     </div>
   );
 }

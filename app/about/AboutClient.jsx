@@ -1,9 +1,13 @@
 "use client";
 
-import Reveal from "@/components/Landingpage/Reveal";
+import Link from "next/link";
 import Image from "next/image";
-
+import { useState } from "react";
+import Enquiry from "@/components/Enquiry";
 export default function AboutPage() {
+
+const [isOpen, setOpen] = useState(false);
+
   return (
     <>
       {/* HERO */}
@@ -291,13 +295,17 @@ export default function AboutPage() {
       </p>
 
       <div className="flex flex-wrap justify-center gap-5 mt-10">
-        <button className="px-8 h-14 rounded-2xl bg-white text-sky-600 font-bold">
+        <button onClick={() => setOpen(true)} className="px-8 h-14 rounded-2xl bg-white text-sky-600 font-bold">
           Request a Quote
         </button>
 
+
+<Link href="/contact">
         <button className="px-8 h-14 rounded-2xl border border-white text-white font-bold">
           Contact Us
         </button>
+
+        </Link>
       </div>
 
     </div>
@@ -306,6 +314,7 @@ export default function AboutPage() {
 
 </section>
 
+     <Enquiry isOpen={isOpen} onClose={() => setOpen(false)} />
     </>
   );
 }

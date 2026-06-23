@@ -29,7 +29,7 @@ export default function Footer() {
           </div>
 
           <a
-            href="tel:+919999999999"
+            href="tel:919717159766"
             className="bg-cyan-600 hover:bg-cyan-700 px-8 py-4 rounded-full font-semibold transition"
           >
             Get Instant Quote
@@ -69,15 +69,19 @@ export default function Footer() {
               </li>
 
               <li className="hover:text-cyan-500">
-                <Link href="/about-us">About Us</Link>
+                <Link href="/about">About Us</Link>
               </li>
 
                <li className="hover:text-cyan-500">
-                <Link href="/products">Products</Link>
+                <Link href="/mark-compressor">Mark Compressor</Link>
+              </li>
+
+                 <li className="hover:text-cyan-500">
+                <Link href="/chicago-pneumatic">Chicago Pneumatic</Link>
               </li>
 
                 <li className="hover:text-cyan-500">
-                <Link href="/blogs">Blogs</Link>
+                <Link href="/our-blogs">Blogs</Link>
               </li>
 
                 <li className="hover:text-cyan-500">
@@ -89,17 +93,55 @@ export default function Footer() {
           {/* Products */}
           <div>
             <h4 className="text-xl font-semibold mb-6">
-              Our Products
+              Our Services
             </h4>
 
-            <ul className="space-y-4  cursor-pointer text-white">
-               <li className="hover:text-cyan-500">Oil Injected Screw Compressors</li>
-              <li className="hover:text-cyan-500">VFD Screw Compressors</li>
-               <li className="hover:text-cyan-500">PM Screw Compressors</li>
-                <li className="hover:text-cyan-500">Oil Free Compressors</li>
-                <li className="hover:text-cyan-500">Air Dryers</li>
-        
-            </ul>
+         <ul className="space-y-4 text-white">
+  <li>
+    <Link
+      href="/amc-service"
+      className="hover:text-cyan-500 transition-colors duration-300"
+    >
+      AMC Service
+    </Link>
+  </li>
+
+  <li>
+    <Link
+      href="/air-audit-service"
+      className="hover:text-cyan-500 transition-colors duration-300"
+    >
+      Air Audit Services
+    </Link>
+  </li>
+
+  <li>
+    <Link
+      href="/engineering-consultancy"
+      className="hover:text-cyan-500 transition-colors duration-300"
+    >
+      Engineering Consultancy
+    </Link>
+  </li>
+
+  <li>
+    <Link
+      href="/wastewater-engineering"
+      className="hover:text-cyan-500 transition-colors duration-300"
+    >
+      Wastewater Engineering
+    </Link>
+  </li>
+
+  <li>
+    <Link
+      href="/turnkey-project"
+      className="hover:text-cyan-500 transition-colors duration-300"
+    >
+      Turnkey Project
+    </Link>
+  </li>
+</ul>
           </div>
 
           {/* Contact */}
@@ -195,7 +237,7 @@ export default function Footer() {
   {/* Background Glow */}
 
 
-  <div className="relative z-10">
+  <div className="relative z-999">
     <h4 className="text-xl ml-2 font-bold text-cyan-400 mb-3">
       Trust Elite Certificate
     </h4>
@@ -210,7 +252,7 @@ export default function Footer() {
       />
     </div>
 
-    <p className="text-slate-200 leading-8 text-[15px]">
+    <p className="text-slate-200 ml-2 leading-6 text-[14px]">
       We are proud to present the Trust Elite Certificate of
       Excellence to Eutair , recognizing their
       commitment to exceptional customer service, outstanding

@@ -5,11 +5,15 @@ import Link from "next/link";
 import markData from "@/lib/Data2";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Pagination } from "swiper/modules";
-
+import { useState } from 'react';
 import "swiper/css";
 import "swiper/css/pagination";
-  
+  import Enquiry from "@/components/Enquiry";
 const page = () => {
+
+
+const [isOpen, setOpen] = useState(false);
+
 const products = markData.products || [];
 const heroImages = [
   "/hero1.png",
@@ -158,13 +162,10 @@ const applications = [
         </p>
 
         <div className="flex flex-wrap gap-4 mt-7">
-          <button className="px-8 py-4 rounded-2xl bg-sky-500 text-white font-semibold shadow-lg shadow-sky-200 hover:scale-105 transition-all">
+          <button onClick={()=> setOpen(true)} className="px-8 py-4 rounded-2xl bg-sky-500 text-white font-semibold shadow-lg shadow-sky-200 hover:scale-105 transition-all">
             Get a Free Quote Today
           </button>
 
-          <button className="px-8 py-4 rounded-2xl bg-white border border-sky-200 text-slate-700 hover:border-sky-400 transition-all">
-            Explore Products
-          </button>
         </div>
       </div>
 
@@ -418,6 +419,11 @@ const applications = [
           for reliability, efficiency, and long-term value.
         </p>
 
+
+<a href="tel:919717159766
+
+">
+
         <button className="
           mt-7
           px-10
@@ -431,7 +437,7 @@ const applications = [
         ">
           Get a Free Quote Today
         </button>
-
+</a>
       </div>
 
     </div>
@@ -613,7 +619,7 @@ const applications = [
 </section>
 
 
-
+  <Enquiry isOpen={isOpen} onClose={() => setOpen(false)} />
 
     </div>
   )

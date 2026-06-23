@@ -1,7 +1,10 @@
 // components/services/TurnkeyProjectExecution.tsx
 
+"use client"
+import Link from "next/link";
+import Enquiry from "@/components/Enquiry";
 import React from "react";
-
+import { useState } from "react";
 const benefits = [
   "Single-window project execution support",
   "Improved accountability across all project stages",
@@ -147,6 +150,9 @@ const faqs = [
 ];
 
 export default function TurnkeyProjectExecution() {
+
+const [isOpen, setOpen] = useState(false);
+
   return (
     <div className="bg-white">
       {/* Hero Section */}
@@ -178,13 +184,18 @@ export default function TurnkeyProjectExecution() {
           </p>
 
           <div className="flex flex-wrap gap-4 mt-10">
-            <button className="bg-blue-600 hover:bg-blue-700 px-6 py-3 rounded-lg font-medium transition">
+            <button onClick={()=> setOpen(true)} className="bg-blue-600 hover:bg-blue-700 px-6 py-3 rounded-lg font-medium transition">
               Start Turnkey Discussion
             </button>
+
+<Link href="/contact">
 
             <button className="border border-white hover:bg-white hover:text-slate-900 px-6 py-3 rounded-lg font-medium transition">
               Request Quote
             </button>
+
+</Link>
+
           </div>
         </div>
       </section>
@@ -348,6 +359,11 @@ export default function TurnkeyProjectExecution() {
           </div>
         </div>
       </section>
+
+
+
+      <Enquiry isOpen={isOpen} onClose={() => setOpen(false)} />
+
     </div>
   );
 }

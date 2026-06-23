@@ -1,7 +1,9 @@
+"use client"
 
-
+import Enquiry from "@/components/Enquiry";
+import { useState } from "react";
 import React from "react";
-
+import Link from "next/link";
 const benefits = [
   "Supports effective wastewater treatment planning",
   "Improves opportunities for water reuse and recovery",
@@ -128,6 +130,7 @@ const faqs = [
 ];
 
 export default function WastewaterEngineering() {
+  const [isOpen, setOpen] = useState(false);
   return (
     <div className="bg-white">
       {/* Hero Section */}
@@ -158,13 +161,18 @@ export default function WastewaterEngineering() {
           </p>
 
           <div className="flex flex-wrap gap-4 mt-10">
-            <button className="bg-cyan-600 hover:bg-cyan-700 px-6 py-3 rounded-lg font-medium transition">
+            <button onClick={()=> setOpen(true)} className="bg-cyan-600 hover:bg-cyan-700 px-6 py-3 rounded-lg font-medium transition">
               Discuss Wastewater Requirement
             </button>
 
-            <button className="border border-white hover:bg-white hover:text-slate-900 px-6 py-3 rounded-lg font-medium transition">
+<Link href="/contact">
+    <button className="border border-white hover:bg-white hover:text-slate-900 px-6 py-3 rounded-lg font-medium transition">
               Request Quote
             </button>
+
+</Link>
+
+        
           </div>
         </div>
       </section>
@@ -310,6 +318,10 @@ export default function WastewaterEngineering() {
           </div>
         </div>
       </section>
+
+
+  <Enquiry isOpen={isOpen} onClose={() => setOpen(false)} />
+
     </div>
   );
 }

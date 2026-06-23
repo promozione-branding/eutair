@@ -108,7 +108,7 @@ export default function ContactPage() {
       {[
         {
           title: "Call Us",
-          value: "+91 971 7159766 , +91 958 2911766          ",
+          value: "+91 9717159766 , +91 9582911766 ",
           icon: <Phone size={32} />,
         },
         {

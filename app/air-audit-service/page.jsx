@@ -1,4 +1,13 @@
+"use client"
+
+import Enquiry from "@/components/Enquiry";
+import { useState } from "react";
+import Link from "next/link";
 export default function AirAuditService() {
+
+const [isOpen, setOpen] = useState(false);
+
+
   const benefits = [
     "Identifies air leaks and pressure losses",
     "Supports lower energy and operating costs",
@@ -116,13 +125,13 @@ export default function AirAuditService() {
         </p>
 
         <div className="mt-10 flex flex-wrap gap-4">
-          <button className="rounded-xl bg-slate-900 px-8 py-4 text-white transition hover:bg-slate-800">
+          <button onClick={()=> setOpen(true)} className="rounded-xl bg-slate-900 px-8 py-4 text-white transition hover:bg-slate-800">
             Request Air Audit Support
           </button>
 
-          <button className="rounded-xl border border-slate-300 px-8 py-4 text-slate-700 transition hover:bg-slate-50">
+          <Link href="/contact" className="rounded-xl border border-slate-300 px-8 py-4 text-slate-700 transition hover:bg-slate-50">
             Request Quote
-          </button>
+          </Link>
         </div>
       </div>
     </div>
@@ -412,17 +421,23 @@ export default function AirAuditService() {
         </p>
 
         <div className="mt-10 flex flex-wrap justify-center gap-4">
-          <button className="rounded-xl bg-white px-8 py-4 font-medium text-slate-900">
+          <button onClick={()=> setOpen(true)} className="rounded-xl bg-white px-8 py-4 font-medium text-slate-900">
             Request Air Audit Support
           </button>
 
-          <button className="rounded-xl border border-white/20 px-8 py-4 text-white">
+<Link href="/contact">
+ <button className="rounded-xl border border-white/20 px-8 py-4 text-white">
             Request Quote
           </button>
+</Link>
+         
         </div>
       </div>
     </div>
   </div>
+
+
+    <Enquiry isOpen={isOpen} onClose={() => setOpen(false)} />
 </section>
   );
 }
