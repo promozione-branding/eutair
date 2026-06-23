@@ -1,9 +1,9 @@
-import React from 'react'
-import SiteMap from './SiteMap'
+// import React from 'react'
+// import SiteMap from './SiteMap'
 
-export default function page(){
-  return (
-    <SiteMap></SiteMap>
-  )
-}
+// export default function page(){
+//   return (
+//     <SiteMap></SiteMap>
+//   )
+// }
 
