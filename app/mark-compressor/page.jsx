@@ -2,7 +2,7 @@
 
 import React from 'react'
 import Link from "next/link";
-import markData from "@/lib/data2";
+import markData from "@/lib/Data2";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Pagination } from "swiper/modules";
 
