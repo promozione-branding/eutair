@@ -1,5 +1,5 @@
 "use client"
-
+import Enquiry from "@/components/Enquiry";
 import Image from "next/image";
 import { notFound } from "next/navigation";
 import details from "@/lib/Data";
@@ -13,7 +13,7 @@ import axios from "axios";
 import toast from "react-hot-toast";
 export default function ProductPage({ params }) {
 
-
+const [isOpen , setOpen] = useState(false)
 
 const [loading, setLoading] = useState(false);
 
@@ -43,7 +43,7 @@ const handleSubmit = async (e) => {
 
     const formData = {
       platform: "Chicago Pneumatic Compressors Landing Page",
-      platformEmail: "care@inquirybazaar.com",
+      platformEmail: "sales@eutair.com",
       name: form.name,
       phone: form.phone,
       email: form.email || "N/A",
@@ -96,11 +96,8 @@ const handleSubmit = async (e) => {
     <>
       {/* HERO SECTION */}
 
-      <section className="relative overflow-hidden bg-gradient-to-br from-slate-50 via-white to-sky-50 py-16">
-        <div className="absolute inset-0">
-          <div className="absolute top-0 left-0 w-96 h-96 bg-sky-200/30 blur-[120px]" />
-          <div className="absolute bottom-0 right-0 w-96 h-96 bg-cyan-200/30 blur-[120px]" />
-        </div>
+      <section className="relative overflow-hidden bg-gradient-to-br from-slate-50 via-white to-sky-50 py-9">
+      
 
         <div className="max-w-[1800px] mx-auto px-14 relative z-10">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
@@ -122,17 +119,31 @@ const handleSubmit = async (e) => {
                 Chicago Pneumatic
               </span>
 
-              <h1 className="mt-5 text-4xl font-black text-slate-900 leading-tight">
+              <h2 className="mt-5 text-4xl font-black text-slate-900 leading-tight">
                 {product.title}
-              </h1>
+              </h2>
 
-              <p className="mt-6 text-lg text-slate-900 leading-relaxed">
-                {product.shortDescription}
-              </p>
+           <div className="mt-4">
+ 
+ <div className="mt-4">
+  <ul className="space-y-2">
+    {product.shortDescription?.map((item, index) => (
+      <li
+        key={index}
+        className="flex items-start gap-3 text-slate-700 text-[17px] leading-relaxed"
+      >
+        <span className="text-green-500 mt-1">✓</span>
+        <span>{item}</span>
+      </li>
+    ))}
+  </ul>
+</div>
+ 
+</div>
 
               {/* BADGES */}
 
-              <div className="flex flex-wrap gap-3 mt-8">
+              <div className="flex flex-wrap gap-3 mt-6">
                 {product.badges?.map((badge, index) => (
                   <span
                     key={index}
@@ -146,17 +157,17 @@ const handleSubmit = async (e) => {
               {/* CTA */}
 
               <div className="flex flex-wrap gap-4 mt-10">
+
+                
+                <button onClick={() => setOpen(true)} className="group flex items-center gap-3 px-8 h-16 rounded-2xl bg-white border border-black text-slate-800 font-semibold">
+                 
+                  <span>Request a Qoute</span>
+                </button>
                 <button className="group flex items-center gap-3 px-8 h-16 rounded-2xl bg-gradient-to-r from-green-500 to-emerald-600 text-white font-semibold shadow-[0_10px_30px_rgba(34,197,94,.35)] hover:-translate-y-1 transition-all duration-300">
                   <FaWhatsapp size={24} />
                   <span>WhatsApp Now</span>
                 </button>
 
-                <button className="group flex items-center gap-3 px-8 h-16 rounded-2xl bg-white border border-sky-200 text-slate-800 font-semibold">
-                  <div className="w-9 h-9 rounded-full bg-sky-100 flex items-center justify-center">
-                    <FaPhoneAlt size={14} />
-                  </div>
-                  <span>Call Now</span>
-                </button>
 
                 <button className="group flex items-center gap-3 px-8 h-16 rounded-2xl bg-gradient-to-r from-slate-900 to-slate-700 text-white font-semibold">
                   <FaDownload size={18} />
@@ -218,19 +229,20 @@ const handleSubmit = async (e) => {
                 <div className="p-8 md:p-10">
 
                   <h3 className="text-4xl font-black text-slate-900 mb-6">
-                    {product.title}
+                   Why Choose Us
                   </h3>
 
-                  {product.description?.map((paragraph, index) => (
-                    <p
-                      key={index}
-                      className={`text-lg leading-relaxed text-slate-600 ${
-                        index !== 0 ? "mt-6" : ""
-                      }`}
-                    >
-                      {paragraph}
-                    </p>
-                  ))}
+              <ul className="space-y-4">
+  {product.description?.map((item, index) => (
+    <li
+      key={index}
+      className="flex items-start gap-3 text-lg leading-relaxed text-slate-700"
+    >
+      <span className="text-sky-500 mt-1">✓</span>
+      <span>{item}</span>
+    </li>
+  ))}
+</ul>
 
                   {/* FEATURES */}
 
@@ -572,7 +584,7 @@ const handleSubmit = async (e) => {
       </section>
 
 
-
+   <Enquiry isOpen={isOpen} onClose={() => setOpen(false)} />
 
       
     </>

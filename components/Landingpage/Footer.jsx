@@ -32,7 +32,7 @@ export default function Footer() {
             href="tel:919717159766"
             className="bg-cyan-600 hover:bg-cyan-700 px-8 py-4 rounded-full font-semibold transition"
           >
-            Get Instant Quote
+            Get Instant Price
           </a>
         </div>
       </div>
