@@ -72,39 +72,25 @@ const About = () => {
       {/* Left Content */}
       <div>
         <span className="inline-flex items-center px-4 py-2 rounded-full bg-cyan-100 text-cyan-700 text-sm font-semibold mb-4">
-          Industry Leader in Compressed Air Solutions
+          About Eutair Equipments
         </span>
 
         <h2 className="text-xl md:text-4xl   font-bold text-slate-900 leading-tight">
-          Eutair Equipments LLP – Screw Air Compressors Manufacturer
+         Trusted Partner for Compressed Air & Industrial Solutions
         </h2>
 
         <div className="w-24 h-1 bg-cyan-600 rounded-full mt-3 mb-4"></div>
 
-        <h3 className="text-xs  md:text-xl font-semibold text-slate-800 leading-relaxed mb-4">
-          Leading Manufacturer, Trader, Exporter & Importer of Air Compressors,
-          Air Dryers, Air Line Filters, Drain Valves and Industrial Filtration
-          Solutions
+      <h3 className="text-xs  md:text-xl font-semibold text-slate-800 leading-relaxed mb-4">
+      
         </h3>
 
-        <p className="text-slate-800 leading-8 text-md md:text-lg  text-justify">
-          Welcome to Eutair Equipments LLP, a trusted name in the compressed air
-          and industrial equipment industry. We are a leading Manufacturer,
-          Trader, Exporter, and Importer of high-quality Air Compressors, Air
-          Dryers, Air Line Filters, Drain Valves, Ethanol Alcohol Based Hand
-          Sanitizers, and MSS Series Screw Compressor Filters. With a commitment
-          to quality, innovation, and customer satisfaction, we deliver reliable
-          solutions that enhance operational efficiency across various
-          industries.
+        <p className="text-black leading-8 text-md md:text-lg  text-justify">
+         With a strong focus on quality, innovation, and customer satisfaction, we deliver reliable products, technical expertise, and comprehensive support to customers across India and international markets.
         </p>
 
-        <p className="text-slate-800 leading-8 text-lg text-justify">
-          Our extensive product portfolio is designed to meet the diverse
-          requirements of manufacturing units, engineering industries,
-          pharmaceutical companies, food processing plants, automotive sectors,
-          and commercial establishments. We focus on providing durable,
-          energy-efficient, and performance-driven products that comply with
-          industry standards.
+        <p className="text-black leading-8 text-lg text-justify">
+          <strong>Eutair Equipments</strong>  is a professionally managed engineering company based in New Delhi, India, specializing in <strong>compressed air systems</strong>  and industrial equipment. We provide high-quality <strong>Screw Air Compressors , Air Dryers, Air Line Filters, Compressor Accessories, and turnkey engineering solutions </strong> to meet the diverse needs of industries.
         </p>
       </div>
 

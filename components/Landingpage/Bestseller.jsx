@@ -2,7 +2,7 @@ import React from "react";
 
 const Bestseller = () => {
   return (
-    <section className="py-12 md:py-16 bg-white overflow-hidden">
+    <section className="py-12  bg-white overflow-hidden">
       <div className="w-full px-5 md:px-19 mx-auto ">
         <div className="grid lg:grid-cols-2 gap-10 lg:gap-14 items-center">
 
@@ -82,7 +82,7 @@ const Bestseller = () => {
                 lg:mb-6
               "
             >
-              Delivering Excellence Through Quality
+              Export & International Trade Operations
             </h2>
 
             <p
@@ -94,12 +94,7 @@ const Bestseller = () => {
                 mb-4
               "
             >
-              At Eutair Equipments LLP, quality is at the heart of everything
-              we do. As a trusted Screw Air Compressor Manufacturer, we are
-              committed to delivering reliable, efficient, and durable products
-              that meet the highest industry standards. Every product is
-              carefully inspected to ensure consistent performance, long service
-              life, and maximum customer satisfaction.
+             Eutair actively supports export-oriented supply for companies based in Africa and other emerging markets. The company operates as an execution partner for industrial equipment and project-related supplies.
             </p>
 
             <p
@@ -111,21 +106,17 @@ const Bestseller = () => {
                 mb-6
               "
             >
-              From Screw Air Compressors and Diesel Air Compressors to Air
-              Dryers, Air Line Filters, Drain Valves, and MSS Series Screw
-              Compressor Filters, we maintain strict quality standards to
-              provide solutions that help industries improve productivity and
-              operational efficiency.
+             
             </p>
 
             {/* Feature Grid */}
             <div className="grid grid-cols-2 gap-4">
               {[
-                "Premium Quality Products",
-                "Rigorous Quality Checks",
-                "Reliable Performance",
-                "Long Service Life",
-                "Industry-Compliant Standards",
+                "Purchase and procurement of equipment & raw material from approved OEMs and suppliers",
+                "Inventory stocking and consolidation",
+                "Pre-Dispatch Inspection (PDI) and quality checks",
+                "Export documentation and logistics coordination",
+                "Supply to Africa-based customers through structured export channels",
                 "Customer-Focused Approach",
               ].map((item, index) => (
                 <div

@@ -8,7 +8,7 @@ import {
   FlaskConical,
   HeartPulse,
 } from "lucide-react";
-
+import { Boxes } from "lucide-react";
 const industries = [
   {
     icon: Factory,
@@ -46,15 +46,17 @@ const industries = [
     description:
       "Engineering workshops and fabrication facilities rely on our compressed air equipment for powering pneumatic tools, machinery, and production processes with maximum efficiency.",
   },
-  {
-    icon: FlaskConical,
-    title: "Chemical Industry",
-    description:
-      "Our robust industrial solutions are designed to perform reliably in demanding chemical processing environments, supporting safe and efficient plant operations.",
-  },
+ 
   {
     icon: HeartPulse,
     title: "Healthcare & Medical Facilities",
+    description:
+      "We provide dependable air treatment and filtration products that support various healthcare applications where clean and reliable compressed air systems are required.",
+  },
+
+    {
+    icon:Boxes,
+    title: "Many More",
     description:
       "We provide dependable air treatment and filtration products that support various healthcare applications where clean and reliable compressed air systems are required.",
   },

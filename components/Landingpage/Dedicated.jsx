@@ -44,8 +44,33 @@ export default function AirSystemSolution() {
 
 <Reveal>
 
- <section className="py-3 md:py-16 overflow-hidden">
+ <section className="py-3 md:py-6 overflow-hidden">
+
+
+
+
+
+
+
+
+
+
+
+  
       <div className="w-full mx-auto px-4 sm:px-6 lg:px-12 xl:px-16">
+
+
+
+
+
+
+
+
+
+
+
+
+
         
         {/* Heading */}
         <p
@@ -60,7 +85,7 @@ export default function AirSystemSolution() {
             font-semibold
           "
         >
-          Why Choose Eutair Equipments LLP?
+          Our Specialization
         </p>
 
         <h2
@@ -72,19 +97,26 @@ export default function AirSystemSolution() {
             sm:text-4xl
             lg:text-5xl
             leading-tight
-            mb-10
-            lg:mb-14
+            mb-6
+           
+            max-w-4xl
+            mx-auto
           "
         >
-          Trusted Screw Air Compressor Manufacturer
-          <br className="hidden sm:block" />
-          Delivering Quality, Performance & Reliability
+       
+        Complete Screw Air Compressors & Industrial Solutions
         </h2>
 
         <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
-          
+
+
+
+
+
+
+    
           {/* Image */}
-          <div className="order-1">
+          <div className="">
             <Image
               src="/why.png"
               alt="Why Choose Eutair"
@@ -100,117 +132,53 @@ export default function AirSystemSolution() {
             />
           </div>
 
-          {/* Accordion */}
-          <div className="order-2">
-            <div className="space-y-4">
-              {features.map((item, index) => (
-                <div
-                  key={index}
-                  className="
-                    overflow-hidden
-                    rounded-2xl
-                    border
-                    border-gray-200
-                    bg-white
-                    shadow-sm
-                    transition-all
-                    duration-300
-                    hover:shadow-md
-                  "
-                >
-                  <button
-                    onClick={() =>
-                      setOpenIndex(openIndex === index ? null : index)
-                    }
-                    className="
-                      flex
-                      w-full
-                      items-start
-                      justify-between
-                      gap-3
-                      p-4
-                      sm:p-5
-                      text-left
-                    "
-                  >
-                    <div className="flex items-start gap-3 sm:gap-4 flex-1">
-                      <span
-                        className="
-                          flex
-                          h-8
-                          w-8
-                          sm:h-10
-                          sm:w-10
-                          shrink-0
-                          items-center
-                          justify-center
-                          rounded-full
-                          bg-cyan-600
-                          text-white
-                          font-bold
-                          text-sm
-                        "
-                      >
-                        ✓
-                      </span>
 
-                      <h4
-                        className="
-                          text-base
-                          sm:text-lg
-                          font-semibold
-                          text-[#1B365D]
-                          leading-snug
-                        "
-                      >
-                        {item.title}
-                      </h4>
-                    </div>
 
-                    <ChevronDown
-                      className={`
-                        h-5
-                        w-5
-                        shrink-0
-                        text-cyan-600
-                        transition-transform
-                        duration-300
-                        ${
-                          openIndex === index
-                            ? "rotate-180"
-                            : ""
-                        }
-                      `}
-                    />
-                  </button>
 
-                  <div
-                    className={`grid transition-all duration-300 ${
-                      openIndex === index
-                        ? "grid-rows-[1fr]"
-                        : "grid-rows-[0fr]"
-                    }`}
-                  >
-                    <div className="overflow-hidden">
-                      <p
-                        className="
-                          px-4
-                          sm:px-5
-                          pb-5
-                          text-sm
-                          sm:text-base
-                          text-gray-600
-                          leading-7
-                        "
-                      >
-                        {item.description}
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
+
+
+
+    {/* Accordion */}
+           <div>
+     
+
+      
+
+       
+
+      <h3 className="text-xs  md:text-xl font-semibold text-slate-800 leading-relaxed mb-4">
+      
+        </h3>
+
+        <p className="text-black leading-8 text-md md:text-lg  text-justify">
+       At Eutair Equipments LLP, we specialize in delivering high-performance Screw Air Compressors, compressed air systems, gas-based power generation equipment, utility infrastructure, water & effluent treatment solutions, and export-oriented industrial supplies. Our solutions are designed to enhance operational efficiency, improve productivity, and meet the evolving needs of diverse industries.
+
+With successful project execution across India and international markets, including Africa, we provide end-to-end solutions—from equipment selection and system design to installation, commissioning, and after-sales support. Backed by technical expertise and a commitment to quality, we help businesses achieve reliable and efficient industrial operations.
+
+Expanding by Compression reflects our commitment to delivering innovative Screw Air Compressors and industrial solutions that power business growth and long-term success.
+        </p>
+
+        <p className="text-black leading-8 text-lg text-justify">
+        
+Expanding by Compression reflects our commitment to delivering innovative industrial solutions that drive business growth.
+        </p>
+      </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
+      
+      
 
         </div>
       </div>

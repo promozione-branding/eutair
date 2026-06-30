@@ -226,7 +226,7 @@ const [isOpen, setOpen] = useState(false);
 
 
       {/* VISION */}
-    <section className="py-20 bg-gradient-to-b from-slate-50 to-white">
+    <section className="py-17 bg-gradient-to-b from-slate-50 to-white">
 
   <div className="max-w-7xl mx-auto px-4">
 
@@ -315,6 +315,61 @@ const [isOpen, setOpen] = useState(false);
 </section>
 
      <Enquiry isOpen={isOpen} onClose={() => setOpen(false)} />
+
+
+
+<section className="relative overflow-hidden bg-white py-8">
+  {/* Background Decorations */}
+
+
+  <div className="relative mx-auto max-w-7xl ">
+    {/* Heading */}
+    <div className="mx-auto max-w-3xl text-center">
+      <span className="inline-flex items-center rounded-full border border-blue-200 bg-blue-50 px-4 py-2 text-sm font-semibold uppercase tracking-[0.2em] text-blue-700">
+        Business Excellence
+      </span>
+
+      <h2 className="mt-4 text-4xl font-bold tracking-tight text-gray-900 ">
+        Technical & Commercial Capabilities
+      </h2>
+
+      <div className="mx-auto mt-3 h-1 w-24 rounded-full bg-gradient-to-r from-blue-600 to-sky-500" />
+    </div>
+
+    {/* Cards */}
+    <div className="mt-7 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+      {[
+        "Pre-sales application engineering and system sizing",
+        "Energy-efficient system design and optimization",
+        "Turnkey project execution (EPC-style approach)",
+        "Installation, testing & commissioning",
+        "Export procurement, PDI, and logistics coordination",
+        "Service coordination, spares management & lifecycle support",
+     
+      ].map((item, index) => (
+        <div
+          key={index}
+          className="group relative rounded-3xl border border-gray-200 bg-white p-5 shadow-sm transition-all duration-300 hover:-translate-y-2 hover:border-blue-300 hover:shadow-2xl"
+        >
+          {/* Number */}
+          <div className="mb-4 flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-to-br from-blue-600 to-sky-500 text-lg font-bold text-white shadow-md">
+            {String(index + 1).padStart(2, "0")}
+          </div>
+
+          {/* Content */}
+          <p className="text-lg font-medium leading-8 text-gray-700">
+            {item}
+          </p>
+
+          {/* Bottom Accent */}
+          <div className="absolute bottom-0 left-8 right-8 h-1 origin-left scale-x-0 rounded-full bg-gradient-to-r from-blue-600 to-sky-500 transition-transform duration-300 group-hover:scale-x-100" />
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+      
     </>
   );
 }
