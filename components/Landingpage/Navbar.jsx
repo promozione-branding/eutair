@@ -92,27 +92,27 @@ export default function Navbar() {
 
                 <div className="w-px h-4 bg-slate-200" />
 
-               <div className="flex items-center gap-2">
-  <Phone className="w-4 h-4 text-blue-600" />
-  <a
-    href="tel:+919717159766"
-    className="hover:text-blue-600 transition-colors"
-  >
-    Phone +91 9717159766
-  </a>
-</div>
+                <div className="flex items-center gap-2">
+                  <Phone className="w-4 h-4 text-blue-600" />
+                  <a
+                    href="tel:+919717159766"
+                    className="hover:text-blue-600 transition-colors"
+                  >
+                    Phone +91 9717159766
+                  </a>
+                </div>
 
-<div className="w-px h-4 bg-slate-200" />
+                <div className="w-px h-4 bg-slate-200" />
 
-<div className="flex items-center gap-2">
-  <Mail className="w-4 h-4 text-blue-600" />
-  <a
-    href="mailto:sales@eutair.com"
-    className="hover:text-blue-600 transition-colors"
-  >
-    sales@eutair.com
-  </a>
-</div>
+                <div className="flex items-center gap-2">
+                  <Mail className="w-4 h-4 text-blue-600" />
+                  <a
+                    href="mailto:sales@eutair.com"
+                    className="hover:text-blue-600 transition-colors"
+                  >
+                    sales@eutair.com
+                  </a>
+                </div>
               </div>
 
               {/* Right Side */}
@@ -131,14 +131,17 @@ export default function Navbar() {
                   <Facebook className="w-4 h-4" />
                 </a>
 
-             <a
-  href="https://wa.me/919582911766
+                <a
+                  href="https://wa.me/919582911766
 "
-  target="_blank"
-  rel="noopener noreferrer"
->
-  <FaWhatsapp size={10} className="flex h-8 w-8 p-1 items-center justify-center rounded-full border  transition-all duration-300 border-green-600 text-green-600 hover:-translate-y-0.5" />
-</a>
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <FaWhatsapp
+                    size={10}
+                    className="flex h-8 w-8 p-1 items-center justify-center rounded-full border  transition-all duration-300 border-green-600 text-green-600 hover:-translate-y-0.5"
+                  />
+                </a>
 
                 <a
                   href="https://www.instagram.com/eutairequipments"
@@ -238,8 +241,6 @@ export default function Navbar() {
                             compressors, dryers, filtration systems and
                             accessories engineered for maximum efficiency.
                           </p>
-
-                       
 
                           <div className="flex gap-5 mt-6">
                             <div
@@ -388,7 +389,6 @@ export default function Navbar() {
                             maintenance, audits and installation support for
                             maximum efficiency and reliability.
                           </p>
-
                         </div>
 
                         {/* Right */}

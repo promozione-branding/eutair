@@ -7,7 +7,7 @@ import Image from "next/image";
 import { ArrowRight, RotateCw } from "lucide-react";
 const products = [
   {
-    name: "Oil Injected Screw Compressors",
+    name: "Screw Air Compressors",
     link: "/chicago-pneumatic",
     thumbnail: "/hero1.png",
     description:
