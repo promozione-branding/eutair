@@ -24,7 +24,7 @@ const slides = [
     bg: "/bghero1.webp",
     machine: "/hero1.png",
 
-    tagline: "HIGH PERFORMANCE",
+    tagline: "PORTABLE HIGH PERFORMANCE",
 
     title: "SCREW AIR\nCOMPRESSORS",
 
@@ -41,7 +41,7 @@ const slides = [
       },
       {
         icon: Zap,
-        title: "VFD Models",
+        title: "Portable",
         desc: "Available",
       },
       {

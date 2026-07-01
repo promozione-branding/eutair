@@ -150,11 +150,11 @@ export default function AirSystemSolution() {
         </h3>
 
         <p className="text-black leading-8 text-md md:text-lg  ">
-       At Eutair Equipments LLP, we specialize in delivering high-performance Screw Air Compressors, compressed air systems, gas-based power generation equipment, utility infrastructure, water & effluent treatment solutions, and export-oriented industrial supplies. Our solutions are designed to enhance operational efficiency, improve productivity, and meet the evolving needs of diverse industries.
+     Eutair Equipments is a professionally managed engineering and industrial equipment company based at New Delhi, India. We have over the years accepted industry challenges, and these very challenges made us what we are today: <strong> 'Compressed Air Experts'. </strong> 
+Eutair is a leading Engineering Company, engaged in the engineering, sales and services of capital equipment to various industrial sectors. Eutair is associated with renowned capital manufacturing companies offering industrial equipment from Concept to Commissioning on EP, EPC, turnkey basis.
+The company specializes in compressed air systems, gas-based power generation equipment, utility infrastructure, water & effluent treatment solutions, and export facilitation. We have executed projects in India and abroad. We also undertake after sales services for these projects. Execution of projects in Africa & India Sub-continent has brought us on to global map.
 
-With successful project execution across India and international markets, including Africa, we provide end-to-end solutions—from equipment selection and system design to installation, commissioning, and after-sales support. Backed by technical expertise and a commitment to quality, we help businesses achieve reliable and efficient industrial operations.
-
-Expanding by Compression reflects our commitment to delivering innovative Screw Air Compressors and industrial solutions that power business growth and long-term success.
+We are <strong> "Expanding by Compression". </strong> 
         </p>
 
         <p className="text-black leading-8 text-lg text-justify">
