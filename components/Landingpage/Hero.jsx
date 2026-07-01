@@ -74,38 +74,38 @@ const slides = [
     bg: "/herobg2.webp",
     machine: "/hero2.png",
 
-    tagline: "100% PURE AIR",
+    tagline: "INDUSTRIAL COMPRESSED AIR",
 
-    title: "OIL FREE\nCOMPRESSORS",
+    title: "MARK COMPRESSORS",
 
     description:
-      "Designed for pharmaceutical, food processing and critical manufacturing industries.",
+      "Designed for manufacturing, engineering, automotive, food processing, pharmaceuticals, textiles, and every industry that demands dependable compressed air solutions.",
 
     features: [
       {
         icon: Shield,
-        title: "100% Oil Free",
-        desc: "Compressed Air",
+        title: "Up To 35%",
+        desc: "Energy Savings",
       },
       {
         icon: BadgeCheck,
-        title: "ISO 8573-1",
-        desc: "Class 0",
+        title: "Variable Speed",
+        desc: "Drive Technology",
       },
       {
         icon: Zap,
-        title: "Lower Energy",
-        desc: "Consumption",
+        title: "High Air",
+        desc: "Efficiency",
       },
       {
         icon: Cog,
-        title: "Minimal",
-        desc: "Maintenance",
+        title: "Stable",
+        desc: "Air Pressure",
       },
       {
         icon: Volume2,
-        title: "Quiet",
-        desc: "Operation",
+        title: "Smart Touch",
+        desc: "Controller",
       },
     ],
 
@@ -122,40 +122,40 @@ const slides = [
     bg: "/bghero1.webp",
     machine: "/hero3.png",
 
-    tagline: "SMART CONTROL",
+    tagline: "CLEAN & DRY COMPRESSED AIR",
 
-    title: "VFD AIR\nCOMPRESSORS",
+    title: "AIR TREATMENT",
 
    
 
     description:
-      "Advanced Variable Frequency Drive technology for intelligent air management.",
+      "Designed to remove moisture, oil, and contaminants from compressed air systems, ensuring reliable operation, improved product quality, and longer equipment life.",
 
     features: [
       {
         icon: Zap,
-        title: "Up To 35%",
-        desc: "Energy Savings",
+        title: "Pure Compressed",
+        desc: "Air",
       },
       {
         icon: Cog,
-        title: "Variable Speed",
-        desc: "Drive System",
+        title: "Advanced Air",
+        desc: "Filtration",
       },
       {
         icon: Shield,
-        title: "Stable",
-        desc: "Air Pressure",
+        title: "High Moisture",
+        desc: "Removal",
       },
       {
         icon: BadgeCheck,
-        title: "Smart",
-        desc: "Controller",
+        title: "Corrosion",
+        desc: "Protection",
       },
       {
         icon: Volume2,
-        title: "Reduced",
-        desc: "Operating Noise",
+        title: "Low Operating",
+        desc: "Cost",
       },
     ],
 

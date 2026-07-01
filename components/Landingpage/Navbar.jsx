@@ -92,17 +92,27 @@ export default function Navbar() {
 
                 <div className="w-px h-4 bg-slate-200" />
 
-                <div className="flex items-center gap-2">
-                  <Phone className="w-4 h-4 text-blue-600" />
-                  <span>Phone +91 9717159766</span>
-                </div>
+               <div className="flex items-center gap-2">
+  <Phone className="w-4 h-4 text-blue-600" />
+  <a
+    href="tel:+919717159766"
+    className="hover:text-blue-600 transition-colors"
+  >
+    Phone +91 9717159766
+  </a>
+</div>
 
-                <div className="w-px h-4 bg-slate-200" />
+<div className="w-px h-4 bg-slate-200" />
 
-                <div className="flex items-center gap-2">
-                  <Mail className="w-4 h-4 text-blue-600" />
-                  <span>sales@eutair.com</span>
-                </div>
+<div className="flex items-center gap-2">
+  <Mail className="w-4 h-4 text-blue-600" />
+  <a
+    href="mailto:sales@eutair.com"
+    className="hover:text-blue-600 transition-colors"
+  >
+    sales@eutair.com
+  </a>
+</div>
               </div>
 
               {/* Right Side */}

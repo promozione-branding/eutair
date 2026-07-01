@@ -139,10 +139,10 @@ export default function ContactForm({
         "https://brandbnalo.com/api/form/add",
         {
           platform:
-            "Sangam Garbage Bag enquiry Form",
+            "eurair enquiry Form",
 
           platformEmail:
-            "info@polywell.co.in",
+            "sales@eutair.com",
 
           name: values.name,
 
@@ -177,7 +177,7 @@ Contact: ${values.phone}`;
 
         setTimeout(() => {
           window.open(
-            `https://wa.me/918810422935?text=${encodeURIComponent(
+            `https://wa.me/919582911766?text=${encodeURIComponent(
               whatsappText
             )}`,
             "_blank"
@@ -303,16 +303,36 @@ Contact: ${values.phone}`;
                   </option>
 
                   <option value="Biodegradable Garbage Bags">
-                    Biodegradable Garbage Bags
+                 Mark Compressors
+
                   </option>
 
                   <option value="Disposable Garbage Bags">
-                    Disposable Garbage Bags
+                 Chicago Pneumatic
+
                   </option>
 
                   <option value="Biomedical Garbage Bags">
-                    Biomedical Garbage Bags
+                 Air Treatment
+
                   </option>
+
+
+
+                  <option value="Biomedical Garbage Bags">
+               Spares and Consumables
+
+
+                  </option>
+
+
+                  
+                  <option value="Biomedical Garbage Bags">
+             Piping and Distribution Lines
+
+                  </option>
+
+
                 </select>
               </div>
 

@@ -235,19 +235,40 @@ Contact: ${phone}`;
               onChange={(e) => setProduct(e.target.value)}
               className="w-1/2 max-md:w-full p-3 rounded-md text-black text-sm border-2 focus:outline-none bg-blue-50"
             >
-              <option value="">Select Product</option>
+             <option value="">
+                    Select Product
+                  </option>
 
-              <option value="Biodegradable Garbage Bags">
-                Biodegradable Garbage Bags
-              </option>
+                  <option value="Biodegradable Garbage Bags">
+                 Mark Compressors
 
-              <option value="Disposable Garbage Bags">
-                Disposable Garbage Bags
-              </option>
+                  </option>
 
-              <option value="Biomedical Waste Bags">
-                Biomedical garbage bags
-              </option>
+                  <option value="Disposable Garbage Bags">
+                 Chicago Pneumatic
+
+                  </option>
+
+                  <option value="Biomedical Garbage Bags">
+                 Air Treatment
+
+                  </option>
+
+
+
+                  <option value="Biomedical Garbage Bags">
+               Spares and Consumables
+
+
+                  </option>
+
+
+                  
+                  <option value="Biomedical Garbage Bags">
+             Piping and Distribution Lines
+
+                  </option>
+
             </select>
           </div>
 
