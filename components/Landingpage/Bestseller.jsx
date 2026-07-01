@@ -54,17 +54,14 @@ const Bestseller = () => {
           {/* Content */}
           <div className="order-2 lg:order-1">
             <span
-              className="
-                inline-block
-                px-4
-                py-2
-                rounded-full
-                bg-[#CEFAFE]
-                text-[#18829E]
-                font-medium
+            className=" text-center 
+                text-sky-600
+                font-semibold
+                uppercase
+                tracking-[2px]
+                md:tracking-[3px]
                 text-xs
                 sm:text-sm
-                mb-4
               "
             >
               Our Quality Commitment

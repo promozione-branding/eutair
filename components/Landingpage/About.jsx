@@ -71,11 +71,19 @@ const About = () => {
       
       {/* Left Content */}
       <div>
-        <span className="inline-flex items-center px-4 py-2 rounded-full bg-cyan-100 text-cyan-700 text-sm font-semibold mb-4">
+        <span className=" text-center 
+                text-sky-600
+                font-semibold
+                uppercase
+                tracking-[2px]
+                md:tracking-[3px]
+                text-xs
+                sm:text-sm
+              ">
           About Eutair Equipments
         </span>
 
-        <h2 className="text-xl md:text-4xl   font-bold text-slate-900 leading-tight">
+        <h2 className="text-xl md:text-4xl mt-3   font-bold text-slate-900 leading-tight">
          Trusted Partner for Compressed Air & Industrial Solutions
         </h2>
 

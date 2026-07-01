@@ -50,7 +50,15 @@ const products = [
   <div className="mx-auto px-4 sm:px-6 lg:px-12">
     
     {/* Heading */}
-    <h2 className="text-blue-600 font-bold text-xs sm:text-sm mb-4 text-center uppercase tracking-[0.25em]">
+    <h2 className=" text-center mb-2
+                text-sky-600
+                font-semibold
+                uppercase
+                tracking-[2px]
+                md:tracking-[3px]
+                text-xs
+                sm:text-sm
+              ">
       Our Products
     </h2>
 

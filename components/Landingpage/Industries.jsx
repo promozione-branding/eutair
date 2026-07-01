@@ -6,7 +6,7 @@ import {
   Shirt,
   Wrench,
   FlaskConical,
-  HeartPulse,
+  Pickaxe ,
 } from "lucide-react";
 import { Boxes } from "lucide-react";
 const industries = [
@@ -47,18 +47,18 @@ const industries = [
       "Engineering workshops and fabrication facilities rely on our compressed air equipment for powering pneumatic tools, machinery, and production processes with maximum efficiency.",
   },
  
-  {
-    icon: HeartPulse,
-    title: "Healthcare & Medical Facilities",
-    description:
-      "We provide dependable air treatment and filtration products that support various healthcare applications where clean and reliable compressed air systems are required.",
-  },
+{
+  icon: Pickaxe,
+  title: "Mining & Construction Industry",
+  description:
+    "We provide reliable compressed air solutions for mining and construction applications, ensuring high efficiency, consistent performance, and maximum productivity in demanding environments.",
+},
 
     {
     icon:Boxes,
     title: "Many More",
     description:
-      "We provide dependable air treatment and filtration products that support various healthcare applications where clean and reliable compressed air systems are required.",
+      "We also serve a wide range of industries with reliable compressed air and industrial solutions tailored to diverse operational requirements.",
   },
 ];
 
@@ -70,16 +70,16 @@ export default function IndustriesWeServe() {
         {/* Header */}
         <div className="max-w-6xl mx-auto text-center mb-10 md:mb-14">
           <span
-            className="
-              inline-block
-              px-4
-              py-2
-              rounded-full
-              bg-cyan-100
-              text-cyan-700
-              text-xs
-              sm:text-sm
-              font-semibold
+         
+            className=" text-center 
+                text-sky-600
+                font-semibold
+                uppercase
+                tracking-[2px]
+                md:tracking-[3px]
+                text-xs
+                sm:text-sm
+              
               mb-4
             "
           >
@@ -90,7 +90,7 @@ export default function IndustriesWeServe() {
             className="
               text-xl
               sm:text-4xl
-           
+           mt-3
               font-bold
               text-slate-900
               leading-tight

@@ -48,7 +48,15 @@ const [isOpen, setOpen] = useState(false);
 
       <div>
 
-        <span className="text-sky-600 font-semibold">
+        <span className=" text-center mb-2
+                text-sky-600
+                font-semibold
+                uppercase
+                tracking-[2px]
+                md:tracking-[3px]
+                text-xs
+                sm:text-sm
+              ">
           About Our Company
         </span>
 
@@ -325,7 +333,15 @@ const [isOpen, setOpen] = useState(false);
   <div className="relative mx-auto max-w-7xl ">
     {/* Heading */}
     <div className="mx-auto max-w-3xl text-center">
-      <span className="inline-flex items-center rounded-full border border-blue-200 bg-blue-50 px-4 py-2 text-sm font-semibold uppercase tracking-[0.2em] text-blue-700">
+      <span className=" text-center mb-2
+                text-sky-600
+                font-semibold
+                uppercase
+                tracking-[2px]
+                md:tracking-[3px]
+                text-xs
+                sm:text-sm
+              ">
         Business Excellence
       </span>
 
@@ -333,7 +349,7 @@ const [isOpen, setOpen] = useState(false);
         Technical & Commercial Capabilities
       </h2>
 
-      <div className="mx-auto mt-3 h-1 w-24 rounded-full bg-gradient-to-r from-blue-600 to-sky-500" />
+      <div className="mx-auto mt-3 h-1 w-24 rounded-full bg-gradient-to-r from-cyan-600 to-sky-500" />
     </div>
 
     {/* Cards */}

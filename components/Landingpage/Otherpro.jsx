@@ -112,7 +112,15 @@ const handleMouseMove = (e) => {
     <section className="py-6 hidden md:block bg-white">
   <div className="w-full mx-auto px-6 lg:px-12">
         <div className="text-center">
-          <p className="text-blue-600 uppercase tracking-[0.3em] text-sm font-medium">
+          <p className=" text-center mb-2
+                text-sky-600
+                font-semibold
+                uppercase
+                tracking-[2px]
+                md:tracking-[3px]
+                text-xs
+                sm:text-sm
+              ">
             Our Bestseller Portfolio
           </p>
 

@@ -74,16 +74,15 @@ export default function AirSystemSolution() {
         
         {/* Heading */}
         <p
-          className="
-            mb-3
-            text-blue-600
-            text-center
-            text-xs
-            sm:text-sm
-            uppercase
-            tracking-[0.2em]
-            font-semibold
-          "
+         className=" text-center mb-2
+                text-sky-600
+                font-semibold
+                uppercase
+                tracking-[2px]
+                md:tracking-[3px]
+                text-xs
+                sm:text-sm
+              "
         >
           Our Specialization
         </p>
@@ -150,7 +149,7 @@ export default function AirSystemSolution() {
       
         </h3>
 
-        <p className="text-black leading-8 text-md md:text-lg  text-justify">
+        <p className="text-black leading-8 text-md md:text-lg  ">
        At Eutair Equipments LLP, we specialize in delivering high-performance Screw Air Compressors, compressed air systems, gas-based power generation equipment, utility infrastructure, water & effluent treatment solutions, and export-oriented industrial supplies. Our solutions are designed to enhance operational efficiency, improve productivity, and meet the evolving needs of diverse industries.
 
 With successful project execution across India and international markets, including Africa, we provide end-to-end solutions—from equipment selection and system design to installation, commissioning, and after-sales support. Backed by technical expertise and a commitment to quality, we help businesses achieve reliable and efficient industrial operations.

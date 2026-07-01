@@ -56,7 +56,15 @@ export default function Testimonials() {
 
         <div className="flex items-center justify-between mb-10">
        <div>
-  <span className="text-[#176BB0] uppercase tracking-[0.3em] text-sm font-semibold">
+  <span className=" text-center mb-2
+                text-sky-600
+                font-semibold
+                uppercase
+                tracking-[2px]
+                md:tracking-[3px]
+                text-xs
+                sm:text-sm
+              ">
     Customer Success Stories
   </span>
 
