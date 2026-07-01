@@ -117,7 +117,7 @@ export default function AirSystemSolution() {
           {/* Image */}
           <div className="">
             <Image
-              src="/why.png"
+              src="/why.jpeg"
               alt="Why Choose Eutair"
               width={800}
               height={800}
