@@ -109,7 +109,7 @@ const Bestseller = () => {
             {/* Feature Grid */}
             <div className="grid grid-cols-2 gap-2 md:gap-4">
               {[
-                "Purchase and procurement of equipment & raw material from approved OEMs and suppliers",
+                "Purchase and procurement of equipment & raw material ",
                 "Inventory stocking and consolidation",
                 "Pre-Dispatch Inspection (PDI) and quality checks",
                 "Export documentation and logistics coordination",
@@ -138,8 +138,8 @@ const Bestseller = () => {
                     className="
                       font-medium
                       text-gray-800
-                      text-[9px]
-                      sm:text-base
+                      text-[12px]
+                      text-base
                     "
                   >
                     {item}

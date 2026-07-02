@@ -22,8 +22,8 @@ export default function ContactPage() {
 
     try {
       const formData = {
-        platform: "Sangam Garbage Bag Contact Form",
-        platformEmail: "info@sangamgarbagebags.com",
+        platform: "eutair popup Form Contact Page Form",
+        platformEmail: "sales@eutair.com",
         name,
         phone,
         email,
@@ -128,7 +128,8 @@ export default function ContactPage() {
           className="
           bg-white
           rounded-[32px]
-          p-8
+          p-5
+          md:p-8
           shadow-[0_20px_60px_rgba(0,0,0,.08)]
           border
           border-slate-100
@@ -155,7 +156,7 @@ export default function ContactPage() {
 </section>
 
       {/* CONTACT INFO */}
-     <section className="py-24 bg-slate-50">
+     <section className="py-8 md:py-24 bg-slate-50">
 
   <div className="max-w-7xl mx-auto px-4">
 
@@ -165,19 +166,16 @@ export default function ContactPage() {
       <div className="lg:col-span-2">
 
         <span className="text-cyan-600 font-semibold">
-          Contact Sangam Industries
+          Contact Us
         </span>
 
-        <h2 className="mt-4 text-5xl font-black text-slate-900">
+        <h2 className="mt-4 text-2xl md:ntext-5xl font-black text-slate-900">
           Let's Discuss Your Requirements
         </h2>
 
-        <p className="mt-6 text-lg text-slate-600 leading-relaxed">
-          Looking for premium-quality garbage bags, biomedical waste bags,
-          biodegradable bags, or customized packaging solutions?
-        </p>
+        
 
-        <p className="mt-4 text-lg text-slate-600 leading-relaxed">
+        <p className="mt-4 text-lg text-slate-600 md:leading-relaxed">
           Our experts are ready to help you find the right product based
           on your application, quantity, and specifications.
         </p>
@@ -247,7 +245,7 @@ export default function ContactPage() {
           shadow-[0_20px_60px_rgba(0,0,0,.08)]
         "
         >
-          <h3 className="text-3xl font-black text-slate-900 mb-8">
+          <h3 className="text-3xl font-black text-slate-900 mb-5 md:mb-8">
             Send Inquiry
           </h3>
 
@@ -256,63 +254,128 @@ export default function ContactPage() {
             <div className="grid md:grid-cols-2 gap-5">
 
               <input
-                type="text"
-                placeholder="Full Name"
-                className="h-14 px-5 rounded-2xl border border-slate-200 outline-none focus:border-cyan-500"
-              />
+  type="text"
+  placeholder="Full Name"
+  required
+  value={name}
+  onChange={(e) => setName(e.target.value)}
+  className="h-14 px-5 rounded-2xl border border-slate-200 outline-none focus:border-cyan-500"
+/>
 
               <input
-                type="tel"
-                placeholder="Phone Number"
-                className="h-14 px-5 rounded-2xl border border-slate-200 outline-none focus:border-cyan-500"
-              />
+  type="tel"
+  placeholder="Phone Number"
+  required
+  value={phone}
+  onChange={(e) => {
+    const value = e.target.value.replace(/\D/g, ""); // Allow only digits
+    if (value.length <= 10) {
+      setPhone(value);
+    }
+  }}
+  pattern="[0-9]{10}"
+  maxLength={10}
+  minLength={10}
+  title="Please enter a valid 10-digit phone number"
+  className="h-14 px-5 rounded-2xl border border-slate-200 outline-none focus:border-cyan-500"
+/>
 
             </div>
 
             <div className="grid md:grid-cols-2 gap-5">
 
               <input
-                type="email"
-                placeholder="Email Address"
-                className="h-14 px-5 rounded-2xl border border-slate-200 outline-none focus:border-cyan-500"
-              />
+  type="email"
+  placeholder="Email Address"
+  required
+  value={email}
+  onChange={(e) => setEmail(e.target.value)}
+  className="h-14 px-5 rounded-2xl border border-slate-200 outline-none focus:border-cyan-500"
+/>
 
-              <input
-                type="text"
-                placeholder="City"
-                className="h-14 px-5 rounded-2xl border border-slate-200 outline-none focus:border-cyan-500"
-              />
+             <input
+  type="text"
+  placeholder="City"
+  required
+  value={place}
+  onChange={(e) => setplace(e.target.value)}
+  className="h-14 px-5 rounded-2xl border border-slate-200 outline-none focus:border-cyan-500"
+/>
 
             </div>
 
-            <select className="h-14 px-5 rounded-2xl border border-slate-200 w-full">
-              <option>Select Product</option>
+            <select
+              name="products"
+              required
+              disabled={loading}
+              value={requirement}
+onChange={(e) => setRequirement(e.target.value)}
+              className="w-1/2 max-md:w-full p-3 rounded-md text-black text-sm border-2 focus:outline-none bg-blue-50"
+            >
+             <option value="">
+                    Select Product
+                  </option>
+
+                  <option value="Biodegradable Garbage Bags">
+                 Mark Compressors
+
+                  </option>
+
+                  <option value="Disposable Garbage Bags">
+                 Chicago Pneumatic
+
+                  </option>
+
+                  <option value="Biomedical Garbage Bags">
+                 Air Treatment
+
+                  </option>
+
+
+
+                  <option value="Biomedical Garbage Bags">
+               Spares and Consumables
+
+
+                  </option>
+
+
+                  
+                  <option value="Biomedical Garbage Bags">
+             Piping and Distribution Lines
+
+                  </option>
+
             </select>
 
             <textarea
-              rows={5}
-              placeholder="Tell us your requirement..."
-              className="w-full rounded-2xl border border-slate-200 p-5"
-            />
+  rows={5}
+  placeholder="Tell us your requirement..."
+  required
+  value={message}
+  onChange={(e) => setMessage(e.target.value)}
+  className="w-full rounded-2xl border border-slate-200 p-5"
+/>
 
             <button
-              type="submit"
-              className="
-              h-14
-              w-full
-              rounded-2xl
-              bg-gradient-to-r
-              from-cyan-600
-              to-cyan-700
-              text-white
-              font-semibold
-              shadow-lg
-              hover:scale-[1.02]
-              transition-all
-            "
-            >
-              Submit Inquiry →
-            </button>
+  type="submit"
+  disabled={loading}
+  className="h-14 w-full rounded-2xl bg-gradient-to-r from-cyan-600 to-cyan-700 text-white font-semibold shadow-lg hover:scale-[1.02] transition-all disabled:opacity-60 disabled:cursor-not-allowed"
+>
+  {loading ? "Submitting..." : "Submit Inquiry →"}
+</button>
+
+{status === "success" && (
+  <p className="text-green-600 font-medium mt-3">
+    ✅ Inquiry submitted successfully.
+  </p>
+)}
+
+{status === "error" && (
+  <p className="text-red-600 font-medium mt-3">
+    ❌ Something went wrong. Please try again.
+  </p>
+)}
 
           </form>
 
