@@ -2,7 +2,7 @@ import React from "react";
 
 const Bestseller = () => {
   return (
-    <section className="py-12  bg-white overflow-hidden">
+    <section className="md:py-12  bg-white overflow-hidden">
       <div className="w-full px-5 md:px-19 mx-auto ">
         <div className="grid lg:grid-cols-2 gap-10 lg:gap-14 items-center">
 
@@ -69,13 +69,13 @@ const Bestseller = () => {
 
             <h2
               className="
-                text-3xl
+                text-2xl
                 sm:text-4xl
                 lg:text-5xl
                 font-bold
                 text-gray-900
                 leading-tight
-                mb-5
+                mb-2
                 lg:mb-6
               "
             >
@@ -100,14 +100,14 @@ const Bestseller = () => {
                 text-sm
                 sm:text-base
                 leading-7
-                mb-6
+                md:mb-6
               "
             >
              
             </p>
 
             {/* Feature Grid */}
-            <div className="grid grid-cols-2 gap-4">
+            <div className="grid grid-cols-2 gap-2 md:gap-4">
               {[
                 "Purchase and procurement of equipment & raw material from approved OEMs and suppliers",
                 "Inventory stocking and consolidation",
@@ -123,7 +123,8 @@ const Bestseller = () => {
                     items-center
                     gap-3
                     bg-gray-50
-                    p-4
+                    p-2
+                    md:p-4
                     rounded-xl
                     border
                     border-gray-100
@@ -137,7 +138,7 @@ const Bestseller = () => {
                     className="
                       font-medium
                       text-gray-800
-                      text-sm
+                      text-[9px]
                       sm:text-base
                     "
                   >

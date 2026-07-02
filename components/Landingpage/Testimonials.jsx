@@ -32,56 +32,69 @@ export default function Testimonials() {
     },
   ];
 
-  const [start, setStart] = useState(0);
+ const [start, setStart] = useState(0);
 
-  const next = () => {
-    setStart((prev) =>
-      prev + 2 >= testimonials.length ? 0 : prev + 2
-    );
-  };
+const isDesktop =
+  typeof window !== "undefined" && window.innerWidth >= 1024;
 
-  const prev = () => {
-    setStart((prev) =>
-      prev - 2 < 0
-        ? Math.max(testimonials.length - 2, 0)
-        : prev - 2
-    );
-  };
+const itemsPerView = isDesktop ? 2 : 1;
 
-  const visible = testimonials.slice(start, start + 2);
+const next = () => {
+  setStart((prev) =>
+    prev + itemsPerView >= testimonials.length
+      ? 0
+      : prev + itemsPerView
+  );
+};
+
+const prev = () => {
+  setStart((prev) =>
+    prev - itemsPerView < 0
+      ? Math.max(testimonials.length - itemsPerView, 0)
+      : prev - itemsPerView
+  );
+};
+
+const visible = testimonials.slice(start, start + itemsPerView);
 
   return (
-    <section className="bg-[#f6f8fa] py-20">
-      <div className="w-full mx-auto px-24">
+   
 
-        <div className="flex items-center justify-between mb-10">
-       <div>
-  <span className=" text-center mb-2
-                text-sky-600
-                font-semibold
-                uppercase
-                tracking-[2px]
-                md:tracking-[3px]
-                text-xs
-                sm:text-sm
-              ">
+      <section className="bg-[#f6f8fa] py-14 sm:py-16 lg:py-20">
+  <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 xl:px-10">
+
+       <div className="flex flex-col gap-6 lg:flex-row lg:items-center lg:justify-between mb-10">
+
+
+ <div className="max-w-2xl">
+  <span
+    className="
+      text-sky-600
+      font-semibold
+      uppercase
+      tracking-[2px]
+      sm:tracking-[3px]
+      text-xs
+      sm:text-sm
+    "
+  >
     Customer Success Stories
   </span>
 
-  <h2 className="mt-3 text-5xl font-bold text-[#0d4976]">
+  <h2 className="mt-3 text-3xl sm:text-4xl lg:text-5xl font-bold text-[#0d4976] leading-tight">
     Letters of Appreciation
   </h2>
 
-  <p className="mt-4 text-slate-500 max-w-2xl">
+  <p className="mt-4 text-sm sm:text-base text-slate-500">
     Trusted by manufacturing plants, engineering companies,
     automotive facilities and industrial organizations across India.
   </p>
 </div>
 
-          <div className="flex gap-3">
+      <div className="flex justify-center lg:justify-end gap-3">
             <button
               onClick={prev}
-              className="w-12 h-12 rounded-full border border-slate-300 bg-white flex items-center justify-center hover:bg-slate-50"
+           className="w-10 h-10 sm:w-12 sm:h-12 rounded-full border border-slate-300 bg-white flex items-center justify-center hover:bg-slate-50 transition"
             >
               <ChevronLeft />
             </button>
@@ -95,26 +108,26 @@ export default function Testimonials() {
           </div>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-8">
+       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8">
           {visible.map((item, index) => (
 <div
   key={index}
   className="
-    group
-    rounded-[32px]
-    overflow-hidden
-    border
-    border-slate-200
-    bg-white
-    shadow-lg
-    hover:shadow-2xl
-    transition-all
-    duration-500
-  "
+group
+rounded-2xl lg:rounded-[32px]
+overflow-hidden
+border
+border-slate-200
+bg-white
+shadow-lg
+hover:shadow-2xl
+transition-all
+duration-500
+"
 >
   {/* Certificate */}
-  <div className="relative bg-slate-50 p-4">
-    <div className="relative h-[500px] rounded-2xl overflow-hidden border border-slate-200">
+<div className="relative bg-slate-50 p-3 sm:p-4">
+  <div className="relative h-[280px] sm:h-[380px] lg:h-[500px] rounded-xl lg:rounded-2xl overflow-hidden border border-slate-200">
       <Image
         src={item.certificate}
         alt={item.company}

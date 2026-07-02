@@ -92,7 +92,7 @@ export default function AirSystemSolution() {
             text-center
             font-bold
             text-blue-900
-            text-xl
+            text-lg
             sm:text-4xl
             lg:text-5xl
             leading-tight
@@ -106,7 +106,7 @@ export default function AirSystemSolution() {
         Complete Screw Air Compressors & Industrial Solutions
         </h2>
 
-        <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+        <div className="grid lg:grid-cols-2  md:gap-12 items-center">
 
 
 
@@ -149,7 +149,7 @@ export default function AirSystemSolution() {
       
         </h3>
 
-        <p className="text-black leading-8 text-md md:text-lg  ">
+        <p className="text-black leading-8 text-sm md:text-lg  ">
      Eutair Equipments is a professionally managed engineering and industrial equipment company based at New Delhi, India. We have over the years accepted industry challenges, and these very challenges made us what we are today: <strong> 'Compressed Air Experts'. </strong> 
 Eutair is a leading Engineering Company, engaged in the engineering, sales and services of capital equipment to various industrial sectors. Eutair is associated with renowned capital manufacturing companies offering industrial equipment from Concept to Commissioning on EP, EPC, turnkey basis.
 The company specializes in compressed air systems, gas-based power generation equipment, utility infrastructure, water & effluent treatment solutions, and export facilitation. We have executed projects in India and abroad. We also undertake after sales services for these projects. Execution of projects in Africa & India Sub-continent has brought us on to global map.
@@ -157,7 +157,7 @@ The company specializes in compressed air systems, gas-based power generation eq
 We are <strong> "Expanding by Compression". </strong> 
         </p>
 
-        <p className="text-black leading-8 text-lg text-justify">
+        <p className="text-black leading-8 text-sm ">
         
 Expanding by Compression reflects our commitment to delivering innovative industrial solutions that drive business growth.
         </p>

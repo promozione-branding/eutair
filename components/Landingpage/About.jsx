@@ -93,11 +93,11 @@ const About = () => {
       
         </h3>
 
-        <p className="text-black leading-8 text-md md:text-lg  text-justify">
+        <p className="text-black leading-8 text-md md:text-lg  ">
          With a strong focus on quality, innovation, and customer satisfaction, we deliver reliable products, technical expertise, and comprehensive support to customers across India and international markets.
         </p>
 
-        <p className="text-black leading-8 text-lg text-justify">
+        <p className="text-black leading-8 text-lg ">
           <strong>Eutair Equipments</strong>  is a professionally managed engineering company based in New Delhi, India, specializing in <strong>compressed air systems</strong>  and industrial equipment. We provide high-quality <strong>Screw Air Compressors , Air Dryers, Air Line Filters, Compressor Accessories, and turnkey engineering solutions </strong> to meet the diverse needs of industries.
         </p>
       </div>

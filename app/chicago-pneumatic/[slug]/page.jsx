@@ -215,7 +215,7 @@ const handleSubmit = async (e) => {
               </div>
             </div>
 
-            {/* DESCRIPTION */}
+        
 
             <div className="lg:col-span-8">
               <div className="bg-white rounded-[32px] border border-slate-200 shadow-[0_20px_60px_rgba(0,0,0,.08)] overflow-hidden">
@@ -300,9 +300,14 @@ const handleSubmit = async (e) => {
                       {product.cta?.description}
                     </p>
 
-                    <button className="mt-5 animate-pulse px-10 h-16 text-lg rounded-2xl bg-black text-white font-semibold shadow-lg hover:scale-105 transition">
+<a href="tel:+919717159766">
+
+ <button className="mt-5 animate-pulse px-10 h-16 text-lg rounded-2xl bg-black text-white font-semibold shadow-lg hover:scale-105 transition">
                       Get Best Price
                     </button>
+</a>
+
+                   
                   </div>
 
                 </div>
@@ -447,6 +452,8 @@ const handleSubmit = async (e) => {
   value={form.phone}
   onChange={handleChange}
   placeholder="Phone Number"
+  maxLength={10}
+  minLength={10}
   className="
     h-16
     rounded-2xl

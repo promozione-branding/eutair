@@ -21,7 +21,7 @@ const Cta = () => {
 
     <div className="mt-6 flex flex-col sm:flex-row items-center justify-center gap-4">
 <a
-  href="tel:6564545454"
+  href="tel:+919717159766"
   className="inline-flex items-center gap-2 px-10 py-4 bg-white text-cyan-700 font-semibold rounded-full "
 >
   <Phone size={18} />

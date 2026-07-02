@@ -64,7 +64,7 @@ const industries = [
 
 export default function IndustriesWeServe() {
   return (
-    <section className="bg-gradient-to-b from-white to-slate-50 pb-6  overflow-hidden">
+    <section className="bg-gradient-to-b mt-3 from-white to-slate-50 pb-6  overflow-hidden">
       <div className="w-full mx-auto px-4 sm:px-6 lg:px-12 xl:px-20">
         
         {/* Header */}
@@ -88,7 +88,7 @@ export default function IndustriesWeServe() {
 
           <h2
             className="
-              text-xl
+              text-lg
               sm:text-4xl
            mt-3
               font-bold
@@ -162,7 +162,7 @@ export default function IndustriesWeServe() {
                 {/* Title */}
                 <h3
                   className="
-                    text-md
+                    text-sm
                     sm:text-xl
                     font-bold
                     text-slate-900
