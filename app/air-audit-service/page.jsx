@@ -106,17 +106,17 @@ const [isOpen, setOpen] = useState(false);
   <div className="relative overflow-hidden">
     <div className="absolute inset-0 bg-gradient-to-br from-slate-50 via-white to-blue-50" />
 
-    <div className="container relative mx-auto px-6 py-10 lg:px-8">
+    <div className="container relative mx-auto px-6 py-5 md:py-10 lg:px-8">
       <div className="max-w-5xl">
         <span className="inline-flex items-center rounded-full border border-slate-200 bg-cyan-200 px-4 py-2 text-sm font-medium text-slate-600">
           Air Audit Services
         </span>
 
-        <h1 className="mt-8 text-5xl font-bold tracking-tight text-slate-900 ">
+        <h1 className="mt-4 md:mt-8 text-2xl md:text-5xl font-bold tracking-tight text-slate-900 ">
           Identify Inefficiencies Before They Impact Performance and Energy Costs
         </h1>
 
-        <p className="mt-8 max-w-3xl text-xl leading-8 text-slate-900">
+        <p className="mt-4 md:mt-8 max-w-3xl md:text-xl leading-6 md:leading-8 text-slate-900">
           Gain better visibility into your compressed air system with
           structured Air Audit Services. Air audits help identify leaks,
           pressure losses, inefficient operating conditions, and system
@@ -139,19 +139,19 @@ const [isOpen, setOpen] = useState(false);
 
   {/* Why Air Audits Matter */}
   <div className="border-y border-slate-200 bg-slate-50">
-    <div className="container mx-auto px-6 py-20 lg:px-10">
-      <div className="grid gap-16 lg:grid-cols-12">
+    <div className="container mx-auto px-6 py-8 md:py-20 lg:px-10">
+      <div className="grid gap-7 md:gap-16 lg:grid-cols-12">
         <div className="lg:col-span-4">
           <span className="text-sm font-semibold uppercase tracking-widest text-blue-600">
             Why Air Audits Matter
           </span>
 
-          <h2 className="mt-4 text-4xl font-bold text-slate-900">
+          <h2 className="mt-4 text-2xl md:text-4xl font-bold text-slate-900">
             Improve Reliability. Reduce Waste. Optimize Performance.
           </h2>
         </div>
 
-        <div className="space-y-6 text-lg leading-8 text-slate-900 lg:col-span-8">
+        <div className="space-y-6 md:text-lg leading-6 md:leading-8 text-slate-900 lg:col-span-8">
           <p>
             Compressed air is one of the most expensive utility resources in
             many industrial facilities. Over time, system inefficiencies such
@@ -171,28 +171,28 @@ const [isOpen, setOpen] = useState(false);
   </div>
 
   {/* Benefits */}
-  <div className="container mx-auto px-6 py-10 lg:px-8">
+  <div className="container mx-auto px-6 py-5 md:py-10 lg:px-8">
     <div className="max-w-3xl">
       <span className="text-sm font-semibold uppercase tracking-widest text-blue-600">
         Benefits
       </span>
 
-      <h2 className="mt-4 text-4xl font-bold text-slate-900">
+      <h2 className="mt-4 text-2xl md:text-4xl font-bold text-slate-900">
         Measurable Operational Advantages
       </h2>
     </div>
 
-    <div className="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+    <div className="mt-5 md:mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
       {benefits.map((item, index) => (
         <div
           key={item}
-          className="group rounded-2xl border  p-5 transition border-blue-200 bg-blue-50/30"
+          className="group rounded-2xl border p-3  md:p-5 transition border-blue-200 bg-blue-50/30"
         >
-          <div className="text-3xl font-bold text-slate-300">
+          <div className="text-2xl md:text-3xl font-bold text-slate-300">
             {String(index + 1).padStart(2, "0")}
           </div>
 
-          <p className="mt-6 text-lg font-medium text-slate-700">
+          <p className="mt-6 md:text-lg font-medium text-slate-700">
             {item}
           </p>
         </div>
@@ -202,28 +202,28 @@ const [isOpen, setOpen] = useState(false);
 
   {/* Features */}
   <div className="bg-slate-950">
-    <div className="container mx-auto px-6 py-10 lg:px-8">
+    <div className="container mx-auto px-6 py-5 md:py-10 lg:px-8">
       <div className="max-w-3xl">
         <span className="text-sm font-semibold uppercase tracking-widest text-blue-400">
           Key Features
         </span>
 
-        <h2 className="mt-4 text-4xl font-bold text-white">
+        <h2 className="mt-4 text-3xl md:text-4xl font-bold text-white">
           Comprehensive System Evaluation
         </h2>
       </div>
 
-      <div className="mt-16 grid gap-6 lg:grid-cols-2">
+      <div className="mt-7 md:mt-16 grid gap-6 lg:grid-cols-2">
         {features.map((feature) => (
           <div
             key={feature.title}
-            className="rounded-2xl border border-white/10 bg-white/5 p-8 backdrop-blur-sm"
+            className="rounded-2xl border border-white/10 bg-white/5 p-4 md:p-8 backdrop-blur-sm"
           >
             <h3 className="text-xl font-semibold text-white">
               {feature.title}
             </h3>
 
-            <p className="mt-4 leading-8 text-slate-300">
+            <p className="mt-4 leading-5 md:leading-8 text-slate-300">
               {feature.description}
             </p>
           </div>
@@ -233,7 +233,7 @@ const [isOpen, setOpen] = useState(false);
   </div>
 
   {/* Industries & Applications */}
-<div className="container mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-10">
+<div className="container mx-auto px-4 sm:px-6 lg:px-8 py-7 md:py-16 lg:py-10">
   <div className="grid gap-8 lg:grid-cols-2">
 
     {/* Industries */}
@@ -244,7 +244,7 @@ const [isOpen, setOpen] = useState(false);
         rounded-3xl
         border border-slate-200
         bg-white
-        p-8 lg:p-10
+        p-5 md:p-8 lg:p-10
         shadow-[0_15px_50px_rgba(0,0,0,0.06)]
       "
     >
@@ -266,7 +266,7 @@ const [isOpen, setOpen] = useState(false);
         </p>
       </div>
 
-      <div className="flex flex-wrap gap-3">
+      <div className="grid grid-cols-2 items-center flex-wrap gap-3">
         {industries.map((item) => (
           <span
             key={item}
@@ -275,7 +275,8 @@ const [isOpen, setOpen] = useState(false);
               border
               border-slate-200
               bg-slate-50
-              px-5
+              px-4
+              md:px-5
               py-3
               text-sm
               font-medium
@@ -285,6 +286,7 @@ const [isOpen, setOpen] = useState(false);
               hover:border-blue-500
               hover:bg-blue-50
               hover:text-blue-700
+              text-center
             "
           >
             {item}
@@ -313,11 +315,11 @@ const [isOpen, setOpen] = useState(false);
           Key Applications
         </span>
 
-        <h2 className="mt-5 text-3xl font-bold text-slate-900">
+        <h2 className="mt-5 text-2xl md:text-3xl font-bold text-slate-900">
           Typical Applications
         </h2>
 
-        <p className="mt-3 text-slate-500">
+        <p className="mt-3 leading-5 md:leading-6 text-slate-500">
           Common scenarios where structured air audits help improve
           performance and efficiency.
         </p>
@@ -335,7 +337,7 @@ const [isOpen, setOpen] = useState(false);
               border
               border-slate-200
               bg-slate-50
-              p-4
+              md:p-4 p-3
               transition-all
               duration-300
               hover:border-blue-500
@@ -380,19 +382,19 @@ const [isOpen, setOpen] = useState(false);
           FAQ
         </span>
 
-        <h2 className="mt-4 text-4xl font-bold text-slate-900">
+        <h2 className="mt-4 text-3xl md:text-4xl font-bold text-slate-900">
           Frequently Asked Questions
         </h2>
       </div>
 
-      <div className="mt-12 divide-y divide-slate-200 rounded-3xl border border-slate-200 bg-white">
+      <div className="mt-6 md:mt-12 divide-y divide-slate-200 rounded-3xl border border-slate-200 bg-white">
         {faqs.map((faq) => (
-          <details key={faq.question} className="group p-8">
+          <details key={faq.question} className="group p-5 md:p-8">
             <summary className="cursor-pointer list-none text-lg font-semibold text-slate-900">
               {faq.question}
             </summary>
 
-            <p className="mt-4 leading-8 text-slate-600">
+            <p className="mt-4 leading-6 md:leading-8 text-slate-600">
               {faq.answer}
             </p>
           </details>
@@ -403,13 +405,13 @@ const [isOpen, setOpen] = useState(false);
 
   {/* Premium CTA */}
   <div className="bg-[#ECFEFF]">
-    <div className="container mx-auto px-6 py-10 lg:px-8">
-      <div className="rounded-[32px] border border-white/10 bg-cyan-950 p-10 text-center backdrop-blur-xl">
-        <h2 className="text-4xl font-bold text-white">
+    <div className="container mx-auto px-6 py-5 md:py-10 lg:px-8">
+      <div className="rounded-[32px] border border-white/10 bg-cyan-950 p-5 md:p-10 text-center backdrop-blur-xl">
+        <h2 className="text-2xl md:text-4xl font-bold text-white">
           Let's Discuss Your Air System Performance
         </h2>
 
-        <p className="mx-auto mt-6 max-w-4xl text-lg leading-8 text-white">
+        <p className="mx-auto mt-6 max-w-4xl  md:text-lg leading-6 md:leading-8 text-white">
           Understanding how your compressed air system operates is the first
           step toward improving efficiency, reducing energy costs, and
           enhancing reliability.

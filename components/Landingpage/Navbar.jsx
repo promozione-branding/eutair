@@ -20,6 +20,7 @@ export default function Navbar() {
   const [mobileMenu, setMobileMenu] = useState(false);
 
   const [productMenu, setProductMenu] = useState(false);
+  const [servicesMenu, setServicesMenu] = useState(false);
 
   const services = [
     {
@@ -442,7 +443,7 @@ export default function Navbar() {
             <div className="lg:hidden flex items-center gap-3">
               <button
                 onClick={() => setOpen(true)}
-                className="bg-blue-600 text-white px-4 py-2 rounded-full text-xs font-semibold"
+                className="bg-blue-600 text-white px-4 py-2 rounded-full text-base font-semibold"
               >
                 Quote
               </button>
@@ -532,13 +533,34 @@ shadow-[0_10px_30px_rgba(37,99,235,0.25)]
                   BLOGS
                 </Link>
 
-                <Link
-                  href="/services"
-                  onClick={() => setMobileMenu(false)}
-                  className="font-medium text-slate-700"
-                >
-                  OUR SERVICES
-                </Link>
+                <div>
+                  <button
+                    onClick={() => setServicesMenu(!servicesMenu)}
+                    className="flex items-center justify-between w-full font-medium text-slate-700"
+                  >
+                    SERVICES
+                    <ChevronDown
+                      className={`w-4 h-4 transition ${
+                        servicesMenu ? "rotate-180" : ""
+                      }`}
+                    />
+                  </button>
+
+                  {servicesMenu && (
+                    <div className="mt-3 pl-4 flex flex-col gap-3 border-l">
+                      {services.map((item) => (
+                        <Link
+                          key={item.title}
+                          href={item.href}
+                          onClick={() => setMobileMenu(false)}
+                          className="text-slate-600"
+                        >
+                          {item.title}
+                        </Link>
+                      ))}
+                    </div>
+                  )}
+                </div>
 
                 <Link
                   href="/contact"
