@@ -7,13 +7,10 @@ import React from "react";
 import { useState } from "react";
 const benefits = [
   "Single-window project execution support",
-  "Improved accountability across all project stages",
-  "Better coordination between engineering and implementation teams",
   "Reduced project management burden for plant teams",
   "Faster decision-making and issue resolution",
   "Consistent quality throughout execution",
   "Improved project visibility and control",
-  "Better alignment between design intent and final performance",
   "Reduced risk of vendor coordination challenges",
 
 ];
@@ -156,18 +153,18 @@ const [isOpen, setOpen] = useState(false);
   return (
     <div className="bg-white">
       {/* Hero Section */}
-      <section className="bg-slate-900 text-white py-20">
+      <section className="bg-slate-900 text-white py-8 md:py-20">
         <div className="container mx-auto px-6 max-w-7xl">
-          <h1 className="text-4xl md:text-5xl font-bold mb-6">
+          <h1 className="text-3xl md:text-5xl font-bold mb-6">
             Turnkey Project Execution
           </h1>
 
-          <h2 className="text-xl md:text-2xl text-blue-300 font-medium mb-6">
+          <h2 className="text-lg md:text-2xl text-blue-300 font-medium mb-6">
             End-to-End Compressed Air Project Delivery Through a Single Point of
             Responsibility
           </h2>
 
-          <p className="text-lg text-slate-300 leading-relaxed max-w-4xl">
+          <p className="md:text-lg text-slate-300 md:leading-relaxed max-w-4xl">
             Execute compressed air infrastructure projects with greater
             confidence through comprehensive Turnkey Project Execution Services.
             From initial planning and engineering through procurement,
@@ -201,13 +198,13 @@ const [isOpen, setOpen] = useState(false);
       </section>
 
       {/* Why It Matters */}
-      <section className="py-20">
+      <section className="py-8 md:py-20">
         <div className="container mx-auto px-6 max-w-7xl">
-          <h2 className="text-3xl font-bold mb-8">
+          <h2 className="text-3xl font-bold mb-4 md:mb-8">
             Why Turnkey Execution Matters
           </h2>
 
-          <div className="space-y-6 text-gray-700 leading-relaxed">
+          <div className="space-y-6 text-gray-700 md:leading-relaxed">
             <p>
               Industrial compressed air projects involve multiple disciplines,
               including engineering, equipment selection, utility planning,
@@ -234,15 +231,15 @@ const [isOpen, setOpen] = useState(false);
       </section>
 
       {/* Benefits */}
-      <section className="bg-gray-50 py-20">
+      <section className="bg-gray-50 py-7 md:py-20">
         <div className="container mx-auto px-6 max-w-7xl">
-          <h2 className="text-3xl font-bold mb-10">Benefits</h2>
+          <h2 className="text-3xl font-bold mb-6 md:mb-10">Benefits</h2>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
+          <div className="grid grid-cols-2 lg:grid-cols-3 gap-5">
             {benefits.map((benefit, index) => (
               <div
                 key={index}
-                className="bg-white p-5 rounded-xl shadow-sm border"
+                className="bg-white p-3 md:p-5 rounded-xl shadow-sm border"
               >
                 {benefit}
               </div>
@@ -252,15 +249,15 @@ const [isOpen, setOpen] = useState(false);
       </section>
 
       {/* Features */}
-      <section className="py-20">
+      <section className="py-7 md:py-20">
         <div className="container mx-auto px-6 max-w-7xl">
-          <h2 className="text-3xl font-bold mb-10">Key Features</h2>
+          <h2 className="text-3xl font-bold mb-6 md:mb-10">Key Features</h2>
 
-          <div className="grid lg:grid-cols-2 gap-8">
+          <div className="grid lg:grid-cols-2 gap-6 md:gap-8">
             {features.map((feature, index) => (
               <div
                 key={index}
-                className="border rounded-xl p-6 hover:shadow-lg transition"
+                className="border rounded-xl p-4 md:p-6 hover:shadow-lg transition"
               >
                 <h3 className="text-xl font-semibold mb-3">
                   {feature.title}
@@ -273,9 +270,9 @@ const [isOpen, setOpen] = useState(false);
       </section>
 
       {/* Process */}
-      <section className="bg-slate-50 py-20">
+      <section className="bg-slate-50 py-7 md:py-20">
         <div className="container mx-auto px-6 max-w-7xl">
-          <h2 className="text-3xl font-bold mb-10">
+          <h2 className="text-2xl md:text-3xl font-bold mb-5 md:mb-10">
             Turnkey Project Execution Process
           </h2>
 
@@ -283,7 +280,7 @@ const [isOpen, setOpen] = useState(false);
             {processSteps.map((step, index) => (
               <div
                 key={index}
-                className="bg-white rounded-xl border p-6 flex gap-6"
+                className="bg-white rounded-xl border p-4 md:p-6 flex gap-6"
               >
                 <div className="w-12 h-12 rounded-full bg-blue-600 text-white flex items-center justify-center font-bold shrink-0">
                   {index + 1}
@@ -302,15 +299,15 @@ const [isOpen, setOpen] = useState(false);
       </section>
 
       {/* Industries & Applications */}
-      <section className="py-20">
+      <section className="py-7 md:py-20">
         <div className="container mx-auto px-6 max-w-7xl">
           <div className="grid lg:grid-cols-2 gap-12">
             <div>
-              <h2 className="text-3xl font-bold mb-8">
+              <h2 className="text-2xl md:text-3xl font-bold mb-4 md:mb-8">
                 Industries & Use Cases
               </h2>
 
-              <ul className="space-y-3">
+              <ul className="space-y-2 md:space-y-3">
                 {industries.map((item, index) => (
                   <li key={index} className="text-gray-700">
                     • {item}
@@ -320,11 +317,11 @@ const [isOpen, setOpen] = useState(false);
             </div>
 
             <div>
-              <h2 className="text-3xl font-bold mb-8">
+              <h2 className="text-2xl md:text-3xl font-bold mb-8">
                 Typical Applications
               </h2>
 
-              <ul className="space-y-3">
+              <ul className="space-y-2 md:space-y-3">
                 {applications.map((item, index) => (
                   <li key={index} className="text-gray-700">
                     • {item}
@@ -337,9 +334,9 @@ const [isOpen, setOpen] = useState(false);
       </section>
 
       {/* FAQ */}
-      <section className="bg-gray-50 py-20">
+      <section className="bg-gray-50 py-7 md:py-20">
         <div className="container mx-auto px-6 max-w-5xl">
-          <h2 className="text-3xl font-bold mb-10">
+          <h2 className="text-2xl md:text-3xl font-bold mb-6 md:mb-10">
             Frequently Asked Question - Turnkey Project Execution
           </h2>
 
@@ -347,7 +344,7 @@ const [isOpen, setOpen] = useState(false);
             {faqs.map((faq, index) => (
               <div
                 key={index}
-                className="bg-white border rounded-xl p-6"
+                className="bg-white border rounded-xl p-3 md:p-6"
               >
                 <h3 className="font-semibold text-lg mb-3">
                   {index + 1}. {faq.question}

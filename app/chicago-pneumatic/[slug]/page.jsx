@@ -99,7 +99,7 @@ const handleSubmit = async (e) => {
       <section className="relative overflow-hidden bg-gradient-to-br from-slate-50 via-white to-sky-50 py-9">
       
 
-        <div className="max-w-[1800px] mx-auto px-14 relative z-10">
+        <div className="max-w-[1800px] mx-auto px-5 md:px-14 relative z-10">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
 
             <div className="bg-white rounded-[32px] p-2 border border-slate-200 shadow-[0_25px_80px_rgba(0,0,0,.08)]">
@@ -119,7 +119,7 @@ const handleSubmit = async (e) => {
                 Chicago Pneumatic
               </span>
 
-              <h2 className="mt-5 text-4xl font-black text-slate-900 leading-tight">
+              <h2 className="mt-5 text-[26px] md:text-4xl font-black text-slate-900 leading-tight">
                 {product.title}
               </h2>
 
@@ -130,7 +130,7 @@ const handleSubmit = async (e) => {
     {product.shortDescription?.map((item, index) => (
       <li
         key={index}
-        className="flex items-start gap-3 text-slate-700 text-[17px] leading-relaxed"
+        className="flex items-start gap-3 text-slate-700 text-[17px] leading-6 md:leading-relaxed"
       >
         <span className="text-green-500 mt-1">✓</span>
         <span>{item}</span>
@@ -147,7 +147,7 @@ const handleSubmit = async (e) => {
                 {product.badges?.map((badge, index) => (
                   <span
                     key={index}
-                    className="px-4 py-2 rounded-full bg-green-100 text-green-700 font-medium"
+                    className="px-2 md:px-4 py-1 md:py-2 rounded-full bg-green-100 text-green-700 font-medium"
                   >
                     ✓ {badge}
                   </span>
@@ -182,8 +182,8 @@ const handleSubmit = async (e) => {
 
       {/* SPECIFICATIONS + DESCRIPTION */}
 
-      <section className="py-15 bg-slate-50">
-        <div className="w-full mx-auto px-10">
+      <section className="py-5 md:py-15 bg-slate-50">
+        <div className="w-full mx-auto  px-5 md:px-10">
 
           <div className="grid lg:grid-cols-12 gap-8 items-start">
 
@@ -201,7 +201,7 @@ const handleSubmit = async (e) => {
                 {product.specifications?.map((spec, index) => (
                   <div
                     key={index}
-                    className="flex justify-between gap-4 px-8 py-6 border-b hover:bg-sky-50 transition"
+                    className="flex justify-between gap-4 px-8 py-3 md:py-6  border-b hover:bg-sky-50 transition"
                   >
                     <span className="font-semibold text-slate-900">
                       {spec.label}
@@ -221,14 +221,14 @@ const handleSubmit = async (e) => {
               <div className="bg-white rounded-[32px] border border-slate-200 shadow-[0_20px_60px_rgba(0,0,0,.08)] overflow-hidden">
 
                 <div className="bg-gradient-to-r from-sky-500 to-blue-300 py-3 px-8">
-                  <h2 className="text-3xl md:text-4xl font-bold text-white">
+                  <h2 className="text-2xl md:text-4xl font-bold text-white">
                     Product Description
                   </h2>
                 </div>
 
-                <div className="p-8 md:p-10">
+                <div className="p-5 md:p-10">
 
-                  <h3 className="text-4xl font-black text-slate-900 mb-6">
+                  <h3 className="text-3xl md:text-4xl font-black text-slate-900 mb-6">
                    Why Choose Us
                   </h3>
 
@@ -236,7 +236,7 @@ const handleSubmit = async (e) => {
   {product.description?.map((item, index) => (
     <li
       key={index}
-      className="flex items-start gap-3 text-lg leading-relaxed text-slate-700"
+      className="flex items-start gap-3 text-lg leading-6 md:leading-relaxed text-slate-700"
     >
       <span className="text-sky-500 mt-1">✓</span>
       <span>{item}</span>
@@ -255,7 +255,7 @@ const handleSubmit = async (e) => {
                       {product.features?.map((feature, index) => (
                         <div
                           key={index}
-                          className="bg-sky-50 rounded-2xl p-5 border border-sky-100"
+                          className="bg-sky-50 rounded-2xl p-3 md:p-5 border border-sky-100"
                         >
                           <h5 className="font-bold text-slate-900 text-lg mb-2">
                             {feature.icon} {feature.title}
@@ -324,7 +324,7 @@ const handleSubmit = async (e) => {
   <div className="absolute top-0 left-0 w-96 h-96 bg-sky-200/20 blur-[120px]" />
   <div className="absolute bottom-0 right-0 w-96 h-96 bg-cyan-200/20 blur-[120px]" />
 
-  <div className="w-full mx-auto px-9 relative z-10">
+  <div className="w-full mx-auto px-4 md:px-9 relative z-10">
 
     <div
       className="
@@ -360,8 +360,8 @@ const handleSubmit = async (e) => {
         className="
           mt-6
           text-center
-          text-5xl
-     
+          md:text-5xl
+          text-3xl
           font-black
           text-slate-900
           leading-tight
@@ -383,7 +383,8 @@ const handleSubmit = async (e) => {
           text-lg
           md:text-xl
           mt-6
-          leading-relaxed
+          leading-6
+          md:leading-relaxed
         "
       >
         Looking for energy-efficient and high-performance compressed air
@@ -404,7 +405,8 @@ const handleSubmit = async (e) => {
   onChange={handleChange}
   placeholder="Full Name"
   className="
-    h-16
+     h-13
+              md:h-16
     rounded-2xl
     bg-slate-50
     border
@@ -426,12 +428,14 @@ const handleSubmit = async (e) => {
   onChange={handleChange}
   placeholder="Email Address"
   className="
-    h-16
+     h-13
+              md:h-16
     rounded-2xl
     bg-slate-50
     border
     border-slate-500
-    px-6
+    px-3
+              md:px-6
     text-slate-800
     outline-none
     transition-all
@@ -448,12 +452,14 @@ const handleSubmit = async (e) => {
   onChange={handleChange}
   placeholder="Phone Number"
   className="
-    h-16
+     h-13
+              md:h-16
     rounded-2xl
     bg-slate-50
     border
     border-slate-500
-    px-6
+    px-3
+              md:px-6
     text-slate-800
     outline-none
     transition-all
@@ -470,12 +476,14 @@ const handleSubmit = async (e) => {
   onChange={handleChange}
   placeholder="Your Requirement"
   className="
-    h-16
+     h-13
+              md:h-16
     rounded-2xl
     bg-slate-50
     border
     border-slate-500
-    px-6
+    px-3
+              md:px-6
     text-slate-800
     outline-none
     transition-all
@@ -549,10 +557,10 @@ const handleSubmit = async (e) => {
       {/* WHY CHOOSE */}
 
       <section className="py-12 bg-white">
-        <div className="w-full mx-auto px-15">
+        <div className="w-full mx-auto px-5 md:px-15">
 
           <div className="text-center mb-10">
-            <h2 className="text-4xl font-black text-slate-900">
+            <h2 className="text-2xl md:text-4xl font-black text-slate-900">
               Why Choose This Compressor
             </h2>
           </div>
@@ -562,7 +570,7 @@ const handleSubmit = async (e) => {
             {product.whyChoose?.slice(0,4).map((item, index) => (
               <div
                 key={index}
-                className="group bg-white border border-slate-200 rounded-[30px] p-8 shadow-lg hover:-translate-y-2 hover:shadow-2xl transition-all"
+                className="group bg-white border border-slate-200 rounded-[30px] p-4 md:p-8 shadow-lg hover:-translate-y-2 hover:shadow-2xl transition-all"
               >
                 <div className="text-5xl mb-5">
                   {item.icon}
