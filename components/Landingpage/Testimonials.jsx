@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Image from "next/image";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
@@ -57,6 +57,18 @@ const prev = () => {
 
 const visible = testimonials.slice(start, start + itemsPerView);
 
+useEffect(() => {
+  const interval = setInterval(() => {
+    setStart((prev) =>
+      prev + itemsPerView >= testimonials.length
+        ? 0
+        : prev + itemsPerView
+    );
+  }, 4000); // Change every 4 seconds
+
+  return () => clearInterval(interval);
+}, [itemsPerView, testimonials.length]);
+
   return (
    
 
@@ -94,7 +106,7 @@ const visible = testimonials.slice(start, start + itemsPerView);
       <div className="flex justify-center lg:justify-end gap-3">
             <button
               onClick={prev}
-           className="w-10 h-10 sm:w-12 sm:h-12 rounded-full border border-slate-300 bg-white flex items-center justify-center hover:bg-slate-50 transition"
+           className="w-12 h-12 sm:w-12 sm:h-12 rounded-full border border-slate-300 bg-white flex items-center justify-center hover:bg-slate-50 transition"
             >
               <ChevronLeft />
             </button>
@@ -150,7 +162,7 @@ duration-500
   </div>
 
   {/* Content */}
-  <div className="p-8">
+  <div className="p-5 md:p-8">
     <h3 className="text-3xl font-bold text-[#0d4976]">
       {item.company}
     </h3>
