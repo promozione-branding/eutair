@@ -98,18 +98,18 @@ export default function EngineeringConsultancyService() {
     <section className="bg-white">
       {/* Hero */}
     <section className="bg-white">
-  <div className="container mx-auto px-6 py-15 lg:px-8">
-    <div className="grid gap-16 lg:grid-cols-12">
+  <div className="container mx-auto px-6 py-6 md:py-15 lg:px-8">
+    <div className="grid gap-9 md:gap-16 lg:grid-cols-12">
       <div className="lg:col-span-7">
         <span className="text-sm font-semibold uppercase tracking-[0.25em] text-blue-600">
           Engineering Consultancy
         </span>
 
-        <h1 className="mt-6 text-4xl font-bold leading-tight text-slate-900 ">
+        <h1 className="mt-6 text-2xl md:text-4xl font-bold leading-tight text-slate-900 ">
           Technical Expertise for Efficient and Future-Ready Compressed Air Systems
         </h1>
 
-        <p className="mt-8 text-lg leading-8 text-slate-900">
+        <p className="mt-8 md:text-lg md:leading-8 text-slate-900">
           Make informed decisions from the earliest stages of your project with professional Engineering Consultancy Services. From system sizing and utility planning to layout optimization and future expansion considerations, engineering support helps ensure compressed air systems are designed for performance, efficiency, and long-term reliability.
         </p>
 
@@ -117,9 +117,9 @@ export default function EngineeringConsultancyService() {
       </div>
 
       <div className="lg:col-span-5">
-        <div className="sticky top-24 rounded-3xl border border-slate-200 bg-slate-50 p-8">
+        <div className="sticky top-24 rounded-3xl border border-slate-200 bg-slate-50 p-4 md:p-8">
           <div className="space-y-6">
-            <div>
+            <div className="mb-2">
               <div className="text-sm text-slate-500">Service Focus</div>
               <div className="mt-2 text-lg font-semibold">
                 Engineering Consultancy Services
@@ -131,7 +131,7 @@ export default function EngineeringConsultancyService() {
                 Project Support Areas
               </div>
 
-              <ul className="mt-4 space-y-3 text-slate-700">
+              <ul className="mt-2 md:mt-4 space-y-3 text-slate-700">
                 <li>System Sizing</li>
                 <li>Capacity Planning</li>
                 <li>Plant Layout Support</li>
@@ -148,19 +148,19 @@ export default function EngineeringConsultancyService() {
 
       {/* Why It Matters */}
       <div className="border-y border-slate-200 bg-slate-50">
-        <div className="container mx-auto px-6 py-24 lg:px-8">
-          <div className="grid gap-16 lg:grid-cols-12">
+        <div className="container mx-auto px-6 py-8 md:py-24 lg:px-8">
+          <div className="grid gap-7 md:gap-16 lg:grid-cols-12">
             <div className="lg:col-span-4">
               <span className="text-sm font-semibold uppercase tracking-widest text-blue-600">
                 Why Engineering Consultancy Matters
               </span>
 
-              <h2 className="mt-4 text-4xl font-bold text-slate-900">
+              <h2 className="mt-4 text-3xl md:text-4xl font-bold text-slate-900">
                 Design Today for Reliable Performance Tomorrow
               </h2>
             </div>
 
-            <div className="space-y-6 text-lg leading-8 text-black lg:col-span-8">
+            <div className="space-y-6 md:text-lg md:leading-8 text-black lg:col-span-8">
               <p>
                 Decisions made during the planning and design stage have a
                 lasting impact on system performance, operating costs, and
@@ -180,13 +180,13 @@ export default function EngineeringConsultancyService() {
       </div>
 
       {/* Benefits */}
-      <div className="container mx-auto px-6 py-10 lg:px-8 bg-cyan-100/20">
+      <div className="container mx-auto px-6 py-5 md:py-10 lg:px-8 bg-cyan-100/20">
         <div className="max-w-4xl">
           <span className="text-sm font-semibold uppercase tracking-widest text-blue-600">
             Benefits
           </span>
 
-          <h2 className="mt-4 text-4xl font-bold text-slate-900">
+          <h2 className="mt-4 text-2xl md:text-4xl font-bold text-slate-900">
             Strategic Advantages Through Better Planning
           </h2>
         </div>
@@ -195,13 +195,13 @@ export default function EngineeringConsultancyService() {
           {benefits.map((item, index) => (
             <div
               key={item}
-              className="rounded-2xl border border-blue-200 p-4 transition hover:border-blue-200 hover:bg-blue-50/30"
+              className="rounded-2xl border border-blue-200 p-2 md:p-4 transition hover:border-blue-200 hover:bg-blue-50/30"
             >
               <div className="text-3xl font-bold text-slate-300">
                 {String(index + 1).padStart(2, "0")}
               </div>
 
-              <p className="mt-6 text-lg font-medium text-slate-700">
+              <p className="mt-3 md:mt-6 md:text-lg font-medium text-slate-700">
                 {item}
               </p>
             </div>
@@ -224,7 +224,7 @@ export default function EngineeringConsultancyService() {
         Key Features
       </span>
 
-      <h2 className="mt-6 text-5xl font-bold tracking-tight text-white">
+      <h2 className="mt-6 text-3xl md:text-5xl font-bold tracking-tight text-white">
         Comprehensive Engineering Support
       </h2>
 
@@ -232,11 +232,11 @@ export default function EngineeringConsultancyService() {
     </div>
 
     {/* Features */}
-    <div className="mt-10 grid gap-8 lg:grid-cols-2">
+    <div className="mt-10 grid gap-5 md:gap-8 lg:grid-cols-2">
       {features.map((feature, index) => (
         <div
           key={feature.title}
-          className="group relative overflow-hidden rounded-3xl border border-white/10 bg-white/[0.03] p-5 transition-all duration-500 hover:-translate-y-1 hover:border-blue-500/30 hover:bg-white/[0.05]"
+          className="group relative overflow-hidden rounded-3xl border border-white/10 bg-white/[0.03] p-3 md:p-5 transition-all duration-500 hover:-translate-y-1 hover:border-blue-500/30 hover:bg-white/[0.05]"
         >
           {/* Feature Number */}
           <div className="absolute right-6 top-4 text-7xl font-bold text-white/[0.04] transition group-hover:text-blue-500/10">
@@ -244,13 +244,13 @@ export default function EngineeringConsultancyService() {
           </div>
 
           {/* Accent Line */}
-          <div className="mb-6 h-1 w-14 rounded-full bg-gradient-to-r from-blue-500 to-cyan-400 transition-all duration-300 group-hover:w-24" />
+          <div className="mb-3 md:mb-6 h-1 w-14 rounded-full bg-gradient-to-r from-blue-500 to-cyan-400 transition-all duration-300 group-hover:w-24" />
 
-          <h3 className="relative text-2xl font-semibold text-white">
+          <h3 className="relative text-xl md:text-2xl font-semibold text-white">
             {feature.title}
           </h3>
 
-          <p className="relative mt-5 leading-8 text-slate-300">
+          <p className="relative mt-5 md:leading-8 text-slate-300">
             {feature.description}
           </p>
 
@@ -267,7 +267,7 @@ export default function EngineeringConsultancyService() {
       {/* Industries & Applications */}
 
 
-<section className="py-10 bg-gradient-to-b from-white via-slate-50/50 to-white relative overflow-hidden">
+<section className="py-5 md:py-10 bg-gradient-to-b from-white via-slate-50/50 to-white relative overflow-hidden">
   <div className="absolute top-0 right-0 w-96 h-96 bg-[#0B4A8B]/5 rounded-full blur-3xl"></div>
   <div className="absolute bottom-0 left-0 w-80 h-80 bg-cyan-500/5 rounded-full blur-3xl"></div>
 
@@ -277,20 +277,20 @@ export default function EngineeringConsultancyService() {
         Industry Applications
       </span>
 
-      <h2 className="mt-6 text-4xl  font-bold text-slate-900 leading-tight">
+      <h2 className="mt-6 text-3xl md:text-4xl  font-bold text-slate-900 leading-tight">
         Industries & Use Cases
       </h2>
 
-      <div className="w-24 h-1 bg-gradient-to-r from-[#0B4A8B] to-cyan-500 rounded-full mx-auto mt-6"></div>
+      <div className="w-24 h-1 bg-gradient-to-r from-[#0B4A8B] to-cyan-500 rounded-full mx-auto mt-3 md:mt-6"></div>
 
    
     </div>
 
-    <div className="mt-8 grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+    <div className="mt-8 grid md:grid-cols-2 lg:grid-cols-3 gap-3 md:gap-6">
       {industries.map((item, index) => (
         <div
           key={item}
-          className="group relative overflow-hidden rounded-3xl border border-slate-200 bg-white p-6 shadow-[0_10px_40px_rgba(0,0,0,0.04)] hover:shadow-[0_20px_60px_rgba(11,74,139,0.12)] hover:-translate-y-1 transition-all duration-500"
+          className="group relative overflow-hidden rounded-3xl border border-slate-200 bg-white p-4 md:p-6 shadow-[0_10px_40px_rgba(0,0,0,0.04)] hover:shadow-[0_20px_60px_rgba(11,74,139,0.12)] hover:-translate-y-1 transition-all duration-500"
         >
           <div className="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-[#0B4A8B] to-cyan-500 scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></div>
 
@@ -318,22 +318,22 @@ export default function EngineeringConsultancyService() {
 
       {/* FAQ */}
      <section className="py-7">
-  <div className="container mx-auto px-16">
-    <h2 className="text-4xl font-bold text-slate-900">
+  <div className="container mx-auto px-5 md:px-16">
+    <h2 className="text-2xl md:text-4xl font-bold text-slate-900">
       Frequently Asked Question - Engineering Consultancy Services
     </h2>
 
-    <div className="mt-12">
+    <div className="mt-5 md:mt-12">
       {faqs.map((faq) => (
         <details
           key={faq.question}
-          className="border-b border-slate-200 py-8"
+          className="border-b border-slate-200 py-5 md:py-8"
         >
-          <summary className="cursor-pointer text-lg font-semibold text-slate-900">
+          <summary className="cursor-pointer md:text-lg font-semibold text-slate-900">
             {faq.question}
           </summary>
 
-          <p className="mt-4 max-w-4xl leading-8 text-slate-600">
+          <p className="mt-4 max-w-4xl md:leading-8 text-slate-600">
             {faq.answer}
           </p>
         </details>

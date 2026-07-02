@@ -134,18 +134,18 @@ export default function WastewaterEngineering() {
   return (
     <div className="bg-white">
       {/* Hero Section */}
-      <section className="bg-slate-900 text-white py-20">
+      <section className="bg-slate-900 text-white py-8 md:py-20">
         <div className="container mx-auto max-w-7xl px-6">
           <h1 className="text-4xl md:text-5xl font-bold mb-6">
             Wastewater Engineering
           </h1>
 
-          <h2 className="text-xl md:text-2xl text-cyan-300 font-medium mb-6">
+          <h2 className="text-lg md:text-2xl text-cyan-300 font-medium mb-6">
             Practical Engineering Support for Treatment, Reuse, Discharge, and
             Water Recovery Projects
           </h2>
 
-          <p className="text-lg text-slate-300 leading-relaxed max-w-4xl">
+          <p className="text-lg text-slate-300 md:leading-relaxed max-w-4xl">
             Industrial wastewater management requires more than treatment
             equipment alone. Effective wastewater engineering involves
             understanding process requirements, discharge norms, water reuse
@@ -153,7 +153,7 @@ export default function WastewaterEngineering() {
             goals.
           </p>
 
-          <p className="text-lg text-slate-300 leading-relaxed max-w-4xl mt-4">
+          <p className="text-lg text-slate-300 md:leading-relaxed max-w-4xl mt-4">
             Wastewater Engineering Services support industries in planning,
             designing, optimizing, and implementing treatment solutions for
             effluent management, sewage treatment, water recycling, and utility
@@ -178,13 +178,13 @@ export default function WastewaterEngineering() {
       </section>
 
       {/* Why Wastewater Engineering Matters */}
-      <section className="py-20">
+      <section className="py-8 md:py-20">
         <div className="container mx-auto max-w-7xl px-6">
-          <h2 className="text-3xl font-bold mb-8">
+          <h2 className="text-2xl md:text-3xl font-bold mb-4 md:mb-8">
             Why Wastewater Engineering Matters
           </h2>
 
-          <div className="space-y-6 text-gray-700 leading-relaxed">
+          <div className="space-y-6 text-gray-700 md:leading-relaxed">
             <p>
               Industrial facilities face increasing pressure to manage
               wastewater responsibly while maintaining operational efficiency
@@ -204,15 +204,15 @@ export default function WastewaterEngineering() {
       </section>
 
       {/* Benefits */}
-      <section className="bg-gray-50 py-20">
+      <section className="bg-gray-50 py-8 md:py-20">
         <div className="container mx-auto max-w-7xl px-6">
-          <h2 className="text-3xl font-bold mb-10">Benefits</h2>
+          <h2 className="text-3xl font-bold mb-5 md:mb-10">Benefits</h2>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
+          <div className="grid grid-cols-2 lg:grid-cols-3 gap-5">
             {benefits.map((benefit, index) => (
               <div
                 key={index}
-                className="bg-white p-5 rounded-xl border shadow-sm"
+                className="bg-white p-3 md:p-5 rounded-xl border shadow-sm"
               >
                 {benefit}
               </div>
@@ -222,9 +222,9 @@ export default function WastewaterEngineering() {
       </section>
 
       {/* Engineering Solutions */}
-      <section className="py-20">
+      <section className="py-7 md:py-20">
         <div className="container mx-auto max-w-7xl px-6">
-          <h2 className="text-3xl font-bold mb-10">
+          <h2 className="text-2xl md:text-3xl font-bold mb-10">
             Engineering Solutions & System Options
           </h2>
 
@@ -232,17 +232,17 @@ export default function WastewaterEngineering() {
             {engineeringSolutions.map((solution, index) => (
               <div
                 key={index}
-                className="border rounded-xl p-8 hover:shadow-lg transition"
+                className="border rounded-xl p-4 md:p-8 hover:shadow-lg transition"
               >
-                <h3 className="text-2xl font-semibold mb-3">
+                <h3 className="text-xl md:text-2xl font-semibold mb-3">
                   {solution.title}
                 </h3>
 
-                <p className="text-gray-600 mb-5">
+                <p className="text-gray-600 leading-5 md:leading-6 mb-5">
                   {solution.description}
                 </p>
 
-                <ul className="space-y-2">
+                <ul className="space-y-1 md:space-y-2">
                   {solution.items.map((item, idx) => (
                     <li key={idx} className="text-gray-700">
                       • {item}
@@ -256,20 +256,20 @@ export default function WastewaterEngineering() {
       </section>
 
       {/* Industries & Applications */}
-      <section className="bg-slate-50 py-20">
+      <section className="bg-slate-50 py-8 md:py-20">
         <div className="container mx-auto max-w-7xl px-6">
-          <div className="grid lg:grid-cols-2 gap-12">
+          <div className="grid lg:grid-cols-2 gap-8 md:gap-12">
             <div>
-              <h2 className="text-3xl font-bold mb-8">
+              <h2 className="text-2xl md:text-3xl font-bold mb-4 md:mb-8">
                 Industries & Use Cases
               </h2>
 
-              <p className="text-gray-700 mb-6">
+              <p className="text-gray-700 mb-3 md:mb-6">
                 Wastewater Engineering Services support a wide range of
                 industries, including:
               </p>
 
-              <ul className="space-y-3">
+              <ul className="space-y-2 md:space-y-3">
                 {industries.map((industry, index) => (
                   <li key={index} className="text-gray-700">
                     • {industry}
@@ -279,7 +279,7 @@ export default function WastewaterEngineering() {
             </div>
 
             <div>
-              <h2 className="text-3xl font-bold mb-8">
+              <h2 className="text-2xl md:text-3xl font-bold mb-4 md:mb-8">
                 Typical Applications
               </h2>
 
@@ -296,17 +296,17 @@ export default function WastewaterEngineering() {
       </section>
 
       {/* FAQ */}
-      <section className="py-20">
+      <section className="py-8 md:py-20">
         <div className="container mx-auto max-w-5xl px-6">
-          <h2 className="text-3xl font-bold mb-10">
+          <h2 className="text-2xl md:text-3xl font-bold mb-8 md:mb-10">
             Frequently Asked Question - Wastewater Engineering
           </h2>
 
-          <div className="space-y-5">
+          <div className="space-y-3 md:space-y-5">
             {faqs.map((faq, index) => (
               <div
                 key={index}
-                className="bg-white border rounded-xl p-6"
+                className="bg-white border rounded-xl p-4 md:p-6"
               >
                 <h3 className="font-semibold text-lg mb-3">
                   {index + 1}. {faq.question}
