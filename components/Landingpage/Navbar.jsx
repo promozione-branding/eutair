@@ -58,7 +58,7 @@ export default function Navbar() {
     },
     {
       title: "Air Treatment",
-      href: "/products/vfd-screw-compressors",
+      href: "/air-treatment-service",
     },
     {
       title: "Spares and Consumables",
@@ -66,7 +66,7 @@ export default function Navbar() {
     },
     {
       title: "Piping and Distribution Lines",
-      href: "/products/diesel-air-compressors",
+      href: "/piping-and-distribution-lines",
     },
   ];
 
