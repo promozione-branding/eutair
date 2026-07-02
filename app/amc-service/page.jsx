@@ -109,21 +109,21 @@ const [isOpen, setOpen] = useState(false);
   return (
     <div className="bg-white">
       {/* Hero */}
-      <section style={{backgroundImage:"url(/bghero1.webp)"}} className="relative overflow-hidden bg-cover bg-center h-[80vh] text-white">
+      <section style={{backgroundImage:"url(/bghero1.webp)"}} className="relative overflow-hidden bg-cover bg-center  md:h-[80vh] text-white">
 <div className="absolute inset-0 bg-black/60"></div>
 
-        <div className="max-w-7xl mx-auto relative px-4 py-20">
+        <div className="max-w-7xl mx-auto relative px-4 py-8 md:py-20">
           <div className="max-w-4xl">
             <span className=" rounded-full border border-white/20 bg-white/10 px-4 py-2 text-sm backdrop-blur">
               AMC Services
             </span>
 
-            <h1 className="mt-6 text-4xl   font-bold leading-tight">
+            <h1 className="mt-6 text-2xl md:text-4xl   font-bold leading-tight">
               Structured Maintenance Support for Reliable Compressed Air
               Operations
             </h1>
 
-            <p className="mt-6 text-lg text-white leading-relaxed">
+            <p className="mt-6 md:text-lg text-white md:leading-relaxed">
               Maintain peak system performance, reduce unexpected downtime, and
               improve equipment reliability with structured Annual Maintenance
               Contract (AMC) Services. Designed for industrial compressed air
@@ -152,21 +152,21 @@ const [isOpen, setOpen] = useState(false);
       </section>
 
       {/* Why AMC */}
-      <section className="py-10">
+      <section className="py-5 md:py-10">
         <div className="max-w-7xl  flex justify-center items-center mx-auto px-4">
           <div className="max-w-7xl text-center">
-            <h2 className="text-4xl font-bold text-slate-900 mb-6">
+            <h2 className="text-2xl md:text-4xl font-bold text-slate-900 mb-6">
               Why AMC Services Matter
             </h2>
 
-            <p className="text-xl text-slate-900 leading-relaxed mb-6">
+            <p className="md:text-xl text-slate-900 md:leading-relaxed mb-6">
               Compressed air systems play a critical role in daily production
               and plant operations. Unplanned equipment failures, performance
               losses, and reactive maintenance can result in costly downtime and
               reduced productivity.
             </p>
 
-            <p className="text-xl text-slate-900 leading-relaxed">
+            <p className="md:text-xl text-slate-900 md:leading-relaxed">
               AMC Services provides a proactive maintenance framework that helps
               improve system reliability, optimize performance, and extend
               equipment life through scheduled service activities and preventive
@@ -177,20 +177,20 @@ const [isOpen, setOpen] = useState(false);
       </section>
 
       {/* Benefits */}
-      <section className="py-10 bg-slate-50">
+      <section className="py-5 md:py-10 bg-slate-50">
         <div className="max-w-7xl mx-auto px-4">
-          <h2 className="text-4xl font-bold text-center mb-10 text-slate-900">
+          <h2 className="text-2xl md:text-4xl font-bold text-center mb-6 md:mb-10 text-slate-900">
             Benefits
           </h2>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-2 lg:grid-cols-3 gap-6">
             {benefits.map((item, i) => (
               <div
                 key={i}
-                className="bg-white p-6 rounded-2xl shadow-sm border"
+                className="bg-white p-3 md:p-6 rounded-2xl shadow-sm border"
               >
-                <CheckCircle className="w-8 h-8 text-green-600 mb-4" />
-                <p className="text-slate-700">{item}</p>
+                <CheckCircle className="w-8 h-8  lg:block text-green-600 mb-4" />
+                <p className="text-slate-700 text-sm md:text-base">{item}</p>
               </div>
             ))}
           </div>
@@ -198,9 +198,9 @@ const [isOpen, setOpen] = useState(false);
       </section>
 
       {/* Key Features */}
-      <section className="py-10">
+      <section className="py-5 md:py-10">
         <div className="max-w-7xl mx-auto px-4">
-          <h2 className="text-4xl font-bold text-center mb-14 text-slate-900">
+          <h2 className="text-3xl md:text-4xl font-bold text-center mb-7 md:mb-14 text-slate-900">
             Key Features
           </h2>
 
@@ -208,11 +208,11 @@ const [isOpen, setOpen] = useState(false);
             {features.map((feature, i) => (
               <div
                 key={i}
-                className="bg-white border rounded-3xl p-8 shadow-sm hover:shadow-lg transition"
+                className="bg-white border rounded-3xl p-4 md:p-8 shadow-sm hover:shadow-lg transition"
               >
                 <Wrench className="w-10 h-10 text-[#0B4A8B] mb-5" />
                 <h3 className="text-xl font-bold mb-3">{feature.title}</h3>
-                <p className="text-slate-600 leading-relaxed">
+                <p className="text-slate-600 md:leading-relaxed">
                   {feature.description}
                 </p>
               </div>
@@ -222,22 +222,22 @@ const [isOpen, setOpen] = useState(false);
       </section>
 
       {/* Industries */}
-      <section className="py-10 bg-slate-50">
+      <section className="py-5 md:py-10 bg-slate-50">
         <div className="max-w-7xl mx-auto px-4">
-          <h2 className="text-4xl font-bold text-center mb-6 text-slate-900">
+          <h2 className="text-3xl md:text-4xl font-bold text-center mb-6 text-slate-900">
             Industries & Use Cases
           </h2>
 
-          <p className="text-center text-slate-600 max-w-4xl mx-auto mb-10">
+          <p className="text-center text-slate-600 max-w-4xl mx-auto mb-5 md:mb-10">
             AMC Services support reliable compressed air operations across a
             wide range of industrial environments, including:
           </p>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-3 md:gap-5">
             {industries.map((industry, i) => (
               <div
                 key={i}
-                className="bg-white border rounded-2xl p-5 flex items-center gap-3"
+                className="bg-white border rounded-2xl p-3 md:p-5 flex items-center gap-3"
               >
                 <Factory className="w-5 h-5 text-[#0B4A8B]" />
                 <span>{industry}</span>
@@ -248,17 +248,17 @@ const [isOpen, setOpen] = useState(false);
       </section>
 
       {/* Applications */}
-      <section className="py-10">
+      <section className="py-5 md:py-10">
         <div className="max-w-7xl mx-auto px-4">
-          <h2 className="text-4xl font-bold text-center mb-10 text-slate-900">
+          <h2 className="text-3xl md:text-4xl font-bold text-center mb-5 md:mb-10 text-slate-900">
             Typical Applications
           </h2>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-3 md:gap-6">
             {applications.map((item, i) => (
               <div
                 key={i}
-                className="bg-slate-50 rounded-2xl border p-6 flex items-center gap-3"
+                className="bg-slate-50 rounded-2xl border p-3 md:p-6 flex items-center gap-3"
               >
                 <ShieldCheck className="w-6 h-6 text-green-600" />
                 <span>{item}</span>
@@ -269,9 +269,9 @@ const [isOpen, setOpen] = useState(false);
       </section>
 
       {/* FAQ */}
-      <section className="py-10 bg-slate-50">
+      <section className="py-5 md:py-10 bg-slate-50">
         <div className="max-w-5xl mx-auto px-4">
-          <h2 className="text-4xl font-bold text-center mb-10 text-slate-900">
+          <h2 className="text-3xl md:text-4xl font-bold text-center mb-5 md:mb-10 text-slate-900">
             Frequently Asked Question – AMC Services
           </h2>
 
@@ -279,10 +279,10 @@ const [isOpen, setOpen] = useState(false);
             {faqs.map((faq, i) => (
               <div
                 key={i}
-                className="bg-white rounded-2xl border p-7 shadow-sm"
+                className="bg-white rounded-2xl border p-4 md:p-7 shadow-sm"
               >
                 <h3 className="font-bold text-lg mb-3">{faq.question}</h3>
-                <p className="text-slate-600 leading-relaxed">{faq.answer}</p>
+                <p className="text-slate-600 md:leading-relaxed">{faq.answer}</p>
               </div>
             ))}
           </div>
@@ -295,11 +295,11 @@ const [isOpen, setOpen] = useState(false);
         className="py-8 bg-gradient-to-r from-[#0B4A8B] to-slate-900 text-white"
       >
         <div className="max-w-6xl mx-auto px-4 text-center">
-          <h2 className="text-4xl md:text-5xl font-bold mb-8">
+          <h2 className="text-3xl md:text-5xl font-bold mb-8">
             Let's Discuss the Right Maintenance Strategy
           </h2>
 
-          <p className="text-lg text-slate-200 leading-relaxed mb-6">
+          <p className="md:text-lg text-slate-200 leading-relaxed mb-6">
             A well-planned maintenance program can significantly improve system
             reliability, efficiency, and long-term performance. AMC Services
             help organizations establish a structured approach to maintenance
