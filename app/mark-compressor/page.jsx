@@ -111,6 +111,20 @@ const page = () => {
 
   return (
     <div>
+
+      <section className="relative w-full h-[250px] md:h-[400px] flex items-center justify-center overflow-hidden">
+         <div
+           className="absolute inset-0 bg-center bg-cover flex items-center justify-center"
+           style={{ backgroundImage: "url('/bghero1.webp')" }}
+         >
+           <div className="absolute inset-0 bg-black/50"></div>
+           <h1 className="px-10   text-center text-3xl md:text-7xl font-bold text-white z-10">
+        
+            Mark Compressor 
+           </h1>
+         </div>
+      </section>
+
      <section className="relative overflow-x-hidden bg-white">
   <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-14">
     <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">

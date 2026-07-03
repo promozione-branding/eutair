@@ -92,19 +92,19 @@ const products = [
       <section className="relative overflow-hidden bg-gradient-to-br from-slate-950 via-[#0B2B4F] to-[#144F8B]">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(255,255,255,0.08),transparent_45%)]"></div>
 
-        <div className="relative mx-auto max-w-7xl px-6 py-20 lg:px-8">
+        <div className="relative mx-auto max-w-7xl px-6 py-7 md:py-20 lg:px-8">
           <div className="max-w-4xl">
 
             <span className="rounded-full border border-cyan-400/30 bg-gray-400/10 px-5 py-2 text-sm font-medium text-cyan-300">
             Spares & Consumables
             </span>
 
-            <h2 className="mt-6 text-5xl font-extrabold leading-tight text-white lg:text-6xl">
+            <h2 className="mt-6 text-3xl md:text-5xl font-extrabold leading-tight text-white lg:text-6xl">
               Spares and Consumables
             </h2>
 
            
-            <p className="mt-6 max-w-3xl text-lg leading-8 text-slate-200">
+            <p className="mt-6 max-w-3xl md:text-lg md:leading-8 text-slate-200">
               Keep your compressed air system operating at peak efficiency with
               premium-quality Compressor Spares & Consumables from Eutair
               Equipments LLP. We supply genuine, OEM-equivalent, and
@@ -139,20 +139,20 @@ const products = [
       
 
       {/* WHY CHOOSE */}
-      <section className="mx-auto max-w-7xl px-6 py-10 lg:px-8">
+      <section className="mx-auto max-w-7xl px-6 py-6 md:py-10 lg:px-8">
 
-        <div className="grid gap-14 lg:grid-cols-2">
+        <div className="grid gap-7 md:gap-14 lg:grid-cols-2">
 
           <div>
             <span className="text-sm font-semibold uppercase tracking-widest text-cyan-600">
               Why Choose Us
             </span>
 
-            <h2 className="mt-3 text-4xl font-bold text-slate-900">
+            <h2 className="mt-3 text-2xl md:text-4xl font-bold text-slate-900">
               Why Choose Our Compressor Spares & Consumables?
             </h2>
 
-            <p className="mt-6 text-lg leading-8 text-slate-600">
+            <p className="mt-6 md:text-lg md:leading-8 text-slate-600">
               At Eutair Equipments LLP, we understand that the performance of a
               compressed air system depends on the quality of its components.
               That's why we provide durable and reliable spares designed to
@@ -161,14 +161,14 @@ const products = [
             </p>
           </div>
 
-          <div className="grid gap-5">
+          <div className="grid gap-3  md:gap-5">
             {chooseUs.map((item) => (
               <div
                 key={item}
-                className="flex items-start gap-4 rounded-2xl border bg-white p-6 shadow-sm"
+                className="flex items-start gap-4 rounded-2xl border bg-white p-3 md:p-6 shadow-sm"
               >
                 <CheckCircle2 className="mt-1 h-6 w-6 text-cyan-600" />
-                <p className="font-medium text-slate-700">{item}</p>
+                <p className="md:font-medium text-slate-700">{item}</p>
               </div>
             ))}
           </div>
@@ -192,21 +192,21 @@ const products = [
               Key Benefits
             </h2>
 
-            <p className="mx-auto mt-6 max-w-3xl text-lg text-slate-600">
+            <p className="mx-auto mt-3 md:mt-6 max-w-3xl md:text-lg text-slate-600">
               Using quality compressor spares and consumables helps maintain
               system performance while reducing maintenance costs and improving
               equipment reliability.
             </p>
           </div>
 
-          <div className="mt-14 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+          <div className="mt-5 md:mt-14 grid gap-3 md:gap-6 grid-cols-2 lg:grid-cols-4">
             {benefits.map((item) => (
               <div
                 key={item}
-                className="rounded-2xl border bg-slate-50 p-6 transition hover:-translate-y-1 hover:shadow-xl"
+                className="rounded-2xl border bg-slate-50 p-3 md:p-6 transition hover:-translate-y-1 hover:shadow-xl"
               >
                 <CheckCircle2 className="mb-5 h-10 w-10 text-cyan-600" />
-                <p className="font-medium text-slate-700">{item}</p>
+                <p className="text-sm md:text-base md:font-medium text-slate-700">{item}</p>
               </div>
             ))}
           </div>
@@ -215,24 +215,24 @@ const products = [
 
       </section>
 
-    <section className="py-10 px-5 bg-slate-50">
-      <div className="container mx-auto px-6 lg:px-8">
+    <section className="py-6 md:py-10 px-5 bg-slate-50">
+      <div className="container mx-auto px-3 lg:px-8">
         <div className="max-w-3xl">
           <span className="text-sm font-semibold uppercase tracking-wider text-blue-600">
             Spare Parts Portfolio
           </span>
 
-          <h2 className="mt-3 text-4xl font-bold text-slate-900">
+          <h2 className="mt-3 text-3xl md:text-4xl font-bold text-slate-900">
             Our Product Range
           </h2>
 
-          <p className="mt-4 text-slate-600">
+          <p className="mt-4 leading-5 md:leading-6 text-slate-600">
             Comprehensive spare parts and maintenance components for industrial
             compressed air systems.
           </p>
         </div>
 
-        <div className="mt-10  grid gap-4 sm:grid-cols-2 lg:grid-cols-5">
+        <div className="mt-10  grid gap-4 grid-cols-2 lg:grid-cols-5">
           {products.map((item, index) => {
             const Icon = item.icon;
 
@@ -245,7 +245,7 @@ const products = [
                   <Icon size={26} />
                 </div>
 
-                <h3 className="mt-2 font-semibold text-slate-900">
+                <h3 className="mt-2 text-sm md:text-base font-semibold text-slate-900">
                   {item.title}
                 </h3>
               </div>
@@ -258,33 +258,33 @@ const products = [
 
       {/* CTA */}
 
-      <section className="bg-gradient-to-r from-cyan-600 to-blue-700 py-15">
+      <section className="bg-gradient-to-r from-cyan-600 to-blue-700 py-7 md:py-15">
 
         <div className="mx-auto max-w-5xl px-6 text-center">
 
-          <h2 className="text-4xl font-bold text-white">
+          <h2 className="text-3xl md:text-4xl font-bold text-white">
             Need Compressor Spares & Consumables?
           </h2>
 
-          <p className="mt-6 text-lg leading-8 text-cyan-100">
+          <p className="mt-6 md:text-lg md:leading-8 text-cyan-100">
             Ensure uninterrupted performance with premium-quality compressor
             spares and consumables from Eutair Equipments LLP. Our team is ready
             to help you find the right replacement parts for your compressed air
             system.
           </p>
 
-          <div className="mt-10 flex flex-wrap justify-center gap-5">
+          <div className="mt-10 flex flex-wrap justify-center gap-3 md:gap-5">
 
             <Link
               href="/contact"
-              className="rounded-xl bg-white px-8 py-4 font-semibold text-slate-900 transition hover:scale-105"
+              className="rounded-xl bg-white px-5 md:px-8 py-4 font-semibold text-slate-900 transition hover:scale-105"
             >
               Contact Us
             </Link>
 
             <button onClick={() => setOpen(true)}
               href="/contact"
-              className="flex items-center gap-2 rounded-xl border border-white bg-transparent px-8 py-4 font-semibold text-white transition hover:bg-white hover:text-slate-900"
+              className="flex items-center gap-2 rounded-xl border border-white bg-transparent px-5 md:px-8 py-4 font-semibold text-white transition hover:bg-white hover:text-slate-900"
             >
               Request a Quote
               <ArrowRight className="h-5 w-5" />
@@ -309,7 +309,7 @@ const products = [
 
 
     
-    <section className="relative overflow-hidden py-10 px-10">
+    <section className="relative overflow-hidden py-6 md:py-10 px-5 md:px-10">
       {/* Background */}
       <div className="absolute inset-0 bg-gradient-to-br from-sky-50 via-white to-cyan-50" />
 
@@ -317,25 +317,25 @@ const products = [
       <div className="absolute -top-20 right-0 h-72 w-72 rounded-full bg-sky-200/40 blur-3xl" />
       <div className="absolute -bottom-20 left-0 h-72 w-72 rounded-full bg-cyan-200/40 blur-3xl" />
 
-      <div className="container relative z-10 mx-auto px-6 lg:px-8">
+      <div className="container relative z-10 mx-auto lg:px-8">
         {/* Header */}
         <div className="max-w-3xl">
           <span className="inline-flex items-center rounded-full border border-sky-200 bg-white px-4 py-2 text-sm font-semibold text-sky-700 shadow-sm">
             Trusted Partners
           </span>
 
-          <h2 className="mt-3 text-4xl font-bold text-slate-900 lg:text-5xl">
+          <h2 className="mt-3 text-3xl md:text-4xl font-bold text-slate-900 lg:text-5xl">
             Brands We Support
           </h2>
 
-          <p className="mt-3 text-md     leading-8 text-slate-600">
+          <p className="mt-3 text-md     md:leading-8 text-slate-600">
             We provide genuine, OEM-equivalent, and compatible spare parts for
             leading compressor brands:
           </p>
         </div>
 
         {/* Logo Grid */}
-        <div className="mt-5 grid  sm:grid-cols-2 lg:grid-cols-5">
+        <div className="mt-5 grid grid-cols-2 gap-3 md:gap-6 lg:grid-cols-5">
           {brands.map((brand, index) => (
             <div
               key={index}
@@ -352,7 +352,7 @@ const products = [
           ))}
 
           {/* Last Card */}
-          <div className="flex h-40 items-center justify-center rounded-3xl border border-dashed border-sky-300 bg-white/60 p-8 text-center shadow-lg shadow-slate-100">
+          <div className=" hidden md:flex h-40 items-center justify-center rounded-3xl border border-dashed border-sky-300 bg-white/60 p-8 text-center shadow-lg shadow-slate-100">
             <p className="font-semibold text-slate-700">
               And many other
               <br />
