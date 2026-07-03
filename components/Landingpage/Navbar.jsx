@@ -601,7 +601,7 @@ shadow-[0_10px_30px_rgba(37,99,235,0.25)]
                     <Instagram className="w-5 h-5 text-pink-500" />
                   </a>
                   <a href="https://www.youtube.com/@eutairequipments1359">
-                    <Youtube className="w-5 h-5 text-red-500" />
+                    <Youtube className="w-6 h-6 text-red-500" />
                   </a>
                 </div>
               </div>
