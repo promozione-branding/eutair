@@ -245,13 +245,13 @@ const page = () => {
         duration-500
       "
               >
-                <div className="bg-gradient-to-b from-sky-50 to-white p-8 h-[240px] flex items-center justify-center overflow-hidden">
+                <div className="bg-gradient-to-b from-sky-50 to-white p-8 h-[270px] flex items-center justify-center overflow-hidden">
                   <img
                     src={item.image}
                     alt={item.title}
                     className="
             max-h-[280px]
-            object-contain
+            object-cover
             transition-all
             duration-500
             group-hover:scale-110
