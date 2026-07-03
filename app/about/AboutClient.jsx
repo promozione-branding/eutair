@@ -11,7 +11,7 @@ const [isOpen, setOpen] = useState(false);
   return (
     <>
       {/* HERO */}
-   <section className="relative h-[450px] overflow-hidden">
+   <section className="relative h-[300px] md:h-[450px] overflow-hidden">
   <Image
     src="/bghero1.webp"
     fill
@@ -28,11 +28,11 @@ const [isOpen, setOpen] = useState(false);
         Trusted Industrial Partner
       </span>
 
-      <h1 className="mt-6 text-5xl md:text-7xl font-black text-white max-w-4xl">
+      <h1 className="mt-6 text-4xl md:text-7xl font-black text-white max-w-4xl">
         About Eutair Equipments LLP
       </h1>
 
-      <p className="mt-6 text-xl text-slate-200 max-w-3xl">
+      <p className="mt-6 text-lg md:text-xl text-slate-200 max-w-3xl">
         Trusted Partner for Compressed Air & Industrial Solutions
       </p>
 
@@ -41,10 +41,10 @@ const [isOpen, setOpen] = useState(false);
 </section>
 
       {/* ABOUT CONTENT */}
-  <section className="py-18 bg-white">
-  <div className="w-full mx-auto px-20">
+  <section className="py-7 md:py-18 bg-white">
+  <div className="w-full mx-auto px-5 md:px-20">
 
-    <div className="grid lg:grid-cols-2 gap-20 items-center">
+    <div className="grid lg:grid-cols-2 gap-5 md:gap-20 items-center">
 
       <div>
 
@@ -60,11 +60,11 @@ const [isOpen, setOpen] = useState(false);
           About Our Company
         </span>
 
-        <h2 className="mt-4 text-5xl font-black text-slate-900">
+        <h2 className="mt-4 text-2xl md:text-5xl font-black text-slate-900">
           Trusted Partner for Compressed Air & Industrial Solutions
         </h2>
 
-        <div className="mt-8 space-y-6 text-lg text-slate-800 leading-relaxed">
+        <div className="mt-8 space-y-6 text-lg text-slate-800 md:leading-relaxed">
 
           <p>
             Eutair Equipments LLP is a leading name in the compressed air and industrial equipment industry, committed to delivering quality, reliability, and innovation.
@@ -96,7 +96,7 @@ const [isOpen, setOpen] = useState(false);
             width={900}
             height={1000}
             alt="Industrial Solutions"
-            className="w-full h-[550px] object-cover"
+            className="w-full h-[300px] md:h-[550px] object-fill md:object-cover"
           />
         </div>
 
@@ -114,7 +114,8 @@ const [isOpen, setOpen] = useState(false);
   style={{ backgroundImage: "url(/stats.png)" }}
   className="
     relative
-    py-14
+    py-7
+    md:py-14
     bg-cover
     bg-center
     bg-fixed
@@ -146,7 +147,7 @@ const [isOpen, setOpen] = useState(false);
         Our Achievements
       </span>
 
-      <h2 className="mt-6 text-4xl md:text-6xl font-black text-white">
+      <h2 className="mt-6 text-3xl md:text-6xl font-black text-white">
         Trusted by Industries Across India
       </h2>
 
@@ -154,7 +155,7 @@ const [isOpen, setOpen] = useState(false);
     </div>
 
     {/* Stats */}
-    <div className="grid md:grid-cols-2 xl:grid-cols-4 gap-8">
+    <div className="grid md:grid-cols-2 xl:grid-cols-4 gap-4 md:gap-8">
 
       {[
         {
@@ -189,7 +190,8 @@ const [isOpen, setOpen] = useState(false);
             backdrop-blur-xl
             border
             border-white/10
-            p-8
+            p-5
+            md:p-8
             text-center
             transition-all
             duration-500
@@ -206,7 +208,7 @@ const [isOpen, setOpen] = useState(false);
           {/* Number */}
           <h3
             className="
-              text-5xl
+              text-4xl
               md:text-6xl
               font-black
               bg-gradient-to-r
@@ -234,39 +236,39 @@ const [isOpen, setOpen] = useState(false);
 
 
       {/* VISION */}
-    <section className="py-17 bg-gradient-to-b from-slate-50 to-white">
+    <section className="py-7 md:py-17 bg-gradient-to-b from-slate-50 to-white">
 
   <div className="max-w-7xl mx-auto px-4">
 
-    <div className="grid lg:grid-cols-2 gap-8">
+    <div className="grid lg:grid-cols-2 gap-4 md:gap-8">
 
-      <div className="rounded-[40px] p-10 bg-white border border-slate-200 shadow-xl">
+      <div className="rounded-[40px] p-5 md:p-10 bg-white border border-slate-200 shadow-xl">
 
         <div className="w-16 h-16 rounded-2xl bg-sky-100 flex items-center justify-center text-3xl">
           🎯
         </div>
 
-        <h3 className="mt-6 text-4xl font-black text-slate-900">
+        <h3 className="mt-3 md:mt-6 text-3xl md:text-4xl font-black text-slate-900">
           Our Mission
         </h3>
 
-        <p className="mt-6 text-slate-600 leading-relaxed text-lg">
+        <p className="mt-3 md:mt-6 text-slate-600 md:leading-relaxed text-lg">
           To provide high-performance Screw Air Compressors, compressed air systems, and industrial solutions that help businesses improve productivity, enhance operational efficiency, and reduce operating costs.
         </p>
 
       </div>
 
-      <div className="rounded-[40px] p-10 bg-white border border-slate-200 shadow-xl">
+      <div className="rounded-[40px] p-5 md:p-10 bg-white border border-slate-200 shadow-xl">
 
         <div className="w-16 h-16 rounded-2xl bg-sky-100 flex items-center justify-center text-3xl">
           🚀
         </div>
 
-        <h3 className="mt-6 text-4xl font-black text-slate-900">
+        <h3 className="mt-3 md:mt-6 text-4xl font-black text-slate-900">
           Our Vision
         </h3>
 
-        <p className="mt-6 text-slate-600 leading-relaxed text-lg">
+        <p className="mt-3 md:mt-6 text-slate-600 md:leading-relaxed md:text-lg">
           To be a trusted name in the compressed air industry by delivering advanced Screw Air Compressors and industrial solutions that set benchmarks for quality, reliability, and customer satisfaction.
         </p>
 
@@ -285,7 +287,7 @@ const [isOpen, setOpen] = useState(false);
     <div
       className="
       rounded-[40px]
-      p-12
+      p-5 md:p-12
       bg-gradient-to-r
       from-sky-500
       via-cyan-500
@@ -294,22 +296,22 @@ const [isOpen, setOpen] = useState(false);
       text-white
     "
     >
-      <h2 className="text-5xl font-black">
+      <h2 className="text-3xl md:text-5xl font-black">
         Ready to Optimize Your Operations?
       </h2>
 
-      <p className="max-w-3xl mx-auto mt-6 text-xl text-white/90">
+      <p className="max-w-3xl mx-auto mt-6 text-lg md:text-xl text-white/90">
         Discover reliable Screw Air Compressors and industrial solutions from Eutair Equipments LLP designed to enhance efficiency, productivity, and performance.
       </p>
 
       <div className="flex flex-wrap justify-center gap-5 mt-10">
-        <button onClick={() => setOpen(true)} className="px-8 h-14 rounded-2xl bg-white text-sky-600 font-bold">
+        <button onClick={() => setOpen(true)} className="px-5 md:px-8 h-14 rounded-2xl bg-white text-sky-600 font-bold">
           Request a Quote
         </button>
 
 
 <Link href="/contact">
-        <button className="px-8 h-14 rounded-2xl border border-white text-white font-bold">
+        <button className="px-5 md:px-8 h-14 rounded-2xl border border-white text-white font-bold">
           Contact Us
         </button>
 
@@ -345,7 +347,7 @@ const [isOpen, setOpen] = useState(false);
         Business Excellence
       </span>
 
-      <h2 className="mt-4 text-4xl font-bold tracking-tight text-gray-900 ">
+      <h2 className="mt-4 text-2xl md:text-4xl font-bold tracking-tight text-gray-900 ">
         Technical & Commercial Capabilities
       </h2>
 
@@ -353,7 +355,7 @@ const [isOpen, setOpen] = useState(false);
     </div>
 
     {/* Cards */}
-    <div className="mt-7 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+    <div className="mt-7 px-3 grid gap-8 grid-cols-2 lg:grid-cols-3">
       {[
         "Pre-sales application engineering and system sizing",
         "Energy-efficient system design and optimization",
@@ -365,7 +367,7 @@ const [isOpen, setOpen] = useState(false);
       ].map((item, index) => (
         <div
           key={index}
-          className="group relative rounded-3xl border border-gray-200 bg-white p-5 shadow-sm transition-all duration-300 hover:-translate-y-2 hover:border-blue-300 hover:shadow-2xl"
+          className="group relative rounded-3xl border border-gray-200 bg-white p-3 md:p-5 shadow-sm transition-all duration-300 hover:-translate-y-2 hover:border-blue-300 hover:shadow-2xl"
         >
           {/* Number */}
           <div className="mb-4 flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-to-br from-blue-600 to-sky-500 text-lg font-bold text-white shadow-md">
@@ -373,7 +375,7 @@ const [isOpen, setOpen] = useState(false);
           </div>
 
           {/* Content */}
-          <p className="text-lg font-medium leading-8 text-gray-700">
+          <p className="text-sm md:text-lg font-medium md:leading-8 text-gray-700">
             {item}
           </p>
 
