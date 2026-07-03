@@ -155,7 +155,7 @@ export default function ProductPage({ params }) {
                   <FaDownload size={18} />
                   <span>Download Brochure</span>
                 </button>
-                <div className="flex justify-center md:flex items-center w-full mx-auto mt-2">
+                <div className="flex md:hidden justify-center ddflex items-center w-full mx-auto mt-2">
                   <button className="group flex items-center gap-3 px-8 h-16 rounded-2xl bg-gradient-to-r from-slate-900 to-slate-700 text-white font-semibold">
                   <FaDownload size={18} />
                   <span>Download Brochure</span>
