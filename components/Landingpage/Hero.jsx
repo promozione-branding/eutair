@@ -128,6 +128,8 @@ const slides = [
 
     title: "AIR TREATMENT",
 
+    pdf:"/pdf/airTreatment.pdf",
+
     description:
       "Designed to remove moisture, oil, and contaminants from compressed air systems, ensuring reliable operation, improved product quality, and longer equipment life.",
 
