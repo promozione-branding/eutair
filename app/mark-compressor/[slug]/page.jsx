@@ -86,10 +86,25 @@ console.log("products", allProducts);
                   <span>Call Now</span>
                 </button>
 
-                <button className="group flex items-center gap-3 px-8 h-16 rounded-2xl bg-gradient-to-r from-slate-900 to-slate-700 text-white font-semibold">
+                <a download="Brochure.pdf"
+                  href={product.pdf}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Download Brochure" className="group hidden md:flex items-center gap-3 px-8 h-16 rounded-2xl bg-gradient-to-r from-slate-900 to-slate-700 text-white font-semibold">
                   <FaDownload size={18} />
                   <span>Download Brochure</span>
-                </button>
+                </a>
+
+                 <div className="flex md:hidden justify-center ddflex items-center w-full mx-auto mt-2">
+                                  <a download="Brochure.pdf"
+                                  href={product.pdf}
+                                  target="_blank"
+                                  rel="noopener noreferrer"
+                                  aria-label="Download Brochure" className="group flex items-center gap-3 px-8 h-16 rounded-2xl bg-gradient-to-r from-slate-900 to-slate-700 text-white font-semibold">
+                                    <FaDownload size={18} />
+                                    <span>Download Brochure</span>
+                                  </a>
+                                </div>
               </div>
             </div>
 
