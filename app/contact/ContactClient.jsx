@@ -104,53 +104,71 @@ export default function ContactPage() {
   <div className="max-w-7xl mx-auto">
 
     <div className="grid md:grid-cols-3 gap-6">
-
-      {[
-        {
-          title: "Call Us",
-          value: "+91 9717159766 , +91 9582911766 ",
-          icon: <Phone size={32} />,
-        },
-        {
-          title: "Email Address",
-          value: "support@eutair.com",
-          icon: <Mail size={32} />,
-        },
-        {
-          title: "Office Address",
-          value:
-            "T-3, Third Floor, Ansal Utility Tower, A 2 Block, Paschim Vihar, New Delhi, Delhi 110063",
-          icon: <MapPin size={32} />,
-        },
-      ].map((item, i) => (
-        <div
-          key={i}
-          className="
-          bg-white
-          rounded-[32px]
-          p-5
-          md:p-8
-          shadow-[0_20px_60px_rgba(0,0,0,.08)]
-          border
-          border-slate-100
-          hover:-translate-y-2
-          transition-all
-        "
+  {[
+    {
+      title: "Call Us",
+      value: (
+        <>
+          <a
+            href="tel:+919717159766"
+            className="block hover:text-cyan-700 transition"
+          >
+            +91 9717159766
+          </a>
+          <a
+            href="tel:+919582911766"
+            className="block hover:text-cyan-700 transition"
+          >
+            +91 9582911766
+          </a>
+        </>
+      ),
+      icon: <Phone size={32} />,
+    },
+    {
+      title: "Email Address",
+      value: (
+        <a
+          href="mailto:support@eutair.com"
+          className="hover:text-cyan-700 transition break-all"
         >
-          <div className="w-16 h-16 rounded-2xl bg-cyan-100 text-cyan-700 flex items-center justify-center">
-            {item.icon}
-          </div>
+          support@eutair.com
+        </a>
+      ),
+      icon: <Mail size={32} />,
+    },
+    {
+      title: "Office Address",
+      value: (
+        <a
+          href="https://maps.google.com/?q=T-3, Third Floor, Ansal Utility Tower, A 2 Block, Paschim Vihar, New Delhi, Delhi 110063"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="hover:text-cyan-700 transition"
+        >
+          T-3, Third Floor, Ansal Utility Tower, A 2 Block, Paschim Vihar,
+          New Delhi, Delhi 110063
+        </a>
+      ),
+      icon: <MapPin size={32} />,
+    },
+  ].map((item, i) => (
+    <div
+      key={i}
+      className="bg-white rounded-[32px] p-5 md:p-8 shadow-[0_20px_60px_rgba(0,0,0,.08)] border border-slate-100 hover:-translate-y-2 transition-all"
+    >
+      <div className="w-16 h-16 rounded-2xl bg-cyan-100 text-cyan-700 flex items-center justify-center">
+        {item.icon}
+      </div>
 
-          <h3 className="mt-6 text-2xl font-bold">
-            {item.title}
-          </h3>
+      <h3 className="mt-6 text-2xl font-bold">{item.title}</h3>
 
-          <p className="mt-4 text-slate-600 whitespace-pre-line">
-            {item.value}
-          </p>
-        </div>
-      ))}
+      <div className="mt-4 text-slate-600 whitespace-pre-line">
+        {item.value}
+      </div>
     </div>
+  ))}
+</div>
 
   </div>
 </section>

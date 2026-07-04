@@ -237,7 +237,7 @@ export default function Footer() {
   {/* Background Glow */}
 
 
-  <div className="relative z-999">
+  <div className="relative ">
     <h4 className="text-xl ml-2 font-bold text-cyan-400 mb-3">
       Trust Elite Certificate
     </h4>
