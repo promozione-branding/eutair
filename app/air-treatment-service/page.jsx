@@ -155,7 +155,7 @@ export default function AirTreatmentSolutionsPage() {
                     <CheckCircle2 />
                   </div>
 
-                  <p className="text-slate-700 font-medium">{item}</p>
+                  <p className="text-slate-700 md:mt-3 font-medium">{item}</p>
                 </div>
               ))}
             </div>
