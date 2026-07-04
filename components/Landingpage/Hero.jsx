@@ -28,6 +28,7 @@ const slides = [
 
     title: "SCREW AIR\nCOMPRESSORS",
 
+    pdf:"/pdf/DiselEutair.pdf",
 
 
     description:
@@ -77,6 +78,7 @@ const slides = [
     tagline: "INDUSTRIAL COMPRESSED AIR",
 
     title: "MARK COMPRESSORS",
+    pdf:"/pdf/mark.pdf",
 
     description:
       "Designed for manufacturing, engineering, automotive, food processing, pharmaceuticals, textiles, and every industry that demands dependable compressed air solutions.",
@@ -126,7 +128,7 @@ const slides = [
 
     title: "AIR TREATMENT",
 
-   
+    pdf:"/pdf/airTreatment.pdf",
 
     description:
       "Designed to remove moisture, oil, and contaminants from compressed air systems, ensuring reliable operation, improved product quality, and longer equipment life.",
@@ -170,7 +172,7 @@ const slides = [
 ];
 export default function HeroSlider() {
   return (
-  <section className="relative h-[800px] lg:h-[670px] w-full overflow-hidden">
+    <section className="relative h-[800px] lg:h-[670px] w-full overflow-hidden">
       <Swiper
         modules={[Autoplay, Pagination, EffectFade]}
         effect="fade"
@@ -186,7 +188,7 @@ export default function HeroSlider() {
       >
         {slides.map((slide, index) => (
           <SwiperSlide key={index}>
-         <div className="relative min-h-[700px] lg:h-[680px]">
+            <div className="relative min-h-[700px] lg:h-[680px]">
               {/* Background */}
               <img
                 src={slide.bg}
@@ -194,15 +196,13 @@ export default function HeroSlider() {
                 className="absolute inset-0 h-full w-full object-cover"
               />
 
-      
-
               {/* Blue Gradient */}
               <div className="absolute inset-0 bg-gradient-to-r from-[#001938]/90 via-[#001938]/55 to-transparent" />
 
               {/* Content */}
-             <div className="relative z-10 w-full max-w-[1600px] mx-auto h-full px-4 sm:px-6 lg:px-12">
-<div
-  className="
+              <div className="relative z-10 w-full max-w-[1600px] mx-auto h-full px-4 sm:px-6 lg:px-12">
+                <div
+                  className="
     grid
     lg:grid-cols-[1fr_1fr_320px]
     gap-8
@@ -212,22 +212,22 @@ export default function HeroSlider() {
     pt-10
     lg:py-0
   "
->
-
+                >
                   {/* LEFT */}
-  <motion.div
-  initial={{ opacity: 0, x: -80 }}
-  animate={{ opacity: 1, x: 0 }}
-  transition={{ duration: 0.8 }}
-className="
+                  <motion.div
+                    initial={{ opacity: 0, x: -80 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.8 }}
+                    className="
   max-w-[620px]
   text-center
   lg:text-left
   mx-auto
   lg:mx-0
 "
->
-  <span className="
+                  >
+                    <span
+                      className="
   text-white/90
   text-xs
   sm:text-sm
@@ -236,12 +236,13 @@ className="
   font-semibold
   tracking-[0.2em]
   uppercase
-">
-    {slide.tagline}
-  </span>
+"
+                    >
+                      {slide.tagline}
+                    </span>
 
-  <h1
-   className="
+                    <h1
+                      className="
   mt-4
   text-white
   text-[34px]
@@ -255,13 +256,12 @@ className="
   whitespace-pre-line
   drop-shadow-[0_10px_40px_rgba(255,255,255,.15)]
 "
-  >
-    {slide.title}
-  </h1>
+                    >
+                      {slide.title}
+                    </h1>
 
-
-
-  <p className="
+                    <p
+                      className="
   mt-4
   text-white/80
   text-sm
@@ -269,12 +269,13 @@ className="
   md:text-lg
   lg:text-[20px]
   leading-relaxed
-">
-    {slide.description}
-  </p>
+"
+                    >
+                      {slide.description}
+                    </p>
 
-<div
-  className="
+                    <div
+                      className="
     flex
     flex-wrap
     justify-center
@@ -284,10 +285,10 @@ className="
     sm:gap-5
     mt-6
   "
->
-  {/* Mark Compressors */}
-  <div
-    className="
+                    >
+                      {/* Mark Compressors */}
+                      <div
+                        className="
       flex items-center justify-center
       px-5 py-3
       bg-white/90 backdrop-blur-md
@@ -297,19 +298,19 @@ className="
       hover:shadow-[0_12px_35px_rgba(0,0,0,0.2)]
       transition-all duration-300
     "
-  >
-    <Image
-      src="/mark-compressors-logo.png"
-      alt="Mark Compressors"
-      width={110}
-      height={60}
-      className="object-contain"
-    />
-  </div>
+                      >
+                        <Image
+                          src="/mark-compressors-logo.png"
+                          alt="Mark Compressors"
+                          width={110}
+                          height={60}
+                          className="object-contain"
+                        />
+                      </div>
 
-  {/* Chicago Pneumatic */}
-  <div
-    className="
+                      {/* Chicago Pneumatic */}
+                      <div
+                        className="
       flex items-center justify-center
       px-5 py-3
       bg-white/90 backdrop-blur-md
@@ -319,21 +320,19 @@ className="
       hover:shadow-[0_12px_35px_rgba(0,0,0,0.2)]
       transition-all duration-300
     "
-  >
-    <Image
-      src="/chicago-pneumatic-logo.png"
-      alt="Chicago Pneumatic"
-      width={100}
-      height={60}
-      className="object-contain"
-    />
-  </div>
-</div>
+                      >
+                        <Image
+                          src="/chicago-pneumatic-logo.png"
+                          alt="Chicago Pneumatic"
+                          width={100}
+                          height={60}
+                          className="object-contain"
+                        />
+                      </div>
+                    </div>
 
-
-
-<div
-  className="
+                    <div
+                      className="
     flex
     flex-col
     sm:flex-row
@@ -342,10 +341,10 @@ className="
     gap-4
     mt-7
   "
->
-<Link href="/contact">
-  <button
-      className="text-center
+                    >
+                      <Link href="/contact">
+                        <button
+                          className="text-center
       group
       relative
       overflow-hidden
@@ -361,18 +360,17 @@ className="
       duration-500
       hover:-translate-y-1
     "
-    >
-      <span className="relative z-10 flex items-center gap-3 text-white font-semibold">
-        GET INSTANT QUOTE
+                        >
+                          <span className="relative z-10 flex items-center gap-3 text-white font-semibold">
+                            GET INSTANT QUOTE
+                            <ArrowRight
+                              size={18}
+                              className="group-hover:translate-x-1 transition"
+                            />
+                          </span>
 
-        <ArrowRight
-          size={18}
-          className="group-hover:translate-x-1 transition"
-        />
-      </span>
-
-      <div
-        className="
+                          <div
+                            className="
         absolute
         inset-0
         bg-gradient-to-r
@@ -385,33 +383,36 @@ className="
         transition-transform
         duration-1000
       "
-      />
-    </button>
+                          />
+                        </button>
+                      </Link>
 
-</Link>
-
-
-  
-
-    <button className="hidden md:block h-[62px] px-8 rounded-xl border border-white/30 bg-white/5 backdrop-blur-md text-white font-semibold hover:bg-white/10 transition">
-      DOWNLOAD CATALOGUE
-    </button>
-  </div>
-</motion.div>
+                     <a
+  href={slide.pdf}
+  download="Brochure.pdf"
+  target="_blank"
+  rel="noopener noreferrer"
+  aria-label="Download Brochure"
+  className="hidden md:inline-flex items-center justify-center mt-1 h-14 px-8 rounded-xl border border-white/30 bg-white/10 backdrop-blur-md text-white font-semibold tracking-wide transition-all duration-300 hover:bg-white hover:text-slate-900 hover:border-white hover:shadow-lg"
+>
+  DOWNLOAD CATALOGUE
+</a>
+                    </div>
+                  </motion.div>
 
                   {/* CENTER PRODUCT */}
-                <motion.div
-  initial={{ opacity: 0, y: 100 }}
-  animate={{ opacity: 1, y: 0 }}
-  transition={{ duration: 1 }}
-  className="flex justify-center"
->
-  <Image
-    src={slide.machine}
-    alt=""
-    width={800}
-    height={700}
- className="
+                  <motion.div
+                    initial={{ opacity: 0, y: 100 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 1 }}
+                    className="flex justify-center"
+                  >
+                    <Image
+                      src={slide.machine}
+                      alt=""
+                      width={800}
+                      height={700}
+                      className="
 w-[280px]
 sm:w-[380px]
 md:w-[500px]
@@ -421,16 +422,15 @@ mx-auto
 
 drop-shadow-[0_40px_80px_rgba(0,0,0,.45)]
 "
-    
-  />
-</motion.div>
+                    />
+                  </motion.div>
 
                   {/* RIGHT FEATURES */}
-                <motion.div
-  initial={{ opacity: 0, x: 100 }}
-  animate={{ opacity: 1, x: 0 }}
-  transition={{ duration: 0.8 }}
-  className=" hidden md:block
+                  <motion.div
+                    initial={{ opacity: 0, x: 100 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.8 }}
+                    className=" hidden md:block
     relative
     overflow-hidden
     rounded-[28px]
@@ -444,20 +444,20 @@ drop-shadow-[0_40px_80px_rgba(0,0,0,.45)]
     py-9
     shadow-[0_25px_80px_rgba(0,0,0,.35)]
   "
->
-  <div className="space-y-6">
-    {slide.features.map((feature, index) => {
-      const Icon = feature.icon;
+                  >
+                    <div className="space-y-6">
+                      {slide.features.map((feature, index) => {
+                        const Icon = feature.icon;
 
-      return (
-        <motion.div
-          key={index}
-          initial={{ opacity: 0, x: 30 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{
-            delay: index * 0.1,
-          }}
-          className="
+                        return (
+                          <motion.div
+                            key={index}
+                            initial={{ opacity: 0, x: 30 }}
+                            animate={{ opacity: 1, x: 0 }}
+                            transition={{
+                              delay: index * 0.1,
+                            }}
+                            className="
             group
             flex
             items-center
@@ -469,9 +469,9 @@ drop-shadow-[0_40px_80px_rgba(0,0,0,.45)]
             hover:bg-white/5
             hover:translate-x-2
           "
-        >
-          <div
-            className="
+                          >
+                            <div
+                              className="
               h-12
               w-12
               rounded-full
@@ -485,27 +485,25 @@ drop-shadow-[0_40px_80px_rgba(0,0,0,.45)]
               group-hover:bg-blue-500/10
               transition-all
             "
-          >
-            <Icon size={20} />
-          </div>
+                            >
+                              <Icon size={20} />
+                            </div>
 
-          <div>
-            <p className="text-white font-semibold">
-              {feature.title}
-            </p>
+                            <div>
+                              <p className="text-white font-semibold">
+                                {feature.title}
+                              </p>
 
-            <p className="text-white/70 text-sm">
-              {feature.desc}
-            </p>
-          </div>
-        </motion.div>
-      );
-    })}
-  </div>
-</motion.div>
-
+                              <p className="text-white/70 text-sm">
+                                {feature.desc}
+                              </p>
+                            </div>
+                          </motion.div>
+                        );
+                      })}
+                    </div>
+                  </motion.div>
                 </div>
-
               </div>
             </div>
           </SwiperSlide>
@@ -515,20 +513,14 @@ drop-shadow-[0_40px_80px_rgba(0,0,0,.45)]
   );
 }
 
-function Feature({
-  icon,
-  text,
-}) {
+function Feature({ icon, text }) {
   return (
     <div className="flex items-center gap-4">
       <div className="h-12 w-12 rounded-full border border-white/20 flex items-center justify-center text-white">
         {icon}
       </div>
 
-      <span className="text-white text-[17px] font-medium">
-        {text}
-      </span>
+      <span className="text-white text-[17px] font-medium">{text}</span>
     </div>
   );
 }
-

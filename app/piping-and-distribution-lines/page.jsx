@@ -15,15 +15,7 @@ import {
   Factory,
 } from "lucide-react";
 
-import {
-  Network,
-  Pipe,
-  Workflow,
-  
-
-
-} from "lucide-react";
-
+import { Network, Pipe, Workflow } from "lucide-react";
 
 import { useState } from "react";
 import Enquiry from "@/components/Enquiry";
@@ -32,16 +24,7 @@ const whyPoints = [
   "Ensures Efficient Compressed Air Distribution Across the Facility",
   "	Minimizes Pressure Drop and Energy Loss",
   "Supports Reliable System Performance and Productivity",
-	
-
-
 ];
-
-
-
-
-
-
 
 const products = [
   {
@@ -83,8 +66,6 @@ const products = [
     icon: Settings,
   },
 ];
-
-
 
 const benefits = [
   "Efficient Compressed Air Delivery Across the Plant",
@@ -136,80 +117,80 @@ const solutions = [
   },
 ];
 
-
-
 export default function AirTreatmentSolutionsPage() {
-     const [open, setOpen] = useState(false);
+  const [open, setOpen] = useState(false);
   return (
     <main className="bg-white">
       {/* Hero */}
-    <section className="relative overflow-hidden bg-gradient-to-br from-[#071B2E] via-[#0B3155] to-[#124A79]">
-  <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(255,255,255,0.08),transparent_40%)]" />
+      <section className="relative overflow-hidden bg-gradient-to-br from-[#071B2E] via-[#0B3155] to-[#124A79]">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(255,255,255,0.08),transparent_40%)]" />
 
-  <div className="relative max-w-7xl mx-auto px-5 sm:px-6 lg:px-8 py-16 sm:py-20 ">
-    <div className="max-w-4xl">
+        <div className="relative max-w-7xl mx-auto px-5 sm:px-6 lg:px-8 py-6 md:py-16  ">
+          <div className="max-w-4xl">
+            <h2 className="mt-6 text-3xl md:text-5xl font-bold leading-tight text-white">
+              Piping & Distribution Lines
+            </h2>
 
-    
+            <p className="mt-5 text-[15px] sm:text-base lg:text-lg md:leading-7  text-white">
+              Ensure efficient and reliable compressed air delivery with
+              high-quality Piping & Distribution Line Solutions from Eutair
+              Equipments LLP. We provide expertly designed piping systems that
+              transport compressed air from the compressor to every point of use
+              with minimal pressure loss, ensuring maximum system efficiency and
+              consistent performance.
+            </p>
 
-      <h2 className="mt-6 text-3xl sm:text-5xl font-bold leading-tight text-white">
-      Piping & Distribution Lines
-      </h2>
+            <div className="mt-8 flex flex-col sm:flex-row gap-4">
+              <Link
+                href="/contact"
+                className="w-full sm:w-auto flex items-center justify-center gap-2 rounded-xl bg-[#00AEEF] px-6 py-4 font-semibold text-white hover:bg-cyan-500 transition"
+              >
+                Talk to Eutair
+                <Phone size={18} />
+              </Link>
 
-      <p className="mt-5 text-[15px] sm:text-base lg:text-lg leading-7 sm:leading-8 text-white">
-       Ensure efficient and reliable compressed air delivery with high-quality Piping & Distribution Line Solutions from Eutair Equipments LLP. We provide expertly designed piping systems that transport compressed air from the compressor to every point of use with minimal pressure loss, ensuring maximum system efficiency and consistent performance.
-
-
-      </p>
-
-      <div className="mt-8 flex flex-col sm:flex-row gap-4">
-        <Link
-          href="/contact"
-          className="w-full sm:w-auto flex items-center justify-center gap-2 rounded-xl bg-[#00AEEF] px-6 py-4 font-semibold text-white hover:bg-cyan-500 transition"
-        >
-          Talk to Eutair
-          <Phone size={18} />
-        </Link>
-
-        <button
-         onClick={() => setOpen(true)}
-          className="w-full sm:w-auto flex items-center justify-center gap-2 rounded-xl border border-white/20 bg-white/10 px-6 py-4 font-semibold text-white hover:bg-white/20 transition"
-        >
-          Request a Quote
-          <ArrowRight size={18} />
-        </button>
-      </div>
-
-    </div>
-  </div>
-</section>
+              <button
+                onClick={() => setOpen(true)}
+                className="w-full sm:w-auto flex items-center justify-center gap-2 rounded-xl border border-white/20 bg-white/10 px-6 py-4 font-semibold text-white hover:bg-white/20 transition"
+              >
+                Request a Quote
+                <ArrowRight size={18} />
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
 
       {/* Why */}
-      <section className="py-10">
+      <section className="py-5 md:py-10">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
+          <div className="grid lg:grid-cols-2 gap-5 md:gap-16 items-center">
             <div>
-            
-
-              <h2 className="mt-4 text-4xl font-bold text-slate-900">
-                  Why Piping & Distribution Lines Matter
+              <h2 className="mt-4 text-2xl md:text-4xl font-bold text-slate-900">
+                Why Piping & Distribution Lines Matter
               </h2>
 
-              <p className="mt-6 text-slate-600 text-lg leading-8">
-              A well-designed compressed air piping network is essential for maintaining consistent air pressure, minimizing energy losses, and ensuring efficient air distribution throughout your facility. Proper system design not only improves equipment performance but also reduces maintenance requirements and operating costs.
+              <p className="mt-3 md:mt-6 text-slate-600 md:text-lg md:leading-8">
+                A well-designed compressed air piping network is essential for
+                maintaining consistent air pressure, minimizing energy losses,
+                and ensuring efficient air distribution throughout your
+                facility. Proper system design not only improves equipment
+                performance but also reduces maintenance requirements and
+                operating costs.
               </p>
             </div>
 
-            <div className="grid gap-5">
+            <div className="grid gap-3 md:gap-5">
               {whyPoints.map((item, index) => (
                 <div
                   key={index}
-                  className="flex gap-4 rounded-2xl border border-slate-200 bg-white p-6 shadow-sm hover:shadow-lg transition"
+                  className="flex gap-4 rounded-2xl border border-slate-200 bg-white p-3 md:p-6 shadow-sm hover:shadow-lg transition"
                 >
                   <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-sky-100 text-sky-600">
                     <CheckCircle2 />
                   </div>
 
-                  <p className="text-slate-700 font-medium">{item}</p>
+                  <p className="text-slate-700 text-sm md:mt-3 md:text-base font-medium">{item}</p>
                 </div>
               ))}
             </div>
@@ -218,31 +199,33 @@ export default function AirTreatmentSolutionsPage() {
       </section>
 
       {/* Benefits */}
-      <section className="bg-slate-50 py-10">
+      <section className="bg-slate-50 py-5 md:py-10">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="text-center max-w-3xl mx-auto">
             <span className="text-sky-600 font-semibold uppercase tracking-wider">
               Key Benefits
             </span>
 
-            <h2 className="mt-3 text-4xl font-bold text-slate-900">
+            <h2 className="mt-3 text-3xl md:text-4xl font-bold text-slate-900">
               Key Benefits
             </h2>
 
-            <p className="mt-4 text-lg text-slate-600 leading-8">
-             Our piping and distribution line solutions are designed to improve compressed air system performance while ensuring long-term operational efficiency.
+            <p className="mt-4 md:text-lg text-slate-600 md:leading-8">
+              Our piping and distribution line solutions are designed to improve
+              compressed air system performance while ensuring long-term
+              operational efficiency.
             </p>
           </div>
 
-          <div className="mt-5 grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="mt-5 grid grid-cols-2 lg:grid-cols-4 gap-3 md:gap-6">
             {benefits.map((item, index) => (
               <div
                 key={index}
-                className="rounded-2xl bg-white p-7 shadow-sm border border-slate-200 hover:-translate-y-1 hover:shadow-xl transition"
+                className="rounded-2xl bg-white p-3 md:p-7 shadow-sm border border-slate-200 hover:-translate-y-1 hover:shadow-xl transition"
               >
-                <CheckCircle2 className="text-sky-600 mb-5" size={28} />
+                <CheckCircle2 className="text-sky-600 mb-3 md:mb-5" size={28} />
 
-                <p className="text-slate-700 font-medium leading-7">{item}</p>
+                <p className="text-slate-700 text-sm md:text-base font-medium md:leading-7">{item}</p>
               </div>
             ))}
           </div>
@@ -250,13 +233,11 @@ export default function AirTreatmentSolutionsPage() {
       </section>
 
       {/* Solutions */}
-      <section className="py-10">
+      <section className="py-5 md:py-10">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="text-center max-w-3xl mx-auto">
-          
-
-            <h2 className="mt-4 text-4xl font-bold text-slate-900">
-             Our Piping & Distribution Solutions
+            <h2 className="mt-4 text-3xl md:text-4xl font-bold text-slate-900">
+              Our Piping & Distribution Solutions
             </h2>
           </div>
 
@@ -267,17 +248,17 @@ export default function AirTreatmentSolutionsPage() {
               return (
                 <div
                   key={index}
-                  className="rounded-3xl border border-slate-200 bg-white p-8 shadow-sm hover:-translate-y-2 hover:shadow-2xl transition"
+                  className="rounded-3xl border border-slate-200 bg-white p-4 md:p-8 shadow-sm hover:-translate-y-2 hover:shadow-2xl transition"
                 >
                   <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-sky-100 text-sky-600">
                     <Icon size={30} />
                   </div>
 
-                  <h3 className="mt-6 text-xl font-bold text-slate-900">
+                  <h3 className="mt-3 md:mt-6 text-lg md:text-xl font-bold text-slate-900">
                     {item.title}
                   </h3>
 
-                  <p className="mt-4 text-slate-600 leading-8">
+                  <p className="mt-2 md:mt-4 text-slate-600 md:leading-8">
                     {item.description}
                   </p>
                 </div>
@@ -288,18 +269,22 @@ export default function AirTreatmentSolutionsPage() {
       </section>
 
       {/* CTA */}
-      <section className="bg-gradient-to-r from-[#071B2E] via-[#0B3155] to-[#124A79] py-10">
+      <section className="bg-gradient-to-r from-[#071B2E] via-[#0B3155] to-[#124A79] py-5 md:py-10">
         <div className="max-w-5xl mx-auto px-6 text-center">
-          <div className="inline-flex items-center justify-center h-20 w-20 rounded-full bg-white/10 backdrop-blur mb-8">
+          <div className="inline-flex items-center justify-center h-20 w-20 rounded-full bg-white/10 backdrop-blur mb-4 md:mb-8">
             <Settings className="text-white" size={38} />
           </div>
 
-          <h2 className="text-4xl font-bold text-white">
+          <h2 className="text-2xl md:text-4xl font-bold text-white">
             Need Expert Piping & Distribution Solutions?
           </h2>
 
-          <p className="mt-6 text-lg text-blue-100 leading-8">
-           Improve the performance of your compressed air system with professionally engineered Piping & Distribution Line Solutions from Eutair Equipments LLP. Our experts are ready to help you design, install, and optimize a piping network that delivers maximum efficiency and long-term reliability.
+          <p className="mt-6 md:text-lg text-blue-100 md:leading-8">
+            Improve the performance of your compressed air system with
+            professionally engineered Piping & Distribution Line Solutions from
+            Eutair Equipments LLP. Our experts are ready to help you design,
+            install, and optimize a piping network that delivers maximum
+            efficiency and long-term reliability.
           </p>
 
           <div className="mt-10">
@@ -314,7 +299,7 @@ export default function AirTreatmentSolutionsPage() {
         </div>
       </section>
 
-       <Enquiry isOpen={open} onClose={() => setOpen(false)} />
+      <Enquiry isOpen={open} onClose={() => setOpen(false)} />
     </main>
   );
 }

@@ -163,7 +163,7 @@ export default function Navbar() {
         </div>
 
         {/* Main Navbar */}
-        <div className="w-full mx-auto px-5 md:px-25">
+        <div className="w-full mx-auto px-5 md:px-25 lg:px-15">
           <div className="h-16 sm:h-20 lg:h-19 flex items-center justify-between">
             {/* Logo */}
             <Link href="/" className="group">
@@ -176,11 +176,11 @@ export default function Navbar() {
 
             {/* Navigation */}
             <nav className="hidden lg:block">
-              <ul className="flex items-center gap-12">
+              <ul className="flex items-center gap-12 lg:gap-15">
                 <li>
                   <Link
                     href="/about"
-                    className="text-[17px] tracking-[0.12em] font-medium text-slate-700 hover:text-blue-600"
+                    className="text-[17px] lg:text-[16px]  tracking-[0.12em] font-medium text-slate-700 hover:text-blue-600"
                   >
                     ABOUT US
                   </Link>
@@ -191,6 +191,7 @@ export default function Navbar() {
                   <button
                     className="
           flex items-center gap-2
+          lg:text-[16px] 
           text-[17px]
           tracking-[0.12em]
           font-medium
@@ -212,6 +213,7 @@ export default function Navbar() {
                   <div
                     className="
           absolute left-1/2 top-full
+          lg:text-[16px] 
           -translate-x-1/2
           pt-6
           opacity-0 invisible
@@ -222,6 +224,7 @@ export default function Navbar() {
                   >
                     <div
                       className="
+                      lg:text-[16px] 
             w-[700px]
             rounded-3xl
             bg-white
@@ -329,7 +332,7 @@ export default function Navbar() {
                 <li>
                   <Link
                     href="/our-blogs"
-                    className="text-[17px] tracking-[0.12em] font-medium text-slate-700 hover:text-blue-600"
+                    className="text-[17px] lg:text-[16px]  tracking-[0.12em] font-medium text-slate-700 hover:text-blue-600"
                   >
                     BLOGS
                   </Link>
@@ -340,6 +343,7 @@ export default function Navbar() {
                     className="
       flex items-center gap-2
       text-[17px]
+      lg:text-[16px] 
       tracking-[0.12em]
       font-medium
       text-slate-700
@@ -351,7 +355,7 @@ export default function Navbar() {
                     <ChevronDown
                       className="
         w-4 h-4
-        transition-transform duration-300
+        transition-transform duration-300 lg:text-[16px] 
         group-hover:rotate-180
       "
                     />
@@ -380,7 +384,7 @@ export default function Navbar() {
                     >
                       <div className="grid grid-cols-2">
                         {/* Left */}
-                        <div className="p-8 bg-gradient-to-br from-cyan-600 to-blue-600 text-white">
+                        <div className="p-8 bg-gradient-to-br lg:text-[16px]  from-cyan-600 to-blue-600 text-white">
                           <h3 className="text-2xl font-bold mb-4">
                             Our Services
                           </h3>
@@ -432,7 +436,7 @@ export default function Navbar() {
                 <li>
                   <Link
                     href="/contact"
-                    className="text-[17px] tracking-[0.12em] font-medium text-slate-700 hover:text-blue-600"
+                    className="text-[17px] tracking-[0.12em] lg:text-[16px]  font-medium text-slate-700 hover:text-blue-600"
                   >
                     CONTACT US
                   </Link>
@@ -601,7 +605,7 @@ shadow-[0_10px_30px_rgba(37,99,235,0.25)]
                     <Instagram className="w-5 h-5 text-pink-500" />
                   </a>
                   <a href="https://www.youtube.com/@eutairequipments1359">
-                    <Youtube className="w-5 h-5 text-red-500" />
+                    <Youtube className="w-6 h-6 text-red-500" />
                   </a>
                 </div>
               </div>
