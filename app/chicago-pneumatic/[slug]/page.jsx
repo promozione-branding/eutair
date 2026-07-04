@@ -80,7 +80,6 @@ export default function ProductPage({ params }) {
     notFound();
   }
 
-  console.log(product.pdf);
 
   return (
     <>

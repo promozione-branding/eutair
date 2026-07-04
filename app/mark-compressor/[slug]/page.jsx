@@ -15,9 +15,6 @@ const allProducts = markData.products;
   );
 
 
-  console.log("params", params);
-console.log("slug", params.slug);
-console.log("products", allProducts);
 
 
   return (
