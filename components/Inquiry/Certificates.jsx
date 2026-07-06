@@ -24,7 +24,7 @@ const certificates = [
 
 export default function Certificates() {
   return (
-    <section className="py-3 md:py-16 bg-gray-50">
+    <section className="py-3 md:py-12 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4">
 
         {/* Heading */}
@@ -61,7 +61,7 @@ export default function Certificates() {
         >
           {certificates.map((item, index) => (
             <SwiperSlide key={index}>
-              <div className="bg-white rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden border border-gray-100">
+              <div className="bg-white rounded-3xl  hover:scale-105 transition-all duration-300 overflow-hidden border border-gray-100">
 
                 <div className="relative h-60 md:h-110">
                   <Image

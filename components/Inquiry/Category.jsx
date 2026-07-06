@@ -100,7 +100,7 @@ export default function Category() {
           {products.map((item, index) => (
             <SwiperSlide key={index}>
 
-              <div className="group bg-white rounded-3xl border border-slate-200 overflow-hidden shadow-md hover:shadow-2xl transition duration-500">
+              <div className="group bg-white rounded-3xl border border-slate-200 overflow-hidden  hover:scale-105 transition duration-500">
   <Link href="https://wa.link/rntibs" >
     <div className="relative h-56 flex items-center justify-center bg-white p-4 md:p-6">
       <Image
