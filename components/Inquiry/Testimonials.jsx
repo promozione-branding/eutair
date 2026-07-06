@@ -37,7 +37,7 @@ export default function Testimonials() {
   const [activeIndex, setActiveIndex] = useState(0);
 
   return (
-    <section className="py-8 md:py-24 bg-slate-50 overflow-hidden">
+    <section className="py-8 md:py-15 bg-slate-50 overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-20 items-center">
           {/* Left Content */}
@@ -101,16 +101,16 @@ export default function Testimonials() {
 
           {/* Right Image */}
           <div className="order-1 lg:order-2 flex justify-center">
-            <div className="relative w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-[620px] aspect-square">
+            <div className="relative w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-[620px] h-130 aspect-square">
               {/* Background Glow */}
-              <div className="absolute inset-0 rounded-3xl bg-blue-300/20 blur-3xl scale-110"></div>
+              <div className="absolute inset-0 rounded-3xl bg-white blur-3xl scale-110"></div>
 
               <Image
                 src={testimonials[activeIndex].image}
                 alt={testimonials[activeIndex].name}
                 fill
                 priority
-                className="relative object-cover rounded-3xl border-4 md:border-8 border-white shadow-2xl transition-all duration-500"
+                className="relative object-contain rounded-3xl border-4 md:border-8 border-white shadow-2xl transition-all duration-500"
               />
             </div>
           </div>
