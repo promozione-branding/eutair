@@ -37,8 +37,8 @@ const products = [
     description:
       "Advanced air treatment solutions for clean and efficient compressed air.",
     frames: Array.from(
-      { length: 36 },
-      (_, i) => `/360/mark/${i + 1}.png`
+      { length: 10 },
+      (_, i) => `/3601/Product-3/${i + 1}.png`
     ),
   },
 
@@ -49,8 +49,8 @@ const products = [
     description:
       "Premium-quality genuine parts and consumables for peak performance.",
     frames: Array.from(
-      { length: 36 },
-      (_, i) => `/360/vfd/${i + 1}.webp`
+      { length: 10 },
+      (_, i) => `/3601/Product-4/${i + 1}.png`
     ),
   },
 
@@ -61,8 +61,8 @@ const products = [
     description:
       "Efficient air distribution networks engineered for industrial applications.",
     frames: Array.from(
-      { length: 36 },
-      (_, i) => `/360/vfd/${i + 1}.webp`
+      { length: 10 },
+      (_, i) => `/3601/Product-5/${i + 1}.png`
     ),
   },
 ];
