@@ -157,10 +157,7 @@ The company specializes in compressed air systems, gas-based power generation eq
 We are <strong> "Expanding by Compression". </strong> 
         </p>
 
-        <p className="text-black leading-8 text-sm ">
         
-Expanding by Compression reflects our commitment to delivering innovative industrial solutions that drive business growth.
-        </p>
       </div>
 
 

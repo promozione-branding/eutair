@@ -84,7 +84,7 @@ const About = () => {
         </span>
 
         <h2 className="text-xl md:text-4xl mt-3   font-bold text-slate-900 leading-tight">
-         Trusted Partner for Compressed Air & Industrial Solutions
+         Compressed Air Experts for Industrial Engineering Solutions
         </h2>
 
         <div className="w-24 h-1 bg-cyan-600 rounded-full mt-3 mb-4"></div>
@@ -94,11 +94,11 @@ const About = () => {
         </h3>
 
         <p className="text-black leading-8 text-md md:text-lg  ">
-         With a strong focus on quality, innovation, and customer satisfaction, we deliver reliable products, technical expertise, and comprehensive support to customers across India and international markets.
+         Eutair Equipment is a professionally managed engineering company based in New Delhi, India, specializing <strong>in compressed air systems</strong>, including <strong>Screw Air Compressors, Air Dryers, Air Line Filters, Compressor Accessories</strong>, and turnkey engineering solutions. 
         </p>
 
         <p className="text-black leading-8 text-lg ">
-          <strong>Eutair Equipments</strong>  is a professionally managed engineering company based in New Delhi, India, specializing in <strong>compressed air systems</strong>  and industrial equipment. We provide high-quality <strong>Screw Air Compressors , Air Dryers, Air Line Filters, Compressor Accessories, and turnkey engineering solutions </strong> to meet the diverse needs of industries.
+         We provide end-to-end services from Concept to Commissioning on EP, EPC, and a turnkey basis, serving diverse industries across India, Africa, and the Indian Sub-continent with reliable after-sales services. We are committed to delivering efficient, high-performance, and cost-effective industrial solutions tailored to client requirements.
         </p>
       </div>
 
