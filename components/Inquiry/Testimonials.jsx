@@ -65,7 +65,7 @@ export default function Testimonials() {
             >
               {testimonials.map((item, index) => (
                 <SwiperSlide key={index}>
-                  <div className="bg-white rounded-3xl shadow-xl p-6 md:p-8 border border-slate-100">
+                  <div className="bg-white rounded-3xl p-6 md:p-8 border border-slate-100">
                     {/* Rating */}
                     <div className="flex gap-1 mb-5">
                       {[...Array(5)].map((_, i) => (

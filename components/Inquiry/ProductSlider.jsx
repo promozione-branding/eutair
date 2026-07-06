@@ -73,7 +73,7 @@ export default function ProductSlider() {
           <Swiper
             modules={[Autoplay, Navigation, Pagination]}
             navigation
-            pagination={{ clickable: true }}
+           
             autoplay={{
               delay: 2500,
               disableOnInteraction: false,
@@ -97,7 +97,7 @@ export default function ProductSlider() {
           >
             {products.map((item, index) => (
               <SwiperSlide key={index}>
-                <div className="group bg-white rounded-3xl border border-slate-200 overflow-hidden shadow-md hover:shadow-2xl transition duration-500">
+                <div className="group bg-white rounded-3xl border border-slate-200 overflow-hidden  hover:scale-105  transition duration-500">
                   <Link href={item.href}>
                     <div className="relative h-56 bg-white p-6">
                       <Image
