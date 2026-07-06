@@ -51,12 +51,14 @@ const products = [
       "A complete range of connectors, valves, brackets, and accessories for secure and reliable piping installations.",
     icon: Wrench,
   },
+  
   {
     title: "Plant Expansion & System Upgrades",
     description:
       "Customized piping solutions that support facility expansion, increased production capacity, and changing operational requirements.",
     icon: Factory,
   },
+
   {
     title: "Turnkey Piping Installation",
     description:
