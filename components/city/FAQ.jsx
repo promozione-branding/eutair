@@ -7,6 +7,10 @@ import { ChevronDown } from "lucide-react"; // install lucide-react if not alrea
 
 
 export default function FAQ({city}) {
+  const cityName = city
+  .split("-")
+  .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+  .join(" ");
 
     const faqs = [
   {
@@ -14,15 +18,15 @@ export default function FAQ({city}) {
     a: "A screw air compressor uses two interlocking rotary screws to compress air continuously, making it ideal for industries that require a reliable and uninterrupted supply of compressed air. It is known for its energy efficiency, low noise levels, and consistent performance."
   },
   {
-    q: `Why should I choose EutAir for a Screw Air Compressor in ${city}?`,
-    a: "EutAir offers high-quality Screw Air Compressors in Delhi designed for superior performance, energy efficiency, and long service life. We also provide expert consultation, professional installation, genuine spare parts, and dependable after-sales support to ensure your compressor operates efficiently."
+    q: `Why should I choose EutAir for a Screw Air Compressor in  ${cityName}?`,
+    a: `EutAir offers high-quality Screw Air Compressors in ${cityName} designed for superior performance, energy efficiency, and long service life. We also provide expert consultation, professional installation, genuine spare parts, and dependable after-sales support to ensure your compressor operates efficiently.`
   },
   {
     q: " Which industries use screw air compressors?",
     a: "Screw air compressors are widely used in manufacturing, automotive, pharmaceuticals, food and beverage processing, textiles, packaging, printing, electronics, engineering, and other industries that require continuous compressed air for their operations."
   },
   {
-    q: `How do I select the right Screw Air Compressor in ${city} for my business?`,
+    q: `How do I select the right Screw Air Compressor in ${cityName} for my business?`,
     a: "The ideal screw air compressor depends on factors such as your required airflow (CFM), operating pressure (Bar), application, and daily usage hours. EutAir's experts can help you choose the most suitable compressor based on your operational requirements and budget."
   },
   {
@@ -30,8 +34,8 @@ export default function FAQ({city}) {
     a: "Yes, we understand that every industry has unique requirements. Our team assists customers in selecting the most suitable compressed air and filtration solutions based on their operational needs."
   },
   {
-    q: ` Does EutAir provide installation and maintenance services in ${city}`,
-    a: "Yes. EutAir offers complete installation, commissioning, preventive maintenance, repair services, Annual Maintenance Contracts (AMC), and genuine spare parts for Screw Air Compressors in Delhi, helping businesses maximize equipment performance and minimize downtime."
+    q: ` Does EutAir provide installation and maintenance services in ${cityName}`,
+    a: `Yes. EutAir offers complete installation, commissioning, preventive maintenance, repair services, Annual Maintenance Contracts (AMC), and genuine spare parts for Screw Air Compressors in ${cityName}, helping businesses maximize equipment performance and minimize downtime.`
   }
 ];
   const [openIndex, setOpenIndex] = useState(null);

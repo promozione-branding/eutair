@@ -55,7 +55,7 @@ const features = [
 //   },
 ];
 
-export default function WhyChooseUs() {
+export default function WhyChooseUs({city}) {
   return (
     <section className="bg-gradient-to-b from-slate-50 to-white py-7 md:pt-8">
       <div className="mx-auto max-w-7xl px-5">
@@ -68,7 +68,7 @@ export default function WhyChooseUs() {
           <h2 className="mt-5 text-2xl md:text-5xl font-bold text-slate-900">
             Why Choose{" "}
             <span className="text-blue-600">
-              EutAir for Screw Air Compressors in Delhi?
+              EutAir for Screw Air Compressors in <span className="capitalize">{city}</span>?
             </span>
           </h2>
 

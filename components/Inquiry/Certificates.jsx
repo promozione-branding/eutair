@@ -44,7 +44,6 @@ export default function Certificates() {
             delay: 3000,
             disableOnInteraction: false,
           }}
-          pagination={{ clickable: true }}
           loop
           spaceBetween={25}
           breakpoints={{

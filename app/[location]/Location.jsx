@@ -25,48 +25,8 @@ import Otherproduct from "@/components/Landingpage/Otherpro";
 import FAQ from "@/components/city/FAQ";
 
 const Location = ({city}) => {
-  // const params = useParams();
-
-  // const city = params?.location?.includes("-in-")
-  //   ? params.location
-  //       .split("-in-")[1]
-  //       .split("-")
-  //       .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
-  //       .join(" ")
-  //   : "India";
-
-  const data = [
-    {
-      title: "High-Quality Waste Disposal Bags",
-      desc: "Our garbage bags are manufactured using premium-grade plastic materials that offer high strength, durability, and resistance to leakage and tearing.",
-      icon: Warehouse,
-      img: "/bag/product/10L Biohazard Garbage Bag.webp",
-    },
-    {
-      title: "Multiple Size Options",
-      desc: "We provide garbage bags in a variety of sizes, thicknesses, and colors to meet the needs of households, offices, hospitals, hotels, and industrial facilities.",
-      icon: Leaf,
-      img: "/bag/product/20 x 24 inch Disposable Garbage Bags.webp",
-    },
-    {
-      title: "Manufacturer Direct Supply",
-      desc: `As a direct Garbage Bag Manufacturer in ${city}, Sangam Plastic Industries offers competitive pricing and consistent supply for bulk orders and distributors.`,
-      icon: Truck,
-      img: "/bag/pro1.png",
-    },
-    {
-      title: "Strong & Leak-Proof Design",
-      desc: "Our garbage bags are designed to handle wet and dry waste efficiently while preventing spills, leaks, and unpleasant odors.",
-      icon: Tags,
-      img: "/bag/pro2.png",
-    },
-    {
-      title: "Trusted by Multiple Industries",
-      desc: `Our garbage bags are widely used by municipal corporations, hospitals, offices, hotels, restaurants, and waste management companies across ${city}.`,
-      icon: Handshake,
-      img: "/bag/pro3.png",
-    },
-  ];
+  
+  
 
   return (
     <>
@@ -83,7 +43,7 @@ const Location = ({city}) => {
           <div className="absolute inset-0 bg-gray-900/60" />
 
           <h1 className="text-center font-serif leading-snug relative font-bold text-white text-2xl px-5 md:py-20 capitalize md:text-6xl">
-            Screw Air Compressor in {city}
+            Screw Air Compressor in  <span className="capitalize">{city}</span>
           </h1>
         </section>
       </div>
@@ -94,7 +54,7 @@ const Location = ({city}) => {
           <div className="text-center mb-5 md:mb-10">
             <h1 className="mt-4 text-3xl md:text-5xl font-bold text-slate-900 leading-tight">
               Screw Air Compressor{" "}
-              <span className="text-blue-600">in {city}</span>
+              <span className="text-blue-600">in  <span className="capitalize">{city}</span></span>
             </h1>
 
             <div className="mx-auto mt-5 h-1 w-24 rounded-full bg-blue-600"></div>
@@ -106,7 +66,7 @@ const Location = ({city}) => {
             <div>
               <p className="md:text-lg  text-black mb-6">
                 Looking for a high-performance{" "}
-                <strong>Screw Air Compressor in {city}</strong>? EutAir is a
+                <strong>Screw Air Compressor in  <span className="capitalize">{city}</span></strong>? EutAir is a
                 trusted supplier of premium-quality screw air compressors
                 designed to deliver consistent airflow, energy efficiency, and
                 long-lasting performance for industrial applications.
@@ -127,7 +87,7 @@ const Location = ({city}) => {
                 improve productivity, and minimize maintenance. Our commitment
                 to superior quality, prompt service, and customer satisfaction
                 has made EutAir one of the preferred suppliers of screw air
-                compressors across {city} and surrounding regions.
+                compressors across  <span className="capitalize">{city}</span> and surrounding regions.
               </p>
             </div>
 
@@ -157,7 +117,7 @@ const Location = ({city}) => {
       <ProductRange />
 
       <TrustedBrands />
-      <WhyChooseUs />
+      <WhyChooseUs city={city} />
 
       <Cta />
 
@@ -260,11 +220,11 @@ const Location = ({city}) => {
 
           <div>
             <h2 className="text-3xl md:text-[42px] font-bold mb-5">
-              Why Industries in {city} Trust EutAir ?
+              Why Industries in <span className="capitalize">{city} </span>Trust EutAir ?
             </h2>
 
             <p className="text-black mb-6 md:leading-relaxed md:  text-lg">
-              {city} is one of India’s biggest industrial and commercial hubs,
+                <span className="capitalize">{city}</span> is one of India’s biggest industrial and commercial hubs,
               where steady compressed air really matters in day-to-day
               production processes. At EutAir we support factories with reliable
               compressor systems, technical know-how and a pretty fast customer
