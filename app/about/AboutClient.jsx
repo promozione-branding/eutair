@@ -92,7 +92,7 @@ const [isOpen, setOpen] = useState(false);
 
         <div className="relative rounded-[40px] overflow-hidden shadow-[0_30px_80px_rgba(0,0,0,.15)]">
           <Image
-            src="/unnamed(2).webp"
+            src="/mark-compressor.webp"
             width={900}
             height={1000}
             alt="Industrial Solutions"
