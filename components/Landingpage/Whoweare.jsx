@@ -74,6 +74,7 @@ const Whoweare = () => {
                 mt-3
                 text-2xl
                 sm:text-4xl
+                lg:text-3xl xl:text-4xl
               
                 font-bold
                 text-slate-900
@@ -85,7 +86,7 @@ const Whoweare = () => {
               Engineering Excellence
             </h2>
 
-            <div className="w-16 sm:w-20 h-1 bg-sky-600 mt-4 sm:mt-5 mb-6 sm:mb-8 rounded-full"></div>
+            <div className="w-16 sm:w-20 h-1 bg-sky-600 mt-4 sm:mt-5 lg:mb-5 xl:mb-6 sm:mb-8 rounded-full"></div>
 
             {/* Content Block 1 */}
             <div className="flex gap-3 sm:gap-5">
@@ -103,6 +104,8 @@ const Whoweare = () => {
                     text-sm
                     sm:text-base
                     leading-7
+                    lg:leading-5
+                    xl:leading-7
                     sm:leading-8
                   "
                 >
@@ -128,6 +131,8 @@ const Whoweare = () => {
                     text-sm
                     sm:text-base
                     leading-7
+                     lg:leading-5
+                    xl:leading-7
                     sm:leading-8
                   "
                 >
@@ -163,6 +168,8 @@ const Whoweare = () => {
                   text-sm
                   sm:text-base
                   leading-7
+                   lg:leading-5
+                    xl:leading-7
                   sm:leading-8
                 "
               >
