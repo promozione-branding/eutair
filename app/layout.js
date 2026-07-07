@@ -52,7 +52,7 @@ export default function RootLayout({ children }) {
 
       <body className={`${roboto.variable} ${poppins.variable} antialiased`}>
      
-    <Whatsapp/>
+    
         <LayoutWrapper>
         
       

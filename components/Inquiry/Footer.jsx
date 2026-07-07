@@ -22,7 +22,7 @@ export default function Footer() {
 
   return (
     <>
-    <footer className="bg-[#081B2E] px-2 hidden md:block text-white relative overflow-hidden">
+    <footer className="bg-[#081B2E]  px-2 hidden md:block text-white relative overflow-hidden">
       
       {/* CTA Strip */}
       <div className="border-b hidden md:block border-white/10">
