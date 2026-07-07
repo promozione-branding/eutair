@@ -59,7 +59,7 @@ export default function ProductSlider() {
             <div className="flex items-center justify-center gap-5 mb-4">
               <div className="h-[2px] w-16 bg-blue-600 rounded-full" />
               <h2 className="text-3xl lg:text-5xl font-bold uppercase">
-                Our <span className="text-blue-600">Premium</span> Products
+                Our <span className="text-blue-600">Industrial</span> Products
               </h2>
               <div className="h-[2px] w-16 bg-blue-600 rounded-full" />
             </div>

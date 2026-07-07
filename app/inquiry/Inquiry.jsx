@@ -18,13 +18,13 @@ export default function Inquiry() {
    <>
    <Navbar/>
    <HeroSlider/>
-   <TrustSection/>
+     <Clients/>
    <ProductSlider/>
+   <TrustSection/>
    <Category/>
    <WhyChoose/>
    <Certificates/>
    <Industries/>
-     <Clients/>
      <Testimonials/>
      <CTA/>
      <Footer/>
