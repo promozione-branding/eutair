@@ -1,39 +1,77 @@
 import Location from "./Location";
 import { notFound } from "next/navigation";
 
+const cities = [
+  "loni",
+  "ghaziabad",
+  "noida",
+  "greater-noida",
+  "sikandrabad-up",
+  "meerut",
+  "gurgaon",
+  "manesar",
+  "bilaspur",
+  "bawal",
+  "bhiwadi",
+  "badarpur",
+  "bahadurgarh",
+  "faridabad",
+  "sonipat",
+  "panipat",
+  "roorkee",
+  "saharanpur",
+  "haridwar",
+  "moradabad",
+  "bareily",
+  "rohtak",
+  "jhajjar",
+  "jammu",
+  "pulwama",
+  "delhi",
+];
+
 export async function generateMetadata({ params }) {
-    const { location } = await params;
+  const { location } = await params;
 
-    const rawCity = location.split("in-").pop();
+  // Must contain "in-"
+  if (!location.includes("in-")) {
+    notFound();
+  }
 
-    const city = rawCity
-        .split("-")
-        .map((w) => w.charAt(0).toUpperCase() + w.slice(1))
-        .join(" ");
+  const citySlug = location.split("in-")[1];
 
-    return {
-        title: `Garbage Bag Manufacturer in ${city} | Sangam Plastic Industries`,
-        description: `Sangam Plastic Industries is a trusted garbage bag manufacturer in ${city} offering durable, leak-proof garbage bags for homes, hospitals, offices & waste management.`,
-    };
+  // Invalid city
+  if (!citySlug || !cities.includes(citySlug)) {
+    notFound();
+  }
+
+  const city = citySlug
+    .split("-")
+    .map((w) => w.charAt(0).toUpperCase() + w.slice(1))
+    .join(" ");
+
+  return {
+    title: `Eutair ${city} | `,
+    description: `Eutair ${city}`,
+  };
 }
 
 const Page = async ({ params }) => {
-    const { location } = await params;
+  const { location } = await params;
 
-    // 🔥 Must contain "-in-"
-    if (!location.includes("in-")) {
-        notFound();
-    }
+  // Must contain "in-"
+  if (!location.includes("in-")) {
+    notFound();
+  }
 
-    // 🔥 Extract city part after "in-"
-    const city = location.split("in-")[1];
+  const citySlug = location.split("in-")[1];
 
-    // 🔥 If city is empty or invalid → redirect to Home
-    if (!city || city.trim().length === 0) {
-        notFound();
-    }
+  // Invalid city
+  if (!citySlug || !cities.includes(citySlug)) {
+    notFound();
+  }
 
-    return <Location city={location} />;
+  return <Location city={citySlug} />;
 };
 
 export default Page;
