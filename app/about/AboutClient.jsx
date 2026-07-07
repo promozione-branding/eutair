@@ -164,7 +164,7 @@ const [isOpen, setOpen] = useState(false);
        
         },
         {
-          number: "100+",
+          number: "300+",
           label: "Industrial Clients",
         
         },

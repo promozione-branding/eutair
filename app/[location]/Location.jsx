@@ -95,7 +95,7 @@ const Location = ({city}) => {
             <div className="relative">
               <div className="overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-2xl">
                 <Image
-                  src="/products/KW upto 45, PSI 100, CFM 300 (1 model).webp"
+                  src="/citypgImg.webp"
                   alt="Screw Air Compressor"
                   width={700}
                   height={650}

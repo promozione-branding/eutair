@@ -13,7 +13,7 @@ const page = () => {
   const [isOpen, setOpen] = useState(false);
 
   const products = markData.products || [];
-  const heroImages = ["/hero2.png", "/unnamed(2).webp", "/unnamed (1).png"];
+  const heroImages = ["/hero2.png", "/mark-compressor.webp", "/unnamed (1).png"];
 
   const features = [
     {
