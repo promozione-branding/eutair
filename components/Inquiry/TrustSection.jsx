@@ -44,7 +44,7 @@ export default function TrustSection() {
   ];
 
   return (
-    <section className="py-10 px-4">
+    <section className="py-2 md:py-10 px-4">
       <div className="max-w-7xl mx-auto">
 
         {/* Desktop */}
@@ -84,17 +84,22 @@ export default function TrustSection() {
         {/* Mobile Slider */}
         <div className="lg:hidden">
           <Swiper
-            modules={[Autoplay, Pagination]}
-            spaceBetween={16}
+            modules={[Pagination, Autoplay]}
             slidesPerView={1.2}
-            centeredSlides
+            spaceBetween={16}
+            centeredSlides={false}
             loop
             autoplay={{
               delay: 2500,
               disableOnInteraction: false,
             }}
-            
             breakpoints={{
+              0: {
+              slidesPerView: 2,
+            },
+              480: {
+                slidesPerView: 2,
+              },
               640: {
                 slidesPerView: 2,
               },
@@ -110,11 +115,11 @@ export default function TrustSection() {
                       <Icon className="w-8 h-8" />
                     </div>
 
-                    <h3 className="mt-5 text-2xl font-bold text-blue-700">
+                    <h3 className="mt-3 md:mt-5 text-xl font-bold text-blue-700">
                       {item.title}
                     </h3>
 
-                    <p className="mt-2 text-slate-600 font-medium">
+                    <p className="mt-2 text-slate-600 text-sm font-medium">
                       {item.subtitle}
                     </p>
                   </div>

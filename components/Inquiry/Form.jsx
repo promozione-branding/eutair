@@ -92,7 +92,7 @@ Requirement: ${form.requirement}`,
   return (
     <div className="rounded-3xl overflow-hidden shadow-2xl bg-gradient-to-br from-blue-700 via-blue-600 to-blue-800 text-white">
       {/* Header */}
-      <div className="px-8 pt-8 pb-6 text-center">
+      <div className="px-8 pt-4 md:pt-8 pb-3 md:pb-6 text-center">
         <h2 className="text-3xl font-extrabold uppercase">
           GET BEST PRICE TODAY!
         </h2>
@@ -102,7 +102,7 @@ Requirement: ${form.requirement}`,
         </p>
       </div>
 
-      <form onSubmit={handleSubmit} className="px-6 pb-8 space-y-4">
+      <form onSubmit={handleSubmit} className="px-6 pb-5 md:pb-8 space-y-4">
         {/* Name */}
         <div className="relative">
           <User className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-blue-600" />
@@ -113,7 +113,7 @@ Requirement: ${form.requirement}`,
             placeholder="Your Name *"
             value={form.name}
             onChange={handleChange}
-            className="w-full h-14 rounded-xl bg-white pl-12 pr-4 text-black outline-none focus:ring-2 focus:ring-yellow-400"
+            className="w-full h-10 md:h-14 rounded-xl bg-white pl-12 pr-4 text-black outline-none focus:ring-2 focus:ring-yellow-400"
             required
           />
         </div>
@@ -136,7 +136,7 @@ Requirement: ${form.requirement}`,
                 mobile: e.target.value.replace(/\D/g, ""),
               })
             }
-            className="w-full h-14 rounded-xl bg-white pl-12 pr-4 text-black outline-none focus:ring-2 focus:ring-yellow-400"
+            className="w-full h-10 md:h-14 rounded-xl bg-white pl-12 pr-4 text-black outline-none focus:ring-2 focus:ring-yellow-400"
             required
           />
         </div>
@@ -152,7 +152,7 @@ Requirement: ${form.requirement}`,
               placeholder="City"
               value={form.city}
               onChange={handleChange}
-              className="w-full h-14 rounded-xl bg-white pl-12 pr-4 text-black outline-none focus:ring-2 focus:ring-yellow-400"
+              className="w-full h-10 md:h-14 rounded-xl bg-white pl-12 pr-4 text-black outline-none focus:ring-2 focus:ring-yellow-400"
             />
           </div>
 
@@ -165,7 +165,7 @@ Requirement: ${form.requirement}`,
               placeholder="Email"
               value={form.email}
               onChange={handleChange}
-              className="w-full h-14 rounded-xl bg-white pl-12 pr-4 text-black outline-none focus:ring-2 focus:ring-yellow-400"
+              className="w-full h-10 md:h-14 rounded-xl bg-white pl-12 pr-4 text-black outline-none focus:ring-2 focus:ring-yellow-400"
             />
           </div>
         </div>
@@ -189,7 +189,7 @@ Requirement: ${form.requirement}`,
         <button
           type="submit"
           disabled={loading}
-          className="group w-full h-14 rounded-xl bg-yellow-400 text-slate-900 font-bold text-lg hover:bg-yellow-300 transition flex items-center justify-center gap-3 disabled:opacity-60 disabled:cursor-not-allowed"
+          className="group w-full h-10 md:h-14 rounded-xl bg-yellow-400 text-slate-900 font-bold text-lg hover:bg-yellow-300 transition flex items-center justify-center gap-3 disabled:opacity-60 disabled:cursor-not-allowed"
         >
           {loading ? "Submitting..." : "GET FREE QUOTE"}
 

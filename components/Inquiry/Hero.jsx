@@ -172,14 +172,12 @@ const slides = [
   //   },
 ];
 export default function HeroSlider() {
-
-      const [open, setOpen] = useState(false);
-
+  const [open, setOpen] = useState(false);
 
   return (
     <>
       {" "}
-      <section className="relative h-[690px] lg:h-[670px] w-full overflow-hidden">
+      <section className="relative h-[600px] lg:h-[670px] w-full overflow-hidden">
         <Swiper
           modules={[Autoplay, Pagination, EffectFade]}
           effect="fade"
@@ -187,9 +185,7 @@ export default function HeroSlider() {
             delay: 5000,
             disableOnInteraction: false,
           }}
-          pagination={{
-            clickable: true,
-          }}
+         
           loop
           className="h-full"
         >
@@ -212,11 +208,12 @@ export default function HeroSlider() {
                     className="
     grid
     lg:grid-cols-2
-    gap-4
+    
     lg:gap-6
     items-center
     h-full
-    pt-10
+    pt-5
+    md:pt-10
     lg:py-0
   "
                   >
@@ -349,8 +346,11 @@ export default function HeroSlider() {
     mt-7
   "
                       >
-                        <div >
-                          <button onClick={()=>{setOpen(true)}}
+                        <div className="hidden md:block">
+                          <button
+                            onClick={() => {
+                              setOpen(true);
+                            }}
                             className="text-center
       group
       relative
@@ -424,13 +424,61 @@ w-[280px]
 sm:w-[380px]
 md:w-[500px]
 lg:w-[650px]
-h-auto
+h-60
+md:h-auto
 mx-auto
 
 drop-shadow-[0_40px_80px_rgba(0,0,0,.45)]
 "
                       />
                     </div>
+                    <div className="flex justify-center items-center">
+                          <button
+                            onClick={() => {
+                              setOpen(true);
+                            }}
+                            className="text-center
+      group
+      relative
+      overflow-hidden
+      h-[62px]
+      px-8
+      rounded-xl
+      bg-gradient-to-r
+      from-[#0A63FF]
+      to-[#1D8FFF]
+      shadow-[0_15px_40px_rgba(10,99,255,.35)]
+      hover:shadow-[0_20px_60px_rgba(10,99,255,.5)]
+      transition-all
+      duration-500
+      hover:-translate-y-1
+    "
+                          >
+                            <span className="relative z-10 flex items-center gap-3 text-white font-semibold">
+                              GET INSTANT QUOTE
+                              <ArrowRight
+                                size={18}
+                                className="group-hover:translate-x-1 transition"
+                              />
+                            </span>
+
+                            <div
+                              className="
+        absolute
+        inset-0
+        bg-gradient-to-r
+        from-transparent
+        via-white/20
+        to-transparent
+        -skew-x-12
+        translate-x-[-150%]
+        group-hover:translate-x-[150%]
+        transition-transform
+        duration-1000
+      "
+                            />
+                          </button>
+                        </div>
                   </div>
                 </div>
               </div>
@@ -438,12 +486,7 @@ drop-shadow-[0_40px_80px_rgba(0,0,0,.45)]
           ))}
         </Swiper>
       </section>
-
-          
-            {open && <ContactForm isOpen={open} onClose={() => setOpen(false)}/>}
-
+      {open && <ContactForm isOpen={open} onClose={() => setOpen(false)} />}
     </>
   );
 }
-
-
