@@ -101,7 +101,7 @@ export default function Testimonials() {
 
           {/* Right Image */}
           <div className="order-1 lg:order-2 flex justify-center">
-            <div className="relative w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-[620px] h-130 aspect-square">
+            <div className="relative w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-[620px]  aspect-square">
               {/* Background Glow */}
               <div className="absolute inset-0 rounded-3xl bg-white blur-3xl scale-110"></div>
 
