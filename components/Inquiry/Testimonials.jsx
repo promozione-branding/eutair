@@ -8,6 +8,7 @@ import Image from "next/image";
 
 import "swiper/css";
 import "swiper/css/pagination";
+import ContactForm from "./PopupForm";
 
 const testimonials = [
   {
@@ -34,9 +35,12 @@ const testimonials = [
 ];
 
 export default function Testimonials() {
+    const [open, setOpen] = useState(false);
+
   const [activeIndex, setActiveIndex] = useState(0);
 
   return (
+    <>
     <section className="py-8 md:py-15 bg-slate-50 overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-20 items-center">
@@ -101,7 +105,7 @@ export default function Testimonials() {
 
           {/* Right Image */}
           <div className="order-1 lg:order-2 flex justify-center">
-            <div className="relative w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-[620px]  aspect-square">
+            <div onClick={()=>{setOpen(true)}} className="relative w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-[620px]  aspect-square">
               {/* Background Glow */}
               <div className="absolute inset-0 rounded-3xl bg-white blur-3xl scale-110"></div>
 
@@ -117,5 +121,10 @@ export default function Testimonials() {
         </div>
       </div>
     </section>
+
+          {open && <ContactForm isOpen={open} onClose={() => setOpen(false)} />}
+
+
+    </>
   );
 }

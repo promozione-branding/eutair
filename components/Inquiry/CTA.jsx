@@ -2,7 +2,7 @@ import { Phone, MessageCircle, ArrowRight } from "lucide-react";
 
 export default function CTA() {
   return (
-    <section className="py-10 px-4">
+    <section className="py-10 pb-22 md:pb-8 px-4">
       <div className="max-w-7xl mx-auto">
         <div className="relative overflow-hidden rounded-3xl bg-gradient-to-r from-blue-700 via-blue-600 to-indigo-700 shadow-2xl">
           {/* Background Blur */}
