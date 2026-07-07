@@ -75,13 +75,12 @@ export default function Category() {
         <Swiper
           modules={[Autoplay, Navigation, Pagination]}
           navigation
-          pagination={{ clickable: true }}
           autoplay={{
             delay: 2500,
             disableOnInteraction: false,
           }}
           loop={true}
-          spaceBetween={25}
+          spaceBetween={15}
           breakpoints={{
             0: {
               slidesPerView: 2,
@@ -107,12 +106,12 @@ export default function Category() {
         src={item.image}
         alt={item.title}
         fill
-        className="object-contain p-3 md:p-5 transition duration-500 group-hover:scale-105"
+        className="object-contain px-2 md:p-5 transition duration-500 group-hover:scale-105"
       />
     </div>
 
-    <div className="px-3 md:px-6 pt-3 md:pt-6 text-center">
-      <h3 className="font-bold line-clamp-2 text-base md:text-lg text-slate-800 min-h-[64px]">
+    <div className="px-3 md:px-6 pt-3 justify-center items-center md:pt-6 text-center">
+      <h3 className="font-bold line-clamp-2 text-sm  md:text-lg text-slate-800 min-h-[54px]">
         {item.title}
       </h3>
     </div>
@@ -121,7 +120,7 @@ export default function Category() {
   <div className="p-3 md:p-6 pt-0">
     <button
       onClick={() => setOpen(true)}
-      className="w-full rounded-lg border-2 border-blue-600 text-blue-600 font-semibold py-3 hover:bg-blue-600 hover:text-white transition"
+      className="w-full text-sm md:text-base rounded-lg border-2 border-blue-600 text-blue-600 font-semibold py-3 hover:bg-blue-600 hover:text-white transition"
     >
       REQUEST QUOTE
     </button>
