@@ -82,7 +82,7 @@ const slides = [
     pdf: "/pdf/mark.pdf",
 
     description:
-      "Designed for manufacturing, engineering, automotive, food processing, pharmaceuticals, textiles, and every industry that demands dependable compressed air solutions.",
+      "Designed for manufacturing, engineering, automotive, food processing, pharmaceuticals, textiles, and every industry that demands .",
 
     features: [
       {
@@ -212,7 +212,7 @@ export default function HeroSlider() {
                     className="
     grid
     lg:grid-cols-2
-    gap-8
+    gap-4
     lg:gap-6
     items-center
     h-full
@@ -446,14 +446,4 @@ drop-shadow-[0_40px_80px_rgba(0,0,0,.45)]
   );
 }
 
-function Feature({ icon, text }) {
-  return (
-    <div className="flex items-center gap-4">
-      <div className="h-12 w-12 rounded-full border border-white/20 flex items-center justify-center text-white">
-        {icon}
-      </div>
 
-      <span className="text-white text-[17px] font-medium">{text}</span>
-    </div>
-  );
-}

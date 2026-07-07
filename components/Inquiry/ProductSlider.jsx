@@ -79,7 +79,7 @@ export default function ProductSlider() {
               disableOnInteraction: false,
             }}
             loop={true}
-            spaceBetween={25}
+            spaceBetween={15}
             breakpoints={{
               0: {
                 slidesPerView: 2,
@@ -94,31 +94,32 @@ export default function ProductSlider() {
                 slidesPerView: 5,
               },
             }}
+            className="px-2"
           >
             {products.map((item, index) => (
               <SwiperSlide key={index}>
                 <div className="group bg-white rounded-3xl border border-slate-200 overflow-hidden  hover:scale-105  transition duration-500">
                   <Link href={item.href}>
-                    <div className="relative h-56 bg-white p-6">
+                    <div className="relative h-56 bg-white md:p-6">
                       <Image
                         src={item.image}
                         alt={item.title}
                         fill
-                        className="object-contain p-5"
+                        className="object-contain md:p-5"
                       />
                     </div>
 
-                    <div className="px-6 pt-6 text-center">
-                      <h3 className="font-bold line-clamp-3 text-base md:text-lg min-h-[64px]">
+                    <div className="px-6 pt-6 flex justify-center items-center text-center">
+                      <h3 className="font-bold line-clamp-3 text-[12px] md:text-lg min-h-[64px]">
                         {item.title}
                       </h3>
                     </div>
                   </Link>
 
-                  <div className="p-6 pt-0 mt-2">
+                  <div className="p-3 md:p-6 pt-0 md:mt-2">
                     <button
                       onClick={() => setOpen(true)}
-                      className="w-full rounded-lg border-2 border-blue-600 text-blue-600 font-semibold py-3 hover:bg-blue-600 hover:text-white transition"
+                      className="w-full rounded-lg border-2 text-sm  md:text-base border-blue-600 text-blue-600 font-semibold py-3 hover:bg-blue-600 hover:text-white transition"
                     >
                       REQUEST PRICE
                     </button>

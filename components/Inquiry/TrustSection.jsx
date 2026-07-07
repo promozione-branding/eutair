@@ -93,9 +93,7 @@ export default function TrustSection() {
               delay: 2500,
               disableOnInteraction: false,
             }}
-            pagination={{
-              clickable: true,
-            }}
+            
             breakpoints={{
               640: {
                 slidesPerView: 2,
@@ -107,8 +105,8 @@ export default function TrustSection() {
 
               return (
                 <SwiperSlide key={index}>
-                  <div className="bg-white mb-3 rounded-3xl border border-slate-200 shadow-xl p-8 flex flex-col items-center text-center h-full">
-                    <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-gradient-to-br from-blue-600 to-cyan-500 text-white shadow-lg">
+                  <div className="bg-white mb-3 rounded-3xl border border-slate-200 shadow-xl p-4 md:p-8 flex flex-col items-center text-center h-full">
+                    <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-gradient-to-br from-blue-600 to-cyan-500 text-white ">
                       <Icon className="w-8 h-8" />
                     </div>
 
