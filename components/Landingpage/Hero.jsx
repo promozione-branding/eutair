@@ -204,7 +204,8 @@ export default function HeroSlider() {
                 <div
                   className="
     grid
-    lg:grid-cols-[1fr_1fr_320px]
+    lg:grid-cols-2
+    xl:grid-cols-[1fr_1fr_320px]
     gap-8
     lg:gap-6
     items-center
@@ -431,6 +432,7 @@ drop-shadow-[0_40px_80px_rgba(0,0,0,.45)]
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.8 }}
                     className=" hidden md:block
+                    lg:hidden xl:block
     relative
     overflow-hidden
     rounded-[28px]
@@ -445,7 +447,7 @@ drop-shadow-[0_40px_80px_rgba(0,0,0,.45)]
     shadow-[0_25px_80px_rgba(0,0,0,.35)]
   "
                   >
-                    <div className="space-y-6">
+                    <div className="  space-y-6">
                       {slide.features.map((feature, index) => {
                         const Icon = feature.icon;
 

@@ -76,7 +76,7 @@ export default function Navbar() {
         {/* Top Info Bar */}
 
         <div className="hidden md:block border-b border-slate-100 bg-slate-50/50">
-          <div className="w-full mx-auto px-4 sm:px-6 lg:px-12 xl:px-20">
+          <div className="w-full mx-auto px-4 sm:px-6 lg:px-8 xl:px-20">
             <div className="h-11 flex items-center justify-between">
               {/* Left Side */}
               <div className="flex items-center gap-6 text-[14px] text-slate-600">
@@ -163,7 +163,7 @@ export default function Navbar() {
         </div>
 
         {/* Main Navbar */}
-        <div className="w-full mx-auto px-5 md:px-25 lg:px-15">
+        <div className="w-full mx-auto px-5 md:px-25 lg:px-10 xl:px-14">
           <div className="h-16 sm:h-20 lg:h-19 flex items-center justify-between">
             {/* Logo */}
             <Link href="/" className="group">
@@ -176,18 +176,18 @@ export default function Navbar() {
 
             {/* Navigation */}
             <nav className="hidden lg:block">
-              <ul className="flex items-center gap-12 lg:gap-15">
-                <li>
+              <ul className="flex items-center gap-12 lg:gap-5 xl:gap-15">
+                <li className="mr-3">
                   <Link
                     href="/about"
-                    className="text-[17px] lg:text-[16px]  tracking-[0.12em] font-medium text-slate-700 hover:text-blue-600"
+                    className="text-[17px] lg:text-[16px]  xl:tracking-[0.12em] font-medium text-slate-700 hover:text-blue-600"
                   >
                     ABOUT US
                   </Link>
                 </li>
 
                 {/* Products Dropdown */}
-                <li className="relative group">
+                <li className="relative mr-3 group">
                   <button
                     className="
           flex items-center gap-2
@@ -329,7 +329,7 @@ export default function Navbar() {
                   </div>
                 </li>
 
-                <li>
+                <li className="mr-3">
                   <Link
                     href="/our-blogs"
                     className="text-[17px] lg:text-[16px]  tracking-[0.12em] font-medium text-slate-700 hover:text-blue-600"
@@ -444,7 +444,7 @@ export default function Navbar() {
               </ul>
             </nav>
 
-            <div className="lg:hidden flex items-center gap-3">
+            <div className="lg:hidden flex items-center gap-3 lg:ml-2 xl:ml-0">
               <button
                 onClick={() => setOpen(true)}
                 className="bg-blue-600 text-white px-4 py-2 rounded-full text-base font-semibold"
@@ -469,6 +469,7 @@ export default function Navbar() {
               onClick={() => setOpen(true)}
               className="
         hidden lg:block
+        
 relative overflow-hidden
 rounded-full
 px-7 py-3.5
