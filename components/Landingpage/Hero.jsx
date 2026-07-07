@@ -24,9 +24,9 @@ const slides = [
     bg: "/bghero1.webp",
     machine: "/hero1.png",
 
-    tagline: "PORTABLE HIGH PERFORMANCE",
+    tagline: "ELECTRIC/DIESEL HIGH PERFORMANCE",
 
-    title: "SCREW AIR\nCOMPRESSORS",
+    title: "PORTABLE AIR\n COMPRESSOR",
 
     pdf:"/pdf/DiselEutair.pdf",
 
