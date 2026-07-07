@@ -96,7 +96,7 @@ const [isOpen, setOpen] = useState(false);
             width={900}
             height={1000}
             alt="Industrial Solutions"
-            className="w-full h-[300px] md:h-[550px] object-fill md:object-cover"
+            className="w-full h-[300px] md:h-[550px] object-fill "
           />
         </div>
 
