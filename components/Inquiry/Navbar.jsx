@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import Link from "next/link";
 import {
   Phone,
@@ -20,8 +20,7 @@ import ContactForm from "./PopupForm";
 
 export default function Navbar() {
   const [mobileMenu, setMobileMenu] = useState(false);
-    const [open, setOpen] = useState(false);
-
+  const [open, setOpen] = useState(false);
 
   const [productMenu, setProductMenu] = useState(false);
   const [servicesMenu, setServicesMenu] = useState(false);
@@ -49,7 +48,6 @@ export default function Navbar() {
     },
   ];
 
-
   const products = [
     {
       title: "Mark Compressors",
@@ -59,7 +57,6 @@ export default function Navbar() {
       title: "Chicago Pneumatic",
       href: "",
     },
-   
   ];
 
   return (
@@ -124,11 +121,7 @@ export default function Navbar() {
                   <Facebook className="w-4 h-4" />
                 </a>
 
-                <a
-                  href=""
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
+                <a href="" target="_blank" rel="noopener noreferrer">
                   <FaWhatsapp
                     size={10}
                     className="flex h-8 w-8 p-1 items-center justify-center rounded-full border  transition-all duration-300 border-green-600 text-green-600 hover:-translate-y-0.5"
@@ -320,8 +313,6 @@ export default function Navbar() {
                   </div>
                 </li>
 
-                
-
                 <li className="relative group">
                   <button
                     className="
@@ -430,13 +421,13 @@ export default function Navbar() {
 
             <div className="lg:hidden flex items-center gap-3">
               <a
-    href="https://wa.link/rntibs"
-    target="_blank"
-    rel="noopener noreferrer"
-    className="flex py-3 px-3 gap-2 items-center justify-center rounded-full bg-green-600 text-white shadow-lg hover:bg-green-700 transition-all"
-  >
-    <FaWhatsapp className="w-6 h-6" /> WhatsApp
-  </a>
+                href="https://wa.link/rntibs"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex py-3 px-3 gap-2 items-center justify-center rounded-full bg-green-600 text-white shadow-lg hover:bg-green-700 transition-all"
+              >
+                <FaWhatsapp className="w-6 h-6" /> WhatsApp
+              </a>
 
               <button
                 onClick={() => setMobileMenu(!mobileMenu)}
@@ -452,34 +443,34 @@ export default function Navbar() {
 
             {/* CTA */}
             {/* Call & WhatsApp */}
-<div className="hidden lg:flex items-center gap-4">
-  <a
-    href="tel:+919717159766"
-    className="flex items-center gap-3 group"
-  >
-    <div className="flex h-12 w-12 items-center justify-center rounded-full bg-blue-600 text-white shadow-lg transition-all duration-300 group-hover:scale-105">
-      <Phone className="w-5 h-5" />
-    </div>
+            <div className="hidden lg:flex items-center gap-4">
+              <a
+                href="tel:+919717159766"
+                className="flex items-center gap-3 group"
+              >
+                <div className="flex h-12 w-12 items-center justify-center rounded-full bg-blue-600 text-white shadow-lg transition-all duration-300 group-hover:scale-105">
+                  <Phone className="w-5 h-5" />
+                </div>
 
-    <div className="leading-tight">
-      <p className="text-xs uppercase tracking-wider text-slate-500">
-        Call Us
-      </p>
-      <p className="text-[15px] font-semibold text-slate-800 group-hover:text-blue-600 transition">
-        +91 97171 59766
-      </p>
-    </div>
-  </a>
+                <div className="leading-tight">
+                  <p className="text-xs uppercase tracking-wider text-slate-500">
+                    Call Us
+                  </p>
+                  <p className="text-[15px] font-semibold text-slate-800 group-hover:text-blue-600 transition">
+                    +91 97171 59766
+                  </p>
+                </div>
+              </a>
 
-  <a
-    href="https://wa.link/rntibs"
-    target="_blank"
-    rel="noopener noreferrer"
-    className="flex py-3 px-3 items-center justify-center rounded-full bg-green-600 text-white shadow-lg hover:bg-green-700 transition-all"
-  >
-    <FaWhatsapp className="w-6 h-6" /> WhatsApp
-  </a>
-</div>
+              <a
+                href="https://wa.link/rntibs"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex py-3 px-3 items-center justify-center rounded-full bg-green-600 text-white shadow-lg hover:bg-green-700 transition-all"
+              >
+                <FaWhatsapp className="w-6 h-6" /> WhatsApp
+              </a>
+            </div>
           </div>
         </div>
 
@@ -488,7 +479,7 @@ export default function Navbar() {
             <div className="px-4 py-5">
               <div className="flex flex-col gap-4">
                 <Link
-                  href="/about"
+                  href=""
                   onClick={() => setMobileMenu(false)}
                   className="font-medium text-slate-700"
                 >
@@ -563,7 +554,7 @@ export default function Navbar() {
                 </div>
 
                 <Link
-                  href="/contact"
+                  href=""
                   onClick={() => setMobileMenu(false)}
                   className="font-medium text-slate-700"
                 >
@@ -590,18 +581,18 @@ export default function Navbar() {
                     <Facebook className="w-5 h-5 text-blue-600" />
                   </a>
                   <a
-                    href="https://wa.me/919582911766
+                    href="https://wa.link/rntibs
 "
                     target="_blank"
                     rel="noopener noreferrer"
                   >
                     <FaWhatsapp className="w-5 h-5 text-green-600" />
                   </a>
-                  <a href="https://www.instagram.com/eutairequipments">
+                  <a href="">
                     {" "}
                     <Instagram className="w-5 h-5 text-pink-500" />
                   </a>
-                  <a href="https://www.youtube.com/@eutairequipments1359">
+                  <a href="">
                     <Youtube className="w-6 h-6 text-red-500" />
                   </a>
                 </div>
@@ -611,7 +602,7 @@ export default function Navbar() {
         )}
       </header>
 
-      {open && <ContactForm isOpen={open} onClose={() => setOpen(false)}/>}
+      {open && <ContactForm isOpen={open} onClose={() => setOpen(false)} />}
     </>
   );
 }

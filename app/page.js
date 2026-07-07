@@ -19,6 +19,7 @@ import Clients from "@/components/Landingpage/Clients"
 import TestimonialSlider from "@/components/Landingpage/Testimonials";
 import Bestseller from "@/components/Landingpage/Bestseller";
 import Whoweare from "@/components/Landingpage/Whoweare";
+import CityPage from "@/components/City";
 export default function Home() {
   return (
     <>
@@ -41,7 +42,7 @@ export default function Home() {
        <TestimonialSlider></TestimonialSlider>
 
 
- 
+      {/* <CityPage/> */}
       <Faq></Faq>
    
     </>
