@@ -368,7 +368,7 @@ export default function ProductPage({ params }) {
             >
               Power Your Operations with
               <span className="block text-sky-600">
-                Nark Compressors
+                Chicago Pneumatic Compressors
               </span>
             </h2>
 

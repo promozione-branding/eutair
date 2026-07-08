@@ -357,7 +357,7 @@ export default function ProductPage({ params }) {
             >
               Power Your Operations with
               <span className="block text-sky-600">
-                Chicago Pneumatic Compressors
+                Mark Compressors
               </span>
             </h2>
 
@@ -376,8 +376,7 @@ export default function ProductPage({ params }) {
         "
             >
               Looking for energy-efficient and high-performance compressed air
-              solutions? We offer a complete range of Chicago Pneumatic Screw
-              Air Compressors engineered for reliability, productivity, and
+              solutions? We offer a complete range of Mrak Compressors engineered for reliability, productivity, and
               long-term industrial performance.
             </p>
 
