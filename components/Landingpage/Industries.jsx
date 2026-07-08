@@ -68,7 +68,7 @@ export default function IndustriesWeServe() {
       <div className="w-full mx-auto px-4 sm:px-6 lg:px-12 xl:px-20">
         
         {/* Header */}
-        <div className="max-w-6xl mx-auto text-center mb-10 md:mb-14">
+        <div className="max-w-6xl mx-auto text-center mb-10 lg:mb-9 xl:mb-14">
           <span
          
             className=" text-center 
@@ -180,6 +180,9 @@ export default function IndustriesWeServe() {
                     text-sm
                     sm:text-[15px]
                     leading-7
+                    xl:leading-7
+                    lg:leading-6
+
                   "
                 >
                   {industry.description}

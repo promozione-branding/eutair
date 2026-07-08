@@ -96,7 +96,8 @@ const products = [
           key={index}
           className="
           p-4
-          md:p-5
+          lg:p-3
+          xl:p-5
           border-b
           border-cyan-400
           xl:border-r

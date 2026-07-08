@@ -8,9 +8,9 @@ const Cta = () => {
 
 
 
-<section className="py-5 md:py-10">
+<section className="py-5 lg:py-7 xl:py-10">
   <div className="w-full mx-auto">
-    <div className=" bg-cyan-700 px-8 py-4 md:py-12 text-center">
+    <div className=" bg-cyan-700 px-8 py-4 lg:py-7 xl:py-12 text-center">
       <h2 className="text-3xl md:text-4xl font-bold text-white">
         Find the Right Product for Your Application
       </h2>
