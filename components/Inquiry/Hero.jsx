@@ -395,14 +395,14 @@ export default function HeroSlider() {
                         </div>
 
                         <a
-                          href={slide.pdf}
+                          href="https://wa.link/rntibs"
                           download="Brochure.pdf"
                           target="_blank"
                           rel="noopener noreferrer"
                           aria-label="Download Brochure"
                           className="hidden md:inline-flex items-center justify-center mt-1 h-14 px-8 rounded-xl border border-white/30 bg-white/10 backdrop-blur-md text-white font-semibold tracking-wide transition-all duration-300 hover:bg-white hover:text-slate-900 hover:border-white hover:shadow-lg"
                         >
-                          DOWNLOAD CATALOGUE
+                          WhatsApp Now
                         </a>
                       </div>
                     </div>
