@@ -22,6 +22,8 @@ export default function Navbar() {
   const [productMenu, setProductMenu] = useState(false);
   const [servicesMenu, setServicesMenu] = useState(false);
 
+  const [desktopProductOpen, setDesktopProductOpen] = useState(false);
+  const [desktopServicesOpen, setDesktopServicesOpen] = useState(false);
   const services = [
     {
       title: "AMC Service",
@@ -69,6 +71,9 @@ export default function Navbar() {
       href: "/piping-and-distribution-lines",
     },
   ];
+
+  console.log(desktopProductOpen);
+  console.log(desktopServicesOpen);
 
   return (
     <>
@@ -187,52 +192,36 @@ export default function Navbar() {
                 </li>
 
                 {/* Products Dropdown */}
-                <li className="relative mr-3 group">
+                <li
+                  className="relative mr-3"
+                  onClick={() => setDesktopProductOpen(!desktopProductOpen)}
+                  onMouseEnter={() => {
+                    if (window.innerWidth >= 1024) setDesktopProductOpen(true);
+                  }}
+                  onMouseLeave={() => {
+                    if (window.innerWidth >= 1024) setDesktopProductOpen(false);
+                  }}
+                >
                   <button
-                    className="
-          flex items-center gap-2
-          lg:text-[16px] 
-          text-[17px]
-          tracking-[0.12em]
-          font-medium
-          text-slate-700
-          hover:text-blue-600
-          transition-all
-        "
+                    type="button"
+                    className="flex items-center gap-2 text-[17px] lg:text-[16px] tracking-[0.12em] font-medium text-slate-700 hover:text-blue-600 transition-all"
                   >
                     OUR PRODUCTS
                     <ChevronDown
-                      className="
-            w-4 h-4
-            transition-transform duration-300
-            group-hover:rotate-180
-          "
+                      className={`w-4 h-4 transition-transform duration-300 ${
+                        desktopProductOpen ? "rotate-180" : ""
+                      }`}
                     />
                   </button>
 
                   <div
-                    className="
-          absolute left-1/2 top-full
-          lg:text-[16px] 
-          -translate-x-1/2
-          pt-6
-          opacity-0 invisible
-          group-hover:opacity-100
-          group-hover:visible
-          transition-all duration-300
-        "
+                    className={`absolute left-1/2 top-full -translate-x-1/2 pt-6 z-50 transition-all duration-300 ${
+                      desktopProductOpen
+                        ? "opacity-100 visible"
+                        : "opacity-0 invisible pointer-events-none"
+                    }`}
                   >
-                    <div
-                      className="
-                      lg:text-[16px] 
-            w-[700px]
-            rounded-3xl
-            bg-white
-            border border-slate-200
-            shadow-[0_20px_60px_rgba(0,0,0,0.08)]
-            overflow-hidden
-          "
-                    >
+                    <div className="w-[700px] rounded-3xl bg-white border border-slate-200 shadow-[0_20px_60px_rgba(0,0,0,0.08)] overflow-hidden">
                       <div className="grid grid-cols-2">
                         {/* Left */}
                         <div className="p-8 bg-gradient-to-br from-blue-600 to-cyan-500 text-white">
@@ -247,46 +236,21 @@ export default function Navbar() {
                           </p>
 
                           <div className="flex gap-5 mt-6">
-                            <div
-                              className="
-      flex items-center justify-center
-      px-5 py-3
-      bg-white/90 backdrop-blur-md
-      border border-white/60
-      rounded-full
-      shadow-[0_8px_25px_rgba(0,0,0,0.15)]
-      hover:shadow-[0_12px_35px_rgba(0,0,0,0.2)]
-      transition-all duration-300
-    "
-                            >
+                            <div className="flex items-center justify-center px-5 py-3 bg-white rounded-full">
                               <Image
                                 src="/mark-compressors-logo.png"
                                 alt="Mark Compressors"
                                 width={110}
                                 height={60}
-                                className="object-contain"
                               />
                             </div>
 
-                            {/* Chicago Pneumatic */}
-                            <div
-                              className="
-      flex items-center justify-center
-      px-5 py-3
-      bg-white/90 backdrop-blur-md
-      border border-white/60
-      rounded-full
-      shadow-[0_8px_25px_rgba(0,0,0,0.15)]
-      hover:shadow-[0_12px_35px_rgba(0,0,0,0.2)]
-      transition-all duration-300
-    "
-                            >
+                            <div className="flex items-center justify-center px-5 py-3 bg-white rounded-full">
                               <Image
                                 src="/chicago-pneumatic-logo.png"
                                 alt="Chicago Pneumatic"
                                 width={100}
                                 height={60}
-                                className="object-contain"
                               />
                             </div>
                           </div>
@@ -294,32 +258,16 @@ export default function Navbar() {
 
                         {/* Right */}
                         <div className="p-8">
-                          <div className="grid grid-cols-1 gap-2">
+                          <div className="grid gap-2">
                             {products.map((product) => (
                               <Link
                                 key={product.title}
                                 href={product.href}
-                                className="
-                      flex items-center justify-between
-                      rounded-xl
-                      px-4 py-3
-                      text-black
-                      hover:bg-blue-50
-                      hover:text-blue-600
-                      transition-all
-                      group/item
-                    "
+                                className="flex items-center justify-between rounded-xl px-4 py-3 hover:bg-blue-50 hover:text-blue-600 transition-all group"
                               >
                                 <span>{product.title}</span>
 
-                                <ArrowRight
-                                  className="
-                        w-4 h-4
-                        opacity-0
-                        group-hover/item:opacity-100
-                        transition-all
-                      "
-                                />
+                                <ArrowRight className="w-4 h-4 opacity-0 group-hover:opacity-100 transition-all" />
                               </Link>
                             ))}
                           </div>
@@ -338,53 +286,44 @@ export default function Navbar() {
                   </Link>
                 </li>
 
-                <li className="relative group">
+                <li
+                   onClick={() => setDesktopServicesOpen(!desktopServicesOpen)}
+                  className="relative mr-3"
+                  onMouseEnter={() => {
+                    if (window.innerWidth >= 1024) {
+                      setDesktopServicesOpen(true);
+                    }
+                  }}
+                  onMouseLeave={() => {
+                    if (window.innerWidth >= 1024) {
+                      setDesktopServicesOpen(false);
+                    }
+                  }}
+                >
                   <button
-                    className="
-      flex items-center gap-2
-      text-[17px]
-      lg:text-[16px] 
-      tracking-[0.12em]
-      font-medium
-      text-slate-700
-      hover:text-blue-600
-      transition-all
-    "
+                    type="button"
+                    onClick={() => setDesktopServicesOpen((prev) => !prev)}
+                    className="flex items-center gap-2 text-[17px] lg:text-[16px] tracking-[0.12em] font-medium text-slate-700 hover:text-blue-600 transition-all"
                   >
                     OUR SERVICES
                     <ChevronDown
-                      className="
-        w-4 h-4
-        transition-transform duration-300 lg:text-[16px] 
-        group-hover:rotate-180
-      "
+                      className={`w-4 h-4 transition-transform duration-300 ${
+                        desktopServicesOpen ? "rotate-180" : ""
+                      }`}
                     />
                   </button>
 
                   <div
-                    className="
-      absolute left-1/2 top-full
-      -translate-x-1/2
-      pt-6
-      opacity-0 invisible
-      group-hover:opacity-100
-      group-hover:visible
-      transition-all duration-300
-    "
+                    className={`absolute left-1/2 top-full -translate-x-1/2 pt-6 z-50 transition-all duration-300 ${
+                      desktopServicesOpen
+                        ? "opacity-100 visible"
+                        : "opacity-0 invisible pointer-events-none"
+                    }`}
                   >
-                    <div
-                      className="
-        w-[650px]
-        rounded-3xl
-        bg-white
-        border border-slate-200
-        shadow-[0_20px_60px_rgba(0,0,0,0.08)]
-        overflow-hidden
-      "
-                    >
+                    <div className="w-[650px] rounded-3xl bg-white border border-slate-200 shadow-[0_20px_60px_rgba(0,0,0,0.08)] overflow-hidden">
                       <div className="grid grid-cols-2">
                         {/* Left */}
-                        <div className="p-8 bg-gradient-to-br lg:text-[16px]  from-cyan-600 to-blue-600 text-white">
+                        <div className="p-8 bg-gradient-to-br from-cyan-600 to-blue-600 text-white">
                           <h3 className="text-2xl font-bold mb-4">
                             Our Services
                           </h3>
@@ -403,27 +342,11 @@ export default function Navbar() {
                               <Link
                                 key={service.title}
                                 href={service.href}
-                                className="
-                  flex items-center justify-between
-                  rounded-xl
-                  px-4 py-3
-                  text-black
-                  hover:bg-cyan-50
-                  hover:text-cyan-600
-                  transition-all
-                  group/item
-                "
+                                className="flex items-center justify-between rounded-xl px-4 py-3 text-black hover:bg-cyan-50 hover:text-cyan-600 transition-all group"
                               >
                                 <span>{service.title}</span>
 
-                                <ArrowRight
-                                  className="
-                    w-4 h-4
-                    opacity-0
-                    group-hover/item:opacity-100
-                    transition-all
-                  "
-                                />
+                                <ArrowRight className="w-4 h-4 opacity-0 group-hover:opacity-100 transition-all" />
                               </Link>
                             ))}
                           </div>

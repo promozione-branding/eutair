@@ -41,7 +41,7 @@ const [isOpen, setOpen] = useState(false);
 </section>
 
       {/* ABOUT CONTENT */}
-  <section className="py-7 md:py-18 bg-white">
+  <section className="py-7 lg:py-11 xl:py-18 bg-white">
   <div className="w-full mx-auto px-5 md:px-20">
 
     <div className="grid lg:grid-cols-2 gap-5 md:gap-20 items-center">
@@ -60,11 +60,11 @@ const [isOpen, setOpen] = useState(false);
           About Our Company
         </span>
 
-        <h2 className="mt-4 text-2xl md:text-5xl font-black text-slate-900">
+        <h2 className="mt-4 text-2xl lg:text-4xl xl:text-5xl font-black text-slate-900">
           Trusted Partner for Compressed Air & Industrial Solutions
         </h2>
 
-        <div className="mt-8 space-y-6 text-lg text-slate-800 md:leading-relaxed">
+        <div className="mt-8 lg:mt-5 xl:mt-8 space-y-6 text-lg text-slate-800 lg:leading-6 xl:leading-relaxed">
 
           <p>
             Eutair Equipments LLP is a leading name in the compressed air and industrial equipment industry, committed to delivering quality, reliability, and innovation.
@@ -78,7 +78,7 @@ const [isOpen, setOpen] = useState(false);
             With a strong focus on customer satisfaction and technical excellence, we offer a comprehensive range of products including Screw Air Compressors, Diesel Air Compressors, Air Dryers, Air Line Filters, Drain Valves, MSS Series Screw Compressor Filters, MARK Compressors, and Ethanol Alcohol Based Hand Sanitizers.
           </p>
 
-          <p>
+          <p className="block lg:hidden xl:block">
             Our solutions are trusted by businesses across various industries for their performance, durability, and value.
           </p>
 
@@ -115,7 +115,8 @@ const [isOpen, setOpen] = useState(false);
   className="
     relative
     py-7
-    md:py-14
+    lg:py-10
+    xl:py-14
     bg-cover
     bg-center
     bg-fixed
@@ -130,7 +131,7 @@ const [isOpen, setOpen] = useState(false);
   <div className="relative z-10 max-w-7xl mx-auto px-4">
 
     {/* Heading */}
-    <div className="text-center mb-10">
+    <div className="text-center mb-10 lg:mb-5 xl:mb-9">
       <span
         className="
           inline-flex
@@ -236,23 +237,23 @@ const [isOpen, setOpen] = useState(false);
 
 
       {/* VISION */}
-    <section className="py-7 md:py-17 bg-gradient-to-b from-slate-50 to-white">
+    <section className="py-7 lg:py-10 xl:py-17 bg-gradient-to-b from-slate-50 to-white">
 
   <div className="max-w-7xl mx-auto px-4">
 
     <div className="grid lg:grid-cols-2 gap-4 md:gap-8">
 
-      <div className="rounded-[40px] p-5 md:p-10 bg-white border border-slate-200 shadow-xl">
+      <div className="rounded-[40px] p-5 lg:p-7 xl:p-10 bg-white border border-slate-200 shadow-xl">
 
         <div className="w-16 h-16 rounded-2xl bg-sky-100 flex items-center justify-center text-3xl">
           🎯
         </div>
 
-        <h3 className="mt-3 md:mt-6 text-3xl md:text-4xl font-black text-slate-900">
+        <h3 className="mt-3 lg:mt-4 xl:mt-6 text-3xl md:text-4xl font-black text-slate-900">
           Our Mission
         </h3>
 
-        <p className="mt-3 md:mt-6 text-slate-600 md:leading-relaxed text-lg">
+        <p className="mt-3 lg:mt-4 xl:mt-6 text-slate-600 md:leading-relaxed text-lg">
           To provide high-performance Screw Air Compressors, compressed air systems, and industrial solutions that help businesses improve productivity, enhance operational efficiency, and reduce operating costs.
         </p>
 
@@ -264,11 +265,11 @@ const [isOpen, setOpen] = useState(false);
           🚀
         </div>
 
-        <h3 className="mt-3 md:mt-6 text-4xl font-black text-slate-900">
+        <h3 className="mt-3 lg:mt-4 xl:mt-6 text-4xl font-black text-slate-900">
           Our Vision
         </h3>
 
-        <p className="mt-3 md:mt-6 text-slate-600 md:leading-relaxed md:text-lg">
+        <p className="mt-3 lg:mt-4 xl:mt-6 text-slate-600 md:leading-relaxed md:text-lg">
           To be a trusted name in the compressed air industry by delivering advanced Screw Air Compressors and industrial solutions that set benchmarks for quality, reliability, and customer satisfaction.
         </p>
 
@@ -287,7 +288,7 @@ const [isOpen, setOpen] = useState(false);
     <div
       className="
       rounded-[40px]
-      p-5 md:p-12
+      p-5 lg:p-8 xl:p-12
       bg-gradient-to-r
       from-sky-500
       via-cyan-500
@@ -304,7 +305,7 @@ const [isOpen, setOpen] = useState(false);
         Discover reliable Screw Air Compressors and industrial solutions from Eutair Equipments LLP designed to enhance efficiency, productivity, and performance.
       </p>
 
-      <div className="flex flex-wrap justify-center gap-5 mt-10">
+      <div className="flex flex-wrap justify-center gap-5 mt-10 lg:mt-5 xl:mt-9">
         <button onClick={() => setOpen(true)} className="px-5 md:px-8 h-14 rounded-2xl bg-white text-sky-600 font-bold">
           Request a Quote
         </button>
@@ -328,7 +329,7 @@ const [isOpen, setOpen] = useState(false);
 
 
 
-<section className="relative overflow-hidden bg-white py-8">
+<section className="relative overflow-hidden bg-white py-8 lg:py-9 xl:py-8">
   {/* Background Decorations */}
 
 
@@ -355,7 +356,7 @@ const [isOpen, setOpen] = useState(false);
     </div>
 
     {/* Cards */}
-    <div className="mt-7 px-3 grid gap-8 grid-cols-2 lg:grid-cols-3">
+    <div className="mt-7 px-3 grid gap-8 lg:gap-6 xl:gap-8 grid-cols-2 lg:grid-cols-3">
       {[
         "Pre-sales application engineering and system sizing",
         "Energy-efficient system design and optimization",
@@ -367,7 +368,7 @@ const [isOpen, setOpen] = useState(false);
       ].map((item, index) => (
         <div
           key={index}
-          className="group relative rounded-3xl border border-gray-200 bg-white p-3 md:p-5 shadow-sm transition-all duration-300 hover:-translate-y-2 hover:border-blue-300 hover:shadow-2xl"
+          className="group relative rounded-3xl border border-gray-200 bg-white p-3 lg:p-3 xl:p-5 shadow-sm transition-all duration-300 hover:-translate-y-2 hover:border-blue-300 hover:shadow-2xl"
         >
           {/* Number */}
           <div className="mb-4 flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-to-br from-blue-600 to-sky-500 text-lg font-bold text-white shadow-md">
@@ -375,7 +376,7 @@ const [isOpen, setOpen] = useState(false);
           </div>
 
           {/* Content */}
-          <p className="text-sm md:text-lg font-medium md:leading-8 text-gray-700">
+          <p className="text-sm md:text-lg font-medium  xl:leading-8 text-gray-700">
             {item}
           </p>
 

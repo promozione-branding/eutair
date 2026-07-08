@@ -97,7 +97,7 @@ export default function AirSystemSolution() {
             lg:text-5xl
             leading-tight
             mb-6
-           
+           lg:mb-3 xl:mb-5
             max-w-4xl
             mx-auto
           "
@@ -149,7 +149,7 @@ export default function AirSystemSolution() {
       
         </h3>
 
-        <p className="text-black leading-8 text-sm md:text-lg  ">
+        <p className="text-black leading-8 lg:leading-6 xl:leading-8 text-sm md:text-lg  ">
      Eutair Equipments is a professionally managed engineering and industrial equipment company based at New Delhi, India. We have over the years accepted industry challenges, and these very challenges made us what we are today: <strong> 'Compressed Air Experts'. </strong> 
 Eutair is a leading Engineering Company, engaged in the engineering, sales and services of capital equipment to various industrial sectors. Eutair is associated with renowned capital manufacturing companies offering industrial equipment from Concept to Commissioning on EP, EPC, turnkey basis.
 The company specializes in compressed air systems, gas-based power generation equipment, utility infrastructure, water & effluent treatment solutions, and export facilitation. We have executed projects in India and abroad. We also undertake after sales services for these projects. Execution of projects in Africa & India Sub-continent has brought us on to global map.

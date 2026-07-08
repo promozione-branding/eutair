@@ -35,11 +35,11 @@ export default function FAQ() {
   };
 
   return (
-    <section className="py-4 md:py-16 relative px-4 md:px-8 lg:px-16 bg-white">
+    <section className="py-4 lg:py-10 xl:py-16 relative px-4 md:px-8 lg:px-9 xl:px-8 bg-white">
       {/* Heading */}
 
 
-      <h2 className="text-2xl md:text-4xl font-extrabold text-center mb-3 md:mb-12 text-[#07342A]">
+      <h2 className="text-2xl md:text-4xl font-extrabold text-center mb-3 lg:mb-9 xl:mb-12 text-[#07342A]">
         Frequently Asked Questions
       </h2>
 

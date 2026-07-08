@@ -2,7 +2,7 @@ import React from "react";
 
 const Bestseller = () => {
   return (
-    <section className="md:py-12  bg-white overflow-hidden">
+    <section className="lg:py-8 xl:py-12  bg-white overflow-hidden">
       <div className="w-full px-5 md:px-19 mx-auto ">
         <div className="grid lg:grid-cols-2 gap-10 lg:gap-14 items-center">
 
@@ -44,7 +44,7 @@ const Bestseller = () => {
                 border-cyan-500
               "
             >
-              <p className="text-gray-700 leading-7 text-sm sm:text-base">
+              <p className="text-gray-700 leading-7 lg:leading-5 xl:leading-7 text-sm sm:text-base">
                 Our commitment to quality enables us to deliver trusted
                 solutions that businesses can rely on every day.
               </p>
@@ -124,7 +124,8 @@ const Bestseller = () => {
                     gap-3
                     bg-gray-50
                     p-2
-                    md:p-4
+                    lg:p-3
+                    xl:p-4
                     rounded-xl
                     border
                     border-gray-100

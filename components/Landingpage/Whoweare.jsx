@@ -4,7 +4,7 @@ const Whoweare = () => {
   return (
 
     <Reveal>
- <section className="py-12 md:py-16 bg-white overflow-hidden">
+ <section className="py-12 lg:py-10 xl:py-16 bg-white overflow-hidden">
       <div className="w-full px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 mx-auto">
         <div className="grid lg:grid-cols-12 gap-8 lg:gap-12 xl:gap-16 items-center">
           {/* Image */}
@@ -86,7 +86,7 @@ const Whoweare = () => {
               Engineering Excellence
             </h2>
 
-            <div className="w-16 sm:w-20 h-1 bg-sky-600 mt-4 sm:mt-5 lg:mb-5 xl:mb-6 sm:mb-8 rounded-full"></div>
+            <div className="w-16 sm:w-20 h-1 bg-sky-600 mt-2 sm:mt-5 lg:mb-5 mb-3 xl:mb-6 sm:mb-8 rounded-full"></div>
 
             {/* Content Block 1 */}
             <div className="flex gap-3 sm:gap-5">

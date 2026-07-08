@@ -72,7 +72,7 @@ useEffect(() => {
   return (
    
 
-      <section className="bg-[#f6f8fa] py-14 sm:py-16 lg:py-20">
+      <section className="bg-[#f6f8fa] py-14 sm:py-16 lg:py-15 xl:py-20">
   <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 xl:px-10">
 
        <div className="flex flex-col gap-6 lg:flex-row lg:items-center lg:justify-between mb-10">
