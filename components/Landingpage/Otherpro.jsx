@@ -32,7 +32,7 @@ const products = [
 
   {
     name: "Air Treatment Systems",
-    link: "/air-treatment",
+    link: "/air-treatment-service",
     thumbnail: "/hero3.png",
     description:
       "Advanced air treatment solutions for clean and efficient compressed air.",
