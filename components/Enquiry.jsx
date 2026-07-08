@@ -5,69 +5,22 @@ import axios from "axios";
 
 import { toast } from "react-toastify";
 
-import {
-  RecaptchaVerifier,
-  signInWithPhoneNumber,
-} from "firebase/auth";
+import { RecaptchaVerifier, signInWithPhoneNumber } from "firebase/auth";
 
 import { auth } from "@/lib/firebase";
 
-export default function ContactForm({
-  isOpen,
-  onClose,
-}) {
-  const [submitted, setSubmitted] =
-    useState(false);
+export default function ContactForm({ isOpen, onClose }) {
+  const [submitted, setSubmitted] = useState(false);
 
-  const [successMessage, setSuccessMessage] =
-    useState("");
+  const [successMessage, setSuccessMessage] = useState("");
 
-  const [loading, setLoading] =
-    useState(false);
+  const [loading, setLoading] = useState(false);
 
   // OTP STATES
-  const [otp, setOtp] = useState("");
 
-  const [showOtpBox, setShowOtpBox] =
-    useState(false);
-
-  const [confirmationResult, setConfirmationResult] =
-    useState(null);
-
-  const [isPhoneVerified, setIsPhoneVerified] =
-    useState(false);
-
-  const [formValues, setFormValues] =
-    useState(null);
+  const [formValues, setFormValues] = useState(null);
 
   // INIT RECAPTCHA
-  useEffect(() => {
-    if (!isOpen) return;
-
-    if (
-      typeof window !== "undefined" &&
-      !window.recaptchaVerifier
-    ) {
-      window.recaptchaVerifier =
-        new RecaptchaVerifier(
-          auth,
-          "recaptcha-container",
-          {
-            size: "normal",
-          }
-        );
-
-      window.recaptchaVerifier.render();
-    }
-
-    return () => {
-      if (window.recaptchaVerifier) {
-        window.recaptchaVerifier.clear();
-
-        window.recaptchaVerifier = null;
-      }
-    };
-  }, [isOpen]);
 
   if (!isOpen) return null;
 
@@ -76,98 +29,89 @@ export default function ContactForm({
   };
 
   // SEND OTP
-  const sendOTP = async (phone) => {
-    try {
-      setLoading(true);
+  // const sendOTP = async (phone) => {
+  //   try {
+  //     setLoading(true);
 
-      const appVerifier =
-        window.recaptchaVerifier;
+  //     const appVerifier =
+  //       window.recaptchaVerifier;
 
-      const result =
-        await signInWithPhoneNumber(
-          auth,
-          "+91" + phone.trim(),
-          appVerifier
-        );
+  //     const result =
+  //       await signInWithPhoneNumber(
+  //         auth,
+  //         "+91" + phone.trim(),
+  //         appVerifier
+  //       );
 
-      setConfirmationResult(result);
+  //     setConfirmationResult(result);
 
-      setShowOtpBox(true);
+  //     setShowOtpBox(true);
 
-      toast.success("OTP Sent Successfully");
-    } catch (error) {
-      console.log(error);
+  //     toast.success("OTP Sent Successfully");
+  //   } catch (error) {
+  //     console.log(error);
 
-      toast.error(
-        error.message || "Failed to send OTP"
-      );
-    } finally {
-      setLoading(false);
-    }
-  };
+  //     toast.error(
+  //       error.message || "Failed to send OTP"
+  //     );
+  //   } finally {
+  //     setLoading(false);
+  //   }
+  // };
 
   // VERIFY OTP
-  const verifyOTP = async () => {
-    try {
-      setLoading(true);
+  // const verifyOTP = async () => {
+  //   try {
+  //     setLoading(true);
 
-      await confirmationResult.confirm(otp);
+  //     await confirmationResult.confirm(otp);
 
-      setIsPhoneVerified(true);
+  //     setIsPhoneVerified(true);
 
-      toast.success(
-        "Phone Verified Successfully"
-      );
+  //     toast.success(
+  //       "Phone Verified Successfully"
+  //     );
 
-      // SUBMIT FORM AFTER VERIFY
-      await submitForm(formValues);
-    } catch (error) {
-      console.log(error);
+  //     // SUBMIT FORM AFTER VERIFY
+  //     await submitForm(formValues);
+  //   } catch (error) {
+  //     console.log(error);
 
-      toast.error("Invalid OTP");
-    } finally {
-      setLoading(false);
-    }
-  };
+  //     toast.error("Invalid OTP");
+  //   } finally {
+  //     setLoading(false);
+  //   }
+  // };
 
   // SUBMIT FORM
   const submitForm = async (values) => {
     try {
       setLoading(true);
 
-      const { data } = await axios.post(
-        "https://brandbnalo.com/api/form/add",
-        {
-          platform:
-            "eurair enquiry Form",
+      const { data } = await axios.post("https://brandbnalo.com/api/form/add", {
+        platform: "eutair enquiry Form",
 
-          platformEmail:
-            "sales@eutair.com",
+        platformEmail: "sales@eutair.com",
 
-          name: values.name,
+        name: values.name,
 
-          phone: values.phone,
+        phone: values.phone,
 
-          email: values.email,
+        email: values.email,
 
-          place: "N/A",
+        place: "N/A",
 
-          product: values.product,
+        product: values.product,
 
-          message: values.message,
-        }
-      );
+        message: values.message,
+      });
 
       if (data?.success) {
         setSubmitted(true);
 
-        setSuccessMessage(
-          "✅ Your enquiry has been submitted successfully!"
-        );
+        setSuccessMessage("✅ Your enquiry has been submitted successfully!");
 
-        toast.success(
-          "Form Submitted Successfully"
-        );
+        toast.success("Form Submitted Successfully");
 
         const whatsappText = `Hi, I am ${values.name}.
 Email: ${values.email}
@@ -178,9 +122,9 @@ Contact: ${values.phone}`;
         setTimeout(() => {
           window.open(
             `https://wa.me/919582911766?text=${encodeURIComponent(
-              whatsappText
+              whatsappText,
             )}`,
-            "_blank"
+            "_blank",
           );
         }, 1000);
 
@@ -190,16 +134,12 @@ Contact: ${values.phone}`;
           onClose();
         }, 4000);
       } else {
-        setSuccessMessage(
-          "❌ Failed to send. Please try again."
-        );
+        setSuccessMessage("❌ Failed to send. Please try again.");
       }
     } catch (error) {
       console.log(error);
 
-      setSuccessMessage(
-        "❌ Server error. Try again later."
-      );
+      setSuccessMessage("❌ Server error. Try again later.");
     } finally {
       setLoading(false);
     }
@@ -213,37 +153,17 @@ Contact: ${values.phone}`;
 
     const values = {
       name: form.name.value,
-
       phone: form.phone.value,
-
       email: form.email.value,
-
       product: form.products.value,
-
       message: form.message.value,
     };
 
-    if (
-      !values.phone ||
-      values.phone.length < 10
-    ) {
-      return toast.error(
-        "Enter Valid Phone Number"
-      );
+    if (!values.phone || values.phone.length < 10) {
+      return toast.error("Enter Valid Phone Number");
     }
 
-    // SAVE FORM DATA
-    setFormValues(values);
-
-    // IF VERIFIED ALREADY
-    if (isPhoneVerified) {
-      await submitForm(values);
-
-      return;
-    }
-
-    // SEND OTP FIRST
-    await sendOTP(values.phone);
+    await submitForm(values);
   };
 
   return (
@@ -251,8 +171,7 @@ Contact: ${values.phone}`;
       <div
         className="relative z-[1000] rounded-3xl shadow-2xl p-6 md:p-10 w-full max-w-[570px] text-white bg-cover bg-center"
         style={{
-          backgroundImage:
-            "url(/formbg.jpg)",
+          backgroundImage: "url(/formbg.jpg)",
         }}
       >
         {/* OVERLAY */}
@@ -276,10 +195,7 @@ Contact: ${values.phone}`;
           <div className="w-28 h-[4px] bg-white mx-auto mt-3 mb-8 rounded-full"></div>
 
           {!submitted ? (
-            <form
-              className="space-y-4"
-              onSubmit={handleSubmit}
-            >
+            <form className="space-y-4" onSubmit={handleSubmit}>
               {/* NAME + PRODUCT */}
               <div className="flex flex-col md:flex-row gap-3">
                 <input
@@ -298,49 +214,27 @@ Contact: ${values.phone}`;
                   defaultValue=""
                   className="w-full md:w-1/2 p-3 rounded-md text-black text-sm border-2 border-white focus:outline-none bg-blue-50"
                 >
-                  <option value="">
-                    Select Product
+                  <option value="">Select Product</option>
+
+                  <option value="Mark Compressors">Mark Compressors</option>
+
+                  <option value="Chicago Pneumatic">Chicago Pneumatic</option>
+
+                  <option value="Air Treatment">Air Treatment</option>
+
+                  <option value="Spares and Consumables">
+                    Spares and Consumables
                   </option>
 
-                  <option value="Biodegradable Garbage Bags">
-                 Mark Compressors
-
+                  <option value="Piping and Distribution Lines">
+                    Piping and Distribution Lines
                   </option>
-
-                  <option value="Disposable Garbage Bags">
-                 Chicago Pneumatic
-
-                  </option>
-
-                  <option value="Biomedical Garbage Bags">
-                 Air Treatment
-
-                  </option>
-
-
-
-                  <option value="Biomedical Garbage Bags">
-               Spares and Consumables
-
-
-                  </option>
-
-
-                  
-                  <option value="Biomedical Garbage Bags">
-             Piping and Distribution Lines
-
-                  </option>
-
-
                 </select>
               </div>
 
               {/* PHONE */}
               <div className="flex items-center rounded-md border-2 border-white overflow-hidden">
-                <span className="ml-3">
-                  🇮🇳
-                </span>
+                <span className="ml-3">🇮🇳</span>
 
                 <input
                   type="tel"
@@ -355,13 +249,13 @@ Contact: ${values.phone}`;
               </div>
 
               {/* RECAPTCHA */}
-              <div
+              {/* <div
                 id="recaptcha-container"
                 className="mt-2"
-              ></div>
+              ></div> */}
 
               {/* OTP BOX */}
-              {showOtpBox &&
+              {/* {showOtpBox &&
                 !isPhoneVerified && (
                   <div className="space-y-3">
                     <input
@@ -382,7 +276,7 @@ Contact: ${values.phone}`;
                       Verify OTP
                     </button>
                   </div>
-                )}
+                )} */}
 
               {/* EMAIL */}
               <input
@@ -409,13 +303,7 @@ Contact: ${values.phone}`;
                 disabled={loading}
                 className="w-full py-3 bg-gradient-to-r from-[#0077e6] to-[#005bb5] rounded-md font-semibold text-white shadow-md hover:opacity-90 transition"
               >
-                {loading
-                  ? "Loading..."
-                  : !showOtpBox
-                  ? "Send OTP"
-                  : !isPhoneVerified
-                  ? "Verify OTP First"
-                  : "Send Message"}
+                {loading ? "Loading..." : "Send Message"}
               </button>
             </form>
           ) : (

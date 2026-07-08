@@ -10,8 +10,13 @@ import {
   ArrowRight,
   CheckCircle2,
 } from "lucide-react";
+import Enquiry from "@/components/Enquiry";
+import { useState } from "react";
+
 
 export default function ServiceSupportPage() {
+    const [open, setOpen] = useState(false);
+  
   return (
     <main className="bg-white">
 
@@ -35,11 +40,11 @@ export default function ServiceSupportPage() {
             </p>
 
             <div className="mt-10 flex flex-wrap gap-4">
-              <button className="rounded-xl bg-blue-600 px-8 py-4 font-semibold text-white transition hover:bg-blue-700">
+              <a href="https://wa.link/rntibs" className="rounded-xl bg-blue-600 px-8 py-4 font-semibold text-white transition hover:bg-blue-700">
                 Request Service Support
-              </button>
+              </a>
 
-              <button className="rounded-xl border border-white/20 bg-white/5 px-8 py-4 font-semibold text-white backdrop-blur-sm">
+              <button  onClick={() => setOpen(true)} className="rounded-xl border border-white/20 bg-white/5 px-8 py-4 font-semibold text-white backdrop-blur-sm">
                 Request Parts Information
               </button>
             </div>
@@ -353,6 +358,9 @@ High-quality oils, lubricants, and maintenance consumables help reduce wear, imp
           </div>
         </div>
       </section>
+
+            <Enquiry isOpen={open} onClose={() => setOpen(false)} />
+      
     </main>
   );
 }

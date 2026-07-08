@@ -7,6 +7,7 @@ import { FaWhatsapp, FaPhoneAlt, FaDownload } from "react-icons/fa";
 import { useState } from "react";
 import axios from "axios";
 import toast from "react-hot-toast";
+import { Link } from "lucide-react";
 export default function ProductPage({ params }) {
   const [isOpen, setOpen] = useState(false);
 
@@ -80,7 +81,6 @@ export default function ProductPage({ params }) {
     notFound();
   }
 
-
   return (
     <>
       {/* HERO SECTION */}
@@ -147,31 +147,42 @@ export default function ProductPage({ params }) {
                 >
                   <span>Request a Qoute</span>
                 </button>
-                <button className="group flex items-center gap-1 px-3 xl:px-8 h-16 rounded-2xl bg-gradient-to-r from-green-500 to-emerald-600 text-white font-semibold shadow-[0_10px_30px_rgba(34,197,94,.35)] hover:-translate-y-1 transition-all duration-300">
+                <a
+                  href="https://wa.link/rntibs
+"
+                  className="group flex items-center gap-1 px-3 xl:px-8 h-16 rounded-2xl bg-gradient-to-r from-green-500 to-emerald-600 text-white font-semibold shadow-[0_10px_30px_rgba(34,197,94,.35)] hover:-translate-y-1 transition-all duration-300"
+                >
                   <FaWhatsapp size={24} />
                   <span>WhatsApp Now</span>
-                </button>
+                </a>
 
-                {product?.pdf && <a
-                  download="Brochure.pdf"
-                  href={product.pdf}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label="Download Brochure"
-                  className="group hidden md:flex items-center gap-2 px-3 xl:px-8 h-16 rounded-2xl bg-gradient-to-r from-slate-900 to-slate-700 text-white font-semibold"
-                >
-                  <FaDownload size={18} />
-                  <span>Download Brochure</span>
-                </a>}
-                <div className="flex md:hidden justify-center ddflex items-center w-full mx-auto mt-2">
-                 {product?.pdf && <a download="Brochure.pdf"
-                  href={product.pdf}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label="Download Brochure" className="group flex items-center gap-3 px-8 h-16 rounded-2xl bg-gradient-to-r from-slate-900 to-slate-700 text-white font-semibold">
+                {product?.pdf && (
+                  <a
+                    download="Brochure.pdf"
+                    href={product.pdf}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Download Brochure"
+                    className="group hidden md:flex items-center gap-2 px-3 xl:px-8 h-16 rounded-2xl bg-gradient-to-r from-slate-900 to-slate-700 text-white font-semibold"
+                  >
                     <FaDownload size={18} />
                     <span>Download Brochure</span>
-                  </a>}
+                  </a>
+                )}
+                <div className="flex md:hidden justify-center ddflex items-center w-full mx-auto mt-2">
+                  {product?.pdf && (
+                    <a
+                      download="Brochure.pdf"
+                      href={product.pdf}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label="Download Brochure"
+                      className="group flex items-center gap-3 px-8 h-16 rounded-2xl bg-gradient-to-r from-slate-900 to-slate-700 text-white font-semibold"
+                    >
+                      <FaDownload size={18} />
+                      <span>Download Brochure</span>
+                    </a>
+                  )}
                 </div>
               </div>
             </div>
@@ -357,7 +368,7 @@ export default function ProductPage({ params }) {
             >
               Power Your Operations with
               <span className="block text-sky-600">
-                Chicago Pneumatic Compressors
+                Nark Compressors
               </span>
             </h2>
 
