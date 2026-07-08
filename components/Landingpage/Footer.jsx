@@ -289,7 +289,7 @@ export default function Footer() {
         <p className="text-slate-300 leading-relaxed">
           37C, 2nd Floor, Gate No. 3, Opp. IDBI Bank,
           Chaudhary Balbir Singh Marg, A3 Block,
-          Paschim Vihar, New Delhi - 110063
+          <br/>Paschim Vihar, New Delhi - 110063
         </p>
       </div>
     </div>
