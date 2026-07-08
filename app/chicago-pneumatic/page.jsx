@@ -42,11 +42,11 @@ export default function Page() {
 
       {/* ABOUT */}
       <section className="relative overflow-hidden bg-white">
-        <div className="container mx-auto px-6 lg:px-18 py-4 md:py-10 relative z-10">
+        <div className="container mx-auto px-6 xl:px-18 py-4 md:py-10 relative z-10">
           <div className="grid lg:grid-cols-2 gap-10 items-center">
             {/* Left Content */}
             <div>
-              <h1 className="mt-5 text-2xl md:text-5xl font-bold leading-tight text-slate-900">
+              <h1 className="mt-5 text-2xl lg:text-3xl xl:text-5xl font-bold leading-tight text-slate-900">
                 Portable Air Compressors for Construction & Mining
               </h1>
 
@@ -151,7 +151,7 @@ export default function Page() {
 
       {/* BENEFITS */}
       <section className="py-9 px-5 md:px-20 bg-white">
-        <div className="max-w-4xl mx-auto text-center mb-4 md:mb-16">
+        <div className="max-w-4xl mx-auto text-center mb-4 lg:mb-8 xl:mb-16">
           <span className="text-sky-600 bg-sky-100 p-3 rounded-full font-semibold">
             Benefits of Chicago Pneumatic Compressors
           </span>
@@ -174,7 +174,7 @@ export default function Page() {
         {/* Benefits Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-5">
           {/* Card 1 */}
-          <div className="group p-4 md:p-6 rounded-3xl border border-slate-200 bg-white shadow-sm hover:shadow-xl transition-all duration-300">
+          <div className="group p-4 lg:p-5 xl:p-6 rounded-3xl border border-slate-200 bg-white shadow-sm hover:shadow-xl transition-all duration-300">
             <div className="w-14 h-14 rounded-2xl bg-sky-100 flex items-center justify-center mb-6">
               ⚡
             </div>
@@ -183,7 +183,7 @@ export default function Page() {
               Enhanced Energy Efficiency
             </h3>
 
-            <p className="text-slate-600 leading-6 md:leading-relaxed">
+            <p className="text-slate-600 leading-6 xl:leading-relaxed">
               Chicago Pneumatic Compressors are engineered to maximize air
               output while minimizing energy consumption. Their efficient design
               helps businesses lower electricity costs and improve overall
@@ -193,7 +193,7 @@ export default function Page() {
           </div>
 
           {/* Card 2 */}
-          <div className="group p-4 md:p-6 rounded-3xl border border-slate-200 bg-white shadow-sm hover:shadow-xl transition-all duration-300">
+          <div className="group p-4 lg:p-5 xl:p-6 rounded-3xl border border-slate-200 bg-white shadow-sm hover:shadow-xl transition-all duration-300">
             <div className="w-14 h-14 rounded-2xl bg-sky-100 flex items-center justify-center mb-6">
               🔄
             </div>
@@ -201,7 +201,7 @@ export default function Page() {
               Consistent and Reliable Performance
             </h3>
 
-            <p className="text-slate-600 leading-6 md:leading-relaxed">
+            <p className="text-slate-600 leading-6 xl:leading-relaxed">
               A stable compressed air supply is essential for maintaining
               uninterrupted industrial operations. Chicago Pneumatic Compressors
               are built to deliver reliable performance even in demanding
@@ -211,7 +211,7 @@ export default function Page() {
           </div>
 
           {/* Card 3 */}
-          <div className="group p-4 md:p-6 rounded-3xl border border-slate-200 bg-white shadow-sm hover:shadow-xl transition-all duration-300">
+          <div className="group lg:p-5 xl:p-6 rounded-3xl border border-slate-200 bg-white shadow-sm hover:shadow-xl transition-all duration-300">
             <div className="w-14 h-14 rounded-2xl bg-sky-100 flex items-center justify-center mb-6">
               🛠️
             </div>
@@ -220,7 +220,7 @@ export default function Page() {
               Lower Maintenance Requirements
             </h3>
 
-            <p className="text-slate-600 leading-6 md:leading-relaxed">
+            <p className="text-slate-600 leading-6 xl:leading-relaxed">
               Manufactured using high-quality components and advanced
               engineering practices, these compressors are designed for
               durability and reduced maintenance. This helps minimize service
@@ -229,7 +229,7 @@ export default function Page() {
           </div>
 
           {/* Card 4 */}
-          <div className="group p-4 md:p-6 rounded-3xl border border-slate-200 bg-white shadow-sm hover:shadow-xl transition-all duration-300">
+          <div className="group p-4 lg:p-5 xl:p-6 rounded-3xl border border-slate-200 bg-white shadow-sm hover:shadow-xl transition-all duration-300">
             <div className="w-14 h-14 rounded-2xl bg-sky-100 flex items-center justify-center mb-6">
               🏭
             </div>
@@ -238,7 +238,7 @@ export default function Page() {
               Long Service Life
             </h3>
 
-            <p className="text-slate-600 leading-6 md:leading-relaxed">
+            <p className="text-slate-600 leading-6 xl:leading-relaxed">
               The robust construction and superior build quality of Chicago
               Pneumatic Compressors ensure long-lasting performance. Their
               durability allows businesses to achieve a higher return on
@@ -247,7 +247,7 @@ export default function Page() {
           </div>
 
           {/* Card 5 */}
-          <div className="group p-4 md:p-6 rounded-3xl border border-slate-200 bg-white shadow-sm hover:shadow-xl transition-all duration-300">
+          <div className="group p-4 lg:p-5 xl:p-6 rounded-3xl border border-slate-200 bg-white shadow-sm hover:shadow-xl transition-all duration-300">
             <div className="w-14 h-14 rounded-2xl bg-sky-100 flex items-center justify-center mb-6">
               📈
             </div>
@@ -256,7 +256,7 @@ export default function Page() {
               Improved Productivity
             </h3>
 
-            <p className="text-slate-600 leading-6 md:leading-relaxed">
+            <p className="text-slate-600 leading-6 xl:leading-relaxed">
               With dependable compressed air delivery and efficient operation,
               Chicago Pneumatic Compressors help businesses optimize workflows,
               improve production output, and support continuous operations.
@@ -264,7 +264,7 @@ export default function Page() {
           </div>
 
           {/* Card 6 */}
-          <div className="group p-4 md:p-6 rounded-3xl border border-slate-200 bg-white shadow-sm hover:shadow-xl transition-all duration-300">
+          <div className="group p-4 lg:p-5 xl:p-6 rounded-3xl border border-slate-200 bg-white shadow-sm hover:shadow-xl transition-all duration-300">
             <div className="w-14 h-14 rounded-2xl bg-sky-100 flex items-center justify-center mb-6">
               💰
             </div>
@@ -273,7 +273,7 @@ export default function Page() {
               Cost-Effective Operations
             </h3>
 
-            <p className="text-slate-600 leading-6 md:leading-relaxed">
+            <p className="text-slate-600 leading-6 xl:leading-relaxed">
               By combining energy efficiency, reliable performance, and low
               maintenance requirements, these compressors contribute to reduced
               operating costs and increased profitability for businesses.

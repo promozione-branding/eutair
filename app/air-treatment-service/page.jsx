@@ -124,7 +124,7 @@ export default function AirTreatmentSolutionsPage() {
       </section>
 
       {/* Why */}
-      <section className="py-7 md:py-15">
+      <section className="py-7 lg:py-9 xl:py-15">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-5 md:gap-16 items-center">
             <div>
@@ -222,7 +222,7 @@ export default function AirTreatmentSolutionsPage() {
               return (
                 <div
                   key={index}
-                  className="rounded-3xl border border-slate-200 bg-white p-4 md:p-8 shadow-sm hover:-translate-y-2 hover:shadow-2xl transition"
+                  className="rounded-3xl border border-slate-200 bg-white p-4 lg:p-5 xl:p-8 shadow-sm hover:-translate-y-2 hover:shadow-2xl transition"
                 >
                   <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-sky-100 text-sky-600">
                     <Icon size={30} />

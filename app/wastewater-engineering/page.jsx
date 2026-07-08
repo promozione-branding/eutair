@@ -178,7 +178,7 @@ export default function WastewaterEngineering() {
       </section>
 
       {/* Why Wastewater Engineering Matters */}
-      <section className="py-8 md:py-20">
+      <section className="py-8 lg:py-10 xl:py-20">
         <div className="container mx-auto max-w-7xl px-6">
           <h2 className="text-2xl md:text-3xl font-bold mb-4 md:mb-8">
             Why Wastewater Engineering Matters
@@ -204,7 +204,7 @@ export default function WastewaterEngineering() {
       </section>
 
       {/* Benefits */}
-      <section className="bg-gray-50 py-8 md:py-20">
+      <section className="bg-gray-50 py-8 lg:py-12 xl:py-20">
         <div className="container mx-auto max-w-7xl px-6">
           <h2 className="text-3xl font-bold mb-5 md:mb-10">Benefits</h2>
 
@@ -212,7 +212,7 @@ export default function WastewaterEngineering() {
             {benefits.map((benefit, index) => (
               <div
                 key={index}
-                className="bg-white p-3 md:p-5 rounded-xl border shadow-sm"
+                className="bg-white p-3 lg:p-4 xl:p-5 rounded-xl border shadow-sm"
               >
                 {benefit}
               </div>
@@ -222,9 +222,9 @@ export default function WastewaterEngineering() {
       </section>
 
       {/* Engineering Solutions */}
-      <section className="py-7 md:py-20">
+      <section className="py-7 lg:py-13 xl:py-20">
         <div className="container mx-auto max-w-7xl px-6">
-          <h2 className="text-2xl md:text-3xl font-bold mb-10">
+          <h2 className="text-2xl md:text-3xl font-bold mb-10 lg:mb-6 xl:mb-10">
             Engineering Solutions & System Options
           </h2>
 
@@ -232,7 +232,7 @@ export default function WastewaterEngineering() {
             {engineeringSolutions.map((solution, index) => (
               <div
                 key={index}
-                className="border rounded-xl p-4 md:p-8 hover:shadow-lg transition"
+                className="border rounded-xl p-4 lg:p-6 xl:p-8 hover:shadow-lg transition"
               >
                 <h3 className="text-xl md:text-2xl font-semibold mb-3">
                   {solution.title}
@@ -256,7 +256,7 @@ export default function WastewaterEngineering() {
       </section>
 
       {/* Industries & Applications */}
-      <section className="bg-slate-50 py-8 md:py-20">
+      <section className="bg-slate-50 py-8 lg:py-12 xl:py-20">
         <div className="container mx-auto max-w-7xl px-6">
           <div className="grid lg:grid-cols-2 gap-8 md:gap-12">
             <div>
@@ -296,7 +296,7 @@ export default function WastewaterEngineering() {
       </section>
 
       {/* FAQ */}
-      <section className="py-8 md:py-20">
+      <section className="py-8 lg:py-12 xl:py-20">
         <div className="container mx-auto max-w-5xl px-6">
           <h2 className="text-2xl md:text-3xl font-bold mb-8 md:mb-10">
             Frequently Asked Question - Wastewater Engineering

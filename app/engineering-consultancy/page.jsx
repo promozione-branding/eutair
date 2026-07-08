@@ -109,7 +109,7 @@ export default function EngineeringConsultancyService() {
           Technical Expertise for Efficient and Future-Ready Compressed Air Systems
         </h1>
 
-        <p className="mt-8 md:text-lg md:leading-8 text-slate-900">
+        <p className="mt-8 md:text-lg xl:leading-8 text-slate-900">
           Make informed decisions from the earliest stages of your project with professional Engineering Consultancy Services. From system sizing and utility planning to layout optimization and future expansion considerations, engineering support helps ensure compressed air systems are designed for performance, efficiency, and long-term reliability.
         </p>
 
@@ -148,7 +148,7 @@ export default function EngineeringConsultancyService() {
 
       {/* Why It Matters */}
       <div className="border-y border-slate-200 bg-slate-50">
-        <div className="container mx-auto px-6 py-8 md:py-24 lg:px-8">
+        <div className="container mx-auto px-6 py-8 lg:py-12 xl:py-24 lg:px-8">
           <div className="grid gap-7 md:gap-16 lg:grid-cols-12">
             <div className="lg:col-span-4">
               <span className="text-sm font-semibold uppercase tracking-widest text-blue-600">
@@ -250,7 +250,7 @@ export default function EngineeringConsultancyService() {
             {feature.title}
           </h3>
 
-          <p className="relative mt-5 md:leading-8 text-slate-300">
+          <p className="relative mt-5 xl:leading-8 text-slate-300">
             {feature.description}
           </p>
 
@@ -290,7 +290,7 @@ export default function EngineeringConsultancyService() {
       {industries.map((item, index) => (
         <div
           key={item}
-          className="group relative overflow-hidden rounded-3xl border border-slate-200 bg-white p-4 md:p-6 shadow-[0_10px_40px_rgba(0,0,0,0.04)] hover:shadow-[0_20px_60px_rgba(11,74,139,0.12)] hover:-translate-y-1 transition-all duration-500"
+          className="group relative overflow-hidden rounded-3xl border border-slate-200 bg-white p-4 xl:p-6 shadow-[0_10px_40px_rgba(0,0,0,0.04)] hover:shadow-[0_20px_60px_rgba(11,74,139,0.12)] hover:-translate-y-1 transition-all duration-500"
         >
           <div className="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-[#0B4A8B] to-cyan-500 scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></div>
 
@@ -304,7 +304,7 @@ export default function EngineeringConsultancyService() {
                 {item}
               </h3>
 
-              <div className="mt-4 flex items-center text-[#0B4A8B] font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+              <div className="hidden mt-4 xl:flex items-center text-[#0B4A8B] font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-500">
                 <span className="text-sm">Industrial Application</span>
                 <ChevronRight className="ml-1 h-4 w-4" />
               </div>
@@ -323,7 +323,7 @@ export default function EngineeringConsultancyService() {
       Frequently Asked Question - Engineering Consultancy Services
     </h2>
 
-    <div className="mt-5 md:mt-12">
+    <div className="mt-5 lg:mt-8 xl:mt-12">
       {faqs.map((faq) => (
         <details
           key={faq.question}

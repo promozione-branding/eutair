@@ -87,7 +87,7 @@ export default function ProductPage({ params }) {
 
       <section className="relative overflow-hidden bg-gradient-to-br from-slate-50 via-white to-sky-50 py-9">
         <div className="max-w-[1800px] mx-auto px-5 md:px-14 relative z-10">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
+          <div className="grid lg:grid-cols-2 gap-12 lg:gap-8 xl:gap-12 items-center">
             <div className="bg-white rounded-[32px] p-2 border border-slate-200 shadow-[0_25px_80px_rgba(0,0,0,.08)]">
               <div className="relative overflow-hidden rounded-3xl bg-gradient-to-b from-slate-50 to-white">
                 <Image
@@ -105,7 +105,7 @@ export default function ProductPage({ params }) {
                 Chicago Pneumatic
               </span>
 
-              <h2 className="mt-5 text-[26px] md:text-4xl font-black text-slate-900 leading-tight">
+              <h2 className="mt-5 text-[26px] xl:text-4xl font-black text-slate-900 leading-tight">
                 {product.title}
               </h2>
 
@@ -115,7 +115,7 @@ export default function ProductPage({ params }) {
                     {product.shortDescription?.map((item, index) => (
                       <li
                         key={index}
-                        className="flex items-start gap-3 text-slate-700 text-[17px] leading-6 md:leading-relaxed"
+                        className="flex items-start gap-3 text-slate-700 text-[17px] leading-6 xl:leading-relaxed"
                       >
                         <span className="text-green-500 mt-1">✓</span>
                         <span>{item}</span>
@@ -131,7 +131,7 @@ export default function ProductPage({ params }) {
                 {product.badges?.map((badge, index) => (
                   <span
                     key={index}
-                    className="px-2 md:px-4 py-1 md:py-2 rounded-full bg-green-100 text-green-700 font-medium"
+                    className="px-2 xl:px-4 py-1 xl:py-2 rounded-full bg-green-100 text-green-700 font-medium"
                   >
                     ✓ {badge}
                   </span>
@@ -140,14 +140,14 @@ export default function ProductPage({ params }) {
 
               {/* CTA */}
 
-              <div className="flex flex-wrap gap-2 md:gap-4 mt-10">
+              <div className="flex flex-wrap gap-2 xl:gap-4 mt-10">
                 <button
                   onClick={() => setOpen(true)}
-                  className="group flex items-center gap-3 px-4 md:px-8 h-16 rounded-2xl bg-white border border-black text-slate-800 font-semibold"
+                  className="group flex items-center gap-2 px-3 xl:px-8 h-16 rounded-2xl bg-white border border-black text-slate-800 font-semibold"
                 >
                   <span>Request a Qoute</span>
                 </button>
-                <button className="group flex items-center gap-3 px-5 md:px-8 h-16 rounded-2xl bg-gradient-to-r from-green-500 to-emerald-600 text-white font-semibold shadow-[0_10px_30px_rgba(34,197,94,.35)] hover:-translate-y-1 transition-all duration-300">
+                <button className="group flex items-center gap-1 px-3 xl:px-8 h-16 rounded-2xl bg-gradient-to-r from-green-500 to-emerald-600 text-white font-semibold shadow-[0_10px_30px_rgba(34,197,94,.35)] hover:-translate-y-1 transition-all duration-300">
                   <FaWhatsapp size={24} />
                   <span>WhatsApp Now</span>
                 </button>
@@ -158,7 +158,7 @@ export default function ProductPage({ params }) {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="Download Brochure"
-                  className="group hidden md:flex items-center gap-3 px-8 h-16 rounded-2xl bg-gradient-to-r from-slate-900 to-slate-700 text-white font-semibold"
+                  className="group hidden md:flex items-center gap-2 px-3 xl:px-8 h-16 rounded-2xl bg-gradient-to-r from-slate-900 to-slate-700 text-white font-semibold"
                 >
                   <FaDownload size={18} />
                   <span>Download Brochure</span>
@@ -181,7 +181,7 @@ export default function ProductPage({ params }) {
 
       {/* SPECIFICATIONS + DESCRIPTION */}
 
-      <section className="py-5 md:py-15 bg-slate-50">
+      <section className="py-5 lg:py-7 xl:py-15 bg-slate-50">
         <div className="w-full mx-auto  px-5 md:px-10">
           <div className="grid lg:grid-cols-12 gap-8 items-start">
             {/* SPECIFICATIONS */}
@@ -197,7 +197,7 @@ export default function ProductPage({ params }) {
                 {product.specifications?.map((spec, index) => (
                   <div
                     key={index}
-                    className="flex justify-between gap-4 px-8 py-3 md:py-6  border-b hover:bg-sky-50 transition"
+                    className="flex justify-between gap-4 px-8 py-3 xl:py-6  border-b hover:bg-sky-50 transition"
                   >
                     <span className="font-semibold text-slate-900">
                       {spec.label}
@@ -219,7 +219,7 @@ export default function ProductPage({ params }) {
                   </h2>
                 </div>
 
-                <div className="p-5 md:p-10">
+                <div className="p-5  lg:p-6  xl:p-10">
                   <h3 className="text-3xl md:text-4xl font-black text-slate-900 mb-6">
                     Why Choose Us
                   </h3>
@@ -228,7 +228,7 @@ export default function ProductPage({ params }) {
                     {product.description?.map((item, index) => (
                       <li
                         key={index}
-                        className="flex items-start gap-3 text-lg leading-6 md:leading-relaxed text-slate-700"
+                        className="flex items-start gap-3 text-lg leading-6 xl:leading-relaxed text-slate-700"
                       >
                         <span className="text-sky-500 mt-1">✓</span>
                         <span>{item}</span>
