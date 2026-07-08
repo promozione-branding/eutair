@@ -376,7 +376,7 @@ export default function ProductPage({ params }) {
         "
             >
               Looking for energy-efficient and high-performance compressed air
-              solutions? We offer a complete range of Mrak Compressors engineered for reliability, productivity, and
+              solutions? We offer a complete range of Mark Compressors engineered for reliability, productivity, and
               long-term industrial performance.
             </p>
 
