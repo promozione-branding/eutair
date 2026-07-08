@@ -24,7 +24,7 @@ const products = [
   {
     title: "Air Treatment",
     image: "/hero3.png",
-    link: "/products/air-treatment",
+    link: "/air-treatment-service",
     desc: "Comprehensive air purification solutions ensuring clean, dry, and contaminant-free compressed air for sensitive applications.",
   },
   {
@@ -36,7 +36,7 @@ const products = [
   {
     title: "Piping and Distribution Lines",
     image: "/pro4.jpeg",
-    link: "/products/piping-and-distribution-lines",
+    link: "/piping-and-distribution-lines",
     desc: "Customized air distribution networks engineered for maximum flow efficiency, reduced leakage, and optimal system performance.",
   },
 ];

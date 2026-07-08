@@ -1,21 +1,80 @@
+"use client";
 import Image from "next/image";
-
 import markData from "@/lib/Data2";
-import {
-  FaWhatsapp,
-  FaPhoneAlt,
-  FaDownload,
-} from "react-icons/fa";
+import Enquiry from "@/components/Enquiry";
+import { FaWhatsapp, FaPhoneAlt, FaDownload } from "react-icons/fa";
+import { useState } from "react";
+import toast from "react-hot-toast";
+import axios from "axios";
 
 export default function ProductPage({ params }) {
-const allProducts = markData.products;
+  const allProducts = markData.products;
 
-  const product = allProducts.find(
-    (item) => item.slug === params.slug
-  );
+  const [isOpen, setOpen] = useState(false);
 
+  const [loading, setLoading] = useState(false);
 
+  const [form, setForm] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    requirement: "",
+  });
 
+  const handleChange = (e) => {
+    setForm({
+      ...form,
+      [e.target.name]: e.target.value,
+    });
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    if (!form.name || !form.phone) {
+      return toast.error("Please fill required fields");
+    }
+
+    try {
+      setLoading(true);
+
+      const formData = {
+        platform: "Chicago Pneumatic Compressors Landing Page",
+        platformEmail: "sales@eutair.com",
+        name: form.name,
+        phone: form.phone,
+        email: form.email || "N/A",
+        place: "N/A",
+        product: "Mark Compressors",
+        message: form.requirement,
+      };
+
+      const { data } = await axios.post(
+        "https://brandbnalo.com/api/form/add",
+        formData,
+      );
+
+      if (data?.success) {
+        toast.success("Request Submitted Successfully");
+
+        setForm({
+          name: "",
+          email: "",
+          phone: "",
+          requirement: "",
+        });
+      } else {
+        toast.error("Failed to submit request");
+      }
+    } catch (error) {
+      console.log(error);
+      toast.error("Server Error");
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  const product = allProducts.find((item) => item.slug === params.slug);
 
   return (
     <>
@@ -29,7 +88,6 @@ const allProducts = markData.products;
 
         <div className="max-w-[1800px] mx-auto px-5 md:px-14 relative z-10">
           <div className="grid lg:grid-cols-2 gap-6 lg:gap-8 xl:gap-12 items-center">
-
             <div className="bg-white rounded-[32px] p-4 md:p-8 border border-slate-200 shadow-[0_25px_80px_rgba(0,0,0,.08)]">
               <div className="relative overflow-hidden rounded-3xl bg-gradient-to-b from-slate-50 to-white">
                 <Image
@@ -37,14 +95,14 @@ const allProducts = markData.products;
                   alt={product.title}
                   width={800}
                   height={800}
-                  className="w-full h-auto object-contain transition-all duration-700 hover:scale-110"
+                  className="w-full h-100 object-contain transition-all duration-700 hover:scale-110"
                 />
               </div>
             </div>
 
             <div>
               <span className="inline-flex px-5 py-2 rounded-full bg-sky-100 text-sky-700 font-semibold">
-                Chicago Pneumatic
+                Mark Compressor
               </span>
 
               <h1 className="mt-5 text-[26px] lg:text-3xl xl:text-5xl font-black text-slate-900 leading-tight">
@@ -71,40 +129,49 @@ const allProducts = markData.products;
               {/* CTA */}
 
               <div className="flex flex-wrap gap-4 lg:gap-2 mt-5 lg:mt-5 xl:mt-10">
-                <button className="group flex items-center gap-2 px-3 xl:px-8 h-16 rounded-2xl bg-gradient-to-r from-green-500 to-emerald-600 text-white font-semibold shadow-[0_10px_30px_rgba(34,197,94,.35)] hover:-translate-y-1 transition-all duration-300">
+                <button
+                  onClick={() => setOpen(true)}
+                  className="group flex items-center gap-2 px-3 xl:px-8 h-16 rounded-2xl bg-white border border-sky-200 text-slate-800 font-semibold"
+                >
+                  <span>Request a Quote</span>
+                </button>
+
+                <a
+                  href="https://wa.link/rntibs
+"
+                  className="group flex items-center gap-1 px-3 xl:px-8 h-16 rounded-2xl bg-gradient-to-r from-green-500 to-emerald-600 text-white font-semibold shadow-[0_10px_30px_rgba(34,197,94,.35)] hover:-translate-y-1 transition-all duration-300"
+                >
                   <FaWhatsapp size={24} />
                   <span>WhatsApp Now</span>
-                </button>
+                </a>
 
-                <button className="group flex items-center gap-2 px-3 xl:px-8 h-16 rounded-2xl bg-white border border-sky-200 text-slate-800 font-semibold">
-                  <div className="w-9 h-9 rounded-full bg-sky-100 flex items-center justify-center">
-                    <FaPhoneAlt size={14} />
-                  </div>
-                  <span>Call Now</span>
-                </button>
-
-                <a download="Brochure.pdf"
+                <a
+                  download="Brochure.pdf"
                   href={product.pdf}
                   target="_blank"
                   rel="noopener noreferrer"
-                  aria-label="Download Brochure" className="group hidden md:flex items-center gap-2 px-3 xl:px-8 h-16 rounded-2xl bg-gradient-to-r from-slate-900 to-slate-700 text-white font-semibold">
+                  aria-label="Download Brochure"
+                  className="group hidden md:flex items-center gap-2 px-3 xl:px-8 h-16 rounded-2xl bg-gradient-to-r from-slate-900 to-slate-700 text-white font-semibold"
+                >
                   <FaDownload size={18} />
                   <span>Download Brochure</span>
                 </a>
 
-                 <div className="flex md:hidden justify-center ddflex items-center w-full mx-auto mt-2">
-                                  <a download="Brochure.pdf"
-                                  href={product.pdf}
-                                  target="_blank"
-                                  rel="noopener noreferrer"
-                                  aria-label="Download Brochure" className="group flex items-center gap-3 px-8 h-16 rounded-2xl bg-gradient-to-r from-slate-900 to-slate-700 text-white font-semibold">
-                                    <FaDownload size={18} />
-                                    <span>Download Brochure</span>
-                                  </a>
-                                </div>
+                <div className="flex md:hidden justify-center ddflex items-center w-full mx-auto mt-2">
+                  <a
+                    download="Brochure.pdf"
+                    href={product.pdf}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Download Brochure"
+                    className="group flex items-center gap-3 px-8 h-16 rounded-2xl bg-gradient-to-r from-slate-900 to-slate-700 text-white font-semibold"
+                  >
+                    <FaDownload size={18} />
+                    <span>Download Brochure</span>
+                  </a>
+                </div>
               </div>
             </div>
-
           </div>
         </div>
       </section>
@@ -113,14 +180,11 @@ const allProducts = markData.products;
 
       <section className="py-5 lg:py-9 xl:py-15 bg-slate-50">
         <div className="w-full mx-auto px-5 md:px-10">
-
           <div className="grid lg:grid-cols-12 gap-8 items-start">
-
             {/* SPECIFICATIONS */}
 
             <div className="lg:col-span-4">
               <div className="bg-white rounded-[32px] overflow-hidden shadow-[0_20px_60px_rgba(0,0,0,.08)] sticky top-24">
-
                 <div className="bg-gradient-to-r from-sky-500 to-blue-400 px-8 py-3">
                   <h2 className="text-2xl font-bold text-white">
                     Specifications
@@ -148,7 +212,6 @@ const allProducts = markData.products;
 
             <div className="lg:col-span-8">
               <div className="bg-white rounded-[32px] border border-slate-200 shadow-[0_20px_60px_rgba(0,0,0,.08)] overflow-hidden">
-
                 <div className="bg-gradient-to-r from-sky-500 to-blue-300 py-3 px-8">
                   <h2 className="text-2xl md:text-4xl font-bold text-white">
                     Product Description
@@ -156,7 +219,6 @@ const allProducts = markData.products;
                 </div>
 
                 <div className="p-5 lg:p-6 xl:p-10">
-
                   <h3 className="text-3xl md:text-4xl font-black text-slate-900 mb-6">
                     {product.title}
                   </h3>
@@ -228,36 +290,32 @@ const allProducts = markData.products;
                       {product.cta?.description}
                     </p>
 
-                    
-                    <button className="mt-5 animate-pulse px-10 h-16 text-lg rounded-2xl bg-black text-white font-semibold shadow-lg hover:scale-105 transition">
+                    <a
+                      href="tel:+919717159766"
+                      className="mt-5 inline-flex items-center animate-pulse  justify-center gap-3 px-10 h-16 rounded-2xl bg-black text-white text-lg font-bold shadow-2xl hover:shadow-blue-500/40 hover:scale-105 active:scale-95 transition-all duration-300"
+                    >
                       Get Best Price
-                    </button>
-                   
+                    </a>
                   </div>
-
                 </div>
               </div>
             </div>
-
           </div>
         </div>
       </section>
 
+      {/* form */}
 
+      <section className="relative py-4 overflow-hidden">
+        {/* Background */}
+        <div className="absolute inset-0 bg-gradient-to-b from-slate-50 via-white to-sky-50" />
 
-{/* form */}
+        <div className="absolute top-0 left-0 w-96 h-96 bg-sky-200/20 blur-[120px]" />
+        <div className="absolute bottom-0 right-0 w-96 h-96 bg-cyan-200/20 blur-[120px]" />
 
-<section className="relative py-4 overflow-hidden">
-  {/* Background */}
-  <div className="absolute inset-0 bg-gradient-to-b from-slate-50 via-white to-sky-50" />
-
-  <div className="absolute top-0 left-0 w-96 h-96 bg-sky-200/20 blur-[120px]" />
-  <div className="absolute bottom-0 right-0 w-96 h-96 bg-cyan-200/20 blur-[120px]" />
-
-  <div className="w-full mx-auto px-5 md:px-9 relative z-10">
-
-    <div
-      className="
+        <div className="w-full mx-auto px-5 md:px-9 relative z-10">
+          <div
+            className="
         bg-white/90
         backdrop-blur-xl
         border
@@ -267,12 +325,11 @@ const allProducts = markData.products;
         p-5
         shadow-[0_30px_80px_rgba(0,0,0,.08)]
       "
-    >
-
-      {/* Badge */}
-      <div className="flex justify-center">
-        <span
-          className="
+          >
+            {/* Badge */}
+            <div className="flex justify-center">
+              <span
+                className="
             px-5
             py-2
             rounded-full
@@ -280,14 +337,14 @@ const allProducts = markData.products;
             text-sky-700
             font-semibold
           "
-        >
-          Get Expert Assistance
-        </span>
-      </div>
+              >
+                Get Expert Assistance
+              </span>
+            </div>
 
-      {/* Heading */}
-      <h2
-        className="
+            {/* Heading */}
+            <h2
+              className="
           mt-6
           text-center
           text-2xl
@@ -297,16 +354,16 @@ const allProducts = markData.products;
           text-slate-900
           leading-tight
         "
-      >
-        Power Your Operations with
-        <span className="block text-sky-600">
-          Chicago Pneumatic Compressors
-        </span>
-      </h2>
+            >
+              Power Your Operations with
+              <span className="block text-sky-600">
+                Chicago Pneumatic Compressors
+              </span>
+            </h2>
 
-      {/* Description */}
-      <p
-        className="
+            {/* Description */}
+            <p
+              className="
           max-w-5xl
           mx-auto
           text-center
@@ -317,166 +374,170 @@ const allProducts = markData.products;
           leading-6
           md:leading-relaxed
         "
-      >
-        Looking for energy-efficient and high-performance compressed air
-        solutions? We offer a complete range of Chicago Pneumatic Screw Air
-        Compressors engineered for reliability, productivity, and long-term
-        industrial performance.
-      </p>
+            >
+              Looking for energy-efficient and high-performance compressed air
+              solutions? We offer a complete range of Chicago Pneumatic Screw
+              Air Compressors engineered for reliability, productivity, and
+              long-term industrial performance.
+            </p>
 
-      {/* Form */}
-      <form className="mt-9">
-
-        <div className="grid xl:grid-cols-5 gap-5">
-
-          <input
-            type="text"
-            placeholder="Full Name"
-            className="
-              h-13
+            {/* Form */}
+            <form onSubmit={handleSubmit} className="mt-9">
+              <div className="grid xl:grid-cols-5 gap-5">
+                <input
+                  type="text"
+                  name="name"
+                  value={form.name}
+                  onChange={handleChange}
+                  placeholder="Full Name"
+                  className="
+     h-13
               md:h-16
-              rounded-2xl
-              bg-slate-50
-              border
-              border-slate-500
-              px-3
+    rounded-2xl
+    bg-slate-50
+    border
+    border-slate-500
+    px-6
+    text-slate-800
+    outline-none
+    transition-all
+    focus:border-sky-500
+    focus:ring-4
+    focus:ring-sky-100
+  "
+                />
+
+                <input
+                  type="email"
+                  name="email"
+                  value={form.email}
+                  onChange={handleChange}
+                  placeholder="Email Address"
+                  className="
+     h-13
+              md:h-16
+    rounded-2xl
+    bg-slate-50
+    border
+    border-slate-500
+    px-3
               md:px-6
-              text-slate-800
-              outline-none
-              transition-all
-              focus:border-sky-500
-              focus:ring-4
-              focus:ring-sky-100
-            "
-          />
+    text-slate-800
+    outline-none
+    transition-all
+    focus:border-sky-500
+    focus:ring-4
+    focus:ring-sky-100
+  "
+                />
 
-          <input
-            type="email"
-            placeholder="Email Address"
-            className="
-              px-3
+                <input
+                  type="tel"
+                  name="phone"
+                  value={form.phone}
+                  onChange={handleChange}
+                  placeholder="Phone Number"
+                  maxLength={10}
+                  minLength={10}
+                  className="
+     h-13
+              md:h-16
+    rounded-2xl
+    bg-slate-50
+    border
+    border-slate-500
+    px-3
               md:px-6
-              rounded-2xl
-              bg-slate-50
-              border
-          border-slate-500
-              h-13
-              md:h-16
-              text-slate-800
-              outline-none
-              transition-all
-              focus:border-sky-500
-              focus:ring-4
-              focus:ring-sky-100
-            "
-          />
+    text-slate-800
+    outline-none
+    transition-all
+    focus:border-sky-500
+    focus:ring-4
+    focus:ring-sky-100
+  "
+                />
 
-          <input
-            type="tel"
-            placeholder="Phone Number"
-            className="
-              h-13
+                <input
+                  type="text"
+                  name="requirement"
+                  value={form.requirement}
+                  onChange={handleChange}
+                  placeholder="Your Requirement"
+                  className="
+     h-13
               md:h-16
-              rounded-2xl
-              bg-slate-50
-              border
-            border-slate-500
-              px-3
+    rounded-2xl
+    bg-slate-50
+    border
+    border-slate-500
+    px-3
               md:px-6
-              text-slate-800
-              outline-none
-              transition-all
-              focus:border-sky-500
-              focus:ring-4
-              focus:ring-sky-100
-            "
-          />
+    text-slate-800
+    outline-none
+    transition-all
+    focus:border-sky-500
+    focus:ring-4
+    focus:ring-sky-100
+  "
+                />
 
-          <input
-            type="text"
-            placeholder="Your Requirement"
-            className="
-              h-13
-              md:h-16
-              rounded-2xl
-              bg-slate-50
-              border
-               border-slate-500
-              px-3
-              md:px-6
-              text-slate-800
-              outline-none
-              transition-all
-              focus:border-sky-500
-              focus:ring-4
-              focus:ring-sky-100
-            "
-          />
+                <button
+                  type="submit"
+                  disabled={loading}
+                  className="
+    h-16
+    rounded-2xl
+    bg-gradient-to-r
+    from-sky-500
+    via-cyan-500
+    to-blue-600
+    text-white
+    font-bold
+    text-lg
+    shadow-lg
+    hover:shadow-sky-300/40
+    hover:scale-[1.03]
+    transition-all
+    duration-300
+    disabled:opacity-70
+    disabled:cursor-not-allowed
+  "
+                >
+                  {loading ? "Submitting..." : "Request Quote →"}
+                </button>
+              </div>
 
-          <button
-            type="submit"
-            className="
-              h-13
-              md:h-16
-              rounded-2xl
-              bg-gradient-to-r
-              from-sky-500
-              via-cyan-500
-              to-blue-600
-              text-white
-              font-bold
-              text-lg
-              shadow-lg
-              hover:shadow-sky-300/40
-              hover:scale-[1.03]
-              transition-all
-              duration-300
-            "
-          >
-            Request Quote →
-          </button>
+              {/* Trust Points */}
+              <div className="flex flex-wrap justify-center gap-6 mt-8">
+                <div className="flex items-center gap-2 text-slate-600">
+                  <span className="text-green-500">✓</span>
+                  Fast Response
+                </div>
 
+                <div className="flex items-center gap-2 text-slate-600">
+                  <span className="text-green-500">✓</span>
+                  Technical Consultation
+                </div>
+
+                <div className="flex items-center gap-2 text-slate-600">
+                  <span className="text-green-500">✓</span>
+                  Best Pricing
+                </div>
+
+                <div className="flex items-center gap-2 text-slate-600">
+                  <span className="text-green-500">✓</span>
+                  Genuine Products
+                </div>
+              </div>
+            </form>
+          </div>
         </div>
-
-        {/* Trust Points */}
-        <div className="flex flex-wrap justify-center gap-3 md:gap-6 mt-8">
-
-          <div className="flex items-center gap-2 text-slate-600">
-            <span className="text-green-500">✓</span>
-            Fast Response
-          </div>
-
-          <div className="flex items-center gap-2 text-slate-600">
-            <span className="text-green-500">✓</span>
-            Technical Consultation
-          </div>
-
-          <div className="flex items-center gap-2 text-slate-600">
-            <span className="text-green-500">✓</span>
-            Best Pricing
-          </div>
-
-          <div className="flex items-center gap-2 text-slate-600">
-            <span className="text-green-500">✓</span>
-            Genuine Products
-          </div>
-
-        </div>
-
-      </form>
-
-    </div>
-
-  </div>
-</section>
-
-
+      </section>
 
       {/* WHY CHOOSE */}
 
       <section className=" py-7 lg:py-10 xl:py-20 bg-white">
         <div className="w-full mx-auto px-5 md:px-15">
-
           <div className="text-center mb-5 md:mb-14">
             <h2 className="text-3xl md:text-5xl font-black text-slate-900">
               Why Choose This Compressor
@@ -484,35 +545,25 @@ const allProducts = markData.products;
           </div>
 
           <div className="grid md:grid-cols-2 xl:grid-cols-4 gap-6">
-
             {product.whyChoose?.map((item, index) => (
               <div
                 key={index}
                 className="group bg-white border border-slate-200 rounded-[30px] p-4 md:p-8 shadow-lg hover:-translate-y-2 hover:shadow-2xl transition-all"
               >
-                <div className="text-5xl mb-5">
-                  {item.icon}
-                </div>
+                <div className="text-5xl mb-5">{item.icon}</div>
 
                 <h3 className="text-2xl font-bold text-slate-900">
                   {item.title}
                 </h3>
 
-                <p className="mt-3 text-slate-800">
-                  {item.desc}
-                </p>
+                <p className="mt-3 text-slate-800">{item.desc}</p>
               </div>
             ))}
-
           </div>
-
         </div>
       </section>
 
-
-
-
-      
+      <Enquiry isOpen={isOpen} onClose={() => setOpen(false)} />
     </>
   );
 }

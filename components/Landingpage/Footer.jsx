@@ -85,7 +85,7 @@ export default function Footer() {
               </li>
 
                 <li className="hover:text-cyan-500">
-                <Link href="/contact-us">Contact Us</Link>
+                <Link href="/contact">Contact Us</Link>
               </li>
             </ul>
           </div>   

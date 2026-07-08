@@ -20,10 +20,6 @@ export default function ContactForm() {
   const [message, setMessage] = useState("");
 
   // OTP STATES
-  const [otp, setOtp] = useState("");
-  const [showOtpBox, setShowOtpBox] = useState(false);
-  const [confirmationResult, setConfirmationResult] = useState(null);
-  const [isPhoneVerified, setIsPhoneVerified] = useState(false);
 
   useEffect(() => {
     const timer = setTimeout(() => setIsOpen(true), 15000);
@@ -31,84 +27,16 @@ export default function ContactForm() {
   }, []);
 
   // FIREBASE RECAPTCHA
-  useEffect(() => {
-    if (!isOpen) return;
-
-    if (
-      typeof window !== "undefined" &&
-      !window.recaptchaVerifier
-    ) {
-      window.recaptchaVerifier = new RecaptchaVerifier(
-        auth,
-        "recaptcha-container",
-        {
-          size: "normal",
-        }
-      );
-
-      window.recaptchaVerifier.render();
-    }
-
-    return () => {
-      if (window.recaptchaVerifier) {
-        window.recaptchaVerifier.clear();
-        window.recaptchaVerifier = null;
-      }
-    };
-  }, [isOpen]);
+  
 
   if (!isOpen) return null;
 
   const handleClose = () => setIsOpen(false);
 
-  // SEND OTP
-  const sendOTP = async () => {
-    try {
-      setLoading(true);
-
-      const appVerifier = window.recaptchaVerifier;
-
-      const result = await signInWithPhoneNumber(
-        auth,
-        "+91" + phone.trim(),
-        appVerifier
-      );
-
-      setConfirmationResult(result);
-
-      setShowOtpBox(true);
-
-      toast.success("OTP Sent Successfully");
-    } catch (error) {
-      console.log(error);
-
-      toast.error(error.message || "Failed to send OTP");
-    } finally {
-      setLoading(false);
-    }
-  };
+ 
 
   // VERIFY OTP
-  const verifyOTP = async () => {
-    try {
-      setLoading(true);
-
-      await confirmationResult.confirm(otp);
-
-      setIsPhoneVerified(true);
-
-      toast.success("Phone Verified Successfully");
-
-      // SUBMIT FORM AFTER OTP VERIFIED
-      await submitForm();
-    } catch (error) {
-      console.log(error);
-
-      toast.error("Invalid OTP");
-    } finally {
-      setLoading(false);
-    }
-  };
+ 
 
   // SUBMIT FORM
   const submitForm = async () => {
@@ -158,10 +86,7 @@ Contact: ${phone}`;
         setEmail("");
         setProduct("");
         setMessage("");
-        setOtp("");
-
-        setShowOtpBox(false);
-        setIsPhoneVerified(false);
+        
 
         setTimeout(() => setIsOpen(false), 3000);
       } else {
@@ -185,13 +110,11 @@ Contact: ${phone}`;
     }
 
     // IF ALREADY VERIFIED
-    if (isPhoneVerified) {
+    
       await submitForm();
-      return;
-    }
+      
 
     // SEND OTP FIRST
-    await sendOTP();
   };
 
   return (
@@ -290,28 +213,9 @@ Contact: ${phone}`;
           </div>
 
           {/* RECAPTCHA */}
-          <div id="recaptcha-container"></div>
 
           {/* OTP BOX */}
-          {showOtpBox && !isPhoneVerified && (
-            <div className="space-y-3">
-              <input
-                type="text"
-                placeholder="Enter OTP"
-                value={otp}
-                onChange={(e) => setOtp(e.target.value)}
-                className="w-full p-3 rounded-md text-black text-sm border-black border-2 focus:outline-none bg-blue-50"
-              />
-
-              <button
-                type="button"
-                onClick={verifyOTP}
-                className="w-full bg-green-600 hover:bg-green-700 text-white py-3 rounded-md font-semibold"
-              >
-                Verify OTP
-              </button>
-            </div>
-          )}
+          
 
           <input
             type="email"
@@ -341,10 +245,6 @@ Contact: ${phone}`;
           >
             {loading
               ? "Loading..."
-              : !showOtpBox
-              ? "Send OTP"
-              : !isPhoneVerified
-              ? "Verify OTP First"
               : "Send Message"}
           </button>
 
