@@ -20,9 +20,9 @@ const poppins = Poppins({
 });
 
 export const metadata = {
-  title: " aircompression",
+  title: "Screw Air Compressor Supplier | Air Treatment Solutions | Eutair",
   description:
-    "aircompression",
+    "Looking for a reliable Screw Air Compressor Supplier? Eutair provides industrial screw air compressors, air dryers, filters, engineering services, AMC, and complete compressed air solutions.",
    icons: {
     icon: "/favicon.ico",
     shortcut: "/favicon.ico",
