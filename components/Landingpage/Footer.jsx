@@ -43,6 +43,7 @@ export default function Footer() {
           {/* Company */}
           <div >
           <Image width={200}
+          alt="Footer"
           height={200} src="/logofooter-removebg-preview.png">
 
           </Image>

@@ -6,12 +6,7 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 
 export default function Testimonials() {
   const testimonials = [
-    {
-      company: "Delta Autocorp",
-      quote:
-        "Reliable compressor performance and low maintenance have made Eutair a trusted support partner for our operations.",
-      certificate: "/cert1.jpeg",
-    },
+    
     {
       company: "Ganesh Foundry",
       quote:
