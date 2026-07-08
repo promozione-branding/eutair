@@ -241,14 +241,14 @@ export default function AirTreatmentSolutionsPage() {
             </h2>
           </div>
 
-          <div className="mt-10 grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="mt-10 grid md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-6 xl:gap-8">
             {solutions.map((item, index) => {
               const Icon = item.icon;
 
               return (
                 <div
                   key={index}
-                  className="rounded-3xl border border-slate-200 bg-white p-4 md:p-8 shadow-sm hover:-translate-y-2 hover:shadow-2xl transition"
+                  className="rounded-3xl border border-slate-200 bg-white p-4 lg:p-6 xl:p-8 shadow-sm hover:-translate-y-2 hover:shadow-2xl transition"
                 >
                   <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-sky-100 text-sky-600">
                     <Icon size={30} />
@@ -258,7 +258,7 @@ export default function AirTreatmentSolutionsPage() {
                     {item.title}
                   </h3>
 
-                  <p className="mt-2 md:mt-4 text-slate-600 md:leading-8">
+                  <p className="mt-2 md:mt-4 text-slate-600 xl:leading-8">
                     {item.description}
                   </p>
                 </div>

@@ -92,7 +92,7 @@ const products = [
       <section className="relative overflow-hidden bg-gradient-to-br from-slate-950 via-[#0B2B4F] to-[#144F8B]">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(255,255,255,0.08),transparent_45%)]"></div>
 
-        <div className="relative mx-auto max-w-7xl px-6 py-7 md:py-20 lg:px-8">
+        <div className="relative mx-auto max-w-7xl px-6 py-7 lg:py-9 xl:py-20 lg:px-8">
           <div className="max-w-4xl">
 
             <span className="rounded-full border border-cyan-400/30 bg-gray-400/10 px-5 py-2 text-sm font-medium text-cyan-300">
@@ -148,11 +148,11 @@ const products = [
               Why Choose Us
             </span>
 
-            <h2 className="mt-3 text-2xl md:text-4xl font-bold text-slate-900">
+            <h2 className="mt-3 text-2xl lg:text-3xl xl:text-4xl font-bold text-slate-900">
               Why Choose Our Compressor Spares & Consumables?
             </h2>
 
-            <p className="mt-6 md:text-lg md:leading-8 text-slate-600">
+            <p className="mt-6 md:text-lg leading-8 text-slate-600">
               At Eutair Equipments LLP, we understand that the performance of a
               compressed air system depends on the quality of its components.
               That's why we provide durable and reliable spares designed to
@@ -258,7 +258,7 @@ const products = [
 
       {/* CTA */}
 
-      <section className="bg-gradient-to-r from-cyan-600 to-blue-700 py-7 md:py-15">
+      <section className="bg-gradient-to-r from-cyan-600 to-blue-700 py-7 lg:py-9 xl:py-15">
 
         <div className="mx-auto max-w-5xl px-6 text-center">
 

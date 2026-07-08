@@ -72,9 +72,6 @@ export default function Navbar() {
     },
   ];
 
-  console.log(desktopProductOpen);
-  console.log(desktopServicesOpen);
-
   return (
     <>
       <header className=" sticky top-0 z-50 bg-white/95 backdrop-blur-xl border-b border-slate-200/60">
@@ -287,7 +284,7 @@ export default function Navbar() {
                 </li>
 
                 <li
-                   onClick={() => setDesktopServicesOpen(!desktopServicesOpen)}
+                  onClick={() => setDesktopServicesOpen(!desktopServicesOpen)}
                   className="relative mr-3"
                   onMouseEnter={() => {
                     if (window.innerWidth >= 1024) {

@@ -10,9 +10,7 @@ import {
 } from "lucide-react";
 import Enquiry from "@/components/Enquiry";
 export default function AMCServicesPage() {
-
-
-const [isOpen, setOpen] = useState(false);
+  const [isOpen, setOpen] = useState(false);
 
   const benefits = [
     "Planned maintenance for improved operational uptime",
@@ -109,8 +107,11 @@ const [isOpen, setOpen] = useState(false);
   return (
     <div className="bg-white">
       {/* Hero */}
-      <section style={{backgroundImage:"url(/bghero1.webp)"}} className="relative overflow-hidden bg-cover bg-center  md:h-[80vh] text-white">
-<div className="absolute inset-0 bg-black/60"></div>
+      <section
+        style={{ backgroundImage: "url(/bghero1.webp)" }}
+        className="relative overflow-hidden bg-cover bg-center  lg:h-[70vh] xl:h-[80vh] text-white"
+      >
+        <div className="absolute inset-0 bg-black/60"></div>
 
         <div className="max-w-7xl mx-auto relative px-4 py-8 md:py-20">
           <div className="max-w-4xl">
@@ -133,12 +134,12 @@ const [isOpen, setOpen] = useState(false);
             </p>
 
             <div className="flex flex-wrap gap-4 mt-10">
-           <button
-  onClick={() => setOpen(true)}
-  className="bg-white text-slate-900 px-7 py-4 rounded-xl font-semibold hover:scale-105 transition"
->
-  Request AMC Discussion
-</button>
+              <button
+                onClick={() => setOpen(true)}
+                className="bg-white text-slate-900 px-7 py-4 rounded-xl font-semibold hover:scale-105 transition"
+              >
+                Request AMC Discussion
+              </button>
 
               <Link
                 href="/contact"
@@ -177,7 +178,7 @@ const [isOpen, setOpen] = useState(false);
       </section>
 
       {/* Benefits */}
-      <section className="py-5 md:py-10 bg-slate-50">
+      <section className="py-5 lg:py-8 xl:py-10 bg-slate-50">
         <div className="max-w-7xl mx-auto px-4">
           <h2 className="text-2xl md:text-4xl font-bold text-center mb-6 md:mb-10 text-slate-900">
             Benefits
@@ -187,7 +188,7 @@ const [isOpen, setOpen] = useState(false);
             {benefits.map((item, i) => (
               <div
                 key={i}
-                className="bg-white p-3 md:p-6 rounded-2xl shadow-sm border"
+                className="bg-white p-3 lg:p-5 xl:p-6 rounded-2xl shadow-sm border"
               >
                 <CheckCircle className="w-8 h-8  lg:block text-green-600 mb-4" />
                 <p className="text-slate-700 text-sm md:text-base">{item}</p>
@@ -198,21 +199,21 @@ const [isOpen, setOpen] = useState(false);
       </section>
 
       {/* Key Features */}
-      <section className="py-5 md:py-10">
+      <section className="py-5 lg:py-7 xl:py-10">
         <div className="max-w-7xl mx-auto px-4">
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-7 md:mb-14 text-slate-900">
             Key Features
           </h2>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-6 xl:gap-8">
             {features.map((feature, i) => (
               <div
                 key={i}
-                className="bg-white border rounded-3xl p-4 md:p-8 shadow-sm hover:shadow-lg transition"
+                className="bg-white border rounded-3xl p-4 lg:p-6 xl:p-8 shadow-sm hover:shadow-lg transition"
               >
                 <Wrench className="w-10 h-10 text-[#0B4A8B] mb-5" />
                 <h3 className="text-xl font-bold mb-3">{feature.title}</h3>
-                <p className="text-slate-600 md:leading-relaxed">
+                <p className="text-slate-600 xl:leading-relaxed">
                   {feature.description}
                 </p>
               </div>
@@ -222,7 +223,7 @@ const [isOpen, setOpen] = useState(false);
       </section>
 
       {/* Industries */}
-      <section className="py-5 md:py-10 bg-slate-50">
+      <section className="py-5 lg:py-7 xl:py-10 bg-slate-50">
         <div className="max-w-7xl mx-auto px-4">
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-6 text-slate-900">
             Industries & Use Cases
@@ -248,7 +249,7 @@ const [isOpen, setOpen] = useState(false);
       </section>
 
       {/* Applications */}
-      <section className="py-5 md:py-10">
+      <section className="py-5 lg:py-7 xl:py-10">
         <div className="max-w-7xl mx-auto px-4">
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-5 md:mb-10 text-slate-900">
             Typical Applications
@@ -282,7 +283,9 @@ const [isOpen, setOpen] = useState(false);
                 className="bg-white rounded-2xl border p-4 md:p-7 shadow-sm"
               >
                 <h3 className="font-bold text-lg mb-3">{faq.question}</h3>
-                <p className="text-slate-600 md:leading-relaxed">{faq.answer}</p>
+                <p className="text-slate-600 md:leading-relaxed">
+                  {faq.answer}
+                </p>
               </div>
             ))}
           </div>
@@ -306,8 +309,6 @@ const [isOpen, setOpen] = useState(false);
             while minimizing operational risks and unplanned downtime.
           </p>
 
-   
-
           <div className="flex flex-wrap justify-center gap-4">
             <a
               href="tel:919717159766"
@@ -327,9 +328,7 @@ const [isOpen, setOpen] = useState(false);
         </div>
       </section>
 
-
-  <Enquiry isOpen={isOpen} onClose={() => setOpen(false)} />
-
+      <Enquiry isOpen={isOpen} onClose={() => setOpen(false)} />
     </div>
   );
 }

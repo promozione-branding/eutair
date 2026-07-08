@@ -139,14 +139,14 @@ const [isOpen, setOpen] = useState(false);
 
   {/* Why Air Audits Matter */}
   <div className="border-y border-slate-200 bg-slate-50">
-    <div className="container mx-auto px-6 py-8 md:py-20 lg:px-10">
+    <div className="container mx-auto px-6 py-8 lg:py-7 xl:py-17 lg:px-10">
       <div className="grid gap-7 md:gap-16 lg:grid-cols-12">
         <div className="lg:col-span-4">
           <span className="text-sm font-semibold uppercase tracking-widest text-blue-600">
             Why Air Audits Matter
           </span>
 
-          <h2 className="mt-4 text-2xl md:text-4xl font-bold text-slate-900">
+          <h2 className="mt-4 text-2xl lg:text-3xl xl:text-4xl font-bold text-slate-900">
             Improve Reliability. Reduce Waste. Optimize Performance.
           </h2>
         </div>
@@ -182,11 +182,11 @@ const [isOpen, setOpen] = useState(false);
       </h2>
     </div>
 
-    <div className="mt-5 md:mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+    <div className="mt-5 xl:mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
       {benefits.map((item, index) => (
         <div
           key={item}
-          className="group rounded-2xl border p-3  md:p-5 transition border-blue-200 bg-blue-50/30"
+          className="group rounded-2xl border p-3  lg:p-4 xl:p-5 transition border-blue-200 bg-blue-50/30"
         >
           <div className="text-2xl md:text-3xl font-bold text-slate-300">
             {String(index + 1).padStart(2, "0")}
@@ -202,7 +202,7 @@ const [isOpen, setOpen] = useState(false);
 
   {/* Features */}
   <div className="bg-slate-950">
-    <div className="container mx-auto px-6 py-5 md:py-10 lg:px-8">
+    <div className="container mx-auto px-6 py-5 lg:py-7 xl:py-10lg:px-8">
       <div className="max-w-3xl">
         <span className="text-sm font-semibold uppercase tracking-widest text-blue-400">
           Key Features
@@ -213,17 +213,17 @@ const [isOpen, setOpen] = useState(false);
         </h2>
       </div>
 
-      <div className="mt-7 md:mt-16 grid gap-6 lg:grid-cols-2">
+      <div className="mt-7 lg:mt-9 xl:mt-16 grid gap-6 lg:grid-cols-2">
         {features.map((feature) => (
           <div
             key={feature.title}
-            className="rounded-2xl border border-white/10 bg-white/5 p-4 md:p-8 backdrop-blur-sm"
+            className="rounded-2xl border border-white/10 bg-white/5 p-4 lg:p-6 xl:p-8 backdrop-blur-sm"
           >
             <h3 className="text-xl font-semibold text-white">
               {feature.title}
             </h3>
 
-            <p className="mt-4 leading-5 md:leading-8 text-slate-300">
+            <p className="mt-4 leading-5 xl:leading-8 text-slate-300">
               {feature.description}
             </p>
           </div>
@@ -387,9 +387,9 @@ const [isOpen, setOpen] = useState(false);
         </h2>
       </div>
 
-      <div className="mt-6 md:mt-12 divide-y divide-slate-200 rounded-3xl border border-slate-200 bg-white">
+      <div className="mt-6 lg:mt-8 xl:mt-12 divide-y divide-slate-200 rounded-3xl border border-slate-200 bg-white">
         {faqs.map((faq) => (
-          <details key={faq.question} className="group p-5 md:p-8">
+          <details key={faq.question} className="group p-5 lg:p-6 xl:p-8">
             <summary className="cursor-pointer list-none text-lg font-semibold text-slate-900">
               {faq.question}
             </summary>
@@ -417,7 +417,7 @@ const [isOpen, setOpen] = useState(false);
           enhancing reliability.
         </p>
 
-        <p className="mx-auto mt-4 max-w-4xl text-white">
+        <p className="mx-auto md:text-lg mt-4 max-w-4xl text-white">
           Discuss audit requirements, performance concerns, and optimization
           goals to identify the most effective approach for your facility.
         </p>

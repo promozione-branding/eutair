@@ -28,7 +28,7 @@ const allProducts = markData.products;
         </div>
 
         <div className="max-w-[1800px] mx-auto px-5 md:px-14 relative z-10">
-          <div className="grid lg:grid-cols-2 gap-6 md:gap-12 items-center">
+          <div className="grid lg:grid-cols-2 gap-6 lg:gap-8 xl:gap-12 items-center">
 
             <div className="bg-white rounded-[32px] p-4 md:p-8 border border-slate-200 shadow-[0_25px_80px_rgba(0,0,0,.08)]">
               <div className="relative overflow-hidden rounded-3xl bg-gradient-to-b from-slate-50 to-white">
@@ -47,17 +47,17 @@ const allProducts = markData.products;
                 Chicago Pneumatic
               </span>
 
-              <h1 className="mt-5 text-[26px] md:text-5xl font-black text-slate-900 leading-tight">
+              <h1 className="mt-5 text-[26px] lg:text-3xl xl:text-5xl font-black text-slate-900 leading-tight">
                 {product.title}
               </h1>
 
-              <p className="mt-6 text-lg text-slate-600 leading-6 md:leading-relaxed">
+              <p className="mt-6 text-lg text-slate-600 leading-6 lg:leading-5 xl:leading-relaxed">
                 {product.shortDescription}
               </p>
 
               {/* BADGES */}
 
-              <div className="flex flex-wrap gap-3 mt-8">
+              <div className="flex flex-wrap gap-3 mt-8 lg:mt-4 xl:mt-8">
                 {product.badges?.map((badge, index) => (
                   <span
                     key={index}
@@ -70,13 +70,13 @@ const allProducts = markData.products;
 
               {/* CTA */}
 
-              <div className="flex flex-wrap gap-4 mt-5 md:mt-10">
-                <button className="group flex items-center gap-3 px-4 md:px-8 h-16 rounded-2xl bg-gradient-to-r from-green-500 to-emerald-600 text-white font-semibold shadow-[0_10px_30px_rgba(34,197,94,.35)] hover:-translate-y-1 transition-all duration-300">
+              <div className="flex flex-wrap gap-4 lg:gap-2 mt-5 lg:mt-5 xl:mt-10">
+                <button className="group flex items-center gap-2 px-3 xl:px-8 h-16 rounded-2xl bg-gradient-to-r from-green-500 to-emerald-600 text-white font-semibold shadow-[0_10px_30px_rgba(34,197,94,.35)] hover:-translate-y-1 transition-all duration-300">
                   <FaWhatsapp size={24} />
                   <span>WhatsApp Now</span>
                 </button>
 
-                <button className="group flex items-center gap-3 px-4 md:px-8 h-16 rounded-2xl bg-white border border-sky-200 text-slate-800 font-semibold">
+                <button className="group flex items-center gap-2 px-3 xl:px-8 h-16 rounded-2xl bg-white border border-sky-200 text-slate-800 font-semibold">
                   <div className="w-9 h-9 rounded-full bg-sky-100 flex items-center justify-center">
                     <FaPhoneAlt size={14} />
                   </div>
@@ -87,7 +87,7 @@ const allProducts = markData.products;
                   href={product.pdf}
                   target="_blank"
                   rel="noopener noreferrer"
-                  aria-label="Download Brochure" className="group hidden md:flex items-center gap-3 px-8 h-16 rounded-2xl bg-gradient-to-r from-slate-900 to-slate-700 text-white font-semibold">
+                  aria-label="Download Brochure" className="group hidden md:flex items-center gap-2 px-3 xl:px-8 h-16 rounded-2xl bg-gradient-to-r from-slate-900 to-slate-700 text-white font-semibold">
                   <FaDownload size={18} />
                   <span>Download Brochure</span>
                 </a>
@@ -111,7 +111,7 @@ const allProducts = markData.products;
 
       {/* SPECIFICATIONS + DESCRIPTION */}
 
-      <section className="py-5 md:py-15 bg-slate-50">
+      <section className="py-5 lg:py-9 xl:py-15 bg-slate-50">
         <div className="w-full mx-auto px-5 md:px-10">
 
           <div className="grid lg:grid-cols-12 gap-8 items-start">
@@ -130,7 +130,7 @@ const allProducts = markData.products;
                 {product.specifications?.map((spec, index) => (
                   <div
                     key={index}
-                    className="flex justify-between gap-4 px-8 py-3 md:py-6 border-b hover:bg-sky-50 transition"
+                    className="flex justify-between gap-4 px-8 py-3  xl:py-6 border-b hover:bg-sky-50 transition"
                   >
                     <span className="font-semibold text-slate-900">
                       {spec.label}
@@ -155,7 +155,7 @@ const allProducts = markData.products;
                   </h2>
                 </div>
 
-                <div className="p-5 md:p-10">
+                <div className="p-5 lg:p-6 xl:p-10">
 
                   <h3 className="text-3xl md:text-4xl font-black text-slate-900 mb-6">
                     {product.title}
@@ -164,7 +164,7 @@ const allProducts = markData.products;
                   {product.description?.map((paragraph, index) => (
                     <p
                       key={index}
-                      className={`text-lg leading-6 md:leading-relaxed text-slate-600 ${
+                      className={`text-lg leading-6 xl:leading-relaxed text-slate-600 ${
                         index !== 0 ? "mt-6" : ""
                       }`}
                     >
@@ -474,7 +474,7 @@ const allProducts = markData.products;
 
       {/* WHY CHOOSE */}
 
-      <section className=" py-7 md:py-20 bg-white">
+      <section className=" py-7 lg:py-10 xl:py-20 bg-white">
         <div className="w-full mx-auto px-5 md:px-15">
 
           <div className="text-center mb-5 md:mb-14">

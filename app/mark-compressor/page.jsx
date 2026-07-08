@@ -126,7 +126,7 @@ const page = () => {
       </section>
 
      <section className="relative overflow-x-hidden bg-white">
-  <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-14">
+  <div className="container mx-auto px-4 sm:px-6 lg:px-6 xl:px-8 py-8 lg:py-9 xl:py-14">
     <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
       {/* Left Content */}
       <div className="w-full">
@@ -134,14 +134,14 @@ const page = () => {
           Trusted Screw Air Compressors Supplier
         </span>
 
-        <h1 className="mt-5 text-2xl sm:text-4xl lg:text-5xl font-bold leading-tight text-slate-900 break-words">
+        <h1 className="mt-5 text-2xl sm:text-4xl lg:text-4xl xl:text-5xl font-bold leading-tight text-slate-900 break-words">
           Screw Air Compressors  &
           <span className="block text-sky-600">
             MARK Compressors Supplier
           </span>
         </h1>
 
-        <p className="mt-5 text-base md:text-lg text-slate-700 leading-6 md:leading-7 break-words">
+        <p className="mt-5 text-base xl:text-lg text-slate-700 leading-6 md:leading-7 break-words">
           Eutair Equipments LLP is a trusted Screw Air Compressors Supplier
           of high-performance MARK Compressors for industrial applications.
           We offer advanced compressed air solutions designed to deliver
@@ -223,11 +223,11 @@ const page = () => {
 
       <section className="py-5 md:py-12 px-6 bg-slate-50">
         <div className="container mx-auto md:px-6">
-          <div className="text-center mb-5 md:mb-16">
+          <div className="text-center mb-5 lg:mb-8 xl:mb-16">
             <h2 className="text-3xl md:text-4xl font-bold">Our MARK Compressor Range</h2>
           </div>
 
-          <div className="grid md:grid-cols-2 xl:grid-cols-4 gap-8 mt-5 md:mt-12">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-4 gap-8 mt-5 lg:mt-8 xl:mt-12">
             {products.map((item, index) => (
               <div
                 key={index}
@@ -245,7 +245,7 @@ const page = () => {
         duration-500
       "
               >
-                <div className="bg-gradient-to-b from-sky-50 to-white p-8 h-[270px] flex items-center justify-center overflow-hidden">
+                <div className="bg-gradient-to-b from-sky-50 to-white p-8 lg:p-6 xl:p-8  h-[270px] flex items-center justify-center overflow-hidden">
                   <img
                     src={item.image}
                     alt={item.title}
@@ -259,11 +259,12 @@ const page = () => {
                   />
                 </div>
 
-                <div className="p-3 text-center">
-                  <h3 className="text-xl font-bold text-slate-900 leading-snug">
+                <div className="p-3 text-center  ">
+                  <h3 className="text-xl min-h-15 lg:text-base xl:text-lg font-bold text-slate-900 leading-snug">
                     {item.title}
                   </h3>
 
+                  <div className="mt-auto">
                   <Link
                     href={`/mark-compressor/${item.slug}`}
                     className="
@@ -283,6 +284,7 @@ const page = () => {
                   >
                     View Details
                   </Link>
+                  </div>
                 </div>
               </div>
             ))}
@@ -309,7 +311,7 @@ const page = () => {
             {features.map((item, index) => (
               <div
                 key={index}
-                className="bg-gradient-to-br from-slate-900 to-blue-900 text-white rounded-3xl p-5 md:p-8"
+                className="bg-gradient-to-br from-slate-900 to-blue-900 text-white rounded-3xl p-5 lg:p-6 xl:p-8"
               >
                 <h3 className="font-bold text-xl mb-4">{item.title}</h3>
 
@@ -320,7 +322,7 @@ const page = () => {
         </div>
       </section>
 
-      <section className="py-5 md:py-12 bg-[#f8fbff]">
+      <section className="py-5 lg:py-7 xl:py-12 bg-[#f8fbff]">
         <div className="container mx-auto px-6">
           <div
             className="
@@ -533,7 +535,7 @@ const page = () => {
                     {item.title}
                   </h3>
 
-                  <p className="text-slate-600 leading-relaxed">{item.desc}</p>
+                  <p className="text-slate-600 leading-relaxed lg:leading-5 xl:leading-6 ">{item.desc}</p>
                 </div>
               </div>
             ))}
