@@ -51,8 +51,9 @@ export async function generateMetadata({ params }) {
     .join(" ");
 
   return {
-    title: `Eutair ${city} | `,
-    description: `Eutair ${city}`,
+    title: `Air Screw Compressor Supplier in ${city} | Industrial Compressors | Eutair
+ | `,
+    description: `Eutair is a trusted Air Screw Compressor Supplier in  ${city}, providing industrial screw air compressors, air dryers, filters, compressor services, and turnkey compressed air solutions.`,
   };
 }
 
