@@ -1,8 +1,8 @@
 import BlogClient from "./BlogClient";
 
 export const metadata = {
-  title: "Blogs – Waste Management Insights & Tips | Sangam Plastic Industries",
-  description: "Read expert articles, news, and practical tips about garbage bags, waste management solutions, recycling best practices, and sustainability from Sangam Plastic Industries.",
+  title: "Industrial Air Compressor Blogs & Insights | Eutair",
+  description: "Explore the Eutair blog for expert insights on screw air compressors, compressed air systems, air treatment solutions, maintenance tips, energy efficiency, and industrial best practices.",
 };
 
 export default function AboutUsPage() {
