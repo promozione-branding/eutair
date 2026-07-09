@@ -182,13 +182,13 @@ const [isOpen, setOpen] = useState(false);
 
           <div className="flex flex-wrap gap-4 mt-10">
             <button onClick={()=> setOpen(true)} className="bg-blue-600 hover:bg-blue-700 px-6 py-3 rounded-lg font-medium transition">
-              Start Turnkey Discussion
+              Request Qoute
             </button>
 
-<Link href="/contact">
+<Link href="tel:+919717159766">
 
             <button className="border border-white hover:bg-white hover:text-slate-900 px-6 py-3 rounded-lg font-medium transition">
-              Request Quote
+              Start Turnkey Discussion
             </button>
 
 </Link>
