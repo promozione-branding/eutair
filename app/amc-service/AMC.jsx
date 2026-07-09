@@ -310,12 +310,12 @@ export default function AMC() {
           </p>
 
           <div className="flex flex-wrap justify-center gap-4">
-            <a
-              href="tel:919717159766"
+            <button
+              onClick={()=>{setOpen(true)}}
               className="bg-white text-slate-900 px-8 py-4 rounded-xl font-semibold inline-flex items-center gap-2"
             >
               Request Quote              <ArrowRight size={18} />
-            </a>
+            </button>
 
             <Link
              href="tel:+919717159766"
