@@ -288,13 +288,13 @@ export default function PipeDistribution() {
           </p>
 
           <div className="mt-10">
-            <Link
-              href="/contact"
+            <button
+              onClick={()=>{setOpen(true)}}
               className="inline-flex items-center gap-2 rounded-xl bg-[#00AEEF] px-8 py-4 font-semibold text-white transition hover:bg-cyan-500"
             >
               Enquire Now
               <ArrowRight size={18} />
-            </Link>
+            </button>
           </div>
         </div>
       </section>

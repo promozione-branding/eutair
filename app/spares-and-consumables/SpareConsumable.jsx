@@ -246,7 +246,7 @@ export default function SpareConsumable() {
 
             <div className="mt-10 flex flex-wrap justify-center gap-3 md:gap-5">
               <Link
-                href="/contact"
+                href="tel:+919717159766"
                 className="rounded-xl bg-white px-5 md:px-8 py-4 font-semibold text-slate-900 transition hover:scale-105"
               >
                 Contact Us
