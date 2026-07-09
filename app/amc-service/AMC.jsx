@@ -138,14 +138,14 @@ export default function AMC() {
                 onClick={() => setOpen(true)}
                 className="bg-white text-slate-900 px-7 py-4 rounded-xl font-semibold hover:scale-105 transition"
               >
-                Request AMC Discussion
+                Request Quote
               </button>
 
               <Link
-                href="/contact"
+                href="tel:+919717159766"
                 className="border border-white px-7 py-4 rounded-xl font-semibold hover:bg-white hover:text-slate-900 transition"
               >
-                Request Quote
+                Request AMC Discussion
               </Link>
             </div>
           </div>
