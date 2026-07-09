@@ -111,7 +111,7 @@ export default function WhyChoose({city}) {
         </div>
       </div>
 
-      <div>
+      <div id="contact">
         <Form />
       </div>
     </div>
