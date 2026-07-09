@@ -129,8 +129,8 @@ const [isOpen, setOpen] = useState(false);
             Request Air Audit Support
           </button>
 
-          <Link href="/contact" className="rounded-xl border border-slate-300 px-8 py-4 text-slate-700 transition hover:bg-slate-50">
-            Request Quote
+          <Link href="tel:+919717159766" className="rounded-xl border border-slate-300 px-8 py-4 text-slate-700 transition hover:bg-slate-50">
+            Call Us
           </Link>
         </div>
       </div>
