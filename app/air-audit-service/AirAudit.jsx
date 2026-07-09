@@ -424,12 +424,12 @@ const [isOpen, setOpen] = useState(false);
 
         <div className="mt-10 flex flex-wrap justify-center gap-4">
           <button onClick={()=> setOpen(true)} className="rounded-xl bg-white px-8 py-4 font-medium text-slate-900">
-            Request Air Audit Support
+            Request Quote
           </button>
 
 <Link href="/contact">
  <button className="rounded-xl border border-white/20 px-8 py-4 text-white">
-            Request Quote
+            Request Air Audit Support
           </button>
 </Link>
          
