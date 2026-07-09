@@ -1,8 +1,8 @@
 import ContactClient from "./ContactClient";
 
 export const metadata = {
-  title: "Contact Us – Get in Touch | Sangam Plastic Industries",
-  description: "Contact Sangam Plastic Industries for enquiries about premium quality garbage bags, waste management solutions, bulk orders and customer support. We're here to help!",
+  title: "Contact Eutair | Industrial Air Compressor Supplier",
+  description: "Get in touch with Eutair for expert guidance on screw air compressors, air treatment solutions, compressor servicing, engineering consultancy, and industrial compressed air systems.",
 };
 
 export default function BlogsPage() {
