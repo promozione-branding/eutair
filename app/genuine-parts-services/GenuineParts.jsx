@@ -40,7 +40,7 @@ export default function GenuineParts() {
             </p>
 
             <div className="mt-10 flex flex-wrap gap-4">
-              <a href="https://wa.link/rntibs" className="rounded-xl bg-blue-600 px-8 py-4 font-semibold text-white transition hover:bg-blue-700">
+              <a href="tel:+919717159766" className="rounded-xl bg-blue-600 px-8 py-4 font-semibold text-white transition hover:bg-blue-700">
                 Request Service Support
               </a>
 
