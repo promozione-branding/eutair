@@ -40,12 +40,12 @@ export default function ProductSlider() {
     },
     {
       title: "CFM: 455 - 650, BAR: 10.5 - 14, PSI: 100 – 200",
-      image: "/products/CFM 455 – 650, BAR 10.5 - 14, PSI 100 – 200.webp",
+      image: "/products/CFM455650BAR10514PSI100200.webp",
       href: "/products/air-receivers",
     },
     {
       title: "CFM: 1060 - 1200, BAR: 16 - 25, PSI: 232 – 355",
-      image: "/products/CFM 1060 – 1200, BAR 16 - 25, PSI 232 – 355.webp",
+      image: "/products/CFM10601200BAR1625PSI232355.webp",
       href: "/products/compressor-spares",
     },
   ];
@@ -53,7 +53,7 @@ export default function ProductSlider() {
   return (
     <>
       <section className="py-6 md:py-16 bg-gradient-to-b from-white to-slate-50">
-        <div className="max-w-7xl mx-auto  px-1 md:px-0">
+        <div id="products" className="max-w-7xl mx-auto  px-1 md:px-0">
           {/* Heading */}
           <div className="text-center px-2 mb-6 md:mb-12">
             <div className="flex items-center justify-center gap-5 mb-4">

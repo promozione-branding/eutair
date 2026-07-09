@@ -172,7 +172,8 @@ export default function Navbar() {
 
                 {/* Products Dropdown */}
                 <li className="relative group">
-                  <button
+                  <Link
+                    href="#products"
                     className="
           flex items-center gap-2
           lg:text-[16px] 
@@ -185,136 +186,14 @@ export default function Navbar() {
         "
                   >
                     OUR PRODUCTS
-                    <ChevronDown
-                      className="
-            w-4 h-4
-            transition-transform duration-300
-            group-hover:rotate-180
-          "
-                    />
-                  </button>
+                    
+                  </Link>
 
-                  <div
-                    className="
-          absolute left-1/2 top-full
-          lg:text-[16px] 
-          -translate-x-1/2
-          pt-6
-          opacity-0 invisible
-          group-hover:opacity-100
-          group-hover:visible
-          transition-all duration-300
-        "
-                  >
-                    <div
-                      className="
-                      lg:text-[16px] 
-            w-[700px]
-            rounded-3xl
-            bg-white
-            border border-slate-200
-            shadow-[0_20px_60px_rgba(0,0,0,0.08)]
-            overflow-hidden
-          "
-                    >
-                      <div className="grid grid-cols-2">
-                        {/* Left */}
-                        <div className="p-8 bg-gradient-to-br from-blue-600 to-cyan-500 text-white">
-                          <h3 className="text-2xl font-bold mb-4">
-                            Air Solutions
-                          </h3>
-
-                          <p className="text-white/90 leading-relaxed">
-                            Explore our complete range of industrial air
-                            compressors, dryers, filtration systems and
-                            accessories engineered for maximum efficiency.
-                          </p>
-
-                          <div className="flex gap-5 mt-6">
-                            <div
-                              className="
-      flex items-center justify-center
-      px-5 py-3
-      bg-white/90 backdrop-blur-md
-      border border-white/60
-      rounded-full
-      shadow-[0_8px_25px_rgba(0,0,0,0.15)]
-      hover:shadow-[0_12px_35px_rgba(0,0,0,0.2)]
-      transition-all duration-300
-    "
-                            >
-                              <Image
-                                src="/mark-compressors-logo.png"
-                                alt="Mark Compressors"
-                                width={110}
-                                height={60}
-                                className="object-contain"
-                              />
-                            </div>
-
-                            {/* Chicago Pneumatic */}
-                            <div
-                              className="
-      flex items-center justify-center
-      px-5 py-3
-      bg-white/90 backdrop-blur-md
-      border border-white/60
-      rounded-full
-      shadow-[0_8px_25px_rgba(0,0,0,0.15)]
-      hover:shadow-[0_12px_35px_rgba(0,0,0,0.2)]
-      transition-all duration-300
-    "
-                            >
-                              <Image
-                                src="/chicago-pneumatic-logo.png"
-                                alt="Chicago Pneumatic"
-                                width={100}
-                                height={60}
-                                className="object-contain"
-                              />
-                            </div>
-                          </div>
-                        </div>
-
-                        {/* Right */}
-                        <div className="p-8">
-                          <div className="grid grid-cols-1 gap-2">
-                            {products.map((product) => (
-                              <Link
-                                key={product.title}
-                                href={product.href}
-                                className="
-                      flex items-center justify-between
-                      rounded-xl
-                      px-4 py-3
-                      text-black
-                      hover:bg-blue-50
-                      hover:text-blue-600
-                      transition-all
-                      group/item
-                    "
-                              >
-                                <span>{product.title}</span>
-
-                                <ArrowRight
-                                  className="
-                        w-4 h-4
-                        opacity-0
-                        group-hover/item:opacity-100
-                        transition-all
-                      "
-                                />
-                              </Link>
-                            ))}
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
+                  
                 </li>
 
                 <li className="relative group">
-                  <button
+                  <Link href="#industries"
                     className="
       flex items-center gap-2
       text-[17px]
@@ -326,91 +205,16 @@ export default function Navbar() {
       transition-all
     "
                   >
-                    OUR SERVICES
-                    <ChevronDown
-                      className="
-        w-4 h-4
-        transition-transform duration-300 lg:text-[16px] 
-        group-hover:rotate-180
-      "
-                    />
-                  </button>
+                    OUR INDUSTRIES
+                    
+                  </Link>
 
-                  <div
-                    className="
-      absolute left-1/2 top-full
-      -translate-x-1/2
-      pt-6
-      opacity-0 invisible
-      group-hover:opacity-100
-      group-hover:visible
-      transition-all duration-300
-    "
-                  >
-                    <div
-                      className="
-        w-[650px]
-        rounded-3xl
-        bg-white
-        border border-slate-200
-        shadow-[0_20px_60px_rgba(0,0,0,0.08)]
-        overflow-hidden
-      "
-                    >
-                      <div className="grid grid-cols-2">
-                        {/* Left */}
-                        <div className="p-8 bg-gradient-to-br lg:text-[16px]  from-cyan-600 to-blue-600 text-white">
-                          <h3 className="text-2xl font-bold mb-4">
-                            Our Services
-                          </h3>
-
-                          <p className="text-white/90 leading-relaxed">
-                            Professional compressed air system services,
-                            maintenance, audits and installation support for
-                            maximum efficiency and reliability.
-                          </p>
-                        </div>
-
-                        {/* Right */}
-                        <div className="p-8">
-                          <div className="grid gap-2">
-                            {services.map((service) => (
-                              <Link
-                                key={service.title}
-                                href={service.href}
-                                className="
-                  flex items-center justify-between
-                  rounded-xl
-                  px-4 py-3
-                  text-black
-                  hover:bg-cyan-50
-                  hover:text-cyan-600
-                  transition-all
-                  group/item
-                "
-                              >
-                                <span>{service.title}</span>
-
-                                <ArrowRight
-                                  className="
-                    w-4 h-4
-                    opacity-0
-                    group-hover/item:opacity-100
-                    transition-all
-                  "
-                                />
-                              </Link>
-                            ))}
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
+                 
                 </li>
 
                 <li>
                   <Link
-                    href=""
+                    href="#contact"
                     className="text-[17px] tracking-[0.12em] lg:text-[16px]  font-medium text-slate-700 hover:text-blue-600"
                   >
                     CONTACT US
@@ -479,7 +283,7 @@ export default function Navbar() {
             <div className="px-4 py-5">
               <div className="flex flex-col gap-4">
                 <Link
-                  href=""
+                  href="/inquiry"
                   onClick={() => setMobileMenu(false)}
                   className="font-medium text-slate-700"
                 >
@@ -488,32 +292,16 @@ export default function Navbar() {
 
                 {/* Products Accordion */}
                 <div>
-                  <button
-                    onClick={() => setProductMenu(!productMenu)}
+                  <Link 
+                   href="#products"
+                   onClick={() => setMobileMenu(false)}
                     className="flex items-center justify-between w-full font-medium text-slate-700"
                   >
                     OUR PRODUCTS
-                    <ChevronDown
-                      className={`w-4 h-4 transition ${
-                        productMenu ? "rotate-180" : ""
-                      }`}
-                    />
-                  </button>
+                    
+                  </Link>
 
-                  {productMenu && (
-                    <div className="mt-3 pl-4 flex flex-col gap-3 border-l">
-                      {products.map((item) => (
-                        <Link
-                          key={item.title}
-                          href={item.href}
-                          onClick={() => setMobileMenu(false)}
-                          className="text-slate-600"
-                        >
-                          {item.title}
-                        </Link>
-                      ))}
-                    </div>
-                  )}
+                  
                 </div>
 
                 {/* <Link
@@ -525,37 +313,22 @@ export default function Navbar() {
                 </Link> */}
 
                 <div>
-                  <button
-                    onClick={() => setServicesMenu(!servicesMenu)}
+                  <Link
+  onClick={() => setMobileMenu(false)}
+                    href="#industries"
                     className="flex items-center justify-between w-full font-medium text-slate-700"
                   >
                     SERVICES
-                    <ChevronDown
-                      className={`w-4 h-4 transition ${
-                        servicesMenu ? "rotate-180" : ""
-                      }`}
-                    />
-                  </button>
+                    
+                  </Link>
 
-                  {servicesMenu && (
-                    <div className="mt-3 pl-4 flex flex-col gap-3 border-l">
-                      {services.map((item) => (
-                        <Link
-                          key={item.title}
-                          href={item.href}
-                          onClick={() => setMobileMenu(false)}
-                          className="text-slate-600"
-                        >
-                          {item.title}
-                        </Link>
-                      ))}
-                    </div>
-                  )}
+                  
                 </div>
 
                 <Link
-                  href=""
-                  onClick={() => setMobileMenu(false)}
+                onClick={() => setMobileMenu(false)}
+                  href="#contact"
+                  
                   className="font-medium text-slate-700"
                 >
                   CONTACT US

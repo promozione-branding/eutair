@@ -4,6 +4,7 @@ import LayoutWrapper from "@/components/LayoutWrapper";
 import { Toaster } from "react-hot-toast";
 
 import Whatsapp from "@/components/Whatsapp";
+import Script from "next/script";
 
 // Roboto
 const roboto = Roboto({
