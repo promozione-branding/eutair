@@ -269,17 +269,16 @@ export default function Footer() {
 <div className="h-px w-full  bg-gray-50/40"></div>
 
 
-<div className="flex py-5  gap-4 justify-center items-center max-w-7xl mx-auto">
 
 
   {/* Registered Address */}
 
-  <div className="flex flex-col md:flex-row">
+  <div className="flex flex-col gap-5 px-10 py-4 items-center w-7xl mx-auto justify-between lg:gap-12 md:flex-row">
 
 
-    <div className="flex   items-start gap-4">
+    <div className="flex w-full  items-center gap-3">
       <MapPin
-        className="text-cyan-500 shrink-0 mt-1"
+        className="text-cyan-500 shrink-0 "
         size={20}
       />
       <div>
@@ -288,16 +287,16 @@ export default function Footer() {
         </p>
         <p className="text-slate-300 leading-relaxed">
           37C, 2nd Floor, Gate No. 3, Opp. IDBI Bank,
-          Chaudhary Balbir Singh Marg, A3 Block,
-          <br/>Paschim Vihar, New Delhi - 110063
+          Chaudhary Balbir Singh Marg, <br/>A3 Block,
+          Paschim Vihar, New Delhi - 110063
         </p>
       </div>
     </div>
 
     {/* Office Address */}
-    <div className="flex items-start gap-4">
+    <div className="flex w-full items-center gap-2">
       <MapPin
-        className="text-cyan-500 shrink-0 mt-1"
+        className="text-cyan-500 shrink-0 "
         size={20}
       />
       <div>
@@ -307,12 +306,12 @@ export default function Footer() {
         <p className="text-slate-300 leading-relaxed">
           T-3, Third Floor, Ansal Utility Tower,
           A2 Block, Paschim Vihar,
+          <br/>
           New Delhi, Delhi - 110063
         </p>
       </div>
     </div>
 </div>
-  </div>
 
 
 

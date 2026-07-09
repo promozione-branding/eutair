@@ -427,7 +427,7 @@ const [isOpen, setOpen] = useState(false);
             Request Quote
           </button>
 
-<Link href="/contact">
+<Link href="tel:+919717159766">
  <button className="rounded-xl border border-white/20 px-8 py-4 text-white">
             Request Air Audit Support
           </button>
