@@ -162,12 +162,12 @@ export default function WastewaterEngineering() {
 
           <div className="flex flex-wrap gap-4 mt-10">
             <button onClick={()=> setOpen(true)} className="bg-cyan-600 hover:bg-cyan-700 px-6 py-3 rounded-lg font-medium transition">
-              Discuss Wastewater Requirement
+              Request Quote
             </button>
 
-<Link href="/contact">
+<Link href="tel:+919717159766" >
     <button className="border border-white hover:bg-white hover:text-slate-900 px-6 py-3 rounded-lg font-medium transition">
-              Request Quote
+              Discuss Wastewater Requirement
             </button>
 
 </Link>
