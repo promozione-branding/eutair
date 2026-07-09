@@ -18,6 +18,8 @@ import {
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/effect-fade";
+import ContactForm from "../Enquiry";
+import { useState } from "react";
 
 const slides = [
   {
@@ -171,6 +173,10 @@ const slides = [
   },
 ];
 export default function HeroSlider() {
+
+    const [open, setOpen] = useState(false);
+  
+
   return (
     <section className="relative h-[800px] lg:h-[670px] w-full overflow-hidden">
       <Swiper
@@ -343,50 +349,41 @@ export default function HeroSlider() {
     mt-7
   "
                     >
-                      <Link href="/contact">
+                      
                         <button
-                          className="text-center
-      group
-      relative
-      overflow-hidden
-      h-[62px]
-      px-8
-      rounded-xl
-      bg-gradient-to-r
-      from-[#0A63FF]
-      to-[#1D8FFF]
-      shadow-[0_15px_40px_rgba(10,99,255,.35)]
-      hover:shadow-[0_20px_60px_rgba(10,99,255,.5)]
-      transition-all
-      duration-500
-      hover:-translate-y-1
-    "
-                        >
-                          <span className="relative z-10 flex items-center gap-3 text-white font-semibold">
-                            GET INSTANT QUOTE
-                            <ArrowRight
-                              size={18}
-                              className="group-hover:translate-x-1 transition"
-                            />
-                          </span>
-
-                          <div
-                            className="
-        absolute
-        inset-0
-        bg-gradient-to-r
-        from-transparent
-        via-white/20
-        to-transparent
-        -skew-x-12
-        translate-x-[-150%]
-        group-hover:translate-x-[150%]
-        transition-transform
-        duration-1000
-      "
-                          />
-                        </button>
-                      </Link>
+  onClick={() => setOpen(true)}
+  className="
+    w-full sm:w-auto
+    max-w-[320px]
+    mx-auto
+    group
+    relative
+    inline-flex
+    items-center
+    justify-center
+    overflow-hidden
+    min-h-[56px] md:h-[62px]
+    px-5 md:px-8
+    rounded-xl
+    bg-gradient-to-r
+    from-[#0A63FF]
+    to-[#1D8FFF]
+    shadow-[0_15px_40px_rgba(10,99,255,.35)]
+    hover:shadow-[0_20px_60px_rgba(10,99,255,.5)]
+    transition-all
+    duration-500
+    hover:-translate-y-1
+  "
+>
+  <span className="relative z-10 flex items-center justify-center gap-2 md:gap-3 text-white font-semibold text-sm md:text-base text-center">
+    GET INSTANT QUOTE
+    <ArrowRight
+      size={18}
+      className="group-hover:translate-x-1 transition"
+    />
+  </span>
+</button>
+                      
 
                      <a
   href={slide.pdf}
@@ -511,6 +508,9 @@ drop-shadow-[0_40px_80px_rgba(0,0,0,.45)]
           </SwiperSlide>
         ))}
       </Swiper>
+
+            {open && <ContactForm isOpen={open} onClose={() => setOpen(false)} />}
+      
     </section>
   );
 }

@@ -311,7 +311,7 @@ const [isOpen, setOpen] = useState(false);
         </button>
 
 
-<Link href="/contact">
+<Link href="tel:+919717159766">
         <button className="px-5 md:px-8 h-14 rounded-2xl border border-white text-white font-bold">
           Contact Us
         </button>

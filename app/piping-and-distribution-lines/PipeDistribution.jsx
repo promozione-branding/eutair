@@ -142,7 +142,7 @@ export default function PipeDistribution() {
 
             <div className="mt-8 flex flex-col sm:flex-row gap-4">
               <Link
-                href="/contact"
+                href="tel:+919717159766"
                 className="w-full sm:w-auto flex items-center justify-center gap-2 rounded-xl bg-[#00AEEF] px-6 py-4 font-semibold text-white hover:bg-cyan-500 transition"
               >
                 Talk to Eutair

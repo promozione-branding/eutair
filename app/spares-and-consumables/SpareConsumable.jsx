@@ -99,7 +99,7 @@ export default function SpareConsumable() {
 
               <div className="mt-10 flex flex-wrap gap-4">
                 <Link
-                  href="/contact"
+                  href="tel:+919717159766"
                   className="rounded-xl bg-cyan-500 px-7 py-4 font-semibold text-white transition hover:bg-cyan-600"
                 >
                   Talk to Eutair

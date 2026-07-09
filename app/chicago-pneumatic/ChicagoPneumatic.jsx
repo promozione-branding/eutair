@@ -99,7 +99,7 @@ export default function ChicagoPneumatic() {
                         setActive(item);
                       }
                     }}
-                    className={`px-6 py-3 mx-1 rounded-2xl font-semibold whitespace-nowrap transition-all duration-300 ${
+                    className={`px-6 py-3 mx-1 rounded-2xl capitalize font-semibold whitespace-nowrap transition-all duration-300 ${
                       active === item
                         ? "bg-gradient-to-r from-sky-500 to-cyan-500 text-white"
                         : "text-slate-700 hover:bg-slate-100"
