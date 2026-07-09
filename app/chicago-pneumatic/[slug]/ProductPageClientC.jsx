@@ -149,8 +149,7 @@ export default function ProductPageClientC() {
                   <span>Request a Qoute</span>
                 </button>
                 <a
-                  href="https://wa.link/rntibs
-"
+                  href="https://wa.link/o8l7fy"
                   className="group flex items-center gap-1 px-3 xl:px-8 h-16 rounded-2xl bg-gradient-to-r from-green-500 to-emerald-600 text-white font-semibold shadow-[0_10px_30px_rgba(34,197,94,.35)] hover:-translate-y-1 transition-all duration-300"
                 >
                   <FaWhatsapp size={24} />

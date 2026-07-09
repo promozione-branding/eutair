@@ -185,7 +185,7 @@ export default function Footer() {
           WhatsApp
         </p>
         <a
-          href="https://wa.me/919582911766"
+          href="https://wa.link/o8l7fy"
           className="text-slate-300 hover:text-cyan-400 transition-colors"
         >
           +91 958 2911766
