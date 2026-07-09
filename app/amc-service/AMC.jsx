@@ -314,15 +314,15 @@ export default function AMC() {
               href="tel:919717159766"
               className="bg-white text-slate-900 px-8 py-4 rounded-xl font-semibold inline-flex items-center gap-2"
             >
-              Schedule a Consultation
-              <ArrowRight size={18} />
+              Request Quote              <ArrowRight size={18} />
             </a>
 
             <Link
-              href="/contact"
+             href="tel:+919717159766"
               className="border border-white px-8 py-4 rounded-xl font-semibold"
             >
-              Request Quote
+              Schedule a Consultation
+
             </Link>
           </div>
         </div>
