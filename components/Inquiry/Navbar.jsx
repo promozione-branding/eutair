@@ -318,7 +318,7 @@ export default function Navbar() {
                     href="#industries"
                     className="flex items-center justify-between w-full font-medium text-slate-700"
                   >
-                    SERVICES
+                    INDUSTRIES
                     
                   </Link>
 
