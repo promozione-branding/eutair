@@ -193,9 +193,11 @@ export default function HeroSlider() {
             <SwiperSlide key={index}>
               <div className="relative min-h-[700px] lg:h-[680px]">
                 {/* Background */}
-                <img
+                <Image
                   src={slide.bg}
                   alt=""
+                  fill
+                  sizes="100vw"
                   className="absolute inset-0 h-full w-full object-cover"
                 />
 
