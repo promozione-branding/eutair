@@ -1,7 +1,7 @@
 "use client";
 
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay, Pagination, EffectFade } from "swiper/modules";
+import { Autoplay } from "swiper/modules";
 import Image from "next/image";
 import Link from "next/link";
 import {
@@ -179,7 +179,7 @@ export default function HeroSlider() {
       {" "}
       <section className="relative h-[600px] lg:h-[670px] w-full overflow-hidden">
         <Swiper
-          modules={[Autoplay, Pagination, EffectFade]}
+          modules={[Autoplay]}
           effect="fade"
           autoplay={{
             delay: 5000,
@@ -221,9 +221,9 @@ export default function HeroSlider() {
                   >
                     {/* LEFT */}
                     <div
-                      initial={{ opacity: 0, x: -80 }}
-                      animate={{ opacity: 1, x: 0 }}
-                      transition={{ duration: 0.8 }}
+                      initial={{ opacity: 0, y: 100 }}
+animate={{ opacity: 1, y: 0 }}
+transition={{ duration: 1 }}
                       className="
   max-w-[620px]
   text-center
@@ -301,8 +301,7 @@ export default function HeroSlider() {
       border border-white/60
       rounded-full
       shadow-[0_8px_25px_rgba(0,0,0,0.15)]
-      hover:shadow-[0_12px_35px_rgba(0,0,0,0.2)]
-      transition-all duration-300
+     
     "
                         >
                           <Image
@@ -323,8 +322,7 @@ export default function HeroSlider() {
       border border-white/60
       rounded-full
       shadow-[0_8px_25px_rgba(0,0,0,0.15)]
-      hover:shadow-[0_12px_35px_rgba(0,0,0,0.2)]
-      transition-all duration-300
+      
     "
                         >
                           <Image
@@ -374,7 +372,7 @@ export default function HeroSlider() {
                               GET INSTANT QUOTE
                               <ArrowRight
                                 size={18}
-                                className="group-hover:translate-x-1 transition"
+                                className=""
                               />
                             </span>
 
@@ -388,9 +386,7 @@ export default function HeroSlider() {
         to-transparent
         -skew-x-12
         translate-x-[-150%]
-        group-hover:translate-x-[150%]
-        transition-transform
-        duration-1000
+        
       "
                             />
                           </button>
@@ -450,10 +446,7 @@ drop-shadow-[0_40px_80px_rgba(0,0,0,.45)]
       from-[#0A63FF]
       to-[#1D8FFF]
       shadow-[0_15px_40px_rgba(10,99,255,.35)]
-      hover:shadow-[0_20px_60px_rgba(10,99,255,.5)]
-      transition-all
-      duration-500
-      hover:-translate-y-1
+      
     "
                           >
                             <span className="relative z-10 flex items-center gap-3 text-white font-semibold">
@@ -474,9 +467,7 @@ drop-shadow-[0_40px_80px_rgba(0,0,0,.45)]
         to-transparent
         -skew-x-12
         translate-x-[-150%]
-        group-hover:translate-x-[150%]
-        transition-transform
-        duration-1000
+       
       "
                             />
                           </button>
