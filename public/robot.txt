@@ -1,0 +1,36 @@
+User-agent: *
+Allow: /
+
+# Block system directories (if they exist)
+Disallow: /cgi-bin/
+Disallow: /tmp/
+Disallow: /cache/
+
+# Sitemap
+Sitemap: https://screwaircompressormanufacturers.com/sitemap.xml
+
+
+User-agent: OAI-SearchBot
+Allow: /
+User-agent: ChatGPT-User
+Allow: /
+User-agent: GPTBot
+Allow: /
+User-agent: PerplexityBot
+Allow: /
+User-agent: Meta-ExternalAgent
+Allow: /
+User-agent: Google-Extended
+Allow: /
+User-agent: Gemini
+Allow: /
+User-agent: DeepSeekBot
+Allow: /
+User-agent: xAI-Grok
+Allow: /
+User-agent: ClaudeBot
+Allow: /
+User-agent: GoogleBot
+Allow: /
+User-agent: Bingbot
+Allow: /
