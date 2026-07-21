@@ -23,7 +23,7 @@ const poppins = Poppins({
 export const metadata = {
   title: "Screw Air Compressor Supplier | Air Treatment Solutions | Eutair",
   description:
-    "Looking for a reliable Screw Air Compressor Supplier? Eutair provides industrial screw air compressors, air dryers, filters, engineering services, AMC, and complete compressed air solutions.",
+    "Looking for a reliable screw air compressor supplier? Eutair offers industrial screw air compressors, air dryers, filters, AMC, and complete air solutions.",
   icons: {
     icon: "/favicon.ico",
     shortcut: "/favicon.ico",
@@ -32,24 +32,27 @@ export const metadata = {
 };
 
 export default function RootLayout({ children }) {
-   const organizationSchema = {
+  const organizationSchema = {
     "@context": "https://schema.org",
     "@type": "Organization",
-    "name": "Eutair Equipments",
-    "url": "https://screwaircompressormanufacturers.com/",
-    "logo": "https://screwaircompressormanufacturers.com/logo.png",
-    "contactPoint": {
+    name: "Eutair Equipments",
+    url: "https://screwaircompressormanufacturers.com/",
+    logo: "https://screwaircompressormanufacturers.com/logo.png",
+    contactPoint: {
       "@type": "ContactPoint",
-      "telephone": "+91-9717159766",
-      "contactType": "sales",
-      "areaServed": "IN",
-      "availableLanguage": "en"
-    }
+      telephone: "+91-9717159766",
+      contactType: "sales",
+      areaServed: "IN",
+      availableLanguage: "en",
+    },
   };
   return (
     <html lang="en">
       <head>
-        <link rel="canonical" href="https://screwaircompressormanufacturers.com/" /> 
+        <link
+          rel="canonical"
+          href="https://screwaircompressormanufacturers.com/"
+        />
 
         <Script id="gtm" strategy="beforeInteractive">{`
           (function(w,d,s,l,i){
@@ -86,7 +89,6 @@ export default function RootLayout({ children }) {
           src="https://www.googletagmanager.com/gtag/js?id=AW-10893102558"
           strategy="afterInteractive"
         />
-        
       </head>
 
       <Toaster
@@ -108,7 +110,7 @@ export default function RootLayout({ children }) {
             }}
           />
         </noscript>
-         <script
+        <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify(organizationSchema),
