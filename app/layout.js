@@ -32,9 +32,25 @@ export const metadata = {
 };
 
 export default function RootLayout({ children }) {
+   const organizationSchema = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Eutair Equipments",
+    "url": "https://screwaircompressormanufacturers.com/",
+    "logo": "https://screwaircompressormanufacturers.com/logo.png",
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+91-9717159766",
+      "contactType": "sales",
+      "areaServed": "IN",
+      "availableLanguage": "en"
+    }
+  };
   return (
     <html lang="en">
       <head>
+        <link rel="canonical" href="https://screwaircompressormanufacturers.com/" /> 
+
         <Script id="gtm" strategy="beforeInteractive">{`
           (function(w,d,s,l,i){
             w[l]=w[l]||[];
@@ -70,6 +86,7 @@ export default function RootLayout({ children }) {
           src="https://www.googletagmanager.com/gtag/js?id=AW-10893102558"
           strategy="afterInteractive"
         />
+        
       </head>
 
       <Toaster
@@ -91,6 +108,12 @@ export default function RootLayout({ children }) {
             }}
           />
         </noscript>
+         <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(organizationSchema),
+          }}
+        />
         <LayoutWrapper>{children}</LayoutWrapper>
       </body>
     </html>
