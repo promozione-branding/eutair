@@ -28,10 +28,11 @@ const slides = [
 
     tagline: "ELECTRIC/DIESEL HIGH PERFORMANCE",
 
+    alt: "Air Compressor",
+
     title: "PORTABLE AIR\n COMPRESSOR",
 
-    pdf:"/pdf/DiselEutair.pdf",
-
+    pdf: "/pdf/DiselEutair.pdf",
 
     description:
       "Energy efficient, low maintenance and reliable air solutions for every industry.",
@@ -79,8 +80,10 @@ const slides = [
 
     tagline: "INDUSTRIAL COMPRESSED AIR",
 
+    alt: "Mark Compressor",
+
     title: "MARK COMPRESSORS",
-    pdf:"/pdf/mark.pdf",
+    pdf: "/pdf/mark.pdf",
 
     description:
       "Designed for manufacturing, engineering, automotive, food processing, pharmaceuticals, textiles, and every industry that demands dependable compressed air solutions.",
@@ -130,7 +133,9 @@ const slides = [
 
     title: "AIR TREATMENT",
 
-    pdf:"/pdf/airTreatment.pdf",
+    alt: "Air Treatment",
+
+    pdf: "/pdf/airTreatment.pdf",
 
     description:
       "Designed to remove moisture, oil, and contaminants from compressed air systems, ensuring reliable operation, improved product quality, and longer equipment life.",
@@ -173,9 +178,7 @@ const slides = [
   },
 ];
 export default function HeroSlider() {
-
-    const [open, setOpen] = useState(false);
-  
+  const [open, setOpen] = useState(false);
 
   return (
     <section className="relative h-[800px] lg:h-[670px] w-full overflow-hidden">
@@ -349,10 +352,9 @@ export default function HeroSlider() {
     mt-7
   "
                     >
-                      
-                        <button
-  onClick={() => setOpen(true)}
-  className="
+                      <button
+                        onClick={() => setOpen(true)}
+                        className="
     w-full sm:w-auto
     max-w-[320px]
     mx-auto
@@ -374,27 +376,26 @@ export default function HeroSlider() {
     duration-500
     hover:-translate-y-1
   "
->
-  <span className="relative z-10 flex items-center justify-center gap-2 md:gap-3 text-white font-semibold text-sm md:text-base text-center">
-    GET INSTANT QUOTE
-    <ArrowRight
-      size={18}
-      className="group-hover:translate-x-1 transition"
-    />
-  </span>
-</button>
-                      
+                      >
+                        <span className="relative z-10 flex items-center justify-center gap-2 md:gap-3 text-white font-semibold text-sm md:text-base text-center">
+                          GET INSTANT QUOTE
+                          <ArrowRight
+                            size={18}
+                            className="group-hover:translate-x-1 transition"
+                          />
+                        </span>
+                      </button>
 
-                     <a
-  href={slide.pdf}
-  download="Brochure.pdf"
-  target="_blank"
-  rel="noopener noreferrer"
-  aria-label="Download Brochure"
-  className="hidden md:inline-flex items-center justify-center mt-1 h-14 px-8 rounded-xl border border-white/30 bg-white/10 backdrop-blur-md text-white font-semibold tracking-wide transition-all duration-300 hover:bg-white hover:text-slate-900 hover:border-white hover:shadow-lg"
->
-  DOWNLOAD CATALOGUE
-</a>
+                      <a
+                        href={slide.pdf}
+                        download="Brochure.pdf"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label="Download Brochure"
+                        className="hidden md:inline-flex items-center justify-center mt-1 h-14 px-8 rounded-xl border border-white/30 bg-white/10 backdrop-blur-md text-white font-semibold tracking-wide transition-all duration-300 hover:bg-white hover:text-slate-900 hover:border-white hover:shadow-lg"
+                      >
+                        DOWNLOAD CATALOGUE
+                      </a>
                     </div>
                   </motion.div>
 
@@ -407,7 +408,7 @@ export default function HeroSlider() {
                   >
                     <Image
                       src={slide.machine}
-                      alt=""
+                      alt={slide.alt}
                       width={800}
                       height={700}
                       className="
@@ -509,8 +510,7 @@ drop-shadow-[0_40px_80px_rgba(0,0,0,.45)]
         ))}
       </Swiper>
 
-            {open && <ContactForm isOpen={open} onClose={() => setOpen(false)} />}
-      
+      {open && <ContactForm isOpen={open} onClose={() => setOpen(false)} />}
     </section>
   );
 }
