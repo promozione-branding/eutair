@@ -376,6 +376,7 @@ const handleMouseMove = (e) => {
                   `}
                 >
               <img
+              alt="Eutair"
   src={product.thumbnail}
   className="
     h-35
