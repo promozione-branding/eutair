@@ -46,9 +46,9 @@ export default function ChicagoPneumatic() {
           <div className="grid lg:grid-cols-2 gap-10 items-center">
             {/* Left Content */}
             <div>
-              <h1 className="mt-5 text-2xl lg:text-3xl xl:text-5xl font-bold leading-tight text-slate-900">
+              <h2 className="mt-5 text-2xl lg:text-3xl xl:text-5xl font-bold leading-tight text-slate-900">
                 Portable Air Compressors for Construction & Mining
-              </h1>
+              </h2>
 
               <p className="mt-6 text-base md:text-lg text-slate-600 leading-6 md:leading-relaxed ">
                 Eutair Equipments offers a comprehensive range of Chicago

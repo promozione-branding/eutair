@@ -83,9 +83,9 @@ export default function SpareConsumable() {
                 Spares & Consumables
               </span>
 
-              <h2 className="mt-6 text-3xl md:text-5xl font-extrabold leading-tight text-white lg:text-6xl">
+              <h1 className="mt-6 text-3xl md:text-5xl font-extrabold leading-tight text-white lg:text-6xl">
                 Spares and Consumables
-              </h2>
+              </h1>
 
               <p className="mt-6 max-w-3xl md:text-lg md:leading-8 text-slate-200">
                 Keep your compressed air system operating at peak efficiency

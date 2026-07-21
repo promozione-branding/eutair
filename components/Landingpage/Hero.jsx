@@ -198,7 +198,7 @@ export default function HeroSlider() {
               {/* Background */}
               <img
                 src={slide.bg}
-                alt=""
+                alt="Eutair"
                 className="absolute inset-0 h-full w-full object-cover"
               />
 

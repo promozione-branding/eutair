@@ -127,9 +127,9 @@ export default function PipeDistribution() {
 
         <div className="relative max-w-7xl mx-auto px-5 sm:px-6 lg:px-8 py-6 md:py-16  ">
           <div className="max-w-4xl">
-            <h2 className="mt-6 text-3xl md:text-5xl font-bold leading-tight text-white">
+            <h1 className="mt-6 text-3xl md:text-5xl font-bold leading-tight text-white">
               Piping & Distribution Lines
-            </h2>
+            </h1>
 
             <p className="mt-5 text-[15px] sm:text-base lg:text-lg md:leading-7  text-white">
               Ensure efficient and reliable compressed air delivery with

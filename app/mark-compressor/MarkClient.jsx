@@ -139,12 +139,12 @@ const MarkClient = () => {
           Trusted Screw Air Compressors Supplier
         </span>
 
-        <h1 className="mt-5 text-2xl sm:text-4xl lg:text-4xl xl:text-5xl font-bold leading-tight text-slate-900 break-words">
+        <h2 className="mt-5 text-2xl sm:text-4xl lg:text-4xl xl:text-5xl font-bold leading-tight text-slate-900 break-words">
           Screw Air Compressors  &
           <span className="block text-sky-600">
             MARK Compressors Supplier
           </span>
-        </h1>
+        </h2>
 
         <p className="mt-5 text-base xl:text-lg text-slate-700 leading-6 md:leading-7 break-words">
           Eutair Equipments LLP is a trusted Screw Air Compressors Supplier
@@ -421,7 +421,7 @@ const MarkClient = () => {
                 >
                   <img
                     src="/Screw.png"
-                    alt=""
+                    alt="Screw "
                     className="relative z-10 w-full object-cover"
                   />
                 </div>
