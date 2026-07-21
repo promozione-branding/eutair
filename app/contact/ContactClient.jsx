@@ -296,23 +296,23 @@ export default function ContactPage() {
                   >
                     <option value="">Select Product</option>
 
-                    <option value="Biodegradable Garbage Bags">
+                    <option value="  Mark Compressors">
                       Mark Compressors
                     </option>
 
-                    <option value="Disposable Garbage Bags">
+                    <option value=" Chicago Pneumatic">
                       Chicago Pneumatic
                     </option>
 
-                    <option value="Biomedical Garbage Bags">
+                    <option value="  Air Treatment">
                       Air Treatment
                     </option>
 
-                    <option value="Biomedical Garbage Bags">
+                    <option value=" Spares and Consumables">
                       Spares and Consumables
                     </option>
 
-                    <option value="Biomedical Garbage Bags">
+                    <option value="Piping and Distribution Lines">
                       Piping and Distribution Lines
                     </option>
                   </select>
