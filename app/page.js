@@ -38,8 +38,8 @@ export default function Home() {
       <IndustriesSection />
       <TestimonialSlider></TestimonialSlider>
 
-      <CityPage/>
       <Faq></Faq>
+      <CityPage/>
     </>
   );
 }
