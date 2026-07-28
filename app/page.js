@@ -17,7 +17,7 @@ import Clients from "@/components/Landingpage/Clients";
 import TestimonialSlider from "@/components/Landingpage/Testimonials";
 import Bestseller from "@/components/Landingpage/Bestseller";
 import Whoweare from "@/components/Landingpage/Whoweare";
-import CityPage from "@/components/City";
+import CityPage from "@/components/Landingpage/CityPage";
 export default function Home() {
   return (
     <>
@@ -38,7 +38,7 @@ export default function Home() {
       <IndustriesSection />
       <TestimonialSlider></TestimonialSlider>
 
-      {/* <CityPage/> */}
+      <CityPage/>
       <Faq></Faq>
     </>
   );
