@@ -65,13 +65,13 @@ const slides = [
       },
     ],
 
-    benefits: [
-      "Energy Efficient",
-      "Low Maintenance",
-      "Reliable Performance",
-      "PAN India Service",
-      "ISO Certified",
-    ],
+    // benefits: [
+    //   "Energy Efficient",
+    //   "Low Maintenance",
+    //   "Reliable Performance",
+    //   "PAN India Service",
+    //   "ISO Certified",
+    // ],
   },
 
   {
@@ -116,13 +116,13 @@ const slides = [
       },
     ],
 
-    benefits: [
-      "Food Grade Air",
-      "Pharma Approved",
-      "Zero Contamination",
-      "Long Service Life",
-      "Energy Saving",
-    ],
+    // benefits: [
+    //   "Food Grade Air",
+    //   "Pharma Approved",
+    //   "Zero Contamination",
+    //   "Long Service Life",
+    //   "Energy Saving",
+    // ],
   },
 
   {
@@ -168,13 +168,13 @@ const slides = [
       },
     ],
 
-    benefits: [
-      "Energy Savings",
-      "Pressure Stability",
-      "Smart Monitoring",
-      "Reduced Wear",
-      "Longer Life",
-    ],
+    // benefits: [
+    //   "Energy Savings",
+    //   "Pressure Stability",
+    //   "Smart Monitoring",
+    //   "Reduced Wear",
+    //   "Longer Life",
+    // ],
   },
 ];
 export default function HeroSlider() {
@@ -186,7 +186,7 @@ export default function HeroSlider() {
         modules={[Autoplay, Pagination, EffectFade]}
         effect="fade"
         autoplay={{
-          // delay: 5000,
+          delay: 4000,
           disableOnInteraction: false,
         }}
         pagination={{
@@ -202,8 +202,8 @@ export default function HeroSlider() {
               <Image
                 src={slide.bg}
                 alt="Eutair"
-                height={100}
-                width={100}
+                priority={index === 0}
+                sizes="100vw"
                 className="absolute inset-0 h-full w-full object-cover"
               />
 
@@ -411,6 +411,7 @@ export default function HeroSlider() {
                     <Image
                       src={slide.machine}
                       alt={slide.alt}
+                      priority={index === 0}
                       width={800}
                       height={700}
                       className="
