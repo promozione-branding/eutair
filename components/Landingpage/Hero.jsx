@@ -5,6 +5,7 @@ import { Autoplay, Pagination, EffectFade } from "swiper/modules";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
+
 import {
   ArrowRight,
   Download,
@@ -186,7 +187,7 @@ export default function HeroSlider() {
         modules={[Autoplay, Pagination, EffectFade]}
         effect="fade"
         autoplay={{
-          delay: 4000,
+          // delay: 4000,
           disableOnInteraction: false,
         }}
         pagination={{
@@ -203,7 +204,8 @@ export default function HeroSlider() {
                 src={slide.bg}
                 alt="Eutair"
                 priority={index === 0}
-                sizes="100vw"
+                height={100}
+                width={100}
                 className="absolute inset-0 h-full w-full object-cover"
               />
 
@@ -312,7 +314,7 @@ export default function HeroSlider() {
     "
                       >
                         <Image
-                          src="/mark-compressors-logo.png"
+                          src="/mark-compressors-logo.webp"
                           alt="Mark Compressors"
                           width={110}
                           height={60}

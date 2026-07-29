@@ -21,15 +21,14 @@ export default function ContactForm() {
 
   // OTP STATES
 
-  useEffect(() => {
-    const timer = setTimeout(() => setIsOpen(true), 15000);
-    return () => clearTimeout(timer);
-  }, []);
+  // useEffect(() => {
+  //   const timer = setTimeout(() => setIsOpen(true), 15000);
+  //   return () => clearTimeout(timer);
+  // }, []);
 
   // FIREBASE RECAPTCHA
   
 
-  if (!isOpen) return null;
 
   const handleClose = () => setIsOpen(false);
 
@@ -116,6 +115,28 @@ Contact: ${phone}`;
 
     // SEND OTP FIRST
   };
+
+  useEffect(() => {
+  const handleScroll = () => {
+    const scrollTop = window.scrollY;
+    const windowHeight = window.innerHeight;
+    const docHeight = document.documentElement.scrollHeight;
+
+    const scrollPercent = (scrollTop / (docHeight - windowHeight)) * 100;
+
+    if (scrollPercent > 30) {
+      setIsOpen(true);
+      window.removeEventListener("scroll", handleScroll); // run only once
+    }
+  };
+
+  window.addEventListener("scroll", handleScroll);
+
+  return () => window.removeEventListener("scroll", handleScroll);
+}, []);
+
+  if (!isOpen) return null;
+
 
   return (
     <div className="fixed z-[99999] inset-0 flex items-center justify-center bg-black/40">

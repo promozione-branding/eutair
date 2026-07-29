@@ -23,7 +23,7 @@ const Bestseller = () => {
                 playsInline
               >
                 <source
-                  src="https://res.cloudinary.com/dcefpzfe0/video/upload/v1781243641/WhatsApp_Video_2026-06-09_at_3.50.56_PM_arktyk.mp4"
+                  src="https://pub-46e3376571d149c28119abf9aa0d6786.r2.dev/video/WhatsApp%20Video%202026-06-09%20at%203.50.56%20PM%20(1).mp4"
                   type="video/mp4"
                 />
               </video>
