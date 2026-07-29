@@ -24,7 +24,7 @@ import { useState } from "react";
 const slides = [
   {
     bg: "/bghero1.webp",
-    machine: "/hero1.png",
+    machine: "/hero1.webp",
 
     tagline: "ELECTRIC/DIESEL HIGH PERFORMANCE",
 
@@ -76,7 +76,7 @@ const slides = [
 
   {
     bg: "/herobg2.webp",
-    machine: "/hero2.png",
+    machine: "/hero22.webp",
 
     tagline: "INDUSTRIAL COMPRESSED AIR",
 
@@ -127,7 +127,7 @@ const slides = [
 
   {
     bg: "/bghero1.webp",
-    machine: "/hero3.png",
+    machine: "/hero3.webp",
 
     tagline: "CLEAN & DRY COMPRESSED AIR",
 
@@ -186,7 +186,7 @@ export default function HeroSlider() {
         modules={[Autoplay, Pagination, EffectFade]}
         effect="fade"
         autoplay={{
-          delay: 5000,
+          // delay: 5000,
           disableOnInteraction: false,
         }}
         pagination={{
@@ -199,9 +199,11 @@ export default function HeroSlider() {
           <SwiperSlide key={index}>
             <div className="relative min-h-[700px] lg:h-[680px]">
               {/* Background */}
-              <img
+              <Image
                 src={slide.bg}
                 alt="Eutair"
+                height={100}
+                width={100}
                 className="absolute inset-0 h-full w-full object-cover"
               />
 
