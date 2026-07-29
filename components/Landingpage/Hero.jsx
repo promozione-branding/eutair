@@ -5,6 +5,8 @@ import { Autoplay, Pagination, EffectFade } from "swiper/modules";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
+import dynamic from "next/dynamic";
+
 
 import {
   ArrowRight,
@@ -19,7 +21,7 @@ import {
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/effect-fade";
-import ContactForm from "../Enquiry";
+// import ContactForm from "../Enquiry";
 import { useState } from "react";
 
 const slides = [
@@ -178,6 +180,10 @@ const slides = [
     // ],
   },
 ];
+
+const ContactForm = dynamic(() => import("../Enquiry"), {
+  ssr: false,
+});
 export default function HeroSlider() {
   const [open, setOpen] = useState(false);
 
@@ -190,6 +196,8 @@ export default function HeroSlider() {
           // delay: 4000,
           disableOnInteraction: false,
         }}
+        lazy={true}
+        preloadImages={false}
         pagination={{
           clickable: true,
         }}
