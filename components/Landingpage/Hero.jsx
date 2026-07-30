@@ -1,7 +1,7 @@
 "use client";
 
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay, Pagination, EffectFade } from "swiper/modules";
+import { Autoplay, Pagination } from "swiper/modules";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
@@ -190,8 +190,7 @@ export default function HeroSlider() {
   return (
     <section className="relative h-[800px] lg:h-[670px] w-full overflow-hidden">
       <Swiper
-        modules={[Autoplay, Pagination, EffectFade]}
-        effect="fade"
+        modules={[Autoplay, Pagination]}
         autoplay={{
           // delay: 4000,
           disableOnInteraction: false,
@@ -236,7 +235,7 @@ export default function HeroSlider() {
   "
                 >
                   {/* LEFT */}
-                  <motion.div
+                  <div
                     initial={{ opacity: 0, x: -80 }}
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.8 }}
@@ -409,10 +408,10 @@ export default function HeroSlider() {
                         DOWNLOAD CATALOGUE
                       </a>
                     </div>
-                  </motion.div>
+                  </div>
 
                   {/* CENTER PRODUCT */}
-                  <motion.div
+                  <div
                     initial={{ opacity: 0, y: 100 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 1 }}
@@ -435,10 +434,10 @@ mx-auto
 drop-shadow-[0_40px_80px_rgba(0,0,0,.45)]
 "
                     />
-                  </motion.div>
+                  </div>
 
                   {/* RIGHT FEATURES */}
-                  <motion.div
+                  <div
                     initial={{ opacity: 0, x: 100 }}
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.8 }}
@@ -463,7 +462,7 @@ drop-shadow-[0_40px_80px_rgba(0,0,0,.45)]
                         const Icon = feature.icon;
 
                         return (
-                          <motion.div
+                          <div
                             key={index}
                             initial={{ opacity: 0, x: 30 }}
                             animate={{ opacity: 1, x: 0 }}
@@ -511,11 +510,11 @@ drop-shadow-[0_40px_80px_rgba(0,0,0,.45)]
                                 {feature.desc}
                               </p>
                             </div>
-                          </motion.div>
+                          </div>
                         );
                       })}
                     </div>
-                  </motion.div>
+                  </div>
                 </div>
               </div>
             </div>
