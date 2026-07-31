@@ -42,7 +42,7 @@ export default function ProductPage() {
 
       const formData = {
         platform: "Chicago Pneumatic Compressors Landing Page",
-        platformEmail: "sales@eutair.com",
+        platformEmail: "rishi.raj@eutair.com",
         name: form.name,
         phone: form.phone,
         email: form.email || "N/A",

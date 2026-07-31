@@ -43,7 +43,7 @@ const handleClose = () => {
 
       const formData = {
         platform: "eutair popup Form Inquiry Page",
-        platformEmail: "sales@eutair.com",
+        platformEmail: "rishi.raj@eutair.com",
         name,
         phone,
         email,

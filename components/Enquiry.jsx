@@ -91,7 +91,7 @@ export default function ContactForm({ isOpen, onClose }) {
       const { data } = await axios.post("https://brandbnalo.com/api/form/add", {
         platform: "eutair enquiry Form",
 
-        platformEmail: "sales@eutair.com",
+        platformEmail: "rishi.raj@eutair.com",
 
         name: values.name,
 

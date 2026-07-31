@@ -23,7 +23,7 @@ export default function ContactPage() {
     try {
       const formData = {
         platform: "eutair popup Form Contact Page Form",
-        platformEmail: "sales@eutair.com",
+        platformEmail: "rishi.raj@eutair.com",
         name,
         phone,
         email,

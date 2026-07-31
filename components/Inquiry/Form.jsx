@@ -44,7 +44,7 @@ export default function Form() {
 
       const formData = {
         platform: "Eutair Website Form",
-        platformEmail: "sales@eutair.com",
+        platformEmail: "rishi.raj@eutair.com",
         name: form.name,
         phone: form.mobile,
         email: form.email,
