@@ -43,7 +43,7 @@ export default function SpareConsumable() {
     { name: "Ingersoll Rand", logo: "/3.png" },
     { name: "Kaeser", logo: "/4.jpg" },
     { name: "ELGi", logo: "/5.jpg" },
-    { name: "Kirloskar", logo: "6.jfif" },
+    { name: "Kirloskar", logo: "/6.jfif" },
     { name: "CompAir", logo: "/7.jfif" },
     { name: "Gardner Denver", logo: "/8.jfif" },
     { name: "Sullair", logo: "/9.png" },
@@ -51,7 +51,7 @@ export default function SpareConsumable() {
     { name: "Doosan", logo: "/11.jfif" },
     { name: "Boge", logo: "/cp.jpeg" },
     { name: "FS Curtis", logo: "/mark.jpg" },
-    { name: "ABAC", logo: "/client/23.png" },
+    { name: "ABAC", logo: "/client/23.webp" },
   ];
 
   const products = [
