@@ -94,7 +94,7 @@ const About = () => {
         </h3>
 
         <p className="text-black leading-8 text-md md:text-lg  ">
-         Eutair Equipment is a professionally managed engineering company based in New Delhi, India, specializing <strong>in compressed air systems</strong>, including <strong>Screw Air Compressors, Air Dryers, Air Line Filters, Compressor Accessories</strong>, and turnkey engineering solutions. 
+         Eutair Equipment is a professionally managed engineering company based in New Delhi, India, specializing in <strong> <a href="/chicago-pneumatic" className="text-blue-600">compressed air systems</a></strong>, including <strong><a href="/mark-compressor" className="text-blue-600">Screw Air Compressors</a>, Air Dryers, Air Line Filters, Compressor Accessories</strong>, and <a  href="/turnkey-project" className="text-blue-600 font-bold">turnkey engineering solutions</a>. 
         </p>
 
         <p className="text-black leading-8 text-lg ">
