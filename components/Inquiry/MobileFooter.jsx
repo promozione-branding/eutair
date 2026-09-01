@@ -1,3 +1,4 @@
+
 "use client";
 
 import Link from "next/link";
@@ -10,66 +11,88 @@ export default function MobileFooter() {
 
   return (
     <>
+      {/* ================= MOBILE FOOTER ================= */}
       <div className="fixed bottom-0 left-0 right-0 z-50 md:hidden">
-        {/* soft top fade so the bar doesn't clip page content harshly */}
-        <div className="h-6 bg-gradient-to-t from-white to-transparent pointer-events-none" />
-
         <div
-          className="relative bg-white/95 backdrop-blur-xl border-t border-slate-100 shadow-[0_-8px_30px_rgba(15,23,42,0.08)]"
-          style={{ paddingBottom: "env(safe-area-inset-bottom, 0px)" }}
+          className=" bg-white shadow-[0_-8px_30px_rgba(15,23,42,0.10)]"
+          style={{
+            paddingBottom: "env(safe-area-inset-bottom, 0px)",
+          }}
         >
-          <div className="grid grid-cols-3 items-end h-18 px-2">
-            {/* Call */}
+          <div className="grid h-[72px] grid-cols-3">
 
+            {/* ================= CALL ================= */}
             <a
               href="tel:+919717159766"
-              className="group flex flex-col items-center justify-center gap-1 h-full active:scale-95 transition-transform"
+              aria-label="Call us"
+              className="group flex h-full flex-col items-center justify-center gap-1 border-r border-slate-200 text-[#155dfc] transition-all duration-200 active:bg-blue-50 active:scale-[0.98]"
             >
-              <span className="flex items-center justify-center w-9 h-9 rounded-full bg-[#155dfc]/10 group-active:bg-[#155dfc]/20 transition-colors">
+              <div className="flex h-9 w-9 items-center rounded-2xl justify-center bg-[#155dfc]/10 transition-colors duration-200 group-active:bg-[#155dfc]/20">
                 <PhoneCall
-                  className="w-[20px] h-[20px] text-[#155dfc]"
-                  strokeWidth={2.25}
+                  className="h-5 w-5 text-[#155dfc]"
+                  strokeWidth={2.2}
                 />
-              </span>
-              <span className="text-[14px] font-semibold text-slate-700 tracking-tight">
+              </div>
+
+              <span className="text-[13px] font-semibold tracking-tight text-slate-700">
                 Call
               </span>
             </a>
 
-            {/* Get Quote — raised center pill */}
-            <div className="flex flex-col items-center justify-end h-full">
-              <button
-                onClick={() => {
-                  setOpen(true);
-                }}
-                className="group -translate-y-4 flex flex-col items-center justify-center gap-0.5 w-16 h-16 rounded-full bg-gradient-to-b from-[#2b6bff] to-[#0f4fe0] text-white shadow-[0_10px_25px_rgba(21,93,252,0.45)] ring-4 ring-white active:scale-95 transition-transform"
-              >
-                <FileText className="w-5 h-5" strokeWidth={2.25} />
-                <span className="text-[14px] font-bold tracking-tight leading-none">
-                  Quote
-                </span>
-              </button>
-            </div>
+            {/* ================= GET QUOTE ================= */}
+            <button
+              type="button"
+              onClick={() => setOpen(true)}
+              aria-label="Get a quote"
+              className="group relative flex h-full flex-col items-center justify-center gap-1 overflow-hidden bg-[#155dfc] text-white transition-all duration-200 active:bg-[#0f4fe0] active:scale-[0.98]"
+            >
+              {/* Top highlight */}
+              <span className="absolute left-0 right-0 top-0 h-[2px] bg-white/30" />
 
-            {/* Inquiry */}
+              <div className="flex h-9 w-9 items-center justify-center rounded-2xl bg-white/15 transition-transform duration-200 group-active:scale-90">
+                <FileText
+                  className="h-5 w-5"
+                  strokeWidth={2.2}
+                />
+              </div>
+
+              <span className="text-[13px] font-bold tracking-tight">
+                Get Quote
+              </span>
+            </button>
+
+            {/* ================= WHATSAPP / INQUIRY ================= */}
             <Link
               href="https://wa.link/rntibs"
-              className="group flex flex-col items-center justify-center gap-1 h-full active:scale-95 transition-transform"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Send an inquiry on WhatsApp"
+              className="group flex h-full flex-col items-center justify-center gap-1 text-[#155dfc] transition-all duration-200 active:bg-blue-50 active:scale-[0.98]"
             >
-              <span className="flex items-center justify-center w-9 h-9 rounded-full bg-[#155dfc]/10 group-active:bg-[#155dfc]/20 transition-colors">
+              <div className="flex h-9 w-9 items-center rounded-2xl justify-center bg-green-500/10 transition-colors duration-200 group-active:bg-[#155dfc]/20">
                 <MessageCircleMore
-                  className="w-[20px] h-[20px] text-[#155dfc]"
-                  strokeWidth={2.25}
+                  className="h-5 w-5 text-green-500"
+                  strokeWidth={2.2}
                 />
-              </span>
-              <span className="text-[14px] font-semibold text-slate-700 tracking-tight">
-                Inquiry
+              </div>
+
+              <span className="text-[13px] font-semibold tracking-tight text-slate-700">
+                WhatsApp
               </span>
             </Link>
+
           </div>
         </div>
       </div>
-      {open && <ContactForm isOpen={open} onClose={() => setOpen(false)} />}
+
+      {/* ================= CONTACT FORM ================= */}
+      {open && (
+        <ContactForm
+          isOpen={open}
+          onClose={() => setOpen(false)}
+        />
+      )}
     </>
   );
 }
+

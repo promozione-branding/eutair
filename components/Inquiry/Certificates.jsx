@@ -48,7 +48,7 @@ export default function Certificates() {
           spaceBetween={25}
           breakpoints={{
             0: {
-              slidesPerView: 2,
+              slidesPerView: 1,
             },
             640: {
               slidesPerView: 2,
@@ -62,7 +62,7 @@ export default function Certificates() {
             <SwiperSlide key={index}>
               <div className="bg-white rounded-3xl  hover:scale-105 transition-all duration-300 overflow-hidden border border-gray-100">
 
-                <div className="relative h-60 md:h-110">
+                <div className="relative h-95 md:h-110">
                   <Image
                     src={item.image}
                     alt={item.title}

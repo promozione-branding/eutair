@@ -20,33 +20,33 @@ export default function ProductSlider() {
     {
       title: "MSS 75 - Oil-Injected Screw Compressor",
       image: "/products/MSS 75 - Oil-Injected Screw Compressor.jpg",
-      href: "/products/screw-air-compressors",
+      href: "/mark-compressor/mss-75-oil-injected-screw-compressors",
     },
     {
       title: "MSS 7.5 kW - 75 kW Variable Speed Screw Compressors",
       image:
         "/products/MSS 7.5 kW - 75 kW Variable Speed Screw Compressors.webp",
-      href: "/products/MSS 7.5 kW - 75 kW Variable Speed Screw Compressors.webp",
+      href: "/mark-compressor/mss-variable-speed-screw-compressors",
     },
     {
       title: "MDS 35 CFM - 1000 CFM Refrigerated Dryers",
       image: "/products/MDS 35 CFM - 1000 CFM Refrigerated Dryers.jpg",
-      href: "/products/air-dryers",
+      href: "/mark-compressor/mds-35-cfm-1000-cfm-refrigerated-dryers",
     },
     {
       title: "Chicago Pneumatic CFM: 81 - 187, BAR: 7 - 12, PSI: 100 – 175",
       image: "/hero1.png",
-      href: "/products/air-filters",
+      href: "/chicago-pneumatic/cfm-81-187",
     },
     {
       title: "CFM: 455 - 650, BAR: 10.5 - 14, PSI: 100 – 200",
       image: "/products/CFM455650BAR10514PSI100200.webp",
-      href: "/products/air-receivers",
+      href: "/chicago-pneumatic/cfm-455-650",
     },
     {
       title: "CFM: 1060 - 1200, BAR: 16 - 25, PSI: 232 – 355",
       image: "/products/CFM10601200BAR1625PSI232355.webp",
-      href: "/products/compressor-spares",
+      href: "/chicago-pneumatic/cfm-1060-1200",
     },
   ];
 
@@ -73,7 +73,6 @@ export default function ProductSlider() {
           <Swiper
             modules={[Autoplay, Navigation, Pagination]}
             navigation
-           
             autoplay={{
               delay: 2500,
               disableOnInteraction: false,
@@ -98,8 +97,8 @@ export default function ProductSlider() {
           >
             {products.map((item, index) => (
               <SwiperSlide key={index}>
-                <Link href="https://wa.link/rntibs">
-                <div className="group bg-white rounded-3xl border border-slate-200 overflow-hidden  hover:scale-105  transition duration-500">
+                <Link href={item.href}>
+                  <div className="group bg-white rounded-3xl border border-slate-200 overflow-hidden  hover:scale-105  transition duration-500">
                     <div className="relative h-56 bg-white md:p-6">
                       <Image
                         src={item.image}
@@ -115,19 +114,19 @@ export default function ProductSlider() {
                       </h3>
                     </div>
 
-                  <div className="p-3 md:p-6 pt-0 md:mt-2">
-                   <button
-  onClick={(e) => {
-    e.preventDefault();    // Prevent Link navigation
-    e.stopPropagation();   // Stop event bubbling
-    setOpen(true);
-  }}
-  className="w-full rounded-lg border-2 text-sm md:text-base border-blue-600 text-blue-600 font-semibold py-3 hover:bg-blue-600 hover:text-white transition"
->
-  REQUEST PRICE
-</button>
+                    <div className="p-3 md:p-6 pt-0 md:mt-2">
+                      <button
+                        onClick={(e) => {
+                          e.preventDefault(); // Prevent Link navigation
+                          e.stopPropagation(); // Stop event bubbling
+                          setOpen(true);
+                        }}
+                        className="w-full rounded-lg border-2 text-sm md:text-base border-blue-600 text-blue-600 font-semibold py-3 hover:bg-blue-600 hover:text-white transition"
+                      >
+                        REQUEST PRICE
+                      </button>
+                    </div>
                   </div>
-                </div>
                 </Link>
               </SwiperSlide>
             ))}
@@ -136,7 +135,7 @@ export default function ProductSlider() {
           {/* Button */}
           <div className="text-center mt-4 md:mt-12">
             <Link
-              href="https://wa.link/rntibs"
+              href="/mark-compressor"
               className="inline-flex items-center gap-3 rounded-xl bg-blue-600 px-8 py-4 text-white font-semibold hover:bg-blue-700 transition"
             >
               VIEW ALL PRODUCTS

@@ -1,15 +1,7 @@
+
 "use client";
 
-import {
-  Car,
-  Pill,
-  CupSoda,
-  Package,
-  Factory,
-  Shirt,
-  Cpu,
-  HardHat,
-} from "lucide-react";
+import Image from "next/image";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Autoplay } from "swiper/modules";
@@ -19,49 +11,60 @@ import "swiper/css/pagination";
 
 const industries = [
   {
-    icon: Car,
+    image: "/industries/automobile.webp",
     title: "Automobile",
   },
   {
-    icon: Pill,
+    image: "/industries/pharma.jpg",
     title: "Pharma",
   },
   {
-    icon: CupSoda,
+    image: "/industries/bev.jpg",
     title: "Beverage",
   },
   {
-    icon: Package,
+    image: "/industries/packing.jpg",
     title: "Packaging",
   },
   {
-    icon: Factory,
+    image: "/industries/steel.jpg",
     title: "Steel",
   },
   {
-    icon: Shirt,
+    image: "/industries/textile.jpg",
     title: "Textile",
   },
   {
-    icon: Cpu,
+    image: "/industries/electronic.jpg",
     title: "Electronics",
   },
   {
-    icon: HardHat,
+    image: "/industries/manu.webp",
     title: "Manufacturing",
   },
 ];
 
 const IndustryCard = ({ item }) => {
-  const Icon = item.icon;
-
   return (
-    <div className="group flex flex-col items-center text-center py-2">
-      <div className="w-20 h-20 rounded-full border border-blue-100 bg-blue-50 flex items-center justify-center transition-all duration-300 group-hover:bg-blue-600">
-        <Icon className="w-10 h-10 text-blue-600 group-hover:text-white transition-colors duration-300" />
+    <div className="group flex flex-col items-center py-2 text-center">
+
+      {/* Image */}
+      <div className="relative flex h-20 w-20 items-center justify-center overflow-hidden rounded-full border border-blue-100 bg-blue-50 transition-all duration-300 group-hover:scale-105 group-hover:border-blue-600 group-hover:bg-blue-600 md:h-24 md:w-24">
+
+        <Image
+          src={item.image}
+          alt={`${item.title} industry`}
+          width={96}
+          height={96}
+          className="h-full w-full object-cover transition-all duration-300 group-hover:scale-110"
+        />
+
+        {/* Blue Hover Overlay */}
+        <div className="absolute inset-0 rounded-full bg-blue-600/0 transition-all duration-300 group-hover:bg-blue-600/20" />
       </div>
 
-      <h3 className="mt-4 text-sm md:text-lg font-semibold text-gray-800 leading-5">
+      {/* Title */}
+      <h3 className="mt-4 text-sm font-semibold leading-5 text-gray-800 transition-colors duration-300 group-hover:text-blue-600 md:text-lg">
         {item.title}
       </h3>
     </div>
@@ -70,25 +73,31 @@ const IndustryCard = ({ item }) => {
 
 export default function Industries() {
   return (
-    <section className="py-6 md:py-12 bg-white overflow-hidden">
-      <div className="max-w-7xl mx-auto px-4">
-        {/* Heading */}
-        <div className="flex items-center justify-center gap-4 mb-5 md:mb-10">
-          <div className="w-12 md:w-20 h-1 bg-blue-600 rounded-full"></div>
+    <section className="overflow-hidden bg-white py-6 md:py-12">
+      <div className="mx-auto max-w-7xl px-4">
 
-          <h2 className="text-2xl md:text-4xl font-extrabold uppercase text-center">
-            Industries <span className="text-blue-600">We Serve</span>
+        {/* ================= HEADING ================= */}
+        <div className="mb-5 flex items-center justify-center gap-4 md:mb-10">
+
+          <div className="h-1 w-12 rounded-full bg-blue-600 md:w-20" />
+
+          <h2 className="text-center text-2xl font-extrabold uppercase md:text-4xl">
+            Industries{" "}
+            <span className="text-blue-600">
+              We Serve
+            </span>
           </h2>
 
-          <div className="w-12 md:w-20 h-1 bg-blue-600 rounded-full"></div>
+          <div className="h-1 w-12 rounded-full bg-blue-600 md:w-20" />
+
         </div>
 
-        {/* Mobile Slider */}
+        {/* ================= MOBILE SLIDER ================= */}
         <div className="lg:hidden">
           <Swiper
             modules={[Pagination, Autoplay]}
             spaceBetween={16}
-            slidesPerView={2.2}
+            slidesPerView={2}
             loop
             autoplay={{
               delay: 2500,
@@ -96,10 +105,10 @@ export default function Industries() {
             }}
             breakpoints={{
               0: {
-              slidesPerView: 2,
-            },
+                slidesPerView: 3,
+              },
               480: {
-                slidesPerView: 2,
+                slidesPerView: 3,
               },
               640: {
                 slidesPerView: 3.5,
@@ -108,6 +117,7 @@ export default function Industries() {
                 slidesPerView: 4,
               },
             }}
+           
             className="pb-10"
           >
             {industries.map((item, index) => (
@@ -118,13 +128,15 @@ export default function Industries() {
           </Swiper>
         </div>
 
-        {/* Desktop Grid */}
-        <div className="hidden lg:grid grid-cols-8 gap-8">
+        {/* ================= DESKTOP GRID ================= */}
+        <div className="hidden grid-cols-8 gap-8 lg:grid">
           {industries.map((item, index) => (
             <IndustryCard key={index} item={item} />
           ))}
         </div>
+
       </div>
     </section>
   );
 }
+
