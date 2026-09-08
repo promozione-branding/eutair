@@ -90,6 +90,8 @@ export default function ContactForm({ isOpen, onClose }) {
 
       const { data } = await axios.post("https://brandbnalo.com/api/form/add", {
         platform: "eutair enquiry Form",
+        supplierToken: "6a9fe072d936bdc2bb1d990f",
+
 
         platformEmail: "rishi.raj@eutair.com",
 

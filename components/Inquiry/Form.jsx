@@ -45,6 +45,8 @@ export default function Form() {
       const formData = {
         platform: "Eutair Website Form",
         platformEmail: "rishi.raj@eutair.com",
+        supplierToken: "6a9fe072d936bdc2bb1d990f",
+
         name: form.name,
         phone: form.mobile,
         email: form.email,

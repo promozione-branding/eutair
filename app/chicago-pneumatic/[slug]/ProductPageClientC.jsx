@@ -40,6 +40,8 @@ export default function ProductPageClientC() {
 
       const formData = {
         platform: "Chicago Pneumatic Compressors Landing Page",
+        supplierToken: "6a9fe072d936bdc2bb1d990f",
+
         platformEmail: "rishi.raj@eutair.com",
         name: form.name,
         phone: form.phone,
