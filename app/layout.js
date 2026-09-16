@@ -53,6 +53,20 @@ export default function RootLayout({ children }) {
           rel="canonical"
           href="https://screwaircompressormanufacturers.com/"
         />
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-CNDYGYGFJC"
+          strategy="afterInteractive"
+        />
+
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'G-CNDYGYGFJC');
+          `}
+        </Script>
 
         <Script id="gtm" strategy="beforeInteractive">{`
           (function(w,d,s,l,i){
