@@ -87,7 +87,7 @@ export default function AirSystemSolution() {
           Our Specialization
         </p>
 
-        <h2
+        <h1
           className="
             text-center
             font-bold
@@ -104,7 +104,7 @@ export default function AirSystemSolution() {
         >
        
         Complete Screw Air Compressors & Industrial Solutions
-        </h2>
+        </h1>
 
         <div className="grid lg:grid-cols-2  md:gap-12 items-center">
 
@@ -118,7 +118,7 @@ export default function AirSystemSolution() {
           <div className="">
             <Image
               src="/why.jpeg"
-              alt="Why Choose Eutair"
+              alt="Mark Compressor & Chicago Pneumatic Supplier"
               width={800}
               height={800}
               className="

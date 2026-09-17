@@ -95,7 +95,7 @@ const [isOpen, setOpen] = useState(false);
             src="/mark-compressor.webp"
             width={900}
             height={1000}
-            alt="Industrial Solutions"
+            alt="Mark Compressor Supplier"
             className="w-full h-[300px] md:h-[550px] object-fill "
           />
         </div>

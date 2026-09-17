@@ -24,10 +24,7 @@ import Cta from "@/components/Landingpage/Cta";
 import Otherproduct from "@/components/Landingpage/Otherpro";
 import FAQ from "@/components/city/FAQ";
 
-const Location = ({city}) => {
-  
-  
-
+const Location = ({ city }) => {
   return (
     <>
       {/* Hero */}
@@ -43,7 +40,7 @@ const Location = ({city}) => {
           <div className="absolute inset-0 bg-gray-900/60" />
 
           <h1 className="text-center font-serif leading-snug relative font-bold text-white text-2xl px-5 md:py-20 capitalize md:text-6xl">
-            Screw Air Compressor in  <span className="capitalize">{city}</span>
+            Screw Air Compressor in <span className="capitalize">{city}</span>
           </h1>
         </section>
       </div>
@@ -54,7 +51,9 @@ const Location = ({city}) => {
           <div className="text-center mb-5 md:mb-10">
             <h1 className="mt-4 text-3xl md:text-5xl font-bold text-slate-900 leading-tight">
               Screw Air Compressor{" "}
-              <span className="text-blue-600">in  <span className="capitalize">{city}</span></span>
+              <span className="text-blue-600">
+                in <span className="capitalize">{city}</span>
+              </span>
             </h1>
 
             <div className="mx-auto mt-5 h-1 w-24 rounded-full bg-blue-600"></div>
@@ -66,10 +65,14 @@ const Location = ({city}) => {
             <div>
               <p className="md:text-lg  text-black mb-6">
                 Looking for a high-performance{" "}
-                <strong>Screw Air Compressor in  <span className="capitalize">{city}</span></strong>? EutAir is a
-                trusted supplier of premium-quality screw air compressors
-                designed to deliver consistent airflow, energy efficiency, and
-                long-lasting performance for industrial applications.
+                <strong>
+                  Screw Air Compressor in{" "}
+                  <span className="capitalize">{city}</span>
+                </strong>
+                ? EutAir is a trusted supplier of premium-quality screw air
+                compressors designed to deliver consistent airflow, energy
+                efficiency, and long-lasting performance for industrial
+                applications.
               </p>
 
               <p className="md:text-lg  text-black mb-6">
@@ -87,7 +90,8 @@ const Location = ({city}) => {
                 improve productivity, and minimize maintenance. Our commitment
                 to superior quality, prompt service, and customer satisfaction
                 has made EutAir one of the preferred suppliers of screw air
-                compressors across  <span className="capitalize">{city}</span> and surrounding regions.
+                compressors across <span className="capitalize">{city}</span>{" "}
+                and surrounding regions.
               </p>
             </div>
 
@@ -213,25 +217,26 @@ const Location = ({city}) => {
           <div className="w-full">
             <img
               src="/products/Hydraulic Power Packs.webp"
-              alt="Euair "
+              alt="Chicago Pneumatic "
               className="w-full h-102 object-cover rounded-2xl "
             />
           </div>
 
           <div>
             <h2 className="text-3xl md:text-[42px] font-bold mb-5">
-              Why Industries in <span className="capitalize">{city} </span>Trust EutAir ?
+              Why Industries in <span className="capitalize">{city} </span>Trust
+              EutAir ?
             </h2>
 
             <p className="text-black mb-6 md:leading-relaxed md:  text-lg">
-                <span className="capitalize">{city}</span> is one of India’s biggest industrial and commercial hubs,
-              where steady compressed air really matters in day-to-day
-              production processes. At EutAir we support factories with reliable
-              compressor systems, technical know-how and a pretty fast customer
-              service response . Our seasoned crew will help you figure out the
-              best compressor for your setup, based on airflow needs, required
-              pressure, how many hours it runs, and also energy consumption
-              goals.
+              <span className="capitalize">{city}</span> is one of India’s
+              biggest industrial and commercial hubs, where steady compressed
+              air really matters in day-to-day production processes. At EutAir
+              we support factories with reliable compressor systems, technical
+              know-how and a pretty fast customer service response . Our
+              seasoned crew will help you figure out the best compressor for
+              your setup, based on airflow needs, required pressure, how many
+              hours it runs, and also energy consumption goals.
             </p>
 
             <Link

@@ -262,7 +262,7 @@ export default function HeroSlider() {
                       {slide.tagline}
                     </span>
 
-                    <h1
+                    <h2
                       className="
   mt-4
   text-white
@@ -279,7 +279,7 @@ export default function HeroSlider() {
 "
                     >
                       {slide.title}
-                    </h1>
+                    </h2>
 
                     <p
                       className="
