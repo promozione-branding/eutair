@@ -20,25 +20,25 @@ export default function Category() {
   const products = [
     {
       title: "Chicago Pneumatic",
-      image: "/hero1.png",
+      image: "/hero1.webp",
       link: "/chicago-pneumatic",
       desc: "Industry-proven compressed air systems delivering superior efficiency, durability, and productivity for modern industrial operations.",
     },
     {
       title: "MARK Compressors",
-      image: "/hero2.png",
+      image: "/hero22.webp",
       link: "/mark-compressor",
       desc: "Innovative compressor solutions combining energy savings, operational reliability, and long-term performance excellence.",
     },
     {
       title: "Air Treatment",
-      image: "/hero3.png",
+      image: "/hero3.webp",
       link: "/inquiry",
       desc: "Comprehensive air purification solutions ensuring clean, dry, and contaminant-free compressed air for sensitive applications.",
     },
     {
       title: "Spares and Consumables",
-      image: "/pro3.png",
+      image: "/pro33.webp",
       link: "/inquiry",
       desc: "Premium-quality genuine parts and consumables designed to maintain peak compressor performance and reduce downtime.",
     },

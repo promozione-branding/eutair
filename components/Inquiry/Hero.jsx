@@ -21,7 +21,7 @@ import ContactForm from "./PopupForm";
 const slides = [
   {
     bg: "/bghero1.webp",
-    machine: "/hero1.png",
+    machine: "/hero1.webp",
 
     tagline: "PORTABLE HIGH PERFORMANCE",
 
@@ -72,7 +72,7 @@ const slides = [
 
   {
     bg: "/herobg2.webp",
-    machine: "/hero2.png",
+    machine: "/hero22.webp",
 
     tagline: "INDUSTRIAL COMPRESSED AIR",
 

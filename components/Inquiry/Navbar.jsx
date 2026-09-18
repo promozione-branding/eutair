@@ -4,17 +4,16 @@ import {
   Phone,
   Mail,
   Building2,
+ 
+  MapPin,
   Linkedin,
   Facebook,
   Instagram,
   Youtube,
-  MapPin,
 } from "lucide-react";
 import Image from "next/image";
-import { ChevronDown, ArrowRight } from "lucide-react";
 import { FaWhatsapp } from "react-icons/fa";
 import { useState } from "react";
-import Enquiry from "@/components/Enquiry";
 import { Menu, X } from "lucide-react";
 import ContactForm from "./PopupForm";
 
@@ -22,42 +21,8 @@ export default function Navbar() {
   const [mobileMenu, setMobileMenu] = useState(false);
   const [open, setOpen] = useState(false);
 
-  const [productMenu, setProductMenu] = useState(false);
-  const [servicesMenu, setServicesMenu] = useState(false);
 
-  const services = [
-    {
-      title: "AMC Service",
-      href: "",
-    },
-    {
-      title: "Air Audit Services",
-      href: "",
-    },
-    {
-      title: "Engineering Consultancy",
-      href: "",
-    },
-    {
-      title: "Wastewater Engineering",
-      href: "",
-    },
-    {
-      title: "Turnkey Project",
-      href: "",
-    },
-  ];
-
-  const products = [
-    {
-      title: "Mark Compressors",
-      href: "",
-    },
-    {
-      title: "Chicago Pneumatic",
-      href: "",
-    },
-  ];
+ 
 
   return (
     <>
@@ -151,7 +116,9 @@ export default function Navbar() {
           <div className="h-16 sm:h-20 lg:h-19 flex items-center justify-between">
             {/* Logo */}
             <Link href="" className="group">
-              <img
+              <Image
+              height={100}
+              width={100}
                 src="/logo.png"
                 alt="EutAir"
                 className="h-10 lg:h-16 w-auto transition-transform duration-500 group-hover:scale-[1.03] object-contain"
