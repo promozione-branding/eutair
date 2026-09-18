@@ -99,7 +99,11 @@ export default function ProductSlider() {
           >
             {products.map((item, index) => (
               <SwiperSlide key={index}>
-                <Link href={item.href}>
+                <div  onClick={(e) => {
+                          e.preventDefault(); // Prevent Link navigation
+                          e.stopPropagation(); // Stop event bubbling
+                          setOpen(true);
+                        }}>
                   <div className="group bg-white rounded-3xl border border-slate-200 overflow-hidden  hover:scale-105  transition duration-500">
                     <div className="relative h-56 bg-white md:p-6">
                       <Image
@@ -118,18 +122,14 @@ export default function ProductSlider() {
 
                     <div className="p-3 md:p-6 pt-0 md:mt-2">
                       <button
-                        onClick={(e) => {
-                          e.preventDefault(); // Prevent Link navigation
-                          e.stopPropagation(); // Stop event bubbling
-                          setOpen(true);
-                        }}
+                       
                         className="w-full rounded-lg border-2 text-sm md:text-base border-blue-600 text-blue-600 font-semibold py-3 hover:bg-blue-600 hover:text-white transition"
                       >
                         REQUEST PRICE
                       </button>
                     </div>
                   </div>
-                </Link>
+                </div>
               </SwiperSlide>
             ))}
           </Swiper>
