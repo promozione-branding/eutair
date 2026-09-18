@@ -81,7 +81,7 @@ export default function Industries() {
 
           <div className="h-1 w-12 rounded-full bg-blue-600 md:w-20" />
 
-          <h2 className="text-center text-2xl font-extrabold uppercase md:text-4xl">
+          <h2 className="text-center text-3xl font-extrabold uppercase md:text-4xl">
             Industries{" "}
             <span className="text-blue-600">
               We Serve

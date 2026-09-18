@@ -41,7 +41,7 @@ export default function Testimonials() {
 
   return (
     <>
-      <section className="py-8 md:py-15 bg-slate-50 overflow-hidden">
+      <section className="py-6 md:py-12 bg-slate-50 overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-20 items-center">
             {/* Left Content */}
@@ -81,7 +81,7 @@ export default function Testimonials() {
                       </div>
 
                       {/* Review */}
-                      <p className="text-base md:text-lg text-slate-600 leading-7 md:leading-8 italic">
+                      <p className="text-base md:text-lg text-slate-600  md:leading-8 italic">
                         "{item.review}"
                       </p>
 

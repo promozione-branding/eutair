@@ -52,81 +52,73 @@ export default function Inquiry() {
     </div>
 
     {/* Stats */}
-    <div className="grid md:grid-cols-2 xl:grid-cols-4 gap-4 md:gap-8">
+    <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8">
+  {[
+    {
+      number: "500+",
+      label: "Projects Delivered",
+    },
+    {
+      number: "300+",
+      label: "Industrial Clients",
+    },
+    {
+      number: "20+",
+      label: "Product Categories",
+    },
+    {
+      number: "24/7",
+      label: "Customer Support",
+    },
+  ].map((item, index) => (
+    <div
+      key={index}
+      className="
+        group
+        relative
+        overflow-hidden
+        rounded-[32px]
+        bg-white/5
+        backdrop-blur-xl
+        border
+        border-white/10
+        p-5
+        md:p-8
+        text-center
+        transition-all
+        duration-500
+        hover:-translate-y-3
+        hover:border-sky-400/40
+        hover:bg-white/10
+      "
+    >
+      {/* Top Glow Line */}
+      <div className="absolute top-0 left-0 h-1 w-full bg-gradient-to-r from-sky-400 via-cyan-400 to-blue-500" />
 
-      {[
-        {
-          number: "500+",
-          label: "Projects Delivered",
-       
-        },
-        {
-          number: "300+",
-          label: "Industrial Clients",
-        
-        },
-        {
-          number: "20+",
-          label: "Product Categories",
-      
-        },
-        {
-          number: "24/7",
-          label: "Customer Support",
-        
-        },
-      ].map((item, index) => (
-        <div
-          key={index}
-          className="
-            group
-            relative
-            overflow-hidden
-            rounded-[32px]
-            bg-white/5
-            backdrop-blur-xl
-            border
-            border-white/10
-            p-5
-            md:p-8
-            text-center
-            transition-all
-            duration-500
-            hover:-translate-y-3
-            hover:border-sky-400/40
-            hover:bg-white/10
-          "
-        >
-          {/* Top Glow Line */}
-          <div className="absolute top-0 left-0 h-1 w-full bg-gradient-to-r from-sky-400 via-cyan-400 to-blue-500" />
+      {/* Number */}
+      <h3
+        className="
+          text-4xl
+          md:text-6xl
+          font-black
+          bg-gradient-to-r
+          from-sky-300
+          via-cyan-300
+          to-white
+          bg-clip-text
+          text-white
+        "
+      >
+        {item.number}
+      </h3>
 
-       
-
-          {/* Number */}
-          <h3
-            className="
-              text-4xl
-              md:text-6xl
-              font-black
-              bg-gradient-to-r
-              from-sky-300
-              via-cyan-300
-              to-white
-              bg-clip-text
-              text-white
-            "
-          >
-            {item.number}
-          </h3>
-
-          {/* Label */}
-          <p className="mt-4 text-lg text-slate-300 font-medium">
-            {item.label}
-          </p>
-        </div>
-      ))}
-
+      {/* Label */}
+      <p className="mt-4 text-lg text-slate-300 font-medium">
+        {item.label}
+      </p>
     </div>
+  ))}
+</div>
 
   </div>
   </div>

@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Phone } from "lucide-react";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Navigation, Pagination } from "swiper/modules";
@@ -12,6 +12,7 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import ContactForm from "./PopupForm";
 import { useState } from "react";
+import { FaWhatsapp } from "react-icons/fa";
 
 export default function Category() {
   const [open, setOpen] = useState(false);
@@ -58,7 +59,7 @@ export default function Category() {
             <div className="flex items-center justify-center gap-5 mb-4">
               <div className="h-[2px] w-16 bg-blue-600 rounded-full" />
               <h2 className="text-3xl lg:text-5xl font-bold uppercase">
-                Our <span className="text-blue-600">Category</span> Range
+                Our <span className="text-blue-600">Category</span>
               </h2>
               <div className="h-[2px] w-16 bg-blue-600 rounded-full" />
             </div>
@@ -127,15 +128,40 @@ export default function Category() {
           </Swiper>
 
           {/* Button */}
-          <div className="text-center mt-12">
-            <button
-              onClick={() => setOpen(true)}
-              className="inline-flex items-center gap-3 rounded-xl bg-blue-600 px-8 py-4 text-white font-semibold hover:bg-blue-700 transition"
-            >
-              GET A QUOTE
-              <ArrowRight size={20} />
-            </button>
-          </div>
+         <div className="text-center mt-12">
+  <div className="flex flex-row items-center justify-center gap-3 sm:gap-4">
+
+    {/* Call */}
+    <a
+      href="tel:+919717159766"
+      aria-label="Call Now"
+      className="w-12 h-12 sm:w-14 sm:h-14 inline-flex items-center justify-center rounded-full bg-red-500 text-white hover:bg-red-600 transition shrink-0"
+    >
+      <Phone size={24} />
+    </a>
+
+    {/* Get A Quote */}
+    <button
+      onClick={() => setOpen(true)}
+      className="inline-flex items-center justify-center gap-2 sm:gap-3 rounded-xl bg-blue-600 px-5 sm:px-8 py-3 sm:py-4 text-white font-semibold hover:bg-blue-700 transition whitespace-nowrap"
+    >
+      GET A QUOTE
+      <ArrowRight size={20} />
+    </button>
+
+    {/* WhatsApp */}
+    <a
+       href="https://wa.link/rntibs"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="WhatsApp"
+      className="w-12 h-12 sm:w-14 sm:h-14 inline-flex items-center justify-center rounded-full bg-[#25D366] text-white hover:bg-[#1ebe5d] transition shrink-0"
+    >
+      <FaWhatsapp size={28} />
+    </a>
+
+  </div>
+</div>
         </div>
       </section>
 

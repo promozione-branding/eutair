@@ -1,12 +1,11 @@
 "use client";
 
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay } from "swiper/modules";
+import { useState } from "react";
 import Image from "next/image";
-import Link from "next/link";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay, EffectFade } from "swiper/modules";
 import {
   ArrowRight,
-  Download,
   Zap,
   Shield,
   Volume2,
@@ -15,11 +14,9 @@ import {
 } from "lucide-react";
 
 import "swiper/css";
-import "swiper/css/pagination";
 import "swiper/css/effect-fade";
-import Form from "./Form";
+
 import ContactForm from "./PopupForm";
-import { useState } from "react";
 
 const slides = [
   {
@@ -30,10 +27,11 @@ const slides = [
 
     title: "CHICAGO PNEUMATIC",
 
-    pdf: "/pdf/DiselEutair.pdf",
-
     description:
       "Energy efficient, low maintenance and reliable air solutions for every industry.",
+
+    logo: "/chicago-pneumatic-logo.png",
+    logoAlt: "Chicago Pneumatic",
 
     features: [
       {
@@ -79,10 +77,12 @@ const slides = [
     tagline: "INDUSTRIAL COMPRESSED AIR",
 
     title: "MARK COMPRESSORS",
-    pdf: "/pdf/mark.pdf",
 
     description:
-      "Designed for manufacturing, engineering, automotive, food processing, pharmaceuticals, textiles, and every industry that demands .",
+      "Designed for manufacturing, engineering, automotive, food processing, pharmaceuticals, textiles, and every industry that demands reliable compressed air.",
+
+    logo: "/mark-compressors-logo.png",
+    logoAlt: "Mark Compressors",
 
     features: [
       {
@@ -120,358 +120,456 @@ const slides = [
       "Energy Saving",
     ],
   },
-
-  //   {
-  //     bg: "/bghero1.webp",
-  //     machine: "/hero3.png",
-
-  //     tagline: "CLEAN & DRY COMPRESSED AIR",
-
-  //     title: "AIR TREATMENT",
-
-  //     pdf:"/pdf/airTreatment.pdf",
-
-  //     description:
-  //       "Designed to remove moisture, oil, and contaminants from compressed air systems, ensuring reliable operation, improved product quality, and longer equipment life.",
-
-  //     features: [
-  //       {
-  //         icon: Zap,
-  //         title: "Pure Compressed",
-  //         desc: "Air",
-  //       },
-  //       {
-  //         icon: Cog,
-  //         title: "Advanced Air",
-  //         desc: "Filtration",
-  //       },
-  //       {
-  //         icon: Shield,
-  //         title: "High Moisture",
-  //         desc: "Removal",
-  //       },
-  //       {
-  //         icon: BadgeCheck,
-  //         title: "Corrosion",
-  //         desc: "Protection",
-  //       },
-  //       {
-  //         icon: Volume2,
-  //         title: "Low Operating",
-  //         desc: "Cost",
-  //       },
-  //     ],
-
-  //     benefits: [
-  //       "Energy Savings",
-  //       "Pressure Stability",
-  //       "Smart Monitoring",
-  //       "Reduced Wear",
-  //       "Longer Life",
-  //     ],
-  //   },
 ];
+
 export default function HeroSlider() {
   const [open, setOpen] = useState(false);
 
   return (
     <>
-      {" "}
-      <section className="relative h-[600px] lg:h-[670px] w-full overflow-hidden">
+      <section
+        className="
+          relative
+          w-full
+          h-[550px]
+          lg:h-[680px]
+          overflow-hidden
+          bg-[#001938]
+        "
+      >
         <Swiper
-          modules={[Autoplay]}
+          modules={[Autoplay, EffectFade]}
           effect="fade"
+          fadeEffect={{
+            crossFade: true,
+          }}
           autoplay={{
             delay: 5000,
             disableOnInteraction: false,
+            pauseOnMouseEnter: true,
           }}
-         
-          loop
+          loop={true}
+          speed={700}
           className="h-full"
         >
           {slides.map((slide, index) => (
-            <SwiperSlide key={index}>
-              <div className="relative min-h-[700px] lg:h-[680px]">
-                {/* Background */}
+            <SwiperSlide key={slide.title}>
+              <div className="relative h-full w-full">
+                {/* ================================================= */}
+                {/* BACKGROUND */}
+                {/* ================================================= */}
+
                 <Image
                   src={slide.bg}
                   alt=""
                   fill
+                  priority={index === 0}
+                  quality={index === 0 ? 80 : 70}
                   sizes="100vw"
-                  className="absolute inset-0 h-full w-full object-cover"
+                  className="object-cover object-center"
                 />
 
-                {/* Blue Gradient */}
-                <div className="absolute inset-0 bg-gradient-to-r from-[#001938]/90 via-[#001938]/55 to-transparent" />
+                {/* ================================================= */}
+                {/* BLUE OVERLAY */}
+                {/* ================================================= */}
 
-                {/* Content */}
-                <div className="relative z-10 w-full max-w-[1600px] mx-auto h-full px-4 sm:px-6 lg:px-12">
+                <div
+                  className="
+                    absolute
+                    inset-0
+                    bg-gradient-to-r
+                    from-[#001938]/95
+                    via-[#001938]/65
+                    to-[#001938]/10
+                  "
+                />
+
+                {/* ================================================= */}
+                {/* MAIN CONTAINER */}
+                {/* ================================================= */}
+
+                <div
+                  className="
+                    relative
+                    z-10
+                    h-full
+                    w-full
+                    max-w-[1600px]
+                    mx-auto
+                    px-4
+                    sm:px-6
+                    lg:px-12
+                  "
+                >
                   <div
                     className="
-    grid
-    lg:grid-cols-2
-    
-    lg:gap-6
-    items-center
-    h-full
-    pt-5
-    md:pt-10
-    lg:py-0
-  "
+                      grid
+                      h-full
+                      grid-rows-[35%_45%_20%]
+                      lg:grid-rows-none
+                      lg:grid-cols-2
+                      lg:gap-4
+                      items-center
+                    "
                   >
-                    {/* LEFT */}
+                    {/* ================================================= */}
+                    {/* LEFT CONTENT */}
+                    {/* ================================================= */}
+
                     <div
-                      initial={{ opacity: 0, y: 100 }}
-animate={{ opacity: 1, y: 0 }}
-transition={{ duration: 1 }}
                       className="
-  max-w-[620px]
-  text-center
-  lg:text-left
-  mx-auto
-  lg:mx-0
-"
+                        max-w-[620px]
+                        w-full
+                        h-full
+                        flex
+                        flex-col
+                        justify-center
+                        text-center
+                        lg:text-left
+                        mx-auto
+                        lg:mx-0
+                        pt-1
+                        lg:pt-0
+                      "
                     >
+                      {/* TAGLINE */}
+
                       <span
                         className="
-  text-white/90
-  text-xs
-  sm:text-sm
-  md:text-base
-  lg:text-[18px]
-  font-semibold
-  tracking-[0.2em]
-  uppercase
-"
+                          text-white/90
+                          text-xs
+                          sm:text-sm
+                          md:text-base
+                          lg:text-[18px]
+                          font-semibold
+                          tracking-[0.18em]
+                          uppercase
+                        "
                       >
                         {slide.tagline}
                       </span>
 
+                      {/* TITLE */}
+
                       <h1
                         className="
-  mt-4
-  text-white
-  text-[34px]
-  sm:text-[44px]
-  md:text-[58px]
-  lg:text-[70px]
-  tracking-[-0.04em]
-  leading-[1]
-  font-black
-  uppercase
-  whitespace-pre-line
-  drop-shadow-[0_10px_40px_rgba(255,255,255,.15)]
-"
+                          mt-2
+                          lg:mt-4
+                          text-white
+                          text-[30px]
+                          sm:text-[44px]
+                          md:text-[56px]
+                          lg:text-[70px]
+                          tracking-[-0.04em]
+                          leading-[0.98]
+                          font-black
+                          uppercase
+                          drop-shadow-[0_10px_40px_rgba(255,255,255,.15)]
+                        "
                       >
                         {slide.title}
                       </h1>
 
+                      {/* DESCRIPTION */}
+
                       <p
                         className="
-  mt-4
-  text-white/80
-  text-sm
-  sm:text-base
-  md:text-lg
-  lg:text-[20px]
-  leading-relaxed
-"
+                          mt-2
+                          lg:mt-4
+                          text-white/80
+                          text-xs
+                          sm:text-base
+                          md:text-lg
+                          lg:text-[19px]
+                          leading-relaxed
+                          max-w-[600px]
+                          mx-auto
+                          lg:mx-0
+                        "
                       >
                         {slide.description}
                       </p>
 
+                      {/* ================================================= */}
+                      {/* BRAND LOGO */}
+                      {/* ================================================= */}
+
                       <div
                         className="
-    flex
-    flex-wrap
-    justify-center
-    lg:justify-start
-    items-center
-    gap-3
-    sm:gap-5
-    mt-6
-  "
+                          flex
+                          justify-center
+                          lg:justify-start
+                          items-center
+                          mt-3
+                          sm:mt-5
+                          lg:mt-6
+                        "
                       >
-                        {/* Mark Compressors */}
                         <div
                           className="
-      flex items-center justify-center
-      px-5 py-3
-      bg-white/90 backdrop-blur-md
-      border border-white/60
-      rounded-full
-      shadow-[0_8px_25px_rgba(0,0,0,0.15)]
-     
-    "
+                            flex
+                            items-center
+                            justify-center
+                            px-4
+                            py-2
+                            sm:px-5
+                            sm:py-3
+                            bg-white/90
+                            backdrop-blur-md
+                            border
+                            border-white/60
+                            rounded-full
+                            shadow-[0_8px_25px_rgba(0,0,0,0.15)]
+                          "
                         >
                           <Image
-                            src="/mark-compressors-logo.png"
-                            alt="Mark Compressors"
+                            src={slide.logo}
+                            alt={slide.logoAlt}
                             width={110}
-                            height={60}
-                            className="object-contain"
-                          />
-                        </div>
-
-                        {/* Chicago Pneumatic */}
-                        <div
-                          className="
-      flex items-center justify-center
-      px-5 py-3
-      bg-white/90 backdrop-blur-md
-      border border-white/60
-      rounded-full
-      shadow-[0_8px_25px_rgba(0,0,0,0.15)]
-      
-    "
-                        >
-                          <Image
-                            src="/chicago-pneumatic-logo.png"
-                            alt="Chicago Pneumatic"
-                            width={100}
-                            height={60}
+                            height={50}
+                            sizes="110px"
                             className="object-contain"
                           />
                         </div>
                       </div>
 
+                      {/* ================================================= */}
+                      {/* DESKTOP CTA */}
+                      {/* ================================================= */}
+
                       <div
                         className="
-    flex
-    flex-col
-    sm:flex-row
-    justify-center
-    lg:justify-start
-    gap-4
-    mt-7
-  "
+                          hidden
+                          md:flex
+                          flex-wrap
+                          justify-center
+                          lg:justify-start
+                          gap-4
+                          mt-7
+                        "
                       >
-                        <div className="hidden md:block">
-                          <button
-                            onClick={() => {
-                              setOpen(true);
-                            }}
-                            className="text-center
-      group
-      relative
-      overflow-hidden
-      h-[62px]
-      px-8
-      rounded-xl
-      bg-gradient-to-r
-      from-[#0A63FF]
-      to-[#1D8FFF]
-      shadow-[0_15px_40px_rgba(10,99,255,.35)]
-      hover:shadow-[0_20px_60px_rgba(10,99,255,.5)]
-      transition-all
-      duration-500
-      hover:-translate-y-1
-    "
-                          >
-                            <span className="relative z-10 flex items-center gap-3 text-white font-semibold">
-                              GET INSTANT QUOTE
-                              <ArrowRight
-                                size={18}
-                                className=""
-                              />
-                            </span>
+                        {/* GET QUOTE */}
 
-                            <div
+                        <button
+                          type="button"
+                          onClick={() => setOpen(true)}
+                          className="
+                            group
+                            relative
+                            overflow-hidden
+                            inline-flex
+                            items-center
+                            justify-center
+                            h-[58px]
+                            px-7
+                            rounded-xl
+                            bg-gradient-to-r
+                            from-[#0A63FF]
+                            to-[#1D8FFF]
+                            text-white
+                            font-semibold
+                            shadow-[0_15px_40px_rgba(10,99,255,.35)]
+                            hover:shadow-[0_20px_60px_rgba(10,99,255,.5)]
+                            hover:-translate-y-1
+                            transition-all
+                            duration-300
+                          "
+                        >
+                          <span
+                            className="
+                              relative
+                              z-10
+                              flex
+                              items-center
+                              gap-3
+                            "
+                          >
+                            GET INSTANT QUOTE
+
+                            <ArrowRight
+                              size={18}
                               className="
-        absolute
-        inset-0
-        bg-gradient-to-r
-        from-transparent
-        via-white/20
-        to-transparent
-        -skew-x-12
-        translate-x-[-150%]
-        
-      "
+                                transition-transform
+                                duration-300
+                                group-hover:translate-x-1
+                              "
                             />
-                          </button>
-                        </div>
+                          </span>
+
+                          {/* Shine */}
+
+                          <span
+                            className="
+                              absolute
+                              inset-0
+                              bg-gradient-to-r
+                              from-transparent
+                              via-white/20
+                              to-transparent
+                              -skew-x-12
+                              -translate-x-full
+                              group-hover:translate-x-full
+                              transition-transform
+                              duration-700
+                            "
+                          />
+                        </button>
+
+                        {/* WHATSAPP */}
 
                         <a
                           href="https://wa.link/rntibs"
-                          download="Brochure.pdf"
                           target="_blank"
                           rel="noopener noreferrer"
-                          aria-label="Download Brochure"
-                          className="hidden md:inline-flex items-center justify-center mt-1 h-14 px-8 rounded-xl border border-white/30 bg-white/10 backdrop-blur-md text-white font-semibold tracking-wide transition-all duration-300 hover:bg-white hover:text-slate-900 hover:border-white hover:shadow-lg"
+                          aria-label="WhatsApp Now"
+                          className="
+                            inline-flex
+                            items-center
+                            justify-center
+                            h-[58px]
+                            px-7
+                            rounded-xl
+                            border
+                            border-white/30
+                            bg-white/10
+                            backdrop-blur-md
+                            text-white
+                            font-semibold
+                            tracking-wide
+                            transition-all
+                            duration-300
+                            hover:bg-white
+                            hover:text-slate-900
+                            hover:border-white
+                            hover:shadow-lg
+                          "
                         >
                           WhatsApp Now
                         </a>
                       </div>
                     </div>
 
-                    {/* CENTER PRODUCT */}
+                    {/* ================================================= */}
+                    {/* RIGHT PRODUCT IMAGE */}
+                    {/* ================================================= */}
+
                     <div
-                      initial={{ opacity: 0, y: 100 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      transition={{ duration: 1 }}
-                      className="flex justify-center"
+                      className="
+                        flex
+                        w-full
+                        h-full
+                        justify-center
+                        items-center
+                        lg:h-full
+                        mt-0
+                      "
                     >
                       <Image
                         src={slide.machine}
-                        alt=""
+                        alt={slide.title}
                         width={800}
                         height={700}
+                        priority={index === 0}
+                        quality={index === 0 ? 85 : 75}
+                        sizes="
+                          (max-width: 640px) 90vw,
+                          (max-width: 768px) 80vw,
+                          (max-width: 1024px) 500px,
+                          650px
+                        "
                         className="
-w-[280px]
-sm:w-[380px]
-md:w-[500px]
-lg:w-[650px]
-h-60
-md:h-auto
-mx-auto
-
-drop-shadow-[0_40px_80px_rgba(0,0,0,.45)]
-"
+                          w-[280px]
+                          sm:w-[380px]
+                          md:w-[500px]
+                          lg:w-[650px]
+                          h-auto
+                          max-h-[100%]
+                          object-contain
+                          drop-shadow-[0_40px_80px_rgba(0,0,0,.45)]
+                        "
                       />
                     </div>
-                    <div className="flex justify-center items-center">
-                          <button
-                            onClick={() => {
-                              setOpen(true);
-                            }}
-                            className="text-center
-      group
-      relative
-      overflow-hidden
-      h-[62px]
-      px-8
-      rounded-xl
-      bg-gradient-to-r
-      from-[#0A63FF]
-      to-[#1D8FFF]
-      shadow-[0_15px_40px_rgba(10,99,255,.35)]
-      
-    "
-                          >
-                            <span className="relative z-10 flex items-center gap-3 text-white font-semibold">
-                              GET INSTANT QUOTE
-                              <ArrowRight
-                                size={18}
-                                className="group-hover:translate-x-1 transition"
-                              />
-                            </span>
 
-                            <div
-                              className="
-        absolute
-        inset-0
-        bg-gradient-to-r
-        from-transparent
-        via-white/20
-        to-transparent
-        -skew-x-12
-        translate-x-[-150%]
-       
-      "
-                            />
-                          </button>
-                        </div>
+                    {/* ================================================= */}
+                    {/* MOBILE CTA - DIRECTLY BELOW IMAGE */}
+                    {/* ================================================= */}
+
+                    <div
+                      className="
+                        md:hidden
+                        flex
+                        items-start
+                        justify-center
+                        w-full
+                        h-full
+                        pt-0
+                        px-4
+                      "
+                    >
+                      <button
+                        type="button"
+                        onClick={() => setOpen(true)}
+                        className="
+                          group
+                          relative
+                          overflow-hidden
+                          inline-flex
+                          items-center
+                          justify-center
+                          h-[50px]
+                          px-7
+                          rounded-xl
+                          bg-gradient-to-r
+                          from-[#0A63FF]
+                          to-[#1D8FFF]
+                          text-white
+                          text-sm
+                          font-semibold
+                          shadow-[0_15px_40px_rgba(10,99,255,.4)]
+                          active:scale-95
+                          transition
+                        "
+                      >
+                        <span
+                          className="
+                            relative
+                            z-10
+                            flex
+                            items-center
+                            gap-3
+                          "
+                        >
+                          GET INSTANT QUOTE
+
+                          <ArrowRight
+                            size={18}
+                            className="
+                              transition-transform
+                              duration-300
+                              group-hover:translate-x-1
+                            "
+                          />
+                        </span>
+
+                        {/* Shine */}
+
+                        <span
+                          className="
+                            absolute
+                            inset-0
+                            bg-gradient-to-r
+                            from-transparent
+                            via-white/20
+                            to-transparent
+                            -skew-x-12
+                            -translate-x-full
+                            group-hover:translate-x-full
+                            transition-transform
+                            duration-700
+                          "
+                        />
+                      </button>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -479,7 +577,17 @@ drop-shadow-[0_40px_80px_rgba(0,0,0,.45)]
           ))}
         </Swiper>
       </section>
-      {open && <ContactForm isOpen={open} onClose={() => setOpen(false)} />}
+
+      {/* ================================================= */}
+      {/* CONTACT POPUP */}
+      {/* ================================================= */}
+
+      {open && (
+        <ContactForm
+          isOpen={open}
+          onClose={() => setOpen(false)}
+        />
+      )}
     </>
   );
 }
