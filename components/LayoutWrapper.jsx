@@ -1,24 +1,21 @@
-"use client";
+'use client';
 
-import { usePathname } from "next/navigation";
-import Navbar from "@/components/Landingpage/Navbar";
-import Footer from "@/components/Landingpage/Footer";
-import Whatsapp from "./Whatsapp";
+import { usePathname } from 'next/navigation';
+import Navbar from '@/components/Landingpage/Navbar';
+import Footer from '@/components/Landingpage/Footer';
+import Whatsapp from './Whatsapp';
 
 export default function LayoutWrapper({ children }) {
-  const pathname = usePathname();
+    const pathname = usePathname();
 
-  // Hide Navbar/Footer on /studio routes
-  const hideLayout =
-    pathname.startsWith("/studio") ||
-    pathname.startsWith("/login") ||
-    pathname.startsWith("/inquiry");
-  return (
-    <>
-      {!hideLayout && <Navbar />}
-      {children}
-      {!hideLayout && <Whatsapp/> }
-      {!hideLayout && <Footer />}
-    </>
-  );
+    // Hide Navbar/Footer on /studio routes
+    const hideLayout = pathname.startsWith('/studio') || pathname.startsWith('/login') || pathname.startsWith('/inquiry');
+    return (
+        <>
+            {!hideLayout && <Navbar />}
+            {children}
+            {!hideLayout && <Whatsapp />}
+            {!hideLayout && <Footer />}
+        </>
+    );
 }

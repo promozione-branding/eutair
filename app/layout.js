@@ -1,74 +1,68 @@
-import { Roboto, Poppins } from "next/font/google";
-import "./globals.css";
-import LayoutWrapper from "@/components/LayoutWrapper";
-import { Toaster } from "react-hot-toast";
+import { Roboto, Poppins } from 'next/font/google';
+import './globals.css';
+import LayoutWrapper from '@/components/LayoutWrapper';
+import { Toaster } from 'react-hot-toast';
 
-import Whatsapp from "@/components/Whatsapp";
-import Script from "next/script";
+import Whatsapp from '@/components/Whatsapp';
+import Script from 'next/script';
 
 // Roboto
 const roboto = Roboto({
-  variable: "--font-roboto",
-  subsets: ["latin"],
-  weight: ["300", "400", "500", "700"],
+    variable: '--font-roboto',
+    subsets: ['latin'],
+    weight: ['300', '400', '500', '700'],
 });
 
 // Poppins
 const poppins = Poppins({
-  variable: "--font-poppins",
-  subsets: ["latin"],
-  weight: ["300", "400", "500", "700"],
+    variable: '--font-poppins',
+    subsets: ['latin'],
+    weight: ['300', '400', '500', '700'],
 });
 
 export const metadata = {
-  title: "Screw Air Compressor Supplier | Air Treatment Solutions | Eutair",
-  description:
-    "Looking for a reliable screw air compressor supplier? Eutair offers industrial screw air compressors, air dryers, filters, AMC, and complete air solutions.",
-  icons: {
-    icon: "/favicon.ico",
-    shortcut: "/favicon.ico",
-    apple: "/favicon.ico",
-  },
+    title: 'Screw Air Compressor Supplier | Air Treatment Solutions | Eutair',
+    description:
+        'Looking for a reliable screw air compressor supplier? Eutair offers industrial screw air compressors, air dryers, filters, AMC, and complete air solutions.',
+    icons: {
+        icon: '/favicon.ico',
+        shortcut: '/favicon.ico',
+        apple: '/favicon.ico',
+    },
 };
 
 export default function RootLayout({ children }) {
-  const organizationSchema = {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    name: "Eutair Equipments",
-    url: "https://screwaircompressormanufacturers.com/",
-    logo: "https://screwaircompressormanufacturers.com/logo.png",
-    contactPoint: {
-      "@type": "ContactPoint",
-      telephone: "+91-9717159766",
-      contactType: "sales",
-      areaServed: "IN",
-      availableLanguage: "en",
-    },
-  };
-  return (
-    <html lang="en">
-      <head>
-        <link
-          rel="canonical"
-          href="https://screwaircompressormanufacturers.com/"
-        />
-        <Script
-          src="https://www.googletagmanager.com/gtag/js?id=G-CNDYGYGFJC"
-          strategy="afterInteractive"
-        />
+    const organizationSchema = {
+        '@context': 'https://schema.org',
+        '@type': 'Organization',
+        name: 'Eutair Equipments',
+        url: 'https://screwaircompressormanufacturers.com/',
+        logo: 'https://screwaircompressormanufacturers.com/logo.png',
+        contactPoint: {
+            '@type': 'ContactPoint',
+            telephone: '+91-9717159766',
+            contactType: 'sales',
+            areaServed: 'IN',
+            availableLanguage: 'en',
+        },
+    };
+    return (
+        <html lang="en">
+            <head>
+                <link rel="canonical" href="https://screwaircompressormanufacturers.com/" />
+                <Script src="https://www.googletagmanager.com/gtag/js?id=G-CNDYGYGFJC" strategy="afterInteractive" />
 
-        <Script id="google-analytics" strategy="afterInteractive">
-          {`
+                <Script id="google-analytics" strategy="afterInteractive">
+                    {`
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
 
             gtag('config', 'G-CNDYGYGFJC');
           `}
-        </Script>
+                </Script>
 
-        <Script id="gtm" strategy="beforeInteractive">{`
+                <Script id="gtm" strategy="beforeInteractive">{`
           (function(w,d,s,l,i){
             w[l]=w[l]||[];
             w[l].push({'gtm.start':
@@ -82,8 +76,8 @@ export default function RootLayout({ children }) {
           })(window,document,'script','dataLayer','GTM-PTF5W8BF');
         `}</Script>
 
-        <Script id="clarity" strategy="afterInteractive">
-          {`
+                <Script id="clarity" strategy="afterInteractive">
+                    {`
             (function(c,l,a,r,i,t,y){
                 c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
                 t=l.createElement(r);
@@ -93,45 +87,39 @@ export default function RootLayout({ children }) {
                 y.parentNode.insertBefore(t,y);
             })(window, document, "clarity", "script", "xjp36uvt0f");
           `}
-        </Script>
+                </Script>
 
-        <link
-          href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
-          rel="stylesheet"
-        />
-        <Script
-          src="https://www.googletagmanager.com/gtag/js?id=AW-10893102558"
-          strategy="afterInteractive"
-        />
-      </head>
+                <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+                <Script src="https://www.googletagmanager.com/gtag/js?id=AW-10893102558" strategy="afterInteractive" />
+            </head>
 
-      <Toaster
-        position="top-center"
-        toastOptions={{
-          duration: 3000,
-        }}
-      />
+            <Toaster
+                position="top-center"
+                toastOptions={{
+                    duration: 3000,
+                }}
+            />
 
-      <body className={`${roboto.variable} ${poppins.variable} antialiased`}>
-        <noscript>
-          <iframe
-            src="https://www.googletagmanager.com/ns.html?id=GTM-PTF5W8BF"
-            height="0"
-            width="0"
-            style={{
-              display: "none",
-              visibility: "hidden",
-            }}
-          />
-        </noscript>
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify(organizationSchema),
-          }}
-        />
-        <LayoutWrapper>{children}</LayoutWrapper>
-      </body>
-    </html>
-  );
+            <body className={`${roboto.variable} ${poppins.variable} antialiased`}>
+                <noscript>
+                    <iframe
+                        src="https://www.googletagmanager.com/ns.html?id=GTM-PTF5W8BF"
+                        height="0"
+                        width="0"
+                        style={{
+                            display: 'none',
+                            visibility: 'hidden',
+                        }}
+                    />
+                </noscript>
+                <script
+                    type="application/ld+json"
+                    dangerouslySetInnerHTML={{
+                        __html: JSON.stringify(organizationSchema),
+                    }}
+                />
+                <LayoutWrapper>{children}</LayoutWrapper>
+            </body>
+        </html>
+    );
 }

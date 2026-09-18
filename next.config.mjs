@@ -8,28 +8,25 @@
 
 // export default nextConfig;
 
-
-
-
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  reactStrictMode: true,
+    reactStrictMode: true,
 
-  images: {
-    unoptimized: true, // Important for Next 15 static images
-    remotePatterns: [
-      {
-        protocol: "https",
-        hostname: "cdn.sanity.io",
-      },
-    ],
-    localPatterns: [
-      {
-        pathname: "/**", // allow ALL public images
-        search: "",
-      },
-    ],
-  },
+    images: {
+        unoptimized: true, // Important for Next 15 static images
+        remotePatterns: [
+            {
+                protocol: 'https',
+                hostname: 'cdn.sanity.io',
+            },
+        ],
+        localPatterns: [
+            {
+                pathname: '/**', // allow ALL public images
+                search: '',
+            },
+        ],
+    },
 };
 
 export default nextConfig;
