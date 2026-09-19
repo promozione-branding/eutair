@@ -52,7 +52,7 @@ export default function Category() {
 
     return (
         <>
-            <section className="bg-gradient-to-b from-white to-slate-50 py-6 md:py-12">
+            <section className="bg-[#e6e7e8] py-6 md:py-12">
                 <div className="mx-auto max-w-7xl px-1 md:px-0">
                     {/* Heading */}
                     <div className="mb-6 px-2 text-center md:mb-12">

@@ -22,7 +22,10 @@ export default function Inquiry() {
             <TrustSection />
             <Category />
             <WhyChoose />
-            <div className="w-full bg-blue-600">
+            <Industries />
+           
+            <Certificates />
+             <div className="w-full bg-blue-600">
                 <div className="relative z-10 mx-auto max-w-7xl bg-blue-600 px-4 py-10">
                     {/* Heading */}
                     <div className="mb-10 text-center lg:mb-5 xl:mb-9">
@@ -72,8 +75,7 @@ export default function Inquiry() {
                     </div>
                 </div>
             </div>
-            <Certificates />
-            <Industries />
+            
             <Testimonials />
             <CTA />
             <Footer />

@@ -4,7 +4,6 @@ import { Phone, Mail, Building2, MapPin, Linkedin, Facebook, Instagram, Youtube 
 import Image from 'next/image';
 import { FaWhatsapp } from 'react-icons/fa';
 import { useState } from 'react';
-import { Menu, X } from 'lucide-react';
 import ContactForm from './PopupForm';
 
 export default function Navbar() {
@@ -155,9 +154,7 @@ export default function Navbar() {
                                 <FaWhatsapp className="h-6 w-6" /> WhatsApp
                             </a>
 
-                            <button onClick={() => setMobileMenu(!mobileMenu)} className="p-2">
-                                {mobileMenu ? <X className="h-7 w-7" /> : <Menu className="h-7 w-7" />}
-                            </button>
+                           
                         </div>
 
                         {/* CTA */}

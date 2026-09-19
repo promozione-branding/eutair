@@ -54,7 +54,7 @@ export default function Certificates() {
                     {certificates.map((item, index) => (
                         <SwiperSlide key={index}>
                             <div className="overflow-hidden rounded-3xl border border-gray-100 bg-white transition-all duration-300 hover:scale-105">
-                                <div className="relative h-95 md:h-110">
+                                <div className="relative h-75 md:h-110">
                                     <Image src={item.image} alt={item.title} fill className="object-cover p-2 md:p-6" />
                                 </div>
                             </div>

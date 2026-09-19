@@ -49,10 +49,42 @@ export default function ProductSlider() {
             href: '/chicago-pneumatic/cfm-1060-1200',
         },
     ];
+    const products2 = [
+        {
+            title: 'G-C-V 45 CFM - 1500 CFM Compressed Air Filters',
+            image: '/products/G-C-V 45 CFM - 1500 CFM Compressed Air Filters.jpg',
+            href: '/mark-compressor/mss-75-oil-injected-screw-compressors',
+        },
+        {
+            title: 'CFM: 370 - 475 (6 model)',
+            image:  '/products/KW 5575PSI100175CFM370475.webp',
+            href: '/mark-compressor/mss-variable-speed-screw-compressors',
+        },
+        {
+            title: 'Hydraulic Power Packs',
+            image:  '/products/Hydraulic Power Packs.webp',
+            href: '/mark-compressor/mds-35-cfm-1000-cfm-refrigerated-dryers',
+        },
+        {
+            title: 'KW: upto 45, PSI: 100, CFM: 300 (1 model)',
+            image: '/products/KWupto45PSI100CFM300.webp',
+            href: '/chicago-pneumatic/cfm-81-187',
+        },
+        {
+            title: 'Hydraulic Core Drills',
+            image: '/products/Hydraulic Core Drills.webp',
+            href: '/chicago-pneumatic/cfm-455-650',
+        },
+        {
+            title: 'CFM: 1060 - 1200, BAR: 16 - 25, PSI: 232 – 355',
+            image: '/products/CFM10601200BAR1625PSI232355.webp',
+            href: '/chicago-pneumatic/cfm-1060-1200',
+        },
+    ];
 
     return (
         <>
-            <section className="bg-gradient-to-b from-white to-slate-50 py-6 md:py-16">
+            <section className="bg-[#e6e7e8] py-6 md:py-16">
                 <div id="products" className="mx-auto max-w-7xl px-1 md:px-0">
                     {/* Heading */}
                     <div className="mb-6 px-2 text-center md:mb-12">
@@ -101,6 +133,60 @@ export default function ProductSlider() {
                                     }}
                                 >
                                     <div className="group overflow-hidden rounded-3xl border border-slate-200 bg-white transition duration-500 hover:scale-105">
+                                        <div className="relative h-56 bg-white md:p-6">
+                                            <Image src={item.image} alt={item.title} fill className="object-contain md:p-5" />
+                                        </div>
+
+                                        <div className="flex items-center justify-center px-6 pt-6 text-center">
+                                            <h3 className="line-clamp-3 min-h-[64px] text-[12px] font-bold md:text-lg">{item.title}</h3>
+                                        </div>
+
+                                        <div className="p-3 pt-0 md:mt-2 md:p-6">
+                                            <button className="w-full rounded-lg border-2 border-blue-600 py-3 text-sm font-semibold text-blue-600 transition hover:bg-blue-600 hover:text-white md:text-base">
+                                                REQUEST PRICE
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </SwiperSlide>
+                        ))}
+                    </Swiper>
+
+                    <Swiper
+                        modules={[Autoplay, Navigation, Pagination]}
+                        navigation
+                        autoplay={{
+                            delay: 3500,
+                            disableOnInteraction: false,
+                        }}
+                        loop={true}
+                        spaceBetween={15}
+                        breakpoints={{
+                            0: {
+                                slidesPerView: 2,
+                            },
+                            640: {
+                                slidesPerView: 2,
+                            },
+                            768: {
+                                slidesPerView: 3,
+                            },
+                            1024: {
+                                slidesPerView: 5,
+                            },
+                        }}
+                        className="px-2 "
+                    >
+                        {products2.map((item, index) => (
+                            <SwiperSlide key={index}>
+                                <div
+                                    onClick={(e) => {
+                                        e.preventDefault(); // Prevent Link navigation
+                                        e.stopPropagation(); // Stop event bubbling
+                                        setOpen(true);
+                                    }}
+                                >
+                                    <div className="group mt-5 overflow-hidden rounded-3xl border border-slate-200 bg-white transition duration-500 hover:scale-105">
                                         <div className="relative h-56 bg-white md:p-6">
                                             <Image src={item.image} alt={item.title} fill className="object-contain md:p-5" />
                                         </div>
