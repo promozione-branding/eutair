@@ -4,6 +4,7 @@ import Link from 'next/link';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import { MessageCircle } from 'lucide-react';
+import { FaWhatsapp } from 'react-icons/fa';
 export default function ProductRange() {
     const products = [
         {
@@ -80,9 +81,10 @@ export default function ProductRange() {
                                         View Product →
                                     </button>
                                 </Link>
-                                <button className="flex cursor-pointer items-center justify-center gap-1 text-sm font-semibold tracking-wide whitespace-nowrap text-green-600 uppercase transition hover:text-cyan-600">
-                                    WhatsApp <MessageCircle className="text-green-600" />
-                                </button>
+                                <Link href="https://wa.link/o8l7fy
+" className="flex cursor-pointer items-center justify-center group gap-1 text-sm font-semibold tracking-wide whitespace-nowrap text-green-600 uppercase transition group-hover:text-cyan-600">
+                                    WhatsApp <FaWhatsapp size={25} className="text-green-600 group-hover:text-cyan-600" />
+                                </Link>
                             </div>
                         </div>
                     ))}
