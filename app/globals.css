@@ -7,13 +7,24 @@
     font-style: normal;
 }
 
+.playfair{
+  font-family: "Playfair", serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+}
+
+
+
 h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
-    font-family: var(--font-poppins), sans-serif; /* Example: Roboto for headings */
+    font-family: playfair; /* Example: Roboto for headings */
 }
 
 .font-poppins {

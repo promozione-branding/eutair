@@ -56,50 +56,50 @@ const slides = [
         benefits: ['Energy Efficient', 'Low Maintenance', 'Reliable Performance', 'PAN India Service', 'ISO Certified'],
     },
 
-    {
-        bg: '/herobg2.webp',
-        machine: '/hero22.webp',
+    // {
+    //     bg: '/herobg2.webp',
+    //     machine: '/hero22.webp',
 
-        tagline: 'INDUSTRIAL COMPRESSED AIR',
+    //     tagline: 'INDUSTRIAL COMPRESSED AIR',
 
-        title: 'MARK COMPRESSORS',
+    //     title: 'MARK COMPRESSORS',
 
-        description:
-            'Designed for manufacturing, engineering, automotive, food processing, pharmaceuticals, textiles, and every industry that demands reliable compressed air.',
+    //     description:
+    //         'Designed for manufacturing, engineering, automotive, food processing, pharmaceuticals, textiles, and every industry that demands reliable compressed air.',
 
-        logo: '/mark-compressors-logo.png',
-        logoAlt: 'Mark Compressors',
+    //     logo: '/mark-compressors-logo.png',
+    //     logoAlt: 'Mark Compressors',
 
-        features: [
-            {
-                icon: Shield,
-                title: 'Up To 35%',
-                desc: 'Energy Savings',
-            },
-            {
-                icon: BadgeCheck,
-                title: 'Variable Speed',
-                desc: 'Drive Technology',
-            },
-            {
-                icon: Zap,
-                title: 'High Air',
-                desc: 'Efficiency',
-            },
-            {
-                icon: Cog,
-                title: 'Stable',
-                desc: 'Air Pressure',
-            },
-            {
-                icon: Volume2,
-                title: 'Smart Touch',
-                desc: 'Controller',
-            },
-        ],
+    //     features: [
+    //         {
+    //             icon: Shield,
+    //             title: 'Up To 35%',
+    //             desc: 'Energy Savings',
+    //         },
+    //         {
+    //             icon: BadgeCheck,
+    //             title: 'Variable Speed',
+    //             desc: 'Drive Technology',
+    //         },
+    //         {
+    //             icon: Zap,
+    //             title: 'High Air',
+    //             desc: 'Efficiency',
+    //         },
+    //         {
+    //             icon: Cog,
+    //             title: 'Stable',
+    //             desc: 'Air Pressure',
+    //         },
+    //         {
+    //             icon: Volume2,
+    //             title: 'Smart Touch',
+    //             desc: 'Controller',
+    //         },
+    //     ],
 
-        benefits: ['Food Grade Air', 'Pharma Approved', 'Zero Contamination', 'Long Service Life', 'Energy Saving'],
-    },
+    //     benefits: ['Food Grade Air', 'Pharma Approved', 'Zero Contamination', 'Long Service Life', 'Energy Saving'],
+    // },
 ];
 
 export default function HeroSlider() {

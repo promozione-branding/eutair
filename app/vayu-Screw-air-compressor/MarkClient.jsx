@@ -14,40 +14,40 @@ const MarkClient = () => {
     const [isOpen, setOpen] = useState(false);
 
     const products = markData.products || [];
-    const heroImages = ['/hero2.png', '/Other/mark2.webp', '/unnamed (1).png'];
+    const heroImages = ['/products/VAYU Screw Air Compressor.jpg'];
 
     const features = [
         {
             title: 'High Energy Efficiency',
-            desc: 'Our MARK Compressors are designed to optimize energy usage, making them a cost-effective choice for industries seeking reliable compressed air solutions from a trusted Screw Air Compressors Supplier.',
+            desc: 'VAYU Screw Air Compressors are designed for efficient operation and dependable compressed air delivery in demanding industrial environments.',
         },
         {
             title: 'Reliable Continuous Operation',
-            desc: 'Built for demanding industrial environments, MARK Compressors ensure uninterrupted compressed air supply, helping businesses maintain smooth and efficient operations.',
+            desc: 'Built for demanding industrial environments, VAYU Screw Air Compressors provide a reliable air supply to support smooth, productive operations.',
         },
         {
             title: 'Advanced Compressor Technology',
-            desc: 'As an experienced Screw Air Compressors Trader, we offer MARK Compressors equipped with innovative technology that enhances performance, control, and operational efficiency.',
+            desc: 'VAYU Screw Air Compressors combine practical design and reliable controls to support consistent performance and straightforward operation.',
         },
         {
             title: 'Low Maintenance Requirements',
-            desc: 'The robust construction and quality components of MARK Compressors help reduce maintenance needs and operational downtime.',
+            desc: 'Robust construction and quality components help make VAYU Screw Air Compressors easier to maintain and keep downtime to a minimum.',
         },
         {
             title: 'Durable & Long-Lasting Performance',
-            desc: 'Designed to withstand challenging industrial conditions, MARK Compressors provide long service life and dependable performance.',
+            desc: 'Designed for real-world industrial conditions, VAYU Screw Air Compressors deliver dependable performance and long-term value.',
         },
 
         {
             title: 'Consistent Air Quality',
-            desc: 'MARK Compressors deliver a stable and reliable compressed air supply, ensuring consistent performance across industrial applications while supporting operational efficiency and product quality.',
+            desc: 'VAYU Screw Air Compressors deliver a stable, reliable air supply for consistent performance across a wide range of industrial applications.',
         },
     ];
 
     const benefits = [
         {
             title: 'Enhanced Energy Efficiency',
-            desc: 'MARK Compressors are engineered to consume less power while delivering consistent compressed air output, helping reduce energy expenses.',
+            desc: 'Efficient operation and stable air delivery help businesses manage energy use and compressed-air operating costs.',
         },
         {
             title: 'Improved Operational Productivity',
@@ -55,7 +55,7 @@ const MarkClient = () => {
         },
         {
             title: 'Lower Maintenance Costs',
-            desc: 'Built with high-quality components, MARK Compressors require less frequent maintenance, reducing downtime and service expenses.',
+            desc: 'Robust construction and dependable engineering help reduce maintenance needs, downtime, and service expenses.',
         },
         {
             title: 'Long Service Life',
@@ -115,7 +115,7 @@ const MarkClient = () => {
             <section className="relative flex h-[250px] w-full items-center justify-center overflow-hidden md:h-[400px]">
                 <div className="absolute inset-0 flex items-center justify-center bg-cover bg-center" style={{ backgroundImage: "url('/bghero1.webp')" }}>
                     <div className="absolute inset-0 bg-black/50"></div>
-                    <h1 className="z-10 px-10 text-center text-3xl font-bold text-white md:text-7xl">Mark Compressor</h1>
+                    <h1 className="z-10 px-10 text-center text-3xl font-bold text-white md:text-7xl">VAYU Screw Air Compressor</h1>
                 </div>
             </section>
 
@@ -129,14 +129,14 @@ const MarkClient = () => {
                             </span>
 
                             <h2 className="mt-5 text-2xl leading-tight font-bold break-words text-slate-900 sm:text-4xl lg:text-4xl xl:text-5xl">
-                                Screw Air Compressors &<span className="block text-sky-600">MARK Compressors Supplier</span>
+                                VAYU Screw Air Compressor Supplier
                             </h2>
 
                             <p className="mt-5 text-base leading-6 break-words text-slate-700 md:leading-7 xl:text-lg">
-                                Eutair Equipments LLP is a trusted Screw Air Compressors Supplier of high-performance MARK Compressors for industrial
-                                applications. We offer advanced compressed air solutions designed to deliver superior efficiency, reliability, and long-lasting
-                                performance. Our MARK Compressor range is engineered to meet the compressed air requirements of manufacturing units, automotive
-                                facilities, pharmaceutical companies, engineering workshops, textile industries, and other industrial sectors.
+                                Eutair Equipments LLP supplies VAYU Screw Air Compressors for industrial applications. Built in India for demanding manufacturing
+                                environments, VAYU compressors are designed for dependable performance, efficient operation, easy maintenance, and long-term value.
+                                They are suitable for manufacturing, automotive, pharmaceutical, engineering, textile, and other industries that need a reliable
+                                compressed air supply.
                             </p>
 
                             <div className="mt-8">
@@ -185,15 +185,15 @@ const MarkClient = () => {
                             {/* Floating Efficiency Card */}
                             <div className="absolute top-12 -left-8 z-20 hidden rounded-2xl border border-sky-100 bg-white px-6 py-4 shadow-xl lg:flex">
                                 <div>
-                                    <h4 className="text-2xl font-bold text-sky-600">99%</h4>
-                                    <p className="text-sm text-slate-500">Efficiency</p>
+                                    <h4 className="text-2xl font-bold text-sky-600">VAYU</h4>
+                                    <p className="text-sm text-slate-500">Made in India</p>
                                 </div>
                             </div>
 
                             {/* Floating Brand Card */}
                             <div className="absolute -right-6 bottom-10 z-20 hidden rounded-2xl border border-sky-100 bg-white px-6 py-4 shadow-xl lg:flex">
                                 <div>
-                                    <h4 className="text-xl font-bold text-sky-600">MARK COMPRESSORS</h4>
+                                    <h4 className="text-xl font-bold text-sky-600">VAYU</h4>
                                     <p className="text-sm text-slate-500">Industrial Solutions</p>
                                 </div>
                             </div>
@@ -205,7 +205,7 @@ const MarkClient = () => {
             <section className="bg-slate-50 px-6 py-5 md:py-12">
                 <div className="container mx-auto md:px-6">
                     <div className="mb-5 text-center lg:mb-8 xl:mb-16">
-                        <h2 className="text-3xl font-bold md:text-4xl">Our MARK Compressor Range</h2>
+                        <h2 className="text-3xl font-bold md:text-4xl">VAYU Screw Air Compressors</h2>
                     </div>
 
                     <div className="mt-5 grid gap-8 md:grid-cols-2 lg:mt-8 lg:grid-cols-4 xl:mt-12 xl:grid-cols-4">
@@ -227,7 +227,7 @@ const MarkClient = () => {
 
                                     <div className="mt-auto">
                                         <Link
-                                            href={`/mark-compressor/${item.slug}`}
+                                            href={`/vayu-screw-air-compressor/${item.slug}`}
                                             className="mt-5 inline-block rounded-xl bg-gradient-to-r from-sky-500 to-blue-600 px-5 py-3 font-semibold text-white transition-all hover:scale-105"
                                         >
                                             View Details
@@ -243,12 +243,11 @@ const MarkClient = () => {
             <section className="bg-white py-5 md:py-12">
                 <div className="container mx-auto px-5 md:px-10">
                     <div className="mb-10 text-center">
-                        <h2 className="text-3xl font-bold md:text-4xl">Why Choose MARK Compressors?</h2>
+                        <h2 className="text-3xl font-bold md:text-4xl">Why Choose VAYU Screw Air Compressors?</h2>
 
                         <p className="my-4 text-base leading-6 text-cyan-800 md:text-lg">
-                            MARK Compressors are recognized worldwide for delivering dependable compressed air solutions that combine advanced technology,
-                            energy efficiency, and long-term reliability. Designed to meet the demanding requirements of modern industries, MARK Compressors
-                            help businesses achieve consistent performance while reducing energy consumption and operating costs.
+                            VAYU Screw Air Compressors are built in India for manufacturers across the world. Designed for demanding operating conditions, they
+                            combine dependable engineering, efficient operation, straightforward maintenance, and responsive service and parts support.
                         </p>
                     </div>
 
@@ -271,8 +270,8 @@ const MarkClient = () => {
                             <h2 className="mb-6 text-3xl font-bold md:text-4xl">Ready to Improve Your Compressed Air Efficiency?</h2>
 
                             <p className="text-lg text-white/90">
-                                Partner with Eutair Equipments LLP, a trusted Screw Air Compressors Supplier, and discover high-performance MARK Compressors
-                                engineered for reliability, efficiency, and long-term value.
+                                Partner with Eutair Equipments LLP for VAYU Screw Air Compressors designed for efficient operation, reliable performance, and
+                                long-term value.
                             </p>
 
                             <a
@@ -292,14 +291,14 @@ const MarkClient = () => {
             <section className="bg-gradient-to-b from-white to-sky-50 py-6 md:py-13">
                 <div className="container mx-auto px-6">
                     <div className="mx-auto mb-20 max-w-4xl text-center">
-                        <span className="font-semibold text-sky-600">Benefits of MARK Compressors</span>
+                        <span className="font-semibold text-sky-600">Benefits of VAYU Screw Air Compressors</span>
 
                         <h2 className="mt-4 text-3xl font-bold text-slate-900 md:text-5xl">Maximize Efficiency, Productivity & Cost Savings</h2>
 
                         <p className="mt-5 leading-relaxed text-slate-600">
-                            As a trusted Screw Air Compressors Trader, Eutair Equipments LLP offers MARK Compressors that are designed to deliver exceptional
-                            performance, energy efficiency, and operational reliability. These compressors help businesses optimize their compressed air systems
-                            while reducing overall operating costs.
+                            Eutair Equipments LLP supplies VAYU Screw Air Compressors for businesses seeking dependable performance, efficient operation, and
+                            responsive service and parts support. Built for demanding manufacturing environments, VAYU compressors help maintain reliable
+                            compressed air systems and long-term value.
                         </p>
                     </div>
 
@@ -333,16 +332,15 @@ const MarkClient = () => {
             <section className="bg-white px-8 py-5">
                 <div className="container mx-auto md:px-6">
                     <div className="mx-auto mb-7 max-w-4xl text-center">
-                        <span className="font-semibold text-sky-600">Applications of MARK Compressors</span>
+                        <span className="font-semibold text-sky-600">Applications of VAYU Screw Air Compressors</span>
 
                         <h2 className="mt-4 text-3xl font-bold text-slate-900 md:text-5xl">
                             Reliable Compressed Air Solutions for Diverse Industrial Applications
                         </h2>
 
                         <p className="mt-6 leading-6 text-slate-600 md:leading-relaxed">
-                            As a trusted Screw Air Compressors Supplier, Eutair Equipments LLP supplies MARK Compressors that are designed to support a wide
-                            range of industrial operations. Their efficiency, durability, and reliable performance make them suitable for industries where a
-                            consistent compressed air supply is critical.
+                            Eutair Equipments LLP supplies VAYU Screw Air Compressors for a wide range of industrial operations. Their dependable performance
+                            and practical design make them suitable for industries where a consistent compressed air supply is essential.
                         </p>
                     </div>
 

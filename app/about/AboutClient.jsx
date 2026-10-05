@@ -55,7 +55,7 @@ export default function AboutPage() {
                                 <p>
                                     With a strong focus on customer satisfaction and technical excellence, we offer a comprehensive range of products including
                                     Screw Air Compressors, Diesel Air Compressors, Air Dryers, Air Line Filters, Drain Valves, MSS Series Screw Compressor
-                                    Filters, MARK Compressors, and Ethanol Alcohol Based Hand Sanitizers.
+                                    Filters, and Ethanol Alcohol Based Hand Sanitizers.
                                 </p>
 
                                 <p className="block lg:hidden xl:block">
@@ -69,10 +69,10 @@ export default function AboutPage() {
 
                             <div className="relative overflow-hidden rounded-[40px] shadow-[0_30px_80px_rgba(0,0,0,.15)]">
                                 <Image
-                                    src="/mark-compressor.webp"
+                                    src="/products/CFM455650BAR10514PSI100200.webp"
                                     width={900}
                                     height={1000}
-                                    alt="Mark Compressor Supplier"
+                                    alt="Chicago Penumatic"
                                     className="h-[300px] w-full object-fill md:h-[550px]"
                                 />
                             </div>

@@ -24,12 +24,12 @@ export default function Category() {
             link: '/chicago-pneumatic',
             desc: 'Industry-proven compressed air systems delivering superior efficiency, durability, and productivity for modern industrial operations.',
         },
-        {
-            title: 'MARK Compressors',
-            image: '/hero22.webp',
-            link: '/mark-compressor',
-            desc: 'Innovative compressor solutions combining energy savings, operational reliability, and long-term performance excellence.',
-        },
+        // {
+        //     title: 'MARK Compressors',
+        //     image: '/hero22.webp',
+        //     link: '/mark-compressor',
+        //     desc: 'Innovative compressor solutions combining energy savings, operational reliability, and long-term performance excellence.',
+        // },
         {
             title: 'Air Treatment',
             image: '/hero3.webp',

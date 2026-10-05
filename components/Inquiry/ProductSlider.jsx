@@ -18,21 +18,21 @@ export default function ProductSlider() {
     const [open, setOpen] = useState(false);
 
     const products = [
-        {
-            title: 'MSS 75 - Oil-Injected Screw Compressor',
-            image: '/products/MSS 75 - Oil-Injected Screw Compressor.jpg',
-            href: '/mark-compressor/mss-75-oil-injected-screw-compressors',
-        },
-        {
-            title: 'MSS 7.5 kW - 75 kW Variable Speed Screw Compressors',
-            image: '/products/MSS 7.5 kW - 75 kW Variable Speed Screw Compressors.webp',
-            href: '/mark-compressor/mss-variable-speed-screw-compressors',
-        },
-        {
-            title: 'MDS 35 CFM - 1000 CFM Refrigerated Dryers',
-            image: '/products/MDS 35 CFM - 1000 CFM Refrigerated Dryers.jpg',
-            href: '/mark-compressor/mds-35-cfm-1000-cfm-refrigerated-dryers',
-        },
+        // {
+        //     title: 'MSS 75 - Oil-Injected Screw Compressor',
+        //     image: '/products/MSS 75 - Oil-Injected Screw Compressor.jpg',
+        //     href: '/mark-compressor/mss-75-oil-injected-screw-compressors',
+        // },
+        // {
+        //     title: 'MSS 7.5 kW - 75 kW Variable Speed Screw Compressors',
+        //     image: '/products/MSS 7.5 kW - 75 kW Variable Speed Screw Compressors.webp',
+        //     href: '/mark-compressor/mss-variable-speed-screw-compressors',
+        // },
+        // {
+        //     title: 'MDS 35 CFM - 1000 CFM Refrigerated Dryers',
+        //     image: '/products/MDS 35 CFM - 1000 CFM Refrigerated Dryers.jpg',
+        //     href: '/mark-compressor/mds-35-cfm-1000-cfm-refrigerated-dryers',
+        // },
         {
             title: 'Chicago Pneumatic CFM: 81 - 187, BAR: 7 - 12, PSI: 100 – 175',
             image: '/hero1.png',

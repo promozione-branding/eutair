@@ -58,9 +58,9 @@ export default function Footer() {
                                     <Link href="">About Us</Link>
                                 </li>
 
-                                <li className="hover:text-cyan-500">
+                                {/* <li className="hover:text-cyan-500">
                                     <Link href="">Mark Compressor</Link>
-                                </li>
+                                </li> */}
 
                                 <li className="hover:text-cyan-500">
                                     <Link href="">Chicago Pneumatic</Link>

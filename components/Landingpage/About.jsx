@@ -70,9 +70,9 @@ const About = () => {
                                     </strong>
                                     , including{' '}
                                     <strong>
-                                        <a href="/mark-compressor" className="text-blue-600">
+                                        
                                             Screw Air Compressors
-                                        </a>
+                                        
                                         , Air Dryers, Air Line Filters, Compressor Accessories
                                     </strong>
                                     , and{' '}

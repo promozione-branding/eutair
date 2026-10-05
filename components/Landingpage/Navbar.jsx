@@ -42,8 +42,8 @@ export default function Navbar() {
 
     const products = [
         {
-            title: 'Mark Compressors',
-            href: '/mark-compressor',
+            title: 'VAYU Screw Air Compressor',
+            href: '/vayu-screw-air-compressor',
         },
         {
             title: 'Chicago Pneumatic',

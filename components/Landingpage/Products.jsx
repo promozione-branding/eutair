@@ -12,12 +12,12 @@ export default function ProductRange() {
             link: '/chicago-pneumatic',
             desc: 'Industry-proven compressed air systems delivering superior efficiency, durability, and productivity for modern industrial operations.',
         },
-        {
-            title: 'MARK Compressors',
-            image: '/hero2.png',
-            link: '/mark-compressor',
-            desc: 'Innovative compressor solutions combining energy savings, operational reliability, and long-term performance excellence.',
-        },
+        // {
+        //     title: 'MARK Compressors',
+        //     image: '/hero2.png',
+        //     link: '/mark-compressor',
+        //     desc: 'Innovative compressor solutions combining energy savings, operational reliability, and long-term performance excellence.',
+        // },
         {
             title: 'Air Treatment',
             image: '/hero3.png',
@@ -52,7 +52,7 @@ export default function ProductRange() {
                     </div>
 
                     {/* Products Grid */}
-                    <div className="grid grid-cols-1 border border-cyan-400 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5">
+                    <div className="grid grid-cols-1 border border-cyan-400 sm:grid-cols-2 lg:grid-cols-4">
                         {products.map((item, index) => (
                             <div
                                 key={index}

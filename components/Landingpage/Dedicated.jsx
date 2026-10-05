@@ -53,15 +53,15 @@ export default function AirSystemSolution() {
                         Complete Screw Air Compressors & Industrial Solutions
                     </h1>
 
-                    <div className="grid items-center md:gap-12 lg:grid-cols-2">
+                    <div className="grid items-center md:gap-6 lg:grid-cols-2">
                         {/* Image */}
                         <div className="">
                             <Image
-                                src="/why.jpeg"
-                                alt="Mark Compressor & Chicago Pneumatic Supplier"
+                                src="/drill-cp.jpeg"
+                                alt="Chicago Pneumatic Supplier"
                                 width={800}
                                 height={800}
-                                className="mx-auto h-auto w-full max-w-[650px] object-contain"
+                                className="mx-auto h-auto md:h-120 w-full max-w-[650px] object-contain"
                             />
                         </div>
 

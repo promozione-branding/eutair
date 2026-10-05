@@ -59,7 +59,7 @@ export async function GET() {
             priority: 0.8,
             changefreq: 'yearly',
         },
-        { loc: `${baseUrl}/mark-compressor`, priority: 0.8, changefreq: 'yearly' },
+        { loc: `${baseUrl}/vayu-screw-air-compressor`, priority: 0.8, changefreq: 'yearly' },
         {
             loc: `${baseUrl}/piping-and-distribution-lines`,
             priority: 0.8,
@@ -139,11 +139,11 @@ export async function GET() {
     `
         )
         .join('');
-    const mark = allProducts3
+    const vayu = allProducts3
         .map(
             (product) => `
       <url>
-        <loc>${baseUrl}/mark-compressor/${product.slug}</loc>
+        <loc>${baseUrl}/vayu-screw-air-compressor/${product.slug}</loc>
         <lastmod>${new Date().toISOString()}</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
@@ -188,7 +188,7 @@ export async function GET() {
      
     ${chicago}  
     ${chicago2}
-    ${mark}
+    ${vayu}
     ${locationUrls}
   
 
