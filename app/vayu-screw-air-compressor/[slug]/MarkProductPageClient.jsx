@@ -231,92 +231,67 @@ export default function ProductPage() {
                 TECHNICAL SPECIFICATION TABLE
             ========================================================= */}
 
-           {product.productTable && (
-    <section className="bg-white py-10 lg:py-16">
-        <div className="mx-auto w-full px-5 md:px-10">
+            {product.productTable && (
+                <section className="bg-white py-10 lg:py-16">
+                    <div className="mx-auto w-full px-5 md:px-10">
+                        <div className="mb-8">
+                            <span className="inline-flex rounded-full bg-sky-100 px-5 py-2 font-semibold text-sky-700">VAYU SL Series</span>
 
-            <div className="mb-8">
-                <span className="inline-flex rounded-full bg-sky-100 px-5 py-2 font-semibold text-sky-700">
-                    VAYU SL Series
-                </span>
+                            <h2 className="mt-4 text-3xl font-black text-slate-900 md:text-5xl">{product.productTable.title}</h2>
 
-                <h2 className="mt-4 text-3xl font-black text-slate-900 md:text-5xl">
-                    {product.productTable.title}
-                </h2>
+                            <p className="mt-4 max-w-3xl text-lg leading-8 text-slate-600">
+                                Explore the available VAYU SL Series models, power ratings, pressure ranges, air delivery, noise levels, weight, outlet size,
+                                and dimensions.
+                            </p>
+                        </div>
 
-                <p className="mt-4 max-w-3xl text-lg leading-8 text-slate-600">
-                    Explore the available VAYU SL Series models, power ratings,
-                    pressure ranges, air delivery, noise levels, weight,
-                    outlet size, and dimensions.
-                </p>
-            </div>
+                        {/* TABLE */}
+                        <div className="overflow-hidden rounded-[28px] border border-slate-200 bg-white shadow-[0_20px_60px_rgba(0,0,0,.08)]">
+                            <div className="overflow-x-auto">
+                                <table className="w-full min-w-[1200px] border-collapse text-center">
+                                    <thead>
+                                        <tr className="bg-gradient-to-r from-sky-600 to-blue-600 text-center text-white">
+                                            {product.productTable.columns.map((column) => (
+                                                <th key={column.key} className="px-5 py-5 text-center text-sm font-bold whitespace-nowrap">
+                                                    {column.label}
+                                                </th>
+                                            ))}
+                                        </tr>
+                                    </thead>
 
-            {/* TABLE */}
-            <div className="overflow-hidden rounded-[28px] border border-slate-200 bg-white shadow-[0_20px_60px_rgba(0,0,0,.08)]">
-                <div className="overflow-x-auto">
-                    <table className="w-full min-w-[1200px] border-collapse text-center">
+                                    <tbody>
+                                        {product.productTable.rows.map((row, index) => (
+                                            <tr
+                                                key={row.model}
+                                                className={`text-center transition hover:bg-sky-50 ${index % 2 === 0 ? 'bg-white' : 'bg-slate-50'}`}
+                                            >
+                                                {product.productTable.columns.map((column) => (
+                                                    <td
+                                                        key={column.key}
+                                                        className={`border-t border-slate-200 px-5 py-4 text-center text-sm ${
+                                                            column.key === 'model' ? 'font-bold text-slate-900' : 'text-slate-600'
+                                                        }`}
+                                                    >
+                                                        {row[column.key]}
+                                                    </td>
+                                                ))}
+                                            </tr>
+                                        ))}
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
 
-                        <thead>
-                            <tr className="bg-gradient-to-r from-sky-600 to-blue-600 text-center text-white">
-
-                                {product.productTable.columns.map((column) => (
-                                    <th
-                                        key={column.key}
-                                        className="whitespace-nowrap px-5 py-5 text-center text-sm font-bold"
-                                    >
-                                        {column.label}
-                                    </th>
-                                ))}
-
-                            </tr>
-                        </thead>
-
-                        <tbody>
-                            {product.productTable.rows.map((row, index) => (
-                                <tr
-                                    key={row.model}
-                                    className={`text-center transition hover:bg-sky-50 ${
-                                        index % 2 === 0
-                                            ? 'bg-white'
-                                            : 'bg-slate-50'
-                                    }`}
-                                >
-
-                                    {product.productTable.columns.map((column) => (
-                                        <td
-                                            key={column.key}
-                                            className={`border-t border-slate-200 px-5 py-4 text-center text-sm ${
-                                                column.key === 'model'
-                                                    ? 'font-bold text-slate-900'
-                                                    : 'text-slate-600'
-                                            }`}
-                                        >
-                                            {row[column.key]}
-                                        </td>
-                                    ))}
-
-                                </tr>
-                            ))}
-                        </tbody>
-
-                    </table>
-                </div>
-            </div>
-
-            {/* TABLE NOTE */}
-            <div className="mt-5 rounded-2xl border border-sky-100 bg-sky-50 p-5">
-                <p className="text-sm leading-7 text-slate-600">
-                    <strong className="text-slate-900">
-                        VAYU SL Series:
-                    </strong>{' '}
-                    Available in multiple power and pressure configurations
-                    to meet different industrial compressed air requirements.
-                </p>
-            </div>
-
-        </div>
-    </section>
-)}
+                        {/* TABLE NOTE */}
+                        <div className="mt-5 rounded-2xl border border-sky-100 bg-sky-50 p-5">
+                            <p className="text-sm leading-7 text-slate-600">
+                                <strong className="text-slate-900">VAYU SL Series:</strong> Available in multiple power and pressure configurations to meet
+                                different industrial compressed air requirements.
+                            </p>
+                        </div>
+                    </div>
+                </section>
+            )}
 
             {/* =========================================================
                 KEY FEATURES
