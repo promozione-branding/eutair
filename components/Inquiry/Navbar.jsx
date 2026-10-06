@@ -8,7 +8,7 @@ import ContactForm from './PopupForm';
 
 export default function Navbar() {
     const [mobileMenu, setMobileMenu] = useState(false);
-    const [open, setOpen] = useState(false);
+    const [open, setOpen] = useState(false);k
 
     return (
         <>
