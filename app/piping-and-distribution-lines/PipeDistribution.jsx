@@ -3,7 +3,7 @@
 import Link from 'next/link';
 import { Wind, ShieldCheck, Settings, Wrench, Droplets, Filter, Gauge, ArrowRight, Phone, CheckCircle2, Factory } from 'lucide-react';
 
-import { Network, Pipe, Workflow } from 'lucide-react';
+import { Network, Route, Workflow } from 'lucide-react';
 
 import { useState } from 'react';
 import Enquiry from '@/components/Enquiry';
@@ -23,7 +23,7 @@ const products = [
     {
         title: 'Aluminum Piping Systems',
         description: 'Lightweight, corrosion-resistant piping solutions that provide excellent airflow and simplified installation.',
-        icon: Pipe,
+        icon: Route,
     },
     {
         title: 'Air Distribution Networks',
