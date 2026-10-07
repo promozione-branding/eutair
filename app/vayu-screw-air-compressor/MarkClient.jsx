@@ -230,13 +230,13 @@ const MarkClient = () => {
                         VAYU Screw Air Compressors
                     </h3>
 
-                    <div className="mt-5 grid gap-8 md:grid-cols-2 lg:mt-8 lg:grid-cols-5 xl:mt-12">
+                    <div className="mt-5 grid gap-5 md:grid-cols-2 lg:mt-8 lg:grid-cols-5 xl:mt-12">
                         {products.map((item, index) => (
                             <div
                                 key={item.slug || index}
                                 className="group overflow-hidden rounded-[30px] border border-slate-200 bg-white shadow-[0_15px_40px_rgba(0,0,0,.06)] transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_25px_60px_rgba(14,165,233,.15)]"
                             >
-                                <div className="flex h-[270px] w-full items-center justify-center overflow-hidden bg-gradient-to-b from-sky-50 to-white p-2">
+                                <div className="flex h-[270px] w-full items-center justify-center overflow-hidden border-b border-gray-300 p-2">
                                     <img
                                         src={item.image}
                                         alt={item.title}
@@ -244,8 +244,8 @@ const MarkClient = () => {
                                     />
                                 </div>
 
-                                <div className="p-4 text-center">
-                                    <h3 className="min-h-15 text-xl leading-snug font-bold text-slate-900 lg:text-base xl:text-lg">
+                                <div className="px-2 py-3 text-center">
+                                    <h3 className="min-h-15 flex justify-center items-center text-center text-xl leading-snug font-semibold text-slate-900 lg:text-base xl:text-lg">
                                         {item.title}
                                     </h3>
                                     <Link
