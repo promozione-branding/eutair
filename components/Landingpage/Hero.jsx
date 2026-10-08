@@ -25,7 +25,7 @@ import { useEffect, useState } from 'react';
 
 const slides = [
     {
-        bg: '/nb2.webp',
+        bg: '/WhatsApp Image 2026-10-08 at 10.47.07 AM.jpeg',
         mobileBg: '/mbm.jpeg',
 
         machine: '/hero1.webp',
@@ -108,7 +108,7 @@ export default function HeroSlider() {
                                 w-full
                                 lg:h-[680px]
                                 lg:min-h-0
-                                xl:h-[720px]
+                                xl:h-[600px]
                             "
                         >
 
@@ -173,20 +173,20 @@ export default function HeroSlider() {
                             {/* =================================================
                                 DESKTOP OPTIONAL OVERLAY
                             ================================================= */}
-                            {/*
+
                             <div
                                 className="
                                     absolute
                                     inset-0
                                     hidden
                                     bg-gradient-to-r
-                                    from-[#001938]/80
-                                    via-[#001938]/40
+                                    from-[#001938]/10
+                                    via-[#001938]/20
                                     to-transparent
                                     md:block
                                 "
                             />
-                            */}
+
 
                             {/* =================================================
                                 CONTENT WRAPPER
@@ -198,30 +198,18 @@ export default function HeroSlider() {
                                     mx-auto
                                     h-full
                                     w-full
-                                    max-w-[1800px]
+                                    max-w-7xl
                                     px-4
                                     sm:px-6
                                     md:px-8
                                     lg:px-12
                                     xl:px-16
+                                    flex justify-center items-end
                                 "
                             >
 
                                 <div
                                     className="
-                                        grid
-                                        h-full
-                                        items-center
-                                        gap-8
-                                        py-7
-
-                                        lg:grid-cols-2
-                                        lg:gap-8
-                                        lg:py-0
-
-                                        xl:grid-cols-[1fr_1fr_280px]
-
-                                        2xl:grid-cols-[1fr_1fr_320px]
                                     "
                                 >
 
@@ -243,19 +231,15 @@ export default function HeroSlider() {
                                         className="
                                             mx-auto
                                             w-full
-                                            max-w-[620px]
-
+flex justify-center flex-col items-center
                                             text-center
-
-                                            lg:mx-0
-                                            lg:text-left
                                         "
                                     >
 
                                         {/* =================================================
                                             TAGLINE
                                         ================================================= */}
-                                        <span
+                                        {/* <span
                                             className="
                                                 text-xs
                                                 font-semibold
@@ -273,7 +257,7 @@ export default function HeroSlider() {
                                             "
                                         >
                                             {slide.tagline}
-                                        </span>
+                                        </span> */}
 
                                         {/* =================================================
                                             TITLE
@@ -285,7 +269,7 @@ export default function HeroSlider() {
                                         {/* =================================================
                                             DESCRIPTION
                                         ================================================= */}
-                                        <p
+                                        {/* <p
                                             className="
                                                 mx-auto
                                                 mt-4
@@ -305,14 +289,14 @@ export default function HeroSlider() {
                                             "
                                         >
                                             {slide.description}
-                                        </p>
+                                        </p> */}
 
                                         {/* =================================================
                                             LOGO
                                         ================================================= */}
                                         <div
                                             className="
-                                                mt-6
+                                            absolute top-15 left-10
                                                 flex
                                                 flex-wrap
                                                 items-center
@@ -360,7 +344,7 @@ export default function HeroSlider() {
                                         ================================================= */}
                                         <div
                                             className="
-                                                mt-7
+                                                mt-8
                                                 flex
                                                 flex-col
                                                 justify-center
@@ -477,7 +461,7 @@ export default function HeroSlider() {
                                         </div>
                                     </motion.div>
 
-                                 
+
                                     <motion.div
                                         initial={{
                                             opacity: 0,
@@ -498,7 +482,7 @@ export default function HeroSlider() {
                                             md:flex
                                         "
                                     >
-                                        
+
                                     </motion.div>
 
                                     {/* =================================================
@@ -531,7 +515,7 @@ export default function HeroSlider() {
                                     >
                                         <div className="space-y-5">
 
-                                           
+
                                         </div>
                                     </motion.div>
 
@@ -606,12 +590,13 @@ function TypewriterTitle({ title }) {
         <h2
             aria-label={title}
             className="
-                mt-4
-                whitespace-pre-line
+                mt-6
+                text-nowrap
+                text-center
                 text-[36px]
                 font-black
                 leading-[0.95]
-                tracking-[-0.04em]
+                tracking-[0.04em]
                 text-white
                 uppercase
                 drop-shadow-[0_10px_40px_rgba(255,255,255,.15)]
