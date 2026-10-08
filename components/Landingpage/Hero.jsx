@@ -179,9 +179,9 @@ export default function HeroSlider() {
                                     absolute
                                     inset-0
                                     hidden
-                                    bg-gradient-to-r
-                                    from-[#001938]/10
-                                    via-[#001938]/20
+                                    bg-gradient-to-b
+                                    from-[#001938]/25
+                                    via-[#001938]/15 
                                     to-transparent
                                     md:block
                                 "
@@ -200,11 +200,7 @@ export default function HeroSlider() {
                                     w-full
                                     max-w-7xl
                                     px-4
-                                    sm:px-6
-                                    md:px-8
-                                    lg:px-12
-                                    xl:px-16
-                                    flex justify-center items-end
+                                    flex justify-start items-start
                                 "
                             >
 
@@ -230,9 +226,9 @@ export default function HeroSlider() {
                                         }}
                                         className="
                                             mx-auto
-                                            w-full
-flex justify-center flex-col items-center
-                                            text-center
+                                            w-full -ml-10
+                                             max-w-xl
+                                            text-start
                                         "
                                     >
 
@@ -269,34 +265,26 @@ flex justify-center flex-col items-center
                                         {/* =================================================
                                             DESCRIPTION
                                         ================================================= */}
-                                        {/* <p
+                                        <p
                                             className="
-                                                mx-auto
-                                                mt-4
-                                                max-w-[600px]
+                                            mt-2
                                                 text-sm
                                                 leading-relaxed
-                                                text-white/90
-
-                                                sm:text-base
-
-                                                md:text-lg
-
-                                                lg:mx-0
-                                                lg:text-[18px]
-
-                                                xl:text-[20px]
+                                                text-white
+font-semibold
+                                                sm:text-lg
                                             "
                                         >
-                                            {slide.description}
-                                        </p> */}
+                                            Energy efficient, low maintenance and reliable
+                                            <br /> air solutions for every industry.
+                                        </p>
 
                                         {/* =================================================
                                             LOGO
                                         ================================================= */}
-                                        <div
+                                        {/* <div
                                             className="
-                                            absolute top-15 left-10
+                                                mt-6
                                                 flex
                                                 flex-wrap
                                                 items-center
@@ -337,12 +325,12 @@ flex justify-center flex-col items-center
                                                     "
                                                 />
                                             </div>
-                                        </div>
+                                        </div> */}
 
                                         {/* =================================================
                                             BUTTONS
                                         ================================================= */}
-                                        <div
+                                        {/* <div
                                             className="
                                                 mt-8
                                                 flex
@@ -356,7 +344,6 @@ flex justify-center flex-col items-center
                                             "
                                         >
 
-                                            {/* GET QUOTE */}
                                             <button
                                                 onClick={() =>
                                                     setOpen(true)
@@ -420,7 +407,6 @@ flex justify-center flex-col items-center
                                                 </span>
                                             </button>
 
-                                            {/* DOWNLOAD CATALOGUE */}
                                             <a
                                                 href={slide.pdf}
                                                 download="Brochure.pdf"
@@ -458,7 +444,7 @@ flex justify-center flex-col items-center
 
                                                 DOWNLOAD CATALOGUE
                                             </a>
-                                        </div>
+                                        </div> */}
                                     </motion.div>
 
 
@@ -590,26 +576,18 @@ function TypewriterTitle({ title }) {
         <h2
             aria-label={title}
             className="
-                mt-6
-                text-nowrap
-                text-center
+                mt-5
+                text-wrap
+                text-start
                 text-[36px]
                 font-black
                 leading-[0.95]
                 tracking-[0.04em]
                 text-white
                 uppercase
-                drop-shadow-[0_10px_40px_rgba(255,255,255,.15)]
-
+                drop-shadow-[0_10px_40px_rgba(255,255,255,.3)]
                 sm:text-[44px]
-
                 md:text-[56px]
-
-                lg:text-[64px]
-
-                xl:text-[70px]
-
-                2xl:text-[76px]
             "
         >
             {visibleTitle}
