@@ -180,8 +180,8 @@ export default function HeroSlider() {
                                     inset-0
                                     hidden
                                     bg-gradient-to-b
-                                    from-[#001938]/25
-                                    via-[#001938]/15 
+                                    from-[#001938]/35
+                                    via-[#001938]/20 
                                     to-transparent
                                     md:block
                                 "
