@@ -135,11 +135,11 @@ const MarkClient = () => {
                             </span>
 
                             <h2 className="mt-5 text-2xl leading-tight font-bold break-words text-slate-900 sm:text-4xl lg:text-4xl xl:text-5xl">
-                                VAYU (Egli) Screw Air Compressors Supplier
+                                VAYU (Elgi) Screw Air Compressors Supplier
                             </h2>
 
                             <p className="mt-5 text-base leading-6 break-words text-slate-700 md:leading-7 xl:text-lg">
-                                Eutair Equipments LLP is a trusted VAYU (Egli) Screw Air Compressors Supplier,
+                                Eutair Equipments LLP is a trusted VAYU (Elgi) Screw Air Compressors Supplier,
                                 offering dependable and high-performance compressed air solutions for a wide
                                 range of industrial applications. VAYU screw air compressors are designed to
                                 deliver reliable performance, efficient operation, easy maintenance, and
