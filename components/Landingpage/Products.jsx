@@ -14,7 +14,7 @@ export default function ProductRange() {
         },
         {
             title: 'VAYU Screw Air Compressor',
-            image: '/vayu.png',
+            image: '/newVayu.webp',
             link: '/vayu-screw-air-compressor',
             desc: 'Eutair Equipments LLP is a trusted VAYU Screw Air Compressors Supplier, offering dependable and high-performance compressed air solutions',
         },
@@ -71,7 +71,7 @@ export default function ProductRange() {
                                 <h3 className="mb-3 text-base leading-snug font-bold text-[#0B3A82] uppercase sm:text-base">{item.title}</h3>
 
                                 {/* Description */}
-                                <p className="mb-4 text-sm leading-6 text-gray-600 ">{item.desc}</p>
+                                <p className="mb-4 text-sm leading-5 text-gray-600 ">{item.desc}</p>
 
                                 {/* Link */}
 

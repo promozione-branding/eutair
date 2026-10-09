@@ -17,7 +17,7 @@ const products = [
     {
         name: 'Vayu Screw Air Compressors',
         link: '/vayu-screw-air-compressor',
-        thumbnail: '/vayubgremove.webp',
+        thumbnail: '/newVayu.webp',
         description: 'Variable frequency technology delivering superior energy savings.',
         frames: Array.from({ length: 10 }, (_, i) => `/3601/mark/${i + 1}.png`),
     },
