@@ -89,6 +89,7 @@ export default function HeroSlider() {
                 }}
                 lazy={true}
                 preloadImages={false}
+
                 pagination={{
                     clickable: true,
                 }}
@@ -98,9 +99,7 @@ export default function HeroSlider() {
             >
                 {slides.map((slide, index) => (
                     <SwiperSlide key={index}>
-                        <div className='absolute inset-0 bg-black/40 z-10 ' />
-
-                        {/* =================================================
+<div className="absolute inset-0 z-10 bg-gradient-to-r from-black/80 via-black/20 to-transparent" />                        {/* =================================================
                             DESKTOP / MOBILE HERO
                         ================================================= */}
                         <div
