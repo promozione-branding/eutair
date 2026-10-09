@@ -52,15 +52,15 @@ const About = () => {
                                     About Eutair Equipments
                                 </span>
 
-                                <h2 className="mt-3 text-xl leading-tight font-bold text-slate-900 md:text-4xl">
+                                <h2 className="mt-3 text-xl leading-tight font-bold text-slate-900 md:text-3xl">
                                     Compressed Air Experts for Industrial Engineering Solutions
                                 </h2>
 
-                                <div className="mt-3 mb-4 h-1 w-24 rounded-full bg-cyan-600"></div>
+                                <div className="mt-2 mb-4 h-1 w-24 rounded-full bg-cyan-600"></div>
 
-                                <h3 className="mb-4 text-xs leading-relaxed font-semibold text-slate-800 md:text-xl"></h3>
+                                <h3 className="mb-4 text-xs leading-relaxed font-semibold text-slate-800 md:text-base"></h3>
 
-                                <p className="text-md leading-8 text-black md:text-lg">
+                                <p className="text-md leading-8 text-black md:text-base">
                                     Eutair Equipment is a professionally managed engineering company based in New Delhi, India, specializing in{' '}
                                     <strong>
                                         {' '}
@@ -82,7 +82,7 @@ const About = () => {
                                     .
                                 </p>
 
-                                <p className="text-lg leading-8 text-black">
+                                <p className="text-lg md:text-base leading-8 text-black">
                                     We provide end-to-end services from Concept to Commissioning on EP, EPC, and a turnkey basis, serving diverse industries
                                     across India, Africa, and the Indian Sub-continent with reliable after-sales services. We are committed to delivering
                                     efficient, high-performance, and cost-effective industrial solutions tailored to client requirements.
@@ -114,9 +114,9 @@ const About = () => {
                                         </div>
                                     </div>
 
-                                    <div className="mt-8 rounded-2xl bg-gradient-to-r from-cyan-600 to-blue-700 p-6 text-white">
-                                        <h4 className="mb-3 text-xl font-semibold">Compressed Air & Industrial Equipment Solutions</h4>
-                                        <p className="leading-7 text-white/90">
+                                    <div className="mt-8 rounded-2xl bg-gradient-to-r from-cyan-600 to-blue-700 p-4 text-white">
+                                        <h4 className="mb-3 text-base font-semibold">Compressed Air & Industrial Equipment Solutions</h4>
+                                        <p className="leading-6 text-base text-white/90">
                                             Delivering quality products, innovative technology, and reliable support to help industries achieve maximum
                                             productivity and operational efficiency.
                                         </p>

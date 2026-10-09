@@ -73,7 +73,7 @@ export default function Navbar() {
                     <div className="mx-auto w-full px-4 sm:px-6 lg:px-8 xl:px-20">
                         <div className="flex h-11 items-center justify-between">
                             {/* Left Side */}
-                            <div className="flex items-center gap-6 text-[14px] text-slate-600">
+                            <div className="flex items-center gap-6 text-[12px] text-slate-600">
                                 <div className="flex items-center gap-2">
                                     <Building2 className="h-4 w-4 text-blue-600" />
                                     <span>GSTIN: 07AAGFE0760M2ZB</span>
@@ -168,7 +168,7 @@ export default function Navbar() {
                                 <li className="mr-3">
                                     <Link
                                         href="/about"
-                                        className="text-[17px] font-medium text-slate-700 hover:text-blue-600 lg:text-[16px] xl:tracking-[0.12em]"
+                                        className="text-[17px] font-medium text-slate-700 hover:text-blue-600 lg:text-[13px] xl:tracking-[0.12em]"
                                     >
                                         ABOUT US
                                     </Link>
@@ -187,7 +187,7 @@ export default function Navbar() {
                                 >
                                     <button
                                         type="button"
-                                        className="flex items-center gap-2 text-[17px] font-medium tracking-[0.12em] text-slate-700 transition-all hover:text-blue-600 lg:text-[16px]"
+                                        className="flex items-center gap-2 text-[17px] font-medium tracking-[0.12em] text-slate-700 transition-all hover:text-blue-600 lg:text-[13px]"
                                     >
                                         OUR PRODUCTS
                                         <ChevronDown className={`h-4 w-4 transition-transform duration-300 ${desktopProductOpen ? 'rotate-180' : ''}`} />
@@ -204,14 +204,14 @@ export default function Navbar() {
                                                 <div className="bg-gradient-to-br from-blue-600 to-cyan-500 p-8 text-white">
                                                     <h3 className="mb-4 text-2xl font-bold">Air Solutions</h3>
 
-                                                    <p className="leading-relaxed text-white/90">
+                                                    <p className="leading-relaxed text-[14px] text-white/90">
                                                         Explore our complete range of industrial air compressors, dryers, filtration systems and accessories
                                                         engineered for maximum efficiency.
                                                     </p>
 
                                                     <div className="mt-6 flex gap-5">
                                                         <div className="flex items-center justify-center rounded-full bg-white px-5 py-3">
-                                                            <Image src="/mark-compressors-logo.png" alt="Mark Compressors" width={110} height={60} />
+                                                            <Image src="/mark-compressors-losgo.png" alt="Mark Compressors" width={110} height={60} />
                                                         </div>
 
                                                         <div className="flex items-center justify-center rounded-full bg-white px-5 py-3">
@@ -221,13 +221,15 @@ export default function Navbar() {
                                                 </div>
 
                                                 {/* Right */}
-                                                <div className="p-8">
-                                                    <div className="grid gap-2">
+                                                <div className="p-5">
+                                                    <div className="grid gap-1">
                                                         {products.map((product) => (
                                                             <Link
                                                                 key={product.title}
                                                                 href={product.href}
-                                                                className="group flex items-center justify-between rounded-xl px-4 py-3 transition-all hover:bg-blue-50 hover:text-blue-600"
+                                                                className="group flex items-center justify-between rounded-xl px-4 py-3 
+                                                                text-[13px] transition-all hover:bg-blue-50 
+                                                                hover:text-blue-600"
                                                             >
                                                                 <span>{product.title}</span>
 
@@ -244,7 +246,7 @@ export default function Navbar() {
                                 <li className="mr-3">
                                     <Link
                                         href="/our-blogs"
-                                        className="text-[17px] font-medium tracking-[0.12em] text-slate-700 hover:text-blue-600 lg:text-[16px]"
+                                        className="text-[17px] font-medium tracking-[0.12em] text-slate-700 hover:text-blue-600 lg:text-[13px]"
                                     >
                                         BLOGS
                                     </Link>
@@ -267,7 +269,7 @@ export default function Navbar() {
                                     <button
                                         type="button"
                                         onClick={() => setDesktopServicesOpen((prev) => !prev)}
-                                        className="flex items-center gap-2 text-[17px] font-medium tracking-[0.12em] text-slate-700 transition-all hover:text-blue-600 lg:text-[16px]"
+                                        className="flex items-center gap-2 text-[17px] font-medium tracking-[0.12em] text-slate-700 transition-all hover:text-blue-600 lg:text-[13px]"
                                     >
                                         OUR SERVICES
                                         <ChevronDown className={`h-4 w-4 transition-transform duration-300 ${desktopServicesOpen ? 'rotate-180' : ''}`} />
@@ -314,7 +316,7 @@ export default function Navbar() {
                                 <li>
                                     <Link
                                         href="/contact"
-                                        className="text-[17px] font-medium tracking-[0.12em] text-slate-700 hover:text-blue-600 lg:text-[16px]"
+                                        className="text-[17px] font-medium tracking-[0.12em] text-slate-700 hover:text-blue-600 lg:text-[13px]"
                                     >
                                         CONTACT US
                                     </Link>

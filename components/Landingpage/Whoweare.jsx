@@ -23,7 +23,7 @@ const Whoweare = () => {
                         <div className="order-2 lg:col-span-8">
                             <span className="text-xs font-semibold tracking-[2px] text-sky-600 uppercase sm:text-sm md:tracking-[3px]">WHO WE ARE</span>
 
-                            <h2 className="mt-3 text-2xl leading-tight font-bold text-slate-900 sm:text-4xl lg:text-3xl xl:text-4xl">
+                            <h2 className="mt-3 text-2xl leading-tight font-bold text-slate-900 sm:text-4xl lg:text-3xl ">
                                 Quality, Reliability & Engineering Excellence
                             </h2>
 
@@ -36,7 +36,7 @@ const Whoweare = () => {
                                 <div>
                                     <p className="text-base font-semibold text-slate-800 sm:text-lg">Eutair is ISO 9001:2015 certified.</p>
 
-                                    <p className="mt-3 text-sm leading-7 text-black sm:text-base sm:leading-8 lg:leading-5 xl:leading-7">
+                                    <p className="mt-3 text-sm leading-7 text-black sm:text-sm sm:leading-8 lg:leading-5 ">
                                         Our quality-focused approach reflects a commitment to structured processes, consistency, reliability and continuous
                                         improvement across engineering, products, services and project execution.
                                     </p>
@@ -51,7 +51,7 @@ const Whoweare = () => {
                                 <div className="w-1 shrink-0 rounded-full bg-sky-600"></div>
 
                                 <div>
-                                    <p className="text-sm leading-7 text-black sm:text-base sm:leading-8 lg:leading-5 xl:leading-7">
+                                    <p className="text-sm leading-7 text-black sm:text-base sm:leading-8 md:text-sm lg:leading-5 ">
                                         We do designing, supply, erect and commission complete compressed air systems along with heat exchangers, cooling
                                         towers, plant air and water piping systems. We design, develop and charge up all three sides: generation, distribution
                                         and demand.
@@ -65,7 +65,7 @@ const Whoweare = () => {
                                     Industry Codes and Standards adhered to by our Designers:
                                 </h3>
 
-                                <p className="text-sm leading-7 text-slate-600 sm:text-base sm:leading-8 lg:leading-5 xl:leading-7">
+                                <p className="text-sm leading-7 text-slate-600 sm:text-base sm:leading-8 lg:leading-5 md:text-sm">
                                     API 650, API 579, API 620, API 653, ASME Boiler & Pressure Vessel Code, Section VIII, Div. – 1 & Div. – 2, PD 5500, TEMA
                                 </p>
                             </div>

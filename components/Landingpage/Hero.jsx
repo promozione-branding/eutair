@@ -25,7 +25,7 @@ import { useEffect, useState } from 'react';
 
 const slides = [
     {
-        bg: '/WhatsApp Image 2026-10-08 at 10.47.07 AM.jpeg',
+        bg: '/banner1.jpeg',
         mobileBg: '/mbm.jpeg',
 
         machine: '/hero1.webp',
@@ -80,6 +80,7 @@ export default function HeroSlider() {
 
     return (
         <section className="relative w-full overflow-hidden">
+            
 
             <Swiper
                 modules={[Autoplay, Pagination]}
@@ -97,6 +98,7 @@ export default function HeroSlider() {
             >
                 {slides.map((slide, index) => (
                     <SwiperSlide key={index}>
+                        <div className='absolute inset-0 bg-black/40 z-10 ' />
 
                         {/* =================================================
                             DESKTOP / MOBILE HERO
@@ -106,9 +108,7 @@ export default function HeroSlider() {
                                 relative
                                 min-h-[580px]
                                 w-full
-                                lg:h-[680px]
-                                lg:min-h-0
-                                xl:h-[600px]
+                                md:h-[580px]
                             "
                         >
 
@@ -173,20 +173,20 @@ export default function HeroSlider() {
                             {/* =================================================
                                 DESKTOP OPTIONAL OVERLAY
                             ================================================= */}
-
+                            {/*
                             <div
                                 className="
                                     absolute
                                     inset-0
                                     hidden
-                                    bg-gradient-to-b
-                                    from-[#001938]/35
-                                    via-[#001938]/20 
+                                    bg-gradient-to-r
+                                    from-[#001938]/80
+                                    via-[#001938]/40
                                     to-transparent
                                     md:block
                                 "
                             />
-
+                            */}
 
                             {/* =================================================
                                 CONTENT WRAPPER
@@ -194,18 +194,34 @@ export default function HeroSlider() {
                             <div
                                 className="
                                     relative
-                                    z-10
+                                    z-30
                                     mx-auto
                                     h-full
                                     w-full
-                                    max-w-7xl
+                                    max-w-[1800px]
                                     px-4
-                                    flex justify-start items-start
+                                    sm:px-6
+                                    md:px-8
+                                    lg:px-12
+                                    xl:px-16
                                 "
                             >
 
                                 <div
                                     className="
+                                        grid
+                                        h-full
+                                        items-center
+                                        gap-8
+                                        py-7
+
+                                        lg:grid-cols-2
+                                        lg:gap-8
+                                        lg:py-0
+
+                                        xl:grid-cols-[1fr_1fr_280px]
+
+                                        2xl:grid-cols-[1fr_1fr_320px]
                                     "
                                 >
 
@@ -226,16 +242,20 @@ export default function HeroSlider() {
                                         }}
                                         className="
                                             mx-auto
-                                            w-full -ml-10
-                                             max-w-xl
-                                            text-start
+                                            w-full
+                                            max-w-[620px]
+
+                                            text-center
+
+                                            lg:mx-0
+                                            lg:text-left
                                         "
                                     >
 
                                         {/* =================================================
                                             TAGLINE
                                         ================================================= */}
-                                        {/* <span
+                                        <span
                                             className="
                                                 text-xs
                                                 font-semibold
@@ -245,15 +265,15 @@ export default function HeroSlider() {
 
                                                 sm:text-sm
 
-                                                md:text-base
+                                                md:text-sm
 
-                                                lg:text-[17px]
+                                              
 
-                                                xl:text-[18px]
+                                              
                                             "
                                         >
                                             {slide.tagline}
-                                        </span> */}
+                                        </span>
 
                                         {/* =================================================
                                             TITLE
@@ -267,22 +287,27 @@ export default function HeroSlider() {
                                         ================================================= */}
                                         <p
                                             className="
-                                            mt-2
+                                                mx-auto
+                                                mt-4
+                                                max-w-[600px]
                                                 text-sm
                                                 leading-relaxed
-                                                text-white
-font-semibold
-                                                sm:text-lg
+                                                text-white/90
+
+                                                sm:text-base
+
+                                                md:text-lg
+
+                                               
                                             "
                                         >
-                                            Energy efficient, low maintenance and reliable
-                                            <br /> air solutions for every industry.
+                                            {slide.description}
                                         </p>
 
                                         {/* =================================================
                                             LOGO
                                         ================================================= */}
-                                        {/* <div
+                                        <div
                                             className="
                                                 mt-6
                                                 flex
@@ -325,14 +350,14 @@ font-semibold
                                                     "
                                                 />
                                             </div>
-                                        </div> */}
+                                        </div>
 
                                         {/* =================================================
                                             BUTTONS
                                         ================================================= */}
-                                        {/* <div
+                                        <div
                                             className="
-                                                mt-8
+                                                mt-7
                                                 flex
                                                 flex-col
                                                 justify-center
@@ -344,6 +369,7 @@ font-semibold
                                             "
                                         >
 
+                                            {/* GET QUOTE */}
                                             <button
                                                 onClick={() =>
                                                     setOpen(true)
@@ -407,6 +433,7 @@ font-semibold
                                                 </span>
                                             </button>
 
+                                            {/* DOWNLOAD CATALOGUE */}
                                             <a
                                                 href={slide.pdf}
                                                 download="Brochure.pdf"
@@ -444,10 +471,10 @@ font-semibold
 
                                                 DOWNLOAD CATALOGUE
                                             </a>
-                                        </div> */}
+                                        </div>
                                     </motion.div>
 
-
+                                 
                                     <motion.div
                                         initial={{
                                             opacity: 0,
@@ -468,7 +495,7 @@ font-semibold
                                             md:flex
                                         "
                                     >
-
+                                        
                                     </motion.div>
 
                                     {/* =================================================
@@ -501,7 +528,7 @@ font-semibold
                                     >
                                         <div className="space-y-5">
 
-
+                                           
                                         </div>
                                     </motion.div>
 
@@ -576,18 +603,21 @@ function TypewriterTitle({ title }) {
         <h2
             aria-label={title}
             className="
-                mt-5
-                text-wrap
-                text-start
+                mt-4
+                whitespace-pre-line
                 text-[36px]
                 font-black
                 leading-[0.95]
-                tracking-[0.04em]
+                tracking-[-0.04em]
                 text-white
                 uppercase
-                drop-shadow-[0_10px_40px_rgba(255,255,255,.3)]
+                drop-shadow-[0_10px_40px_rgba(255,255,255,.15)]
+
                 sm:text-[44px]
+
                 md:text-[56px]
+
+               
             "
         >
             {visibleTitle}

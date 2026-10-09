@@ -15,9 +15,9 @@ const products = [
     },
 
     {
-        name: 'VFD Screw Compressors',
-        link: '/mark-compressor',
-        thumbnail: '/hero2.png',
+        name: 'Vayu Screw Air Compressors',
+        link: '/vayu-screw-air-compressor',
+        thumbnail: '/vayubgremove.webp',
         description: 'Variable frequency technology delivering superior energy savings.',
         frames: Array.from({ length: 10 }, (_, i) => `/3601/mark/${i + 1}.png`),
     },
@@ -27,7 +27,7 @@ const products = [
         link: '/air-treatment-service',
         thumbnail: '/hero3.png',
         description: 'Advanced air treatment solutions for clean and efficient compressed air.',
-        frames: Array.from({ length: 10 }, (_, i) => `/3601/Product-3/${i + 1}.png`),
+        frames: Array.from({ length: 10 }, (_, i) => `/vayubgremove.webp`),
     },
 
     {
@@ -88,7 +88,7 @@ export default function ProductRange() {
                         Our Bestseller Portfolio
                     </p>
 
-                    <h2 className="mt-4 text-5xl font-bold text-slate-900">Engineered For Every Industry</h2>
+                    <h2 className="mt-4 text-3xl font-bold text-slate-900">Engineered For Every Industry</h2>
                 </div>
 
                 <div className="mt-16 grid gap-8 lg:grid-cols-12">

@@ -45,8 +45,8 @@ export default function ProductRange() {
                     {/* Heading */}
                     <h2 className="mb-2 text-center text-xs font-semibold tracking-[2px] text-sky-600 uppercase sm:text-sm md:tracking-[3px]">Our Products</h2>
 
-                    <div className="mb-8 text-center md:mb-12">
-                        <h2 className="text-2xl leading-tight font-bold text-[#0B3A82] uppercase sm:text-3xl md:text-4xl lg:text-5xl">
+                    <div className="mb-8 text-center md:mb-7">
+                        <h2 className="text-2xl leading-tight font-bold text-[#0B3A82] uppercase sm:text-3xl md:text-4xl ">
                             Our Screw Air Compressor Range
                         </h2>
                     </div>
@@ -68,15 +68,15 @@ export default function ProductRange() {
                                 </div>
 
                                 {/* Title */}
-                                <h3 className="mb-3 text-base leading-snug font-bold text-[#0B3A82] uppercase sm:text-lg">{item.title}</h3>
+                                <h3 className="mb-3 text-base leading-snug font-bold text-[#0B3A82] uppercase sm:text-base">{item.title}</h3>
 
                                 {/* Description */}
-                                <p className="mb-4 text-sm leading-6 text-gray-600 sm:text-[15px]">{item.desc}</p>
+                                <p className="mb-4 text-sm leading-6 text-gray-600 ">{item.desc}</p>
 
                                 {/* Link */}
 
                                 <Link href={item.link}>
-                                    <button className="cursor-pointer text-sm font-semibold tracking-wide text-[#0B3A82] uppercase transition hover:text-cyan-600">
+                                    <button className="cursor-pointer text-xs font-semibold tracking-wide text-[#0B3A82] uppercase transition hover:text-cyan-600">
                                         View Product →
                                     </button>
                                 </Link>
