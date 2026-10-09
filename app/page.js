@@ -30,7 +30,7 @@ export default function Home() {
             <Products></Products>
             <Cta></Cta>
             <Otherproduct></Otherproduct>
-            <Process></Process>
+            {/* <Process></Process> */}
             <Dedicated></Dedicated>
 
             <Bestseller></Bestseller>

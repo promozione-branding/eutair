@@ -28,7 +28,7 @@ export default function Footer() {
                     <div>
                         <Image width={200} alt="Eutair" height={200} src="/logofooter-removebg-preview.png"></Image>
 
-                        <p className="mt-8 leading-8 text-white">
+                        <p className="mt-8 leading-6 text-sm md:text-[14px] text-white">
                             Leading Manufacturer, Trader, Exporter & Importer of Air Compressors, Air Dryers, Air Line Filters, Drain Valves and Industrial
                             Filtration Solutions.
                         </p>
@@ -37,7 +37,7 @@ export default function Footer() {
 
                     {/* Quick Links */}
                     <div>
-                        <h4 className="mb-6 text-xl font-semibold">Quick Links</h4>
+                        <h4 className="mb-6 text-lg   font-semibold">Quick Links</h4>
 
                         <ul className="space-y-4 text-white">
                             <li className="hover:text-cyan-500">
@@ -68,7 +68,7 @@ export default function Footer() {
 
                     {/* Products */}
                     <div>
-                        <h4 className="mb-6 text-xl font-semibold">Our Services</h4>
+                        <h4 className="mb-6 text-lg font-semibold">Our Services</h4>
 
                         <ul className="space-y-4 text-white">
                             <li>
@@ -105,7 +105,7 @@ export default function Footer() {
 
                     {/* Contact */}
                     <div>
-                        <h4 className="mb-5 text-xl font-semibold">Contact Information</h4>
+                        <h4 className="mb-5 text-lg font-semibold">Contact Information</h4>
 
                         <div className="space-y-6">
                             {/* Phone */}
@@ -113,7 +113,7 @@ export default function Footer() {
                                 <Phone className="mt-1 shrink-0 text-cyan-500" size={20} />
                                 <div>
                                     <p className="font-semibold text-white">Phone</p>
-                                    <a href="tel:+919717159766" className="text-slate-300 transition-colors hover:text-cyan-400">
+                                    <a href="tel:+919717159766" className="text-slate-300 transition-colors text-[14px] hover:text-cyan-400">
                                         +91 9717159766
                                     </a>
                                 </div>
@@ -124,7 +124,7 @@ export default function Footer() {
                                 <FaWhatsapp className="mt-1 shrink-0 text-cyan-500" size={20} />
                                 <div>
                                     <p className="font-semibold text-white">WhatsApp</p>
-                                    <a href="https://wa.link/o8l7fy" className="text-slate-300 transition-colors hover:text-cyan-400">
+                                    <a href="https://wa.link/o8l7fy" className="text-slate-300 transition-colors text-[14px] hover:text-cyan-400">
                                         +91 958 2911766
                                     </a>
                                 </div>
@@ -137,11 +137,11 @@ export default function Footer() {
                                 <p className="mb-2 font-semibold text-white">Email Contacts</p>
 
                                 <div className="space-y-1 text-slate-300">
-                                    <a href="mailto:support@eutair.com" className="block transition-colors hover:text-cyan-400">
+                                    <a href="mailto:support@eutair.com" className="block transition-colors text-[14px]  hover:text-cyan-400">
                                         support@eutair.com
                                     </a>
 
-                                    <a href="mailto:sales@eutair.com" className="block transition-colors hover:text-cyan-400">
+                                    <a href="mailto:sales@eutair.com" className="block transition-colors text-[14px] hover:text-cyan-400">
                                         sales@eutair.com
                                     </a>
                                 </div>
@@ -154,13 +154,13 @@ export default function Footer() {
                         {/* Background Glow */}
 
                         <div className="relative">
-                            <h4 className="mb-3 ml-2 text-xl font-bold text-cyan-400">Trust Elite Certificate</h4>
+                            <h4 className="mb-3 ml-2 text-lg font-bold text-cyan-400">Trust Elite Certificate</h4>
 
                             <div className="flex justify-center">
                                 <Image src="/TRUST-ELITE.webp" alt="Trust Elite Certificate" width={120} height={120} className="object-contain" />
                             </div>
 
-                            <p className="ml-2 text-[14px] leading-6 text-slate-200">
+                            <p className="ml-2 text-[13px] leading-6 text-slate-200">
                                 We are proud to present the Trust Elite Certificate of Excellence to Eutair , recognizing their commitment to exceptional
                                 customer service, outstanding business practices, and a dedication to building trust with their customers.
                             </p>
@@ -181,7 +181,7 @@ export default function Footer() {
                     <div className="min-w-0">
                         <p className="font-semibold text-white">Regd. Address</p>
 
-                        <p className="leading-relaxed break-words text-slate-300">
+                        <p className="leading-6 break-words text-[14px] text-slate-300">
                             37C, 2nd Floor, Gate No. 3, Opp. IDBI Bank, Chaudhary Balbir Singh Marg, <br />
                             A3 Block, Paschim Vihar, New Delhi - 110063
                         </p>
@@ -195,7 +195,7 @@ export default function Footer() {
                     <div className="min-w-0">
                         <p className="font-semibold text-white">Office Address</p>
 
-                        <p className="leading-relaxed break-words text-slate-300">
+                        <p className="leading-relaxed text-[14px] break-words text-slate-300">
                             T-3, Third Floor, Ansal Utility Tower, A2 Block, Paschim Vihar,
                             <br />
                             New Delhi, Delhi - 110063

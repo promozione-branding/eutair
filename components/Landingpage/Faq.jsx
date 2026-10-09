@@ -34,10 +34,10 @@ export default function FAQ() {
     };
 
     return (
-        <section className="relative bg-white px-4 py-4 md:px-8 lg:px-9 lg:py-10 xl:px-8 xl:py-16">
+        <section className="relative bg-white px-4 py-4 md:px-8 lg:px-9 lg:py-10 ">
             {/* Heading */}
 
-            <h2 className="mb-3 text-center text-2xl font-extrabold text-[#07342A] md:text-4xl lg:mb-9 xl:mb-12">Frequently Asked Questions</h2>
+            <h2 className="mb-3 text-center text-2xl font-extrabold text-[#07342A] md:text-4xl lg:mb-9 ">Frequently Asked Questions</h2>
 
             {/* FAQ Container */}
             <div className="mx-auto max-w-5xl overflow-hidden rounded-xl border border-gray-200 bg-white shadow-lg">
@@ -48,7 +48,7 @@ export default function FAQ() {
                             onClick={() => toggleFAQ(index)}
                             className="flex w-full items-center justify-between px-6 py-5 text-lg font-medium text-gray-900 transition hover:bg-cyan-600/30"
                         >
-                            <span className="flex-1 text-left text-base md:text-xl">
+                            <span className="flex-1 text-left text-base md:text-base">
                                 {index + 1}. {faq.q}
                             </span>
                             <ChevronDown

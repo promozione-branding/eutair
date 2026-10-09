@@ -30,11 +30,11 @@ const Bestseller = () => {
                             Our Quality Commitment
                         </span>
 
-                        <h2 className="mb-2 text-2xl leading-tight font-bold text-gray-900 sm:text-4xl lg:mb-6 lg:text-5xl">
+                        <h2 className="mb-2 text-2xl leading-tight font-bold text-gray-900 sm:text-4xl ">
                             Export & International Trade Operations
                         </h2>
 
-                        <p className="mb-4 text-sm leading-7 text-gray-700 sm:text-base">
+                        <p className="mb-4 text-sm leading-6 text-gray-700 sm:text-base">
                             Eutair actively supports export-oriented supply for companies based in Africa and other emerging markets. The company operates as an
                             execution partner for industrial equipment and project-related supplies.
                         </p>

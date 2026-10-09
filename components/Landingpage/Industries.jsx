@@ -63,7 +63,7 @@ export default function IndustriesWeServe() {
                         Industries We Serve
                     </span>
 
-                    <h2 className="mt-3 text-lg leading-tight font-bold text-slate-900 sm:text-4xl">
+                    <h2 className="mt-3 text-lg leading-tight font-bold text-slate-900 sm:text-3xl">
                         Reliable Compressed Air & Industrial Filtration Solutions for Every Industry
                     </h2>
                 </div>
@@ -84,10 +84,10 @@ export default function IndustriesWeServe() {
                                 </div>
 
                                 {/* Title */}
-                                <h3 className="mb-3 text-sm leading-snug font-bold text-slate-900 sm:text-xl">{industry.title}</h3>
+                                <h3 className="mb-3 text-sm leading-snug font-bold text-slate-900 sm:text-lg">{industry.title}</h3>
 
                                 {/* Description */}
-                                <p className="hidden text-sm leading-7 text-slate-600 sm:text-[15px] md:block lg:leading-6 xl:leading-7">
+                                <p className="hidden text-sm leading-7 text-slate-600 sm:text-[14px] md:block ">
                                     {industry.description}
                                 </p>
                             </div>

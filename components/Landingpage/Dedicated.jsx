@@ -49,7 +49,7 @@ export default function AirSystemSolution() {
                         Our Specialization
                     </p>
 
-                    <h1 className="mx-auto mb-6 max-w-4xl text-center text-lg leading-tight font-bold text-blue-900 sm:text-4xl lg:mb-3 lg:text-5xl xl:mb-5">
+                    <h1 className="mx-auto mb-6 max-w-4xl text-center text-lg leading-tight font-bold text-blue-900 sm:text-4xl  xl:mb-5">
                         Complete Screw Air Compressors & Industrial Solutions
                     </h1>
 
@@ -61,15 +61,15 @@ export default function AirSystemSolution() {
                                 alt="Chicago Pneumatic Supplier"
                                 width={800}
                                 height={800}
-                                className="mx-auto h-auto md:h-120 w-full max-w-[650px] object-contain"
+                                className="mx-auto h-auto md:h-100 w-full max-w-[650px] object-contain"
                             />
                         </div>
 
                         {/* Accordion */}
                         <div>
-                            <h3 className="mb-4 text-xs leading-relaxed font-semibold text-slate-800 md:text-xl"></h3>
+                            <h3 className="mb-4 text-xs leading-relaxed font-semibold text-slate-800 md:text-base"></h3>
 
-                            <p className="text-sm leading-8 text-black md:text-lg lg:leading-6 xl:leading-8">
+                            <p className="text-sm leading-8 text-black md:text-base lg:leading-7">
                                 Eutair Equipments is a professionally managed engineering and industrial equipment company based at New Delhi, India. We have
                                 over the years accepted industry challenges, and these very challenges made us what we are today:{' '}
                                 <strong> 'Compressed Air Experts'. </strong>

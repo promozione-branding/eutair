@@ -56,7 +56,7 @@ export default function Testimonials() {
                             Customer Success Stories
                         </span>
 
-                        <h2 className="mt-3 text-3xl leading-tight font-bold text-[#0d4976] sm:text-4xl lg:text-5xl">Letters of Appreciation</h2>
+                        <h2 className="mt-3 text-3xl leading-tight font-bold text-[#0d4976] sm:text-4xl ">Letters of Appreciation</h2>
 
                         <p className="mt-4 text-sm text-slate-500 sm:text-base">
                             Trusted by manufacturing plants, engineering companies, automotive facilities and industrial organizations across India.
