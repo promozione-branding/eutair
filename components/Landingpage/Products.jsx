@@ -12,12 +12,12 @@ export default function ProductRange() {
             link: '/chicago-pneumatic',
             desc: 'Industry-proven compressed air systems delivering superior efficiency, durability, and productivity for modern industrial operations.',
         },
-        // {
-        //     title: 'MARK Compressors',
-        //     image: '/hero2.png',
-        //     link: '/mark-compressor',
-        //     desc: 'Innovative compressor solutions combining energy savings, operational reliability, and long-term performance excellence.',
-        // },
+        {
+            title: 'VAYU Screw Air Compressor',
+            image: '/vayu.png',
+            link: '/vayu-screw-air-compressor',
+            desc: 'Eutair Equipments LLP is a trusted VAYU Screw Air Compressors Supplier, offering dependable and high-performance compressed air solutions',
+        },
         {
             title: 'Air Treatment',
             image: '/hero3.png',
@@ -52,7 +52,7 @@ export default function ProductRange() {
                     </div>
 
                     {/* Products Grid */}
-                    <div className="grid grid-cols-1 border border-cyan-400 sm:grid-cols-2 lg:grid-cols-4">
+                    <div className="grid grid-cols-1 border border-cyan-400 sm:grid-cols-2 lg:grid-cols-5">
                         {products.map((item, index) => (
                             <div
                                 key={index}
