@@ -73,7 +73,7 @@ export default function AirTreatment() {
 
                         <h1 className="mt-6 text-3xl leading-tight font-bold text-white sm:text-4xl lg:text-6xl">Air Treatment Solutions</h1>
 
-                        <p className="mt-5 text-[15px] leading-7 text-white sm:text-base sm:leading-8 lg:text-lg">
+                        <p className="mt-5 text-[15px] leading-7 text-white sm:text-base sm:leading-6 lg:text-lg">
                             Protect your compressed air system with advanced Air Treatment Solutions designed to deliver clean, dry, and high-quality compressed
                             air. At Eutair Equipments, we offer reliable air treatment equipment, including Air Dryers, Air Line Filters, and Drain Valves, to
                             remove moisture, oil, and contaminants, ensuring improved system efficiency, equipment protection, and long-term performance across
@@ -110,18 +110,18 @@ export default function AirTreatment() {
 
                             <h2 className="mt-4 text-3xl font-bold text-slate-900 md:text-4xl">Why Air Treatment Solutions Matter</h2>
 
-                            <p className="mt-6 text-slate-600 md:text-lg md:leading-8">
+                            <p className="mt-6 text-slate-600 md:text-lg md:leading-7">
                                 Clean and dry compressed air is essential for maintaining equipment efficiency, reducing downtime, and ensuring consistent
                                 production quality. Our air treatment solutions help improve system reliability while extending the lifespan of downstream
                                 equipment.
                             </p>
                         </div>
 
-                        <div className="grid gap-3 md:gap-5">
+                        <div className="grid gap-3 md:gap-4">
                             {whyPoints.map((item, index) => (
                                 <div
                                     key={index}
-                                    className="flex gap-4 rounded-2xl border border-slate-200 bg-white p-3 shadow-sm transition hover:shadow-lg md:p-6"
+                                    className="flex gap-4 rounded-2xl border border-slate-200 bg-white p-3 shadow-sm transition hover:shadow-lg md:p-4"
                                 >
                                     <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-sky-100 text-sky-600">
                                         <CheckCircle2 />
@@ -138,27 +138,27 @@ export default function AirTreatment() {
             {/* Benefits */}
             <section className="bg-slate-50 py-7 md:py-10">
                 <div className="mx-auto max-w-7xl px-6 lg:px-8">
-                    <div className="mx-auto max-w-3xl text-center">
+                    <div className="mx-auto max-w-5xl text-center">
                         <span className="font-semibold tracking-wider text-sky-600 uppercase">Key Benefits</span>
 
                         <h2 className="mt-3 text-3xl font-bold text-slate-900 md:text-4xl">Key Benefits</h2>
 
-                        <p className="mt-4 text-slate-600 md:text-lg md:leading-8">
+                        <p className="mt-4 text-slate-600 md:text-lg md:leading-6">
                             Our Air Treatment Solutions are designed to improve compressed air quality, protect critical equipment, and enhance the overall
                             efficiency of your compressed air system. By removing moisture, oil, dust, and other contaminants, these solutions help industries
                             achieve reliable performance while reducing maintenance costs and extending equipment life.
                         </p>
                     </div>
 
-                    <div className="mt-5 grid grid-cols-2 gap-6 lg:grid-cols-4">
+                    <div className="mt-5 grid grid-cols-2 gap-3 lg:grid-cols-4">
                         {benefits.map((item, index) => (
                             <div
                                 key={index}
-                                className="rounded-2xl border border-slate-200 bg-white p-3 shadow-sm transition hover:-translate-y-1 hover:shadow-xl md:p-7"
+                                className="rounded-2xl border border-slate-200 bg-white p-3 shadow-sm transition hover:-translate-y-1 hover:shadow-xl md:p-5"
                             >
                                 <CheckCircle2 className="mb-5 text-sky-600" size={28} />
 
-                                <p className="text-sm font-medium text-slate-700 md:text-base md:leading-7">{item}</p>
+                                <p className="text-sm font-medium text-slate-700 md:text-base md:leading-6">{item}</p>
                             </div>
                         ))}
                     </div>
@@ -174,14 +174,14 @@ export default function AirTreatment() {
                         <h2 className="mt-4 text-3xl font-bold text-slate-900 md:text-4xl">Our Air Treatment Solutions</h2>
                     </div>
 
-                    <div className="mt-5 grid gap-4 md:mt-10 md:grid-cols-2 md:gap-8 lg:grid-cols-3">
+                    <div className="mt-5 grid gap-4 md:mt-10 md:grid-cols-2 md:gap-6 lg:grid-cols-3">
                         {solutions.map((item, index) => {
                             const Icon = item.icon;
 
                             return (
                                 <div
                                     key={index}
-                                    className="rounded-3xl border border-slate-200 bg-white p-4 shadow-sm transition hover:-translate-y-2 hover:shadow-2xl lg:p-5 xl:p-8"
+                                    className="rounded-3xl border border-slate-200 bg-white p-4 shadow-sm transition hover:-translate-y-2 hover:shadow-2xl lg:p-5 "
                                 >
                                     <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-sky-100 text-sky-600">
                                         <Icon size={30} />
@@ -189,7 +189,7 @@ export default function AirTreatment() {
 
                                     <h3 className="mt-3 text-xl font-bold text-slate-900 md:mt-6">{item.title}</h3>
 
-                                    <p className="mt-4 text-slate-600 md:leading-8">{item.description}</p>
+                                    <p className="mt-4 text-slate-600 md:leading-6">{item.description}</p>
                                 </div>
                             );
                         })}
@@ -206,7 +206,7 @@ export default function AirTreatment() {
 
                     <h2 className="text-2xl font-bold text-white md:text-4xl">Need Expert Air Treatment Solutions?</h2>
 
-                    <p className="mt-3 text-blue-100 md:mt-6 md:text-lg md:leading-8">
+                    <p className="mt-3 text-blue-100 md:mt-6 md:text-lg md:leading-6">
                         Improve the efficiency and reliability of your compressed air system with high-performance Air Treatment Solutions from Eutair
                         Equipments. Our experts are ready to help you choose the right solution for your industrial application.
                     </p>

@@ -321,7 +321,7 @@ const MarkClient = () => {
                         <span className="font-semibold text-sky-600">
                             Benefits of VAYU Screw Air Compressors
                         </span>
-                        <h2 className="mt-4 text-3xl font-bold text-slate-900 md:text-5xl">
+                        <h2 className="mt-4 text-3xl font-bold text-slate-900 md:text-4xl">
                             Improve Efficiency, Productivity &amp; Cost Control
                         </h2>
                         <p className="mt-5 leading-relaxed text-slate-600">
@@ -369,7 +369,7 @@ const MarkClient = () => {
                         <span className="font-semibold text-sky-600">
                             Applications of VAYU Screw Air Compressors
                         </span>
-                        <h2 className="mt-4 text-3xl font-bold text-slate-900 md:text-5xl">
+                        <h2 className="mt-4 text-3xl font-bold text-slate-900 md:text-4xl">
                             Built for Diverse Manufacturing Applications
                         </h2>
                         <p className="mt-6 leading-6 text-slate-600 md:leading-relaxed">
@@ -401,7 +401,7 @@ const MarkClient = () => {
 
                                 <div className="p-4">
                                     <h3 className="mb-2 text-xl font-bold text-slate-900">{item.title}</h3>
-                                    <p className="leading-relaxed text-slate-600 lg:leading-5 xl:leading-6">
+                                    <p className="leading-relaxed text-slate-600 text-sm lg:leading-5 xl:leading-6">
                                         {item.desc}
                                     </p>
                                 </div>

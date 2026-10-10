@@ -143,13 +143,13 @@ export default function TurnkeyProjectExecution() {
                         End-to-End Compressed Air Project Delivery Through a Single Point of Responsibility
                     </h2>
 
-                    <p className="max-w-4xl text-slate-300 md:text-lg md:leading-relaxed">
+                    <p className="max-w-4xl text-slate-300 md:text-lg md:leading-6">
                         Execute compressed air infrastructure projects with greater confidence through comprehensive Turnkey Project Execution Services. From
                         initial planning and engineering through procurement, installation, testing, and commissioning, a turnkey approach provides a structured
                         framework for delivering reliable and efficient compressed air systems.
                     </p>
 
-                    <p className="mt-4 max-w-4xl text-lg leading-relaxed text-slate-300">
+                    <p className="mt-4 max-w-4xl text-lg leading-6 text-slate-300">
                         By managing all critical stages of the project lifecycle through a coordinated execution strategy, organizations can reduce complexity,
                         improve accountability, and ensure smoother project implementation.
                     </p>
@@ -169,11 +169,11 @@ export default function TurnkeyProjectExecution() {
             </section>
 
             {/* Why It Matters */}
-            <section className="py-8 lg:py-12 xl:py-20">
+            <section className="py-8 lg:py-13">
                 <div className="container mx-auto max-w-7xl px-6">
                     <h2 className="mb-4 text-3xl font-bold lg:mb-6 xl:mb-8">Why Turnkey Execution Matters</h2>
 
-                    <div className="space-y-6 text-gray-700 xl:leading-relaxed">
+                    <div className="space-y-6 text-gray-700 xl:leading-6">
                         <p>
                             Industrial compressed air projects involve multiple disciplines, including engineering, equipment selection, utility planning,
                             piping networks, electrical integration, installation, testing, and commissioning. Coordinating these activities through multiple
@@ -194,13 +194,13 @@ export default function TurnkeyProjectExecution() {
             </section>
 
             {/* Benefits */}
-            <section className="bg-gray-50 py-7 lg:py-10 xl:py-20">
+            <section className="bg-gray-50 py-7 lg:py-13">
                 <div className="container mx-auto max-w-7xl px-6">
-                    <h2 className="mb-6 text-3xl font-bold md:mb-10">Benefits</h2>
+                    <h2 className="mb-6 text-3xl font-bold md:mb-7">Benefits</h2>
 
                     <div className="grid grid-cols-2 gap-5 lg:grid-cols-3">
                         {benefits.map((benefit, index) => (
-                            <div key={index} className="rounded-xl border bg-white p-3 shadow-sm md:p-5">
+                            <div key={index} className="rounded-xl border bg-white p-3 shadow-sm md:p-4">
                                 {benefit}
                             </div>
                         ))}
@@ -209,13 +209,13 @@ export default function TurnkeyProjectExecution() {
             </section>
 
             {/* Features */}
-            <section className="py-7 lg:py-12 xl:py-20">
+            <section className="py-7 lg:py-13">
                 <div className="container mx-auto max-w-7xl px-6">
-                    <h2 className="mb-6 text-3xl font-bold xl:mb-10">Key Features</h2>
+                    <h2 className="mb-6 text-3xl font-bold xl:mb-7">Key Features</h2>
 
                     <div className="grid gap-6 md:gap-8 lg:grid-cols-2">
                         {features.map((feature, index) => (
-                            <div key={index} className="rounded-xl border p-4 transition hover:shadow-lg lg:p-5 xl:p-6">
+                            <div key={index} className="rounded-xl border p-4 transition hover:shadow-lg lg:p-5 ">
                                 <h3 className="mb-3 text-xl font-semibold">{feature.title}</h3>
                                 <p className="text-gray-600">{feature.description}</p>
                             </div>
@@ -225,19 +225,19 @@ export default function TurnkeyProjectExecution() {
             </section>
 
             {/* Process */}
-            <section className="bg-slate-50 py-7 lg:py-12 xl:py-20">
+            <section className="bg-slate-50 py-7 lg:py-13">
                 <div className="container mx-auto max-w-7xl px-6">
                     <h2 className="mb-5 text-2xl font-bold md:text-3xl lg:mb-7 xl:mb-10">Turnkey Project Execution Process</h2>
 
-                    <div className="space-y-6">
+                    <div className="space-y-4">
                         {processSteps.map((step, index) => (
-                            <div key={index} className="flex gap-6 rounded-xl border bg-white p-4 md:p-6">
+                            <div key={index} className="flex gap-6 rounded-xl border bg-white p-4 md:p-5">
                                 <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-blue-600 font-bold text-white">
                                     {index + 1}
                                 </div>
 
                                 <div>
-                                    <h3 className="mb-2 text-lg font-semibold">{step.title}</h3>
+                                    <h3 className="mb-1 text-lg font-semibold">{step.title}</h3>
                                     <p className="text-gray-600">{step.description}</p>
                                 </div>
                             </div>
@@ -247,7 +247,7 @@ export default function TurnkeyProjectExecution() {
             </section>
 
             {/* Industries & Applications */}
-            <section className="py-7 lg:py-12 xl:py-20">
+            <section className="py-7 lg:py-13">
                 <div className="container mx-auto max-w-7xl px-6">
                     <div className="grid gap-12 lg:grid-cols-2">
                         <div>
@@ -256,7 +256,7 @@ export default function TurnkeyProjectExecution() {
                             <ul className="space-y-2 md:space-y-3">
                                 {industries.map((item, index) => (
                                     <li key={index} className="text-gray-700">
-                                        • {item}
+                                       {item}
                                     </li>
                                 ))}
                             </ul>
@@ -268,7 +268,7 @@ export default function TurnkeyProjectExecution() {
                             <ul className="space-y-2 md:space-y-3">
                                 {applications.map((item, index) => (
                                     <li key={index} className="text-gray-700">
-                                        • {item}
+                                     {item}
                                     </li>
                                 ))}
                             </ul>
@@ -278,13 +278,13 @@ export default function TurnkeyProjectExecution() {
             </section>
 
             {/* FAQ */}
-            <section className="bg-gray-50 py-7 lg:py-12 xl:py-20">
+            <section className="bg-gray-50 py-7 lg:py-13">
                 <div className="container mx-auto max-w-5xl px-6">
                     <h2 className="mb-6 text-2xl font-bold md:mb-10 md:text-3xl">Frequently Asked Question - Turnkey Project Execution</h2>
 
                     <div className="space-y-5">
                         {faqs.map((faq, index) => (
-                            <div key={index} className="rounded-xl border bg-white p-3 md:p-6">
+                            <div key={index} className="rounded-xl border bg-white p-3 md:p-5">
                                 <h3 className="mb-3 text-lg font-semibold">
                                     {index + 1}. {faq.question}
                                 </h3>

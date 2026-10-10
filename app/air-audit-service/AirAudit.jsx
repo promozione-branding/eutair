@@ -102,7 +102,7 @@ export default function AirAudit() {
                             Identify Inefficiencies Before They Impact Performance and Energy Costs
                         </h1>
 
-                        <p className="mt-4 max-w-3xl leading-6 text-slate-900 md:mt-8 md:text-xl md:leading-8">
+                        <p className="mt-4 max-w-3xl leading-6 text-slate-900 md:mt-8 md:text-xl md:leading-6">
                             Gain better visibility into your compressed air system with structured Air Audit Services. Air audits help identify leaks, pressure
                             losses, inefficient operating conditions, and system performance issues that can increase energy consumption and operating costs.
                         </p>
@@ -122,7 +122,7 @@ export default function AirAudit() {
 
             {/* Why Air Audits Matter */}
             <div className="border-y border-slate-200 bg-slate-50">
-                <div className="container mx-auto px-6 py-8 lg:px-10 lg:py-7 xl:py-17">
+                <div className="container mx-auto px-6 py-8 lg:px-10 lg:py-15 ">
                     <div className="grid gap-7 md:gap-16 lg:grid-cols-12">
                         <div className="lg:col-span-4">
                             <span className="text-sm font-semibold tracking-widest text-blue-600 uppercase">Why Air Audits Matter</span>
@@ -133,13 +133,13 @@ export default function AirAudit() {
                         </div>
 
                         <div className="space-y-6 leading-6 text-slate-900 md:text-lg md:leading-8 lg:col-span-8">
-                            <p>
+                            <p className='leading-6'>
                                 Compressed air is one of the most expensive utility resources in many industrial facilities. Over time, system inefficiencies
                                 such as air leaks, pressure drops, inappropriate controls, and distribution losses can significantly affect productivity and
                                 energy performance.
                             </p>
 
-                            <p>
+                            <p className='leading-6'>
                                 Air Audit Services provide valuable insights into system operations, helping organizations identify opportunities for
                                 improvement and make informed decisions to optimize.
                             </p>
@@ -156,12 +156,12 @@ export default function AirAudit() {
                     <h2 className="mt-4 text-2xl font-bold text-slate-900 md:text-4xl">Measurable Operational Advantages</h2>
                 </div>
 
-                <div className="mt-5 grid gap-6 md:grid-cols-2 lg:grid-cols-3 xl:mt-10">
+                <div className="mt-5 grid gap-6 md:grid-cols-2 lg:grid-cols-3 xl:mt-6">
                     {benefits.map((item, index) => (
-                        <div key={item} className="group rounded-2xl border border-blue-200 bg-blue-50/30 p-3 transition lg:p-4 xl:p-5">
+                        <div key={item} className="group rounded-2xl border border-blue-200 bg-blue-50/30 p-3 transition lg:p-4 ">
                             <div className="text-2xl font-bold text-slate-300 md:text-3xl">{String(index + 1).padStart(2, '0')}</div>
 
-                            <p className="mt-6 font-medium text-slate-700 md:text-lg">{item}</p>
+                            <p className="mt-4 font-medium text-slate-700 md:text-base">{item}</p>
                         </div>
                     ))}
                 </div>
@@ -176,12 +176,12 @@ export default function AirAudit() {
                         <h2 className="mt-4 text-3xl font-bold text-white md:text-4xl">Comprehensive System Evaluation</h2>
                     </div>
 
-                    <div className="mt-7 grid gap-6 lg:mt-9 lg:grid-cols-2 xl:mt-16">
+                    <div className="mt-7 grid gap-6 lg:mt-9 lg:grid-cols-2 ">
                         {features.map((feature) => (
-                            <div key={feature.title} className="rounded-2xl border border-white/10 bg-white/5 p-4 backdrop-blur-sm lg:p-6 xl:p-8">
+                            <div key={feature.title} className="rounded-2xl border border-white/10 bg-white/5 p-4 backdrop-blur-sm lg:p-6 ">
                                 <h3 className="text-xl font-semibold text-white">{feature.title}</h3>
 
-                                <p className="mt-4 leading-5 text-slate-300 xl:leading-8">{feature.description}</p>
+                                <p className="mt-4 leading-5 text-slate-300 xl:leading-6">{feature.description}</p>
                             </div>
                         ))}
                     </div>
@@ -192,7 +192,7 @@ export default function AirAudit() {
             <div className="container mx-auto px-4 py-7 sm:px-6 md:py-16 lg:px-8 lg:py-10">
                 <div className="grid gap-8 lg:grid-cols-2">
                     {/* Industries */}
-                    <div className="relative overflow-hidden rounded-3xl border border-slate-200 bg-white p-5 shadow-[0_15px_50px_rgba(0,0,0,0.06)] md:p-8 lg:p-10">
+                    <div className="relative overflow-hidden rounded-3xl border border-slate-200 bg-white p-5 shadow-[0_15px_50px_rgba(0,0,0,0.06)] md:p-8 lg:p-8">
                         {/* Background Accent */}
                         <div className="absolute top-0 left-0 h-1.5 w-full bg-gradient-to-r from-cyan-500 to-blue-600" />
 
@@ -219,7 +219,7 @@ export default function AirAudit() {
                     </div>
 
                     {/* Applications */}
-                    <div className="relative overflow-hidden rounded-3xl border border-slate-200 bg-white p-8 shadow-[0_15px_50px_rgba(0,0,0,0.06)] lg:p-10">
+                    <div className="relative overflow-hidden rounded-3xl border border-slate-200 bg-white p-8 shadow-[0_15px_50px_rgba(0,0,0,0.06)] lg:p-8">
                         {/* Background Accent */}
                         <div className="absolute top-0 left-0 h-1.5 w-full bg-gradient-to-r from-cyan-500 to-blue-600" />
 
@@ -239,7 +239,7 @@ export default function AirAudit() {
                             {applications.map((item) => (
                                 <div
                                     key={item}
-                                    className="group flex items-center rounded-2xl border border-slate-200 bg-slate-50 p-3 transition-all duration-300 hover:border-blue-500 hover:bg-white hover:shadow-md md:p-4"
+                                    className="group flex items-center rounded-2xl border border-slate-200 bg-slate-50 p-3 transition-all duration-300 hover:border-blue-500 hover:bg-white hover:shadow-md md:p-3"
                                 >
                                     <div className="mr-4 flex h-10 w-10 items-center justify-center rounded-full bg-blue-100 transition-all duration-300 group-hover:bg-blue-600">
                                         <div className="h-2.5 w-2.5 rounded-full bg-blue-600 group-hover:bg-white" />
@@ -262,12 +262,12 @@ export default function AirAudit() {
                         <h2 className="mt-4 text-3xl font-bold text-slate-900 md:text-4xl">Frequently Asked Questions</h2>
                     </div>
 
-                    <div className="mt-6 divide-y divide-slate-200 rounded-3xl border border-slate-200 bg-white lg:mt-8 xl:mt-12">
+                    <div className="mt-6 divide-y divide-slate-200 rounded-3xl border border-slate-200 bg-white lg:mt-8 ">
                         {faqs.map((faq) => (
-                            <details key={faq.question} className="group p-5 lg:p-6 xl:p-8">
+                            <details key={faq.question} className="group p-5 lg:p-6 ">
                                 <summary className="cursor-pointer list-none text-lg font-semibold text-slate-900">{faq.question}</summary>
 
-                                <p className="mt-4 leading-6 text-slate-600 md:leading-8">{faq.answer}</p>
+                                <p className="mt-4 leading-6 text-slate-600 md:leading-6">{faq.answer}</p>
                             </details>
                         ))}
                     </div>
@@ -280,7 +280,7 @@ export default function AirAudit() {
                     <div className="rounded-[32px] border border-white/10 bg-cyan-950 p-5 text-center backdrop-blur-xl md:p-10">
                         <h2 className="text-2xl font-bold text-white md:text-4xl">Let's Discuss Your Air System Performance</h2>
 
-                        <p className="mx-auto mt-6 max-w-4xl leading-6 text-white md:text-lg md:leading-8">
+                        <p className="mx-auto mt-6 max-w-4xl leading-6 text-white md:text-lg md:leading-6">
                             Understanding how your compressed air system operates is the first step toward improving efficiency, reducing energy costs, and
                             enhancing reliability.
                         </p>

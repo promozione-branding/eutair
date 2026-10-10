@@ -139,18 +139,18 @@ export default function PipeDistribution() {
                         <div>
                             <h2 className="mt-4 text-2xl font-bold text-slate-900 md:text-4xl">Why Piping & Distribution Lines Matter</h2>
 
-                            <p className="mt-3 text-slate-600 md:mt-6 md:text-lg md:leading-8">
+                            <p className="mt-3 text-slate-600 md:mt-6 md:text-lg md:leading-6">
                                 A well-designed compressed air piping network is essential for maintaining consistent air pressure, minimizing energy losses,
                                 and ensuring efficient air distribution throughout your facility. Proper system design not only improves equipment performance
                                 but also reduces maintenance requirements and operating costs.
                             </p>
                         </div>
 
-                        <div className="grid gap-3 md:gap-5">
+                        <div className="grid gap-3 md:gap-4">
                             {whyPoints.map((item, index) => (
                                 <div
                                     key={index}
-                                    className="flex gap-4 rounded-2xl border border-slate-200 bg-white p-3 shadow-sm transition hover:shadow-lg md:p-6"
+                                    className="flex gap-4 rounded-2xl border border-slate-200 bg-white p-3 shadow-sm transition hover:shadow-lg md:p-4"
                                 >
                                     <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-sky-100 text-sky-600">
                                         <CheckCircle2 />
@@ -172,7 +172,7 @@ export default function PipeDistribution() {
 
                         <h2 className="mt-3 text-3xl font-bold text-slate-900 md:text-4xl">Key Benefits</h2>
 
-                        <p className="mt-4 text-slate-600 md:text-lg md:leading-8">
+                        <p className="mt-4 text-slate-600 md:text-lg md:leading-6  ">
                             Our piping and distribution line solutions are designed to improve compressed air system performance while ensuring long-term
                             operational efficiency.
                         </p>
@@ -182,11 +182,11 @@ export default function PipeDistribution() {
                         {benefits.map((item, index) => (
                             <div
                                 key={index}
-                                className="rounded-2xl border border-slate-200 bg-white p-3 shadow-sm transition hover:-translate-y-1 hover:shadow-xl md:p-7"
+                                className="rounded-2xl border border-slate-200 bg-white p-3 shadow-sm transition hover:-translate-y-1 hover:shadow-xl md:p-4"
                             >
                                 <CheckCircle2 className="mb-3 text-sky-600 md:mb-5" size={28} />
 
-                                <p className="text-sm font-medium text-slate-700 md:text-base md:leading-7">{item}</p>
+                                <p className="text-sm font-medium text-slate-700 md:text-base md:leading-6">{item}</p>
                             </div>
                         ))}
                     </div>
@@ -200,14 +200,14 @@ export default function PipeDistribution() {
                         <h2 className="mt-4 text-3xl font-bold text-slate-900 md:text-4xl">Our Piping & Distribution Solutions</h2>
                     </div>
 
-                    <div className="mt-10 grid gap-8 md:grid-cols-2 lg:grid-cols-3 lg:gap-6 xl:gap-8">
+                    <div className="mt-10 grid gap-8 md:grid-cols-2 lg:grid-cols-3 lg:gap-6 ">
                         {solutions.map((item, index) => {
                             const Icon = item.icon;
 
                             return (
                                 <div
                                     key={index}
-                                    className="rounded-3xl border border-slate-200 bg-white p-4 shadow-sm transition hover:-translate-y-2 hover:shadow-2xl lg:p-6 xl:p-8"
+                                    className="rounded-3xl border border-slate-200 bg-white p-4 shadow-sm transition hover:-translate-y-2 hover:shadow-2xl lg:p-5"
                                 >
                                     <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-sky-100 text-sky-600">
                                         <Icon size={30} />
@@ -215,7 +215,7 @@ export default function PipeDistribution() {
 
                                     <h3 className="mt-3 text-lg font-bold text-slate-900 md:mt-6 md:text-xl">{item.title}</h3>
 
-                                    <p className="mt-2 text-slate-600 md:mt-4 xl:leading-8">{item.description}</p>
+                                    <p className="mt-2 text-slate-600 md:mt-4 xl:leading-6">{item.description}</p>
                                 </div>
                             );
                         })}
@@ -232,7 +232,7 @@ export default function PipeDistribution() {
 
                     <h2 className="text-2xl font-bold text-white md:text-4xl">Need Expert Piping & Distribution Solutions?</h2>
 
-                    <p className="mt-6 text-blue-100 md:text-lg md:leading-8">
+                    <p className="mt-6 text-blue-100 md:text-lg md:leading-6">
                         Improve the performance of your compressed air system with professionally engineered Piping & Distribution Line Solutions from Eutair
                         Equipments LLP. Our experts are ready to help you design, install, and optimize a piping network that delivers maximum efficiency and
                         long-term reliability.

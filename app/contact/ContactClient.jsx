@@ -150,7 +150,7 @@ export default function ContactPage() {
 
                             <h2 className="md:ntext-5xl mt-4 text-2xl font-black text-slate-900">Let's Discuss Your Requirements</h2>
 
-                            <p className="mt-4 text-lg text-slate-600 md:leading-relaxed">
+                            <p className="mt-4 text-lg text-slate-600 md:leading-6">
                                 Our experts are ready to help you find the right product based on your application, quantity, and specifications.
                             </p>
 
@@ -189,7 +189,7 @@ export default function ContactPage() {
 
                         {/* Form */}
                         <div className="lg:col-span-3">
-                            <div className="rounded-[40px] bg-white p-8 shadow-[0_20px_60px_rgba(0,0,0,.08)] md:p-12">
+                            <div className="rounded-[40px] bg-white p-8 shadow-[0_20px_60px_rgba(0,0,0,.08)] md:p-7">
                                 <h3 className="mb-5 text-3xl font-black text-slate-900 md:mb-8">Send Inquiry</h3>
 
                                 <form onSubmit={handleSubmit} className="space-y-5">

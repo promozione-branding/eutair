@@ -41,11 +41,11 @@ export default function ChicagoPneumatic() {
                     <div className="grid items-center gap-10 lg:grid-cols-2">
                         {/* Left Content */}
                         <div>
-                            <h2 className="mt-5 text-2xl leading-tight font-bold text-slate-900 lg:text-3xl xl:text-5xl">
+                            <h2 className="mt-5 text-2xl leading-tight font-bold text-slate-900 md:text-[40px] ">
                                 Portable Air Compressors for Construction & Mining
                             </h2>
 
-                            <p className="mt-6 text-base leading-6 text-slate-600 md:text-lg md:leading-relaxed">
+                            <p className="mt-6 text-base leading-6 text-slate-600 md:text-base md:leading-relaxed">
                                 Eutair Equipments offers a comprehensive range of Chicago Pneumatic Portable Air Compressors designed to deliver exceptional
                                 performance, energy efficiency, and long-term reliability. Renowned worldwide for their innovative engineering and robust
                                 construction, Chicago Pneumatic compressors are trusted by industries seeking dependable compressed air solutions for demanding
@@ -132,7 +132,7 @@ export default function ChicagoPneumatic() {
 
             {/* BENEFITS */}
             <section className="bg-white px-5 py-9 md:px-20">
-                <div className="mx-auto mb-4 max-w-4xl text-center lg:mb-8 xl:mb-16">
+                <div className="mx-auto mb-4 max-w-4xl text-center lg:mb-8 ">
                     <span className="rounded-full bg-sky-100 p-3 font-semibold text-sky-600">Benefits of Chicago Pneumatic Compressors</span>
 
                     <h2 className="mt-8 text-2xl font-bold text-slate-900 md:mt-4 md:text-4xl">
@@ -147,7 +147,7 @@ export default function ChicagoPneumatic() {
                 </div>
 
                 {/* Benefits Grid */}
-                <div className="mt-5 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+                <div className="mt-5 grid gap-8 md:gap-6 md:grid-cols-2 lg:grid-cols-3">
                     {/* Card 1 */}
                     <div className="group rounded-3xl border border-slate-200 bg-white p-4 shadow-sm transition-all duration-300 hover:shadow-xl lg:p-5 xl:p-6">
                         <div className="mb-6 flex h-14 w-14 items-center justify-center rounded-2xl bg-sky-100">⚡</div>

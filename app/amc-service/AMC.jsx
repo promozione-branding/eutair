@@ -134,12 +134,12 @@ export default function AMC() {
                     <div className="max-w-7xl text-center">
                         <h2 className="mb-6 text-2xl font-bold text-slate-900 md:text-4xl">Why AMC Services Matter</h2>
 
-                        <p className="mb-6 text-slate-900 md:text-xl md:leading-relaxed">
+                        <p className="mb-6 text-slate-900 md:text-lg md:leading-6">
                             Compressed air systems play a critical role in daily production and plant operations. Unplanned equipment failures, performance
                             losses, and reactive maintenance can result in costly downtime and reduced productivity.
                         </p>
 
-                        <p className="text-slate-900 md:text-xl md:leading-relaxed">
+                        <p className="text-slate-900 md:text-lg md:leading-6">
                             AMC Services provides a proactive maintenance framework that helps improve system reliability, optimize performance, and extend
                             equipment life through scheduled service activities and preventive care.
                         </p>
@@ -150,11 +150,11 @@ export default function AMC() {
             {/* Benefits */}
             <section className="bg-slate-50 py-5 lg:py-8 xl:py-10">
                 <div className="mx-auto max-w-7xl px-4">
-                    <h2 className="mb-6 text-center text-2xl font-bold text-slate-900 md:mb-10 md:text-4xl">Benefits</h2>
+                    <h2 className="mb-6 text-center text-2xl font-bold text-slate-900 md:mb-7 md:text-4xl">Benefits</h2>
 
                     <div className="grid grid-cols-2 gap-6 lg:grid-cols-3">
                         {benefits.map((item, i) => (
-                            <div key={i} className="rounded-2xl border bg-white p-3 shadow-sm lg:p-5 xl:p-6">
+                            <div key={i} className="rounded-2xl border bg-white p-3 shadow-sm lg:p-5 ">
                                 <CheckCircle className="mb-4 h-8 w-8 text-green-600 lg:block" />
                                 <p className="text-sm text-slate-700 md:text-base">{item}</p>
                             </div>
@@ -164,16 +164,16 @@ export default function AMC() {
             </section>
 
             {/* Key Features */}
-            <section className="py-5 lg:py-7 xl:py-10">
+            <section className="py-5 lg:py-7 ">
                 <div className="mx-auto max-w-7xl px-4">
-                    <h2 className="mb-7 text-center text-3xl font-bold text-slate-900 md:mb-14 md:text-4xl">Key Features</h2>
+                    <h2 className="mb-7 text-center text-3xl font-bold text-slate-900 md:mb-7 md:text-4xl">Key Features</h2>
 
-                    <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3 lg:gap-6 xl:gap-8">
+                    <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3 lg:gap-6 ">
                         {features.map((feature, i) => (
-                            <div key={i} className="rounded-3xl border bg-white p-4 shadow-sm transition hover:shadow-lg lg:p-6 xl:p-8">
+                            <div key={i} className="rounded-3xl border bg-white p-4 shadow-sm transition hover:shadow-lg lg:p-6">
                                 <Wrench className="mb-5 h-10 w-10 text-[#0B4A8B]" />
                                 <h3 className="mb-3 text-xl font-bold">{feature.title}</h3>
-                                <p className="text-slate-600 xl:leading-relaxed">{feature.description}</p>
+                                <p className="text-slate-600 xl:leading-6">{feature.description}</p>
                             </div>
                         ))}
                     </div>
@@ -181,17 +181,17 @@ export default function AMC() {
             </section>
 
             {/* Industries */}
-            <section className="bg-slate-50 py-5 lg:py-7 xl:py-10">
+            <section className="bg-slate-50 py-5 lg:py-7">
                 <div className="mx-auto max-w-7xl px-4">
                     <h2 className="mb-6 text-center text-3xl font-bold text-slate-900 md:text-4xl">Industries & Use Cases</h2>
 
-                    <p className="mx-auto mb-5 max-w-4xl text-center text-slate-600 md:mb-10">
+                    <p className="mx-auto mb-5 max-w-4xl text-center text-slate-600 md:mb-7">
                         AMC Services support reliable compressed air operations across a wide range of industrial environments, including:
                     </p>
 
                     <div className="grid gap-3 md:grid-cols-2 md:gap-5 lg:grid-cols-3">
                         {industries.map((industry, i) => (
-                            <div key={i} className="flex items-center gap-3 rounded-2xl border bg-white p-3 md:p-5">
+                            <div key={i} className="flex items-center gap-3 rounded-2xl border bg-white p-3 md:p-4">
                                 <Factory className="h-5 w-5 text-[#0B4A8B]" />
                                 <span>{industry}</span>
                             </div>
@@ -203,11 +203,11 @@ export default function AMC() {
             {/* Applications */}
             <section className="py-5 lg:py-7 xl:py-10">
                 <div className="mx-auto max-w-7xl px-4">
-                    <h2 className="mb-5 text-center text-3xl font-bold text-slate-900 md:mb-10 md:text-4xl">Typical Applications</h2>
+                    <h2 className="mb-5 text-center text-3xl font-bold text-slate-900 md:mb-7 md:text-4xl">Typical Applications</h2>
 
                     <div className="grid gap-3 md:grid-cols-2 md:gap-6 lg:grid-cols-3">
                         {applications.map((item, i) => (
-                            <div key={i} className="flex items-center gap-3 rounded-2xl border bg-slate-50 p-3 md:p-6">
+                            <div key={i} className="flex items-center gap-3 rounded-2xl border bg-slate-50 p-3 md:p-5">
                                 <ShieldCheck className="h-6 w-6 text-green-600" />
                                 <span>{item}</span>
                             </div>
@@ -223,9 +223,9 @@ export default function AMC() {
 
                     <div className="space-y-6">
                         {faqs.map((faq, i) => (
-                            <div key={i} className="rounded-2xl border bg-white p-4 shadow-sm md:p-7">
+                            <div key={i} className="rounded-2xl border bg-white p-4 shadow-sm md:p-5">
                                 <h3 className="mb-3 text-lg font-bold">{faq.question}</h3>
-                                <p className="text-slate-600 md:leading-relaxed">{faq.answer}</p>
+                                <p className="text-slate-600 md:leading-6">{faq.answer}</p>
                             </div>
                         ))}
                     </div>
@@ -237,7 +237,7 @@ export default function AMC() {
                 <div className="mx-auto max-w-6xl px-4 text-center">
                     <h2 className="mb-8 text-3xl font-bold md:text-5xl">Let's Discuss the Right Maintenance Strategy</h2>
 
-                    <p className="mb-6 leading-relaxed text-slate-200 md:text-lg">
+                    <p className="mb-6 leading-6 text-slate-200 md:text-lg">
                         A well-planned maintenance program can significantly improve system reliability, efficiency, and long-term performance. AMC Services
                         help organizations establish a structured approach to maintenance while minimizing operational risks and unplanned downtime.
                     </p>
