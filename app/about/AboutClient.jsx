@@ -21,7 +21,7 @@ export default function AboutPage() {
                             Trusted Industrial Partner
                         </span>
 
-                        <h1 className="mt-6 max-w-4xl text-4xl font-black text-white md:text-7xl">About Eutair Equipments LLP</h1>
+                        <h1 className="mt-6 max-w-4xl text-4xl font-black text-white md:text-6xl">About Eutair Equipments LLP</h1>
 
                         <p className="mt-6 max-w-3xl text-lg text-slate-200 md:text-xl">Trusted Partner for Compressed Air & Industrial Solutions</p>
                     </div>
@@ -29,7 +29,7 @@ export default function AboutPage() {
             </section>
 
             {/* ABOUT CONTENT */}
-            <section className="bg-white py-7 lg:py-11 xl:py-18">
+            <section className="bg-white py-7 lg:py-11 ">
                 <div className="mx-auto w-full px-5 md:px-20">
                     <div className="grid items-center gap-5 md:gap-20 lg:grid-cols-2">
                         <div>
@@ -37,11 +37,11 @@ export default function AboutPage() {
                                 About Our Company
                             </span>
 
-                            <h2 className="mt-4 text-2xl font-black text-slate-900 lg:text-4xl xl:text-5xl">
+                            <h2 className="mt-4 text-2xl font-black text-slate-900 lg:text-4xl ">
                                 Trusted Partner for Compressed Air & Industrial Solutions
                             </h2>
 
-                            <div className="mt-8 space-y-6 text-lg text-slate-800 lg:mt-5 lg:leading-6 xl:mt-8 xl:leading-relaxed">
+                            <div className="mt-8 space-y-6 text-lg text-slate-800 lg:mt-5 lg:leading-6 xl:mt-8 ">
                                 <p>
                                     Eutair Equipments LLP is a leading name in the compressed air and industrial equipment industry, committed to delivering
                                     quality, reliability, and innovation.
@@ -92,7 +92,7 @@ export default function AboutPage() {
                             Our Achievements
                         </span>
 
-                        <h2 className="mt-6 text-3xl font-black text-white md:text-6xl">Trusted by Industries Across India</h2>
+                        <h2 className="mt-6 text-3xl font-black text-white md:text-5xl">Trusted by Industries Across India</h2>
                     </div>
 
                     {/* Stats */}
@@ -123,12 +123,12 @@ export default function AboutPage() {
                                 <div className="absolute top-0 left-0 h-1 w-full bg-gradient-to-r from-sky-400 via-cyan-400 to-blue-500" />
 
                                 {/* Number */}
-                                <h3 className="bg-gradient-to-r from-sky-300 via-cyan-300 to-white bg-clip-text text-4xl font-black text-transparent md:text-6xl">
+                                <h3 className="bg-gradient-to-r from-sky-300 via-cyan-300 to-white bg-clip-text text-4xl font-black text-transparent md:text-4xl">
                                     {item.number}
                                 </h3>
 
                                 {/* Label */}
-                                <p className="mt-4 text-lg font-medium text-slate-300">{item.label}</p>
+                                <p className="mt-4 text-lg md:text-xl font-medium text-slate-300">{item.label}</p>
                             </div>
                         ))}
                     </div>
@@ -139,12 +139,12 @@ export default function AboutPage() {
             <section className="bg-gradient-to-b from-slate-50 to-white py-7 lg:py-10 xl:py-17">
                 <div className="mx-auto max-w-7xl px-4">
                     <div className="grid gap-4 md:gap-8 lg:grid-cols-2">
-                        <div className="rounded-[40px] border border-slate-200 bg-white p-5 shadow-xl lg:p-7 xl:p-10">
+                        <div className="rounded-[40px] border border-slate-200 bg-white p-5 shadow-xl lg:p-7 ">
                             <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-sky-100 text-3xl">🎯</div>
 
                             <h3 className="mt-3 text-3xl font-black text-slate-900 md:text-4xl lg:mt-4 xl:mt-6">Our Mission</h3>
 
-                            <p className="mt-3 text-lg text-slate-600 md:leading-relaxed lg:mt-4 xl:mt-6">
+                            <p className="mt-3 text-[16px] text-slate-600 md:leading-relaxed lg:mt-4 xl:mt-6">
                                 To provide high-performance Screw Air Compressors, compressed air systems, and industrial solutions that help businesses improve
                                 productivity, enhance operational efficiency, and reduce operating costs.
                             </p>
@@ -155,7 +155,7 @@ export default function AboutPage() {
 
                             <h3 className="mt-3 text-4xl font-black text-slate-900 lg:mt-4 xl:mt-6">Our Vision</h3>
 
-                            <p className="mt-3 text-slate-600 md:text-lg md:leading-relaxed lg:mt-4 xl:mt-6">
+                            <p className="mt-3 text-slate-600 text-[16px] md:leading-relaxed lg:mt-4 xl:mt-6">
                                 To be a trusted name in the compressed air industry by delivering advanced Screw Air Compressors and industrial solutions that
                                 set benchmarks for quality, reliability, and customer satisfaction.
                             </p>
@@ -167,9 +167,9 @@ export default function AboutPage() {
             <section className="py-2">
                 <div className="mx-auto w-full px-4">
                     <div className="rounded-[40px] bg-gradient-to-r from-sky-500 via-cyan-500 to-blue-600 p-5 text-center text-white lg:p-8 xl:p-12">
-                        <h2 className="text-3xl font-black md:text-5xl">Ready to Optimize Your Operations?</h2>
+                        <h2 className="text-3xl font-black md:text-4xl">Ready to Optimize Your Operations?</h2>
 
-                        <p className="mx-auto mt-6 max-w-3xl text-lg text-white/90 md:text-xl">
+                        <p className="mx-auto mt-6 max-w-3xl text-lg text-white/90 md:text-lg">
                             Discover reliable Screw Air Compressors and industrial solutions from Eutair Equipments LLP designed to enhance efficiency,
                             productivity, and performance.
                         </p>
@@ -199,7 +199,7 @@ export default function AboutPage() {
                             Business Excellence
                         </span>
 
-                        <h2 className="mt-4 text-2xl font-bold tracking-tight text-gray-900 md:text-4xl">Technical & Commercial Capabilities</h2>
+                        <h2 className="mt-4 text-2xl font-bold tracking-tight text-gray-900 md:text-3xl">Technical & Commercial Capabilities</h2>
 
                         <div className="mx-auto mt-3 h-1 w-24 rounded-full bg-gradient-to-r from-cyan-600 to-sky-500" />
                     </div>
@@ -224,7 +224,7 @@ export default function AboutPage() {
                                 </div>
 
                                 {/* Content */}
-                                <p className="text-sm font-medium text-gray-700 md:text-lg xl:leading-8">{item}</p>
+                                <p className="text-sm font-medium text-gray-700 md:text-base ">{item}</p>
 
                                 {/* Bottom Accent */}
                                 <div className="absolute right-8 bottom-0 left-8 h-1 origin-left scale-x-0 rounded-full bg-gradient-to-r from-blue-600 to-sky-500 transition-transform duration-300 group-hover:scale-x-100" />

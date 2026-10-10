@@ -103,7 +103,7 @@ export default function AMC() {
                             Structured Maintenance Support for Reliable Compressed Air Operations
                         </h1>
 
-                        <p className="mt-6 text-white md:text-lg md:leading-relaxed">
+                        <p className="mt-6 text-white md:text-lg md:leading-6">
                             Maintain peak system performance, reduce unexpected downtime, and improve equipment reliability with structured Annual Maintenance
                             Contract (AMC) Services. Designed for industrial compressed air systems, AMC programs help ensure continuous operation through
                             planned inspections, preventive maintenance, and responsive service support.
