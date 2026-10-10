@@ -227,8 +227,8 @@ export default function Navbar() {
                                                             <Link
                                                                 key={product.title}
                                                                 href={product.href}
-                                                                className="group flex items-center justify-between rounded-xl px-4 py-3 
-                                                                text-[13px] transition-all hover:bg-blue-50 
+                                                                className="group flex items-center justify-between rounded-xl px-1 py-3 
+                                                                text-sm transition-all hover:bg-blue-50 
                                                                 hover:text-blue-600"
                                                             >
                                                                 <span>{product.title}</span>
@@ -283,7 +283,7 @@ export default function Navbar() {
                                         <div className="w-[650px] overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-[0_20px_60px_rgba(0,0,0,0.08)]">
                                             <div className="grid grid-cols-2">
                                                 {/* Left */}
-                                                <div className="bg-gradient-to-br from-cyan-600 to-blue-600 p-8 text-white">
+                                                <div className="bg-gradient-to-br from-cyan-600 to-blue-600 p-6 text-white">
                                                     <h3 className="mb-4 text-2xl font-bold">Our Services</h3>
 
                                                     <p className="leading-relaxed text-white/90">
@@ -293,13 +293,13 @@ export default function Navbar() {
                                                 </div>
 
                                                 {/* Right */}
-                                                <div className="p-8">
+                                                <div className="p-6">
                                                     <div className="grid gap-2">
                                                         {services.map((service) => (
                                                             <Link
                                                                 key={service.title}
                                                                 href={service.href}
-                                                                className="group flex items-center justify-between rounded-xl px-4 py-3 text-black transition-all hover:bg-cyan-50 hover:text-cyan-600"
+                                                                className="group flex items-center justify-between rounded-xl py-1 text-black transition-all hover:bg-cyan-50 hover:text-cyan-600"
                                                             >
                                                                 <span>{service.title}</span>
 
