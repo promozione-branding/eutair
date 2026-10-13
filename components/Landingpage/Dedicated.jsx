@@ -57,11 +57,11 @@ export default function AirSystemSolution() {
                         {/* Image */}
                         <div className="">
                             <Image
-                                src="/drill-cp.jpeg"
+                                src="/industries_theme.png"
                                 alt="Chicago Pneumatic Supplier"
                                 width={800}
                                 height={800}
-                                className="mx-auto h-auto md:h-100 w-full max-w-[650px] object-contain"
+                                className="mx-auto h-auto md:h-100 w-full max-w-[650px] object-cover"
                             />
                         </div>
 
