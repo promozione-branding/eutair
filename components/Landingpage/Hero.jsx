@@ -25,7 +25,7 @@ import { useEffect, useState } from 'react';
 
 const slides = [
     {
-        bg: '/banner1.jpeg',
+        bg: '/eutair.png',
         mobileBg: '/mbm.jpeg',
 
         machine: '/hero1.webp',
@@ -344,8 +344,35 @@ export default function HeroSlider() {
                                                         h-auto
                                                         w-[90px]
                                                         object-contain
-
                                                         sm:w-[100px]
+                                                    "
+                                                />
+                                            </div>
+                                              <div
+                                                className="
+                                                    flex
+                                                    items-center
+                                                    justify-center
+                                                    rounded-full
+                                                    border
+                                                    border-white/60
+                                                    bg-white/90
+                                                    px-5
+                                                    py-3
+                                                    shadow-[0_8px_25px_rgba(0,0,0,0.15)]
+                                                    backdrop-blur-md
+                                                "
+                                            >
+                                                <Image
+                                                    src="/Vayu_brand.webp"
+                                                    alt="Chicago Pneumatic"
+                                                    width={100}
+                                                    height={60}
+                                                    className="
+                                                        h-auto
+                                                        w-[90px]
+                                                        object-contain
+                                                        sm:w-[80px]
                                                     "
                                                 />
                                             </div>

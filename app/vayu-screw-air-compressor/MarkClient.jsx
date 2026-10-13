@@ -13,7 +13,7 @@ const MarkClient = () => {
     const [isOpen, setOpen] = useState(false);
 
     const products = markData.products || [];
-    const heroImages = ['/vayu.png'];
+    const heroImages = ['/vayu_compressor_.png'];
 
     const compressorRange = [
         'Fixed-Speed Screw Compressors',

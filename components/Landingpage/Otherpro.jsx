@@ -19,15 +19,15 @@ const products = [
         link: '/vayu-screw-air-compressor',
         thumbnail: '/newVayu.webp',
         description: 'Variable frequency technology delivering superior energy savings.',
-        frames: Array.from({ length: 10 }, (_, i) => `/3601/mark/${i + 1}.png`),
+        frames: Array.from({ length: 10 }, (_, i) => `/3601/Product-6/${i + 1}.png`),
     },
 
     {
         name: 'Air Treatment Systems',
         link: '/air-treatment-service',
-        thumbnail: '/hero3.png',
+        thumbnail: '/hero3.webp',
         description: 'Advanced air treatment solutions for clean and efficient compressed air.',
-        frames: Array.from({ length: 10 }, (_, i) => `/vayubgremove.webp`),
+        frames: Array.from({ length: 10 }, (_, i) => `/3601/Product-3/${i + 1}.png`),
     },
 
     {
@@ -95,7 +95,6 @@ export default function ProductRange() {
                     {/* LEFT PRODUCT VIEWER */}
                     <div
                         className={`relative min-h-[650px] overflow-hidden rounded-[40px] border border-slate-200 bg-blue-200/20 hover:border-blue-300 lg:col-span-7 ${isDragging ? 'cursor-grabbing' : 'cursor-grab'} `}
-
                         onMouseDown={handleMouseDown}
                         onMouseMove={handleMouseMove}
                         onMouseUp={handleMouseUp}

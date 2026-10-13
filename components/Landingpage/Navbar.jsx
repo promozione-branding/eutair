@@ -211,7 +211,7 @@ export default function Navbar() {
 
                                                     <div className="mt-6 flex gap-5">
                                                         <div className="flex items-center justify-center rounded-full bg-white px-5 py-3">
-                                                            <Image src="/mark-compressors-losgo.png" alt="Mark Compressors" width={110} height={60} />
+                                                            <Image src="/Vayu_brand.webp" alt="Mark Compressors" width={110} height={60} />
                                                         </div>
 
                                                         <div className="flex items-center justify-center rounded-full bg-white px-5 py-3">
