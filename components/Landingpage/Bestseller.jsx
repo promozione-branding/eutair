@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import React from 'react';
 
 const Bestseller = () => {
@@ -8,12 +9,13 @@ const Bestseller = () => {
                     {/* Video - First on Mobile */}
                     <div className="relative order-1 lg:order-2">
                         <div className="overflow-hidden rounded-2xl shadow-xl lg:rounded-3xl">
-                            <video className="h-[250px] w-full object-contain sm:h-[350px] md:h-[360px]" autoPlay muted loop playsInline>
-                                <source
-                                    src="https://pub-46e3376571d149c28119abf9aa0d6786.r2.dev/video/WhatsApp%20Video%202026-06-09%20at%203.50.56%20PM%20(1).mp4"
-                                    type="video/mp4"
-                                />
-                            </video>
+                            <Image
+                                                           src="/vayu_theme_.png"
+                                                           alt="Chicago Pneumatic Supplier"
+                                                           width={800}
+                                                           height={800}
+                                                           className="mx-auto h-auto md:h-100 w-full max-w-[650px] object-cover"
+                                                       />
                         </div>
 
                         {/* Quote Box */}

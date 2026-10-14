@@ -69,6 +69,44 @@ const slides = [
             },
         ],
     },
+    {
+        bg: '/slide2.png',          
+        mobileBg: '/slide2-mobile.jpeg',
+        machine: '/hero2.webp',
+        tagline: 'ENERGY EFFICIENT SOLUTIONS',
+        alt: 'Stationary Air Compressor',
+        title: 'STATIONARY AIR\nCOMPRESSOR',
+        pdf: '/pdf/Slide2.pdf',
+        description:
+            'Reliable compressed air systems built for continuous industrial use.',
+                features: [
+            {
+                icon: Cog,
+                title: '5 HP - 500 HP',
+                desc: 'Power Range',
+            },
+            {
+                icon: Zap,
+                title: 'Portable',
+                desc: 'Available',
+            },
+            {
+                icon: Shield,
+                title: 'Energy Efficient',
+                desc: 'Technology',
+            },
+            {
+                icon: Volume2,
+                title: 'Low Noise',
+                desc: 'Operation',
+            },
+            {
+                icon: BadgeCheck,
+                title: 'Best-In-Class',
+                desc: 'Service Support',
+            },
+        ],
+    },
 ];
 
 const ContactForm = dynamic(() => import('../Enquiry'), {
@@ -82,26 +120,21 @@ export default function HeroSlider() {
         <section className="relative w-full overflow-hidden">
             
 
-            <Swiper
-                modules={[Autoplay, Pagination]}
-                autoplay={{
-                    disableOnInteraction: false,
-                }}
-                lazy={true}
-                preloadImages={false}
+       <Swiper
+    modules={[Autoplay, Pagination]}
+    autoplay={{
+        delay: 5000,
+        disableOnInteraction: false,
+    }}
+    pagination={{ clickable: true }}
+    speed={1000}
+    loop
+    className="w-full"
+>
+    {slides.map((slide, index) => (
+        <SwiperSlide key={index} className="relative">
+            <div className="absolute inset-0 z-10 bg-gradient-to-r from-black/90 via-black/20 to-transparent" />
 
-                pagination={{
-                    clickable: true,
-                }}
-                speed={1000}
-                loop
-                className="w-full"
-            >
-                {slides.map((slide, index) => (
-                    <SwiperSlide key={index}>
-<div className="absolute inset-0 z-10 bg-gradient-to-r from-black/90 via-black/20 to-transparent" />                        {/* =================================================
-                            DESKTOP / MOBILE HERO
-                        ================================================= */}
                         <div
                             className="
                                 relative
@@ -281,9 +314,7 @@ export default function HeroSlider() {
                                             title={slide.title}
                                         />
 
-                                        {/* =================================================
-                                            DESCRIPTION
-                                        ================================================= */}
+                                    
                                         <p
                                             className="
                                                 mx-auto
@@ -625,29 +656,52 @@ function TypewriterTitle({ title }) {
             );
     }, [isActive, title]);
 
-    return (
+  return (
+    <div className="mt-4">
         <h2
             aria-label={title}
             className="
-                mt-4
+                relative
+                inline-block
                 whitespace-pre-line
-                text-[36px]
+                rounded-3xl
+                border
+                border-white/30
+                bg-gradient-to-br
+                from-white/30
+                to-white/10
+                px-6
+                py-4
+                text-[32px]
                 font-black
-                leading-[0.95]
-                tracking-[-0.04em]
-                text-white
                 uppercase
-                drop-shadow-[0_10px_40px_rgba(255,255,255,.15)]
+                leading-[1.05]
+                tracking-[-0.03em]
+                text-white
+                shadow-[0_8px_32px_rgba(0,0,0,0.25)]
+                backdrop-blur-md
+                [text-shadow:0_2px_10px_rgba(0,0,0,0.45)]
 
-                sm:text-[44px]
-
-                md:text-[56px]
-
-               
+                sm:text-[40px]
+                md:px-8
+                md:py-5
+                md:text-[52px]
             "
         >
-            {visibleTitle}
+            {/* invisible full title reserves the final box size */}
+            <span className="invisible" aria-hidden="true">
+                {title}
+            </span>
+
+            {/* typed text sits on top, same padding so it lines up */}
+            <span
+                aria-hidden="true"
+                className="absolute inset-0 px-6 py-4 md:px-8 md:py-5"
+            >
+                {visibleTitle}
+            </span>
         </h2>
-    );
+    </div>
+);
 }
 

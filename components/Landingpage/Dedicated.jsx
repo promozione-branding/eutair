@@ -57,7 +57,7 @@ export default function AirSystemSolution() {
                         {/* Image */}
                         <div className="">
                             <Image
-                                src="/industries_theme.png"
+                                src="/industries_theme_.png"
                                 alt="Chicago Pneumatic Supplier"
                                 width={800}
                                 height={800}

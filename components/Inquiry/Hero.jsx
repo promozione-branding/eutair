@@ -192,13 +192,7 @@ export default function HeroSlider() {
                                                 </div>
                                             </div>
 
-                                            {/* ================================================= */}
-                                            {/* DESKTOP CTA */}
-                                            {/* ================================================= */}
-
                                             <div className="mt-7 hidden flex-wrap justify-center gap-4 md:flex lg:justify-start">
-                                                {/* GET QUOTE */}
-
                                                 <button
                                                     type="button"
                                                     onClick={() => setOpen(true)}

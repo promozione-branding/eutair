@@ -13,7 +13,7 @@ const MarkClient = () => {
     const [isOpen, setOpen] = useState(false);
 
     const products = markData.products || [];
-    const heroImages = ['/vayu_compressor_.png'];
+    const heroImages = ['/vayu_compressor.png'];
 
     const compressorRange = [
         'Fixed-Speed Screw Compressors',
@@ -26,19 +26,19 @@ const MarkClient = () => {
     const features = [
         {
             title: 'Dependable Performance',
-            desc: 'Built for demanding manufacturing conditions, VAYU Screw Air Compressors deliver stable and reliable compressed air through robust construction and consistent performance. Designed for real-world industrial applications, they help businesses maintain smooth production across different operating environments.',
+            desc: 'Built for demanding manufacturing conditions, VAYU (ELGi) Screw Air Compressors deliver stable and reliable compressed air through robust construction and consistent performance. Designed for real-world industrial applications, they help businesses maintain smooth production across different operating environments.',
         },
         {
             title: 'Efficient Operation',
-            desc: 'VAYU Air Compressors are engineered for efficient operation, helping industries optimize compressed air performance while keeping energy consumption and operating costs under control. Their practical design makes them a dependable choice for manufacturers seeking efficient industrial screw air compressors.',
+            desc: 'VAYU (ELGi) Air Compressors are engineered for efficient operation, helping industries optimize compressed air performance while keeping energy consumption and operating costs under control. Their practical design makes them a dependable choice for manufacturers seeking efficient industrial screw air compressors.',
         },
         {
             title: 'Built for Easy Ownership',
-            desc: 'VAYU compressors are designed with practical ownership in mind. Competitive pricing, straightforward maintenance, and durable construction help provide lasting value throughout the working life of the compressor.',
+            desc: 'VAYU (ELGi) compressors are designed with practical ownership in mind. Competitive pricing, straightforward maintenance, and durable construction help provide lasting value throughout the working life of the compressor.',
         },
         {
             title: 'Simple Usability',
-            desc: 'An intuitive controller makes monitoring and operating VAYU Screw Air Compressors simple and convenient. Easy-to-understand controls help operators monitor compressor performance efficiently while staying focused on production.',
+            desc: 'An intuitive controller makes monitoring and operating VAYU (ELGi) Screw Air Compressors simple and convenient. Easy-to-understand controls help operators monitor compressor performance efficiently while staying focused on production.',
         },
         {
             title: 'Reliable Continuous Operation',
@@ -61,11 +61,11 @@ const MarkClient = () => {
         },
         {
             title: 'Lower Maintenance Requirements',
-            desc: 'Designed for practical ownership, VAYU Air Compressors feature robust construction and straightforward maintenance requirements, helping reduce maintenance effort, service costs, and unnecessary downtime.',
+            desc: 'Designed for practical ownership, VAYU (ELGi) Air Compressors feature robust construction and straightforward maintenance requirements, helping reduce maintenance effort, service costs, and unnecessary downtime.',
         },
         {
             title: 'Long-Lasting Performance',
-            desc: 'Built for real-world manufacturing conditions, VAYU compressors combine rugged construction with dependable engineering to provide consistent performance and lasting value throughout their working life.',
+            desc: 'Built for real-world manufacturing conditions, VAYU (ELGi) compressors combine rugged construction with dependable engineering to provide consistent performance and lasting value throughout their working life.',
         },
     ];
 
@@ -98,7 +98,7 @@ const MarkClient = () => {
         {
             title: 'Foundry',
             image: '/indus6.jpg',
-            desc: 'Built to support demanding foundry environments, VAYU compressors provide dependable compressed air for pneumatic tools, equipment, automation, and production processes.',
+            desc: 'Built to support demanding foundry environments, VAYU (ELGi) compressors provide dependable compressed air for pneumatic tools, equipment, automation, and production processes.',
         },
         {
             title: 'Leather Industry',
@@ -121,7 +121,7 @@ const MarkClient = () => {
                 >
                     <div className="absolute inset-0 bg-black/50" />
                     <h1 className="z-10 px-10 text-center text-3xl font-bold text-white md:text-7xl">
-                        VAYU Screw Air Compressor
+                        VAYU (ELGi) Screw Air Compressor
                     </h1>
                 </div>
             </section>
@@ -131,7 +131,7 @@ const MarkClient = () => {
                     <div className="grid grid-cols-1 items-center gap-10 lg:grid-cols-2">
                         <div className="w-full">
                             <span className="inline-flex items-center gap-2 rounded-full border border-sky-200 bg-white px-4 py-2 text-sm font-medium text-sky-700 shadow-sm">
-                                Trusted VAYU Screw Air Compressors Supplier
+                                Trusted VAYU (ELGi) Screw Air Compressors Supplier
                             </span>
 
                             <h2 className="mt-5 text-2xl leading-tight font-bold break-words text-slate-900 sm:text-4xl lg:text-4xl xl:text-5xl">
@@ -141,15 +141,15 @@ const MarkClient = () => {
                             <p className="mt-5 text-base leading-6 break-words text-slate-700 md:leading-7 xl:text-lg">
                                 Eutair Equipments LLP is a trusted VAYU (ELGi) Screw Air Compressors Supplier,
                                 offering dependable and high-performance compressed air solutions for a wide
-                                range of industrial applications. VAYU screw air compressors are designed to
+                                range of industrial applications. VAYU (ELGi) screw air compressors are designed to
                                 deliver reliable performance, efficient operation, easy maintenance, and
                                 long-term value in demanding manufacturing environments.
                             </p>
 
                             <p className="mt-4 text-base leading-6 break-words text-slate-700 md:leading-7 xl:text-lg">
-                                Built in India for manufacturers across the world, VAYU compressors are
+                                Built in India for manufacturers across the world, VAYU (ELGi) compressors are
                                 engineered for real operating conditions and backed by responsive service and
-                                parts support. Our VAYU screw compressor range is suitable for manufacturing
+                                parts support. Our VAYU (ELGi) screw compressor range is suitable for manufacturing
                                 units, automotive industries, pharmaceutical companies, engineering workshops,
                                 textile industries, and other industrial applications requiring a dependable
                                 compressed air supply.
