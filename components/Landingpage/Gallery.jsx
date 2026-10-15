@@ -124,7 +124,7 @@ export default function Gallery() {
                             cornerRadius={16}
                             onChange={setActive}
                             onItemClick={handleItemClick}
-                            style={{ width: '100%', height: '60%', position: 'relative' }}
+                            style={{ width: '100%', height: '70%', position: 'relative' }}
                         />
                     </div>
  
