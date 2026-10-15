@@ -33,9 +33,8 @@ export default function Home() {
             <Otherproduct/>
             {/* <Process></Process> */}
             <Dedicated/>
-
             <Bestseller/>
-            <Gallery/>
+            {/* <Gallery/> */}
             <IndustriesSection />
             <TestimonialSlider/>
 

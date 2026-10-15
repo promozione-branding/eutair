@@ -141,7 +141,6 @@ export default function Gallery() {
                     )}
                 </div>
  
-                {/* Lightbox */}
                 {lightbox !== null && filtered[lightbox] && (
                     <div
                         className="fixed inset-0 z-[300] flex items-center justify-center bg-blue-950/95 p-4 backdrop-blur-sm"
@@ -155,8 +154,7 @@ export default function Gallery() {
                             aria-label="Close"
                         >
                             <X size={20} />
-                        </button>
- 
+                        </button> 
                         <button
                             onClick={(e) => {
                                 e.stopPropagation();
