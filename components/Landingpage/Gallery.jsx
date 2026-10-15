@@ -19,7 +19,6 @@ const items = [
 
 const categories = ['All', 'Compressors', 'Installations', 'Service', 'Projects'];
 
-// A ring needs enough cards to look like a ring, so small filters are repeated up to this size.
 const MIN_RING = 8;
 
 export default function Gallery() {
@@ -30,7 +29,6 @@ export default function Gallery() {
     const filtered = useMemo(() => (activeCat === 'All' ? items : items.filter((i) => i.category === activeCat)), [activeCat]);
     const n = filtered.length;
 
-    // Items fed to the ring (repeated when a filter has only a few photos)
     const ringItems = useMemo(() => {
         const repeats = Math.max(1, Math.ceil(MIN_RING / n));
         return Array.from({ length: n * repeats }, (_, i) => {
@@ -48,14 +46,11 @@ export default function Gallery() {
 
     const handleItemClick = useCallback(
         (_item, index) => {
-            // Clicking a side card only rotates it to the front (handled by the carousel);
-            // clicking the front card opens the lightbox.
             if (index === active) setLightbox(index % n);
         },
         [active, n]
     );
 
-    // Lightbox helpers
     const close = useCallback(() => setLightbox(null), []);
     const lbNext = useCallback(() => setLightbox((i) => (i === null ? i : (i + 1) % n)), [n]);
     const lbPrev = useCallback(() => setLightbox((i) => (i === null ? i : (i - 1 + n) % n)), [n]);
@@ -80,7 +75,6 @@ export default function Gallery() {
         <Reveal>
             <section className="relative overflow-hidden bg-gradient-to-b from-white via-sky-50/60 to-white py-8 md:py-14">
                 <div className="mx-auto w-full px-4 sm:px-6 lg:px-12 xl:px-16">
-                    {/* Heading */}
                     <p className="mb-2 text-center text-xs font-semibold tracking-[2px] text-sky-600 uppercase sm:text-sm md:tracking-[3px]">
                         Our Gallery
                     </p>
@@ -92,7 +86,6 @@ export default function Gallery() {
                         A look at our compressors, installations and projects delivered across India and abroad.
                     </p>
 
-                    {/* Filter tabs */}
                     <div className="mb-4 flex flex-wrap justify-center gap-2 md:mb-6">
                         {categories.map((cat) => (
                             <button
@@ -109,10 +102,9 @@ export default function Gallery() {
                         ))}
                     </div>
 
-                    {/* 3D circular carousel (React Bits) */}
                     <div className="relative mx-auto h-[380px] w-full max-w-[1600px] sm:h-[460px] md:h-[560px]">
                         <CircularCarousel
-                            key={activeCat} // remount on filter change so the ring restarts from the first photo
+                            key={activeCat} 
                             items={ringItems}
                             preset="cylinder"
                             tilt={-1}
@@ -148,7 +140,6 @@ export default function Gallery() {
                     )}
                 </div>
 
-                {/* Lightbox */}
                 {lightbox !== null && filtered[lightbox] && (
                     <div
                         className="fixed inset-0 z-[300] flex items-center justify-center bg-blue-950/95 p-4 backdrop-blur-sm"
