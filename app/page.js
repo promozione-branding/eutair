@@ -18,27 +18,28 @@ import TestimonialSlider from '@/components/Landingpage/Testimonials';
 import Bestseller from '@/components/Landingpage/Bestseller';
 import Whoweare from '@/components/Landingpage/Whoweare';
 import CityPage from '@/components/Landingpage/CityPage';
+import Gallery from '@/components/Landingpage/Gallery';
 export default function Home() {
     return (
         <>
-            <Popup></Popup>
+            <Popup/>
             <Hero />
             <Clients />
 
             <About />
             <Whoweare />
-            <Products></Products>
-            <Cta></Cta>
-            <Otherproduct></Otherproduct>
+            <Products/>
+            <Cta/>
+            <Otherproduct/>
             {/* <Process></Process> */}
-            <Dedicated></Dedicated>
+            <Dedicated/>
 
-            <Bestseller></Bestseller>
-
+            <Bestseller/>
+            <Gallery/>
             <IndustriesSection />
-            <TestimonialSlider></TestimonialSlider>
+            <TestimonialSlider/>
 
-            <Faq></Faq>
+            <Faq/>
             <CityPage />
         </>
     );
