@@ -23,7 +23,7 @@ const MIN_RING = 10;
  
 export default function Gallery() {
     const [activeCat, setActiveCat] = useState('All');
-    const [active, setActive] = useState(0); // index of the card currently at the front of the ring
+    const [active, setActive] = useState(0); 
     const [lightbox, setLightbox] = useState(null);
  
     const filtered = useMemo(() => (activeCat === 'All' ? items : items.filter((i) => i.category === activeCat)), [activeCat]);
@@ -46,14 +46,11 @@ export default function Gallery() {
  
     const handleItemClick = useCallback(
         (_item, index) => {
-            // Clicking a side card only rotates it to the front (handled by the carousel);
-            // clicking the front card opens the lightbox.
             if (index === active) setLightbox(index % n);
         },
         [active, n]
     );
  
-    // Lightbox helpers
     const close = useCallback(() => setLightbox(null), []);
     const lbNext = useCallback(() => setLightbox((i) => (i === null ? i : (i + 1) % n)), [n]);
     const lbPrev = useCallback(() => setLightbox((i) => (i === null ? i : (i - 1 + n) % n)), [n]);
