@@ -4,8 +4,6 @@ import Image from 'next/image';
 import { useCallback, useEffect, useMemo, useState } from 'react';
 import { ChevronLeft, ChevronRight, X } from 'lucide-react';
 import Reveal from './Reveal';
-// Installed with: npx shadcn@latest add @react-bits/CircularCarousel-JS-CSS
-// Adjust this path to wherever the CLI placed CircularCarousel.jsx in your project.
 import CircularCarousel from '../CircularCarousel';
 
 const items = [
@@ -112,14 +110,14 @@ export default function Gallery() {
                     </div>
 
                     {/* 3D circular carousel (React Bits) */}
-                    <div className="relative mx-auto h-[380px] w-full max-w-6xl sm:h-[460px] md:h-[540px]">
+                    <div className="relative mx-auto h-[380px] w-full max-w-[1600px] sm:h-[460px] md:h-[560px]">
                         <CircularCarousel
                             key={activeCat} // remount on filter change so the ring restarts from the first photo
                             items={ringItems}
                             preset="cylinder"
                             tilt={-1}
                             intro="rise"
-                            cardWidth={280}
+                            cardWidth={340}
                             aspectRatio={4 / 5}
                             gap={25}
                             autoplay="step"
