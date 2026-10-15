@@ -13,7 +13,7 @@ const items = [
     { src: '/gallery/4.webp', title: 'Turnkey Project, Africa', category: 'Projects' },
     { src: '/gallery/5.webp', title: 'Oil-Free Compressor Unit', category: 'Compressors' },
     { src: '/gallery/6.webp', title: 'Air Line & Dryer Setup', category: 'Installations' },
-    { src: '/gallery/7.webp', title: 'Industrial Utility Infrastructure', category: 'Projects' },
+    { src: '/8888.png', title: 'Industrial Utility Infrastructure', category: 'Projects' },
     { src: '/gallery/8.webp', title: 'Preventive Maintenance', category: 'Service' },
 ];
  
@@ -112,7 +112,7 @@ export default function Gallery() {
                             tilt={-1}
                             intro="rise"
                             cardWidth={280}
-                            aspectRatio={4 / 5}
+                            aspectRatio={1}
                             gap={60}
                             autoplay="step"
                             interval={3.5}
@@ -124,7 +124,7 @@ export default function Gallery() {
                             cornerRadius={16}
                             onChange={setActive}
                             onItemClick={handleItemClick}
-                            style={{ width: '100%', height: '100%', position: 'relative' }}
+                            style={{ width: '100%', height: '60%', position: 'relative' }}
                         />
                     </div>
  
