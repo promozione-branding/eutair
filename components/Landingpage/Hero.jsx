@@ -49,7 +49,7 @@ const slides = [
         tagline: '',
         alt: 'Stationary Air Compressor',
         title: 'Engineered for Industrial Power',
-        pdf: '/pdf/Slide2.pdf',
+        pdf: '',
         description:
             'Explore high-performance screw air compressors designed for demanding applications.',
         features: [
@@ -67,7 +67,7 @@ const slides = [
         tagline: '',
         alt: 'Stationary Air Compressor',
         title: 'Reliable Industrial Air Compressors',
-        pdf: '/pdf/Slide2.pdf',
+        pdf: '',
         description:
             'Choose dependable equipment engineered for productivity, durability, and performance.',
         features: [
@@ -167,32 +167,34 @@ export default function HeroSlider() {
                                             </div>
                                         )}
 
-                                        <div className="mt-7 flex flex-col justify-center gap-4 sm:flex-row lg:justify-start">
-                                            <button
-                                                onClick={() => setOpen(true)}
-                                                className="group relative mx-auto inline-flex min-h-[54px] w-full max-w-[320px] items-center justify-center overflow-hidden rounded-xl bg-gradient-to-r from-[#0A63FF] to-[#1D8FFF] px-5 shadow-[0_15px_40px_rgba(10,99,255,.35)] transition-all duration-500 hover:-translate-y-1 hover:shadow-[0_20px_60px_rgba(10,99,255,.5)] sm:mx-0 sm:w-auto md:min-h-[58px] md:px-8"
-                                            >
-                                                <span className="relative z-10 flex items-center justify-center gap-2 text-center text-sm font-semibold text-white md:gap-3 md:text-base">
-                                                    GET INSTANT QUOTE
-                                                    <ArrowRight
-                                                        size={18}
-                                                        className="transition-transform duration-300 group-hover:translate-x-1"
-                                                    />
-                                                </span>
-                                            </button>
+                                 {index === 0 && (
+    <div className="mt-7 flex flex-col justify-center gap-4 sm:flex-row lg:justify-start">
+        <button
+            onClick={() => setOpen(true)}
+            className="group relative mx-auto inline-flex min-h-[54px] w-full max-w-[320px] items-center justify-center overflow-hidden rounded-xl bg-gradient-to-r from-[#0A63FF] to-[#1D8FFF] px-5 shadow-[0_15px_40px_rgba(10,99,255,.35)] transition-all duration-500 hover:-translate-y-1 hover:shadow-[0_20px_60px_rgba(10,99,255,.5)] sm:mx-0 sm:w-auto md:min-h-[58px] md:px-8"
+        >
+            <span className="relative z-10 flex items-center justify-center gap-2 text-center text-sm font-semibold text-white md:gap-3 md:text-base">
+                GET INSTANT QUOTE
+                <ArrowRight
+                    size={18}
+                    className="transition-transform duration-300 group-hover:translate-x-1"
+                />
+            </span>
+        </button>
 
-                                            <a
-                                                href={slide.pdf}
-                                                download="Brochure.pdf"
-                                                target="_blank"
-                                                rel="noopener noreferrer"
-                                                aria-label="Download Brochure"
-                                                className="hidden h-[58px] items-center justify-center rounded-xl border border-white/30 bg-white/10 px-7 font-semibold tracking-wide text-white backdrop-blur-md transition-all duration-300 hover:border-white hover:bg-white hover:text-slate-900 hover:shadow-lg md:inline-flex"
-                                            >
-                                                <Download size={17} className="mr-2" />
-                                                DOWNLOAD CATALOGUE
-                                            </a>
-                                        </div>
+        <a
+            href={slide.pdf}
+            download="Brochure.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Download Brochure"
+            className="hidden h-[58px] items-center justify-center rounded-xl border border-white/30 bg-white/10 px-7 font-semibold tracking-wide text-white backdrop-blur-md transition-all duration-300 hover:border-white hover:bg-white hover:text-slate-900 hover:shadow-lg md:inline-flex"
+        >
+            <Download size={17} className="mr-2" />
+            DOWNLOAD CATALOGUE
+        </a>
+    </div>
+)}
                                     </motion.div>
 
                                     <motion.div
