@@ -9,12 +9,11 @@ import Reveal from './Reveal';
 const items = [
     { src: '/gallery/1.webp', title: 'Screw Air Compressor', category: 'Compressors', ratio: 4 / 3 },
     { src: '/gallery/2.webp', title: 'Tech Event 2025', category: 'Event', ratio: 4 / 3 },
-    { src: '/gallery/3.webp', title: 'Tech Event 2026', category: 'Event', ratio: 4 / 3 },
+    { src: '/gallery/8.webp', title: 'Tech Event 2026', category: 'Event', ratio: 4 / 3 },
     { src: '/gallery/4.webp', title: 'On-site Servicing', category: 'Service', ratio: 4 / 3 },
     { src: '/gallery/5.webp', title: 'Oil-Free Compressor Unit', category: 'Compressors', ratio: 4 / 3 },
     { src: '/gallery/6.webp', title: 'First AirComprssor Setup', category: 'Installations', ratio: 4 / 3 },
-    { src: '/gallery/7.webp', title: 'Plant Room Installation', category: 'Projects', ratio: 4 / 3 },
-    { src: '/gallery/8.webp', title: 'Manufacturing Team', category: 'Service', ratio: 1280 / 960 },
+    { src: '/gallery/3.webp', title: 'Plant Room Installation', category: 'Projects', ratio: 4 / 3 },
 ];
 
 const categories = ['All', 'Compressors', 'Installations', 'Service', 'Projects'];
