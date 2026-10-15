@@ -104,7 +104,7 @@ export default function Gallery() {
                         ))}
                     </div>
 
-                    <div className="relative mx-auto h-[380px] w-full max-w-none sm:h-[460px] md:h-[560px]">
+                    <div className="relative mx-auto h-[380px] w-full max-w-none sm:h-[460px] md:h-[400px]">
                         <CircularCarousel
                             key={activeCat}
                             items={ringItems}
