@@ -2,48 +2,72 @@
 
 import Image from 'next/image';
 import { useCallback, useEffect, useMemo, useState } from 'react';
-import { ChevronLeft, ChevronRight, Expand, X } from 'lucide-react';
+import { ChevronLeft, ChevronRight, X } from 'lucide-react';
 import Reveal from './Reveal';
-
+// Installed with: npx shadcn@latest add @react-bits/CircularCarousel-JS-CSS
+// Adjust this path to wherever the CLI placed CircularCarousel.jsx in your project.
+import CircularCarousel from '../CircularCarousel';
 
 const items = [
-    { src: '/gallery/1.webp', title: 'Screw Air Compressor', category: 'Compressors', ratio: 4 / 3 },
-    { src: '/gallery/2.webp', title: 'Tech Event 2025', category: 'Event', ratio: 4 / 3 },
-    { src: '/gallery/8.webp', title: 'Tech Event 2026', category: 'Event', ratio: 4 / 3 },
-    { src: '/gallery/4.webp', title: 'On-site Servicing', category: 'Service', ratio: 4 / 3 },
-    { src: '/gallery/5.webp', title: 'Oil-Free Compressor Unit', category: 'Compressors', ratio: 4 / 3 },
-    { src: '/gallery/6.webp', title: 'First AirComprssor Setup', category: 'Installations', ratio: 4 / 3 },
-    { src: '/gallery/3.webp', title: 'Plant Room Installation', category: 'Projects', ratio: 4 / 3 },
+    { src: '/gallery/1.webp', title: 'Screw Air Compressor', category: 'Compressors' },
+    { src: '/gallery/2.webp', title: 'Plant Room Installation', category: 'Installations' },
+    { src: '/gallery/3.webp', title: 'On-site Servicing', category: 'Service' },
+    { src: '/gallery/4.webp', title: 'Turnkey Project, Africa', category: 'Projects' },
+    { src: '/gallery/5.webp', title: 'Oil-Free Compressor Unit', category: 'Compressors' },
+    { src: '/gallery/6.webp', title: 'Air Line & Dryer Setup', category: 'Installations' },
+    { src: '/gallery/7.webp', title: 'Industrial Utility Infrastructure', category: 'Projects' },
+    { src: '/gallery/8.webp', title: 'Preventive Maintenance', category: 'Service' },
 ];
 
 const categories = ['All', 'Compressors', 'Installations', 'Service', 'Projects'];
 
+// A ring needs enough cards to look like a ring, so small filters are repeated up to this size.
+const MIN_RING = 8;
+
 export default function Gallery() {
-    const [active, setActive] = useState('All');
+    const [activeCat, setActiveCat] = useState('All');
+    const [active, setActive] = useState(0); // index of the card currently at the front of the ring
     const [lightbox, setLightbox] = useState(null);
-    const [ratios, setRatios] = useState({});
 
-    const filtered = useMemo(() => (active === 'All' ? items : items.filter((i) => i.category === active)), [active]);
+    const filtered = useMemo(() => (activeCat === 'All' ? items : items.filter((i) => i.category === activeCat)), [activeCat]);
+    const n = filtered.length;
 
-    const getRatio = (item) => ratios[item.src] || item.ratio;
+    // Items fed to the ring (repeated when a filter has only a few photos)
+    const ringItems = useMemo(() => {
+        const repeats = Math.max(1, Math.ceil(MIN_RING / n));
+        return Array.from({ length: n * repeats }, (_, i) => {
+            const item = filtered[i % n];
+            return { src: item.src, alt: item.title, title: item.title, subtitle: item.category };
+        });
+    }, [filtered, n]);
 
-    const handleLoad = (src, e) => {
-        const { naturalWidth, naturalHeight } = e.currentTarget;
-        if (!naturalWidth || !naturalHeight) return;
-        const r = naturalWidth / naturalHeight;
-        setRatios((prev) => (Math.abs((prev[src] || 0) - r) < 0.001 ? prev : { ...prev, [src]: r }));
+    const front = filtered[active % n] ?? filtered[0];
+
+    const changeCategory = (cat) => {
+        setActiveCat(cat);
+        setActive(0);
     };
 
+    const handleItemClick = useCallback(
+        (_item, index) => {
+            // Clicking a side card only rotates it to the front (handled by the carousel);
+            // clicking the front card opens the lightbox.
+            if (index === active) setLightbox(index % n);
+        },
+        [active, n]
+    );
+
+    // Lightbox helpers
     const close = useCallback(() => setLightbox(null), []);
-    const next = useCallback(() => setLightbox((i) => (i === null ? i : (i + 1) % filtered.length)), [filtered.length]);
-    const prev = useCallback(() => setLightbox((i) => (i === null ? i : (i - 1 + filtered.length) % filtered.length)), [filtered.length]);
+    const lbNext = useCallback(() => setLightbox((i) => (i === null ? i : (i + 1) % n)), [n]);
+    const lbPrev = useCallback(() => setLightbox((i) => (i === null ? i : (i - 1 + n) % n)), [n]);
 
     useEffect(() => {
         if (lightbox === null) return;
         const onKey = (e) => {
             if (e.key === 'Escape') close();
-            if (e.key === 'ArrowRight') next();
-            if (e.key === 'ArrowLeft') prev();
+            if (e.key === 'ArrowRight') lbNext();
+            if (e.key === 'ArrowLeft') lbPrev();
         };
         document.addEventListener('keydown', onKey);
         const original = document.body.style.overflow;
@@ -52,11 +76,11 @@ export default function Gallery() {
             document.removeEventListener('keydown', onKey);
             document.body.style.overflow = original;
         };
-    }, [lightbox, close, next, prev]);
+    }, [lightbox, close, lbNext, lbPrev]);
 
     return (
         <Reveal>
-            <section className="overflow-hidden bg-gradient-to-b from-white via-sky-50/60 to-white py-8 md:py-14">
+            <section className="relative overflow-hidden bg-gradient-to-b from-white via-sky-50/60 to-white py-8 md:py-14">
                 <div className="mx-auto w-full px-4 sm:px-6 lg:px-12 xl:px-16">
                     {/* Heading */}
                     <p className="mb-2 text-center text-xs font-semibold tracking-[2px] text-sky-600 uppercase sm:text-sm md:tracking-[3px]">
@@ -71,13 +95,13 @@ export default function Gallery() {
                     </p>
 
                     {/* Filter tabs */}
-                    <div className="mb-8 flex flex-wrap justify-center gap-2">
+                    <div className="mb-4 flex flex-wrap justify-center gap-2 md:mb-6">
                         {categories.map((cat) => (
                             <button
                                 key={cat}
-                                onClick={() => setActive(cat)}
+                                onClick={() => changeCategory(cat)}
                                 className={`rounded-full border px-4 py-1.5 text-xs font-semibold transition-all duration-300 sm:text-sm ${
-                                    active === cat
+                                    activeCat === cat
                                         ? 'border-blue-900 bg-blue-900 text-white shadow-md'
                                         : 'border-slate-200 bg-white text-slate-700 hover:border-sky-600 hover:text-sky-600'
                                 }`}
@@ -87,53 +111,49 @@ export default function Gallery() {
                         ))}
                     </div>
 
-                    {/* Justified rows: equal row height, each tile's width follows its image ratio,
-                        and tiles grow to fill the row, so there are never empty gaps. */}
-                    <div className="flex flex-wrap gap-3 [--h:150px] sm:[--h:200px] md:gap-4 lg:[--h:250px] xl:[--h:280px]">
-                        {filtered.map((item, index) => {
-                            const ratio = getRatio(item);
-                            return (
-                                <button
-                                    key={item.src}
-                                    onClick={() => setLightbox(index)}
-                                    style={{ flex: `${ratio} ${ratio} calc(var(--h) * ${ratio})` }}
-                                    className="group relative h-[var(--h)] min-w-0 overflow-hidden rounded-2xl bg-slate-100 text-left shadow-sm ring-1 ring-slate-200 transition-all duration-500 hover:-translate-y-1 hover:shadow-xl hover:ring-sky-500"
-                                    aria-label={`View ${item.title}`}
-                                >
-                                    <Image
-                                        src={item.src}
-                                        alt={item.title}
-                                        fill
-                                        sizes="(min-width: 100%) 50vw, 100vw"
-                                        onLoad={(e) => handleLoad(item.src, e)}
-                                        className="object-cover transition-transform duration-700 group-hover:scale-105"
-                                    />
-
-                                    {/* Gradient overlay */}
-                                    <div className="absolute inset-0 bg-gradient-to-t from-blue-950/85 via-blue-900/10 to-transparent opacity-70 transition-opacity duration-500 group-hover:opacity-100" />
-
-                                    {/* Expand icon */}
-                                    <span className="absolute top-3 right-3 flex h-9 w-9 translate-y-2 items-center justify-center rounded-full bg-white/90 text-blue-900 opacity-0 shadow transition-all duration-300 group-hover:translate-y-0 group-hover:opacity-100">
-                                        <Expand size={16} />
-                                    </span>
-
-                                    {/* Caption */}
-                                    <div className="absolute inset-x-0 bottom-0 p-3 sm:p-4">
-                                        <span className="mb-1 inline-block rounded-full bg-sky-600 px-2.5 py-0.5 text-[10px] font-semibold tracking-wider text-white uppercase">
-                                            {item.category}
-                                        </span>
-                                        <h3 className="text-sm leading-snug font-semibold text-white sm:text-base">{item.title}</h3>
-                                    </div>
-                                </button>
-                            );
-                        })}
+                    {/* 3D circular carousel (React Bits) */}
+                    <div className="relative mx-auto h-[380px] w-full max-w-6xl sm:h-[460px] md:h-[540px]">
+                        <CircularCarousel
+                            key={activeCat} // remount on filter change so the ring restarts from the first photo
+                            items={ringItems}
+                            preset="cylinder"
+                            tilt={-1}
+                            intro="rise"
+                            cardWidth={280}
+                            aspectRatio={4 / 5}
+                            gap={25}
+                            autoplay="step"
+                            interval={3.5}
+                            pauseOnHover
+                            focusOnClick
+                            fadeColor="#ffffff"
+                            depthFade={0.6}
+                            innerShade={0.5}
+                            cornerRadius={16}
+                            onChange={setActive}
+                            onItemClick={handleItemClick}
+                            style={{ width: '100%', height: '100%', position: 'relative' }}
+                        />
                     </div>
+
+                    {/* Caption for the card at the front */}
+                    {front && (
+                        <div className="mx-auto mt-2 flex max-w-md flex-col items-center text-center">
+                            <span className="mb-2 inline-block rounded-full bg-sky-600 px-3 py-0.5 text-[10px] font-semibold tracking-wider text-white uppercase">
+                                {front.category}
+                            </span>
+                            <h3 className="text-base font-semibold text-blue-900 sm:text-lg">{front.title}</h3>
+                            <p className="mt-1 text-xs text-slate-500">
+                                {(active % n) + 1} / {n} · Drag to rotate, click the front card to enlarge
+                            </p>
+                        </div>
+                    )}
                 </div>
 
                 {/* Lightbox */}
                 {lightbox !== null && filtered[lightbox] && (
                     <div
-                        className="fixed inset-0 z-50 flex items-center justify-center bg-blue-950/95 p-4 backdrop-blur-sm"
+                        className="fixed inset-0 z-[300] flex items-center justify-center bg-blue-950/95 p-4 backdrop-blur-sm"
                         onClick={close}
                         role="dialog"
                         aria-modal="true"
@@ -149,7 +169,7 @@ export default function Gallery() {
                         <button
                             onClick={(e) => {
                                 e.stopPropagation();
-                                prev();
+                                lbPrev();
                             }}
                             className="absolute left-3 z-10 flex h-10 w-10 items-center justify-center rounded-full bg-white/10 text-white transition hover:bg-sky-600 md:left-8"
                             aria-label="Previous image"
@@ -174,7 +194,7 @@ export default function Gallery() {
                                     <h3 className="text-base font-semibold sm:text-lg">{filtered[lightbox].title}</h3>
                                 </div>
                                 <span className="text-sm text-slate-300">
-                                    {lightbox + 1} / {filtered.length}
+                                    {lightbox + 1} / {n}
                                 </span>
                             </div>
                         </div>
@@ -182,7 +202,7 @@ export default function Gallery() {
                         <button
                             onClick={(e) => {
                                 e.stopPropagation();
-                                next();
+                                lbNext();
                             }}
                             className="absolute right-3 z-10 flex h-10 w-10 items-center justify-center rounded-full bg-white/10 text-white transition hover:bg-sky-600 md:right-8"
                             aria-label="Next image"
