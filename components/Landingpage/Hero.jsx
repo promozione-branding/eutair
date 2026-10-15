@@ -661,13 +661,9 @@ function CornerText({ text }) {
                 right-4
                 z-30
                 max-w-[220px]
-                bg-gradient-to-br
-                from-white/30
-                to-white/10
                 px-4
                 py-3
                 text-right
-                shadow-[0_8px_32px_rgba(0,0,0,0.25)]
                 sm:top-6
                 sm:right-6
                 sm:max-w-[300px]
@@ -748,7 +744,6 @@ function TypewriterTitle({ title }) {
                 py-4
                 text-[32px]
                 font-black
-                uppercase
                 leading-[1.05]
                 tracking-[-0.03em]
                 text-white

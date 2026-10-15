@@ -13,7 +13,7 @@ export default function ProductRange() {
             desc: 'Industry-proven compressed air systems delivering superior efficiency, durability, and productivity for modern industrial operations.',
         },
         {
-            title: 'VAYU Screw Air Compressor',
+            title: 'VAYU (ELGi) Screw Air Compressor',
             image: '/vayu_compressor.png',
             link: '/vayu-screw-air-compressor',
             desc: 'Eutair Equipments LLP is a trusted VAYU Screw Air Compressors Supplier, offering dependable and high-performance compressed air solutions',

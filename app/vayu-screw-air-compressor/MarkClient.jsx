@@ -53,7 +53,7 @@ const MarkClient = () => {
     const benefits = [
         {
             title: 'Enhanced Operating Efficiency',
-            desc: 'VAYU Screw Air Compressors are engineered for efficient operation and stable air delivery, helping manufacturers optimize compressed air performance while managing energy and operating costs.',
+            desc: 'VAYU (ELGi) Screw Air Compressors are engineered for efficient operation and stable air delivery, helping manufacturers optimize compressed air performance while managing energy and operating costs.',
         },
         {
             title: 'Improved Production Productivity',
@@ -282,10 +282,10 @@ const MarkClient = () => {
                         </h2>
                         <p className="my-4 text-base leading-6 text-cyan-800 md:text-lg">
                             Every investment should create clear value where it matters most — on your factory
-                            floor. VAYU Screw Air Compressors combine dependable engineering, efficient
+                            floor. VAYU (ELGi) Screw Air Compressors combine dependable engineering, efficient
                             operation, practical ownership, and responsive service support to deliver reliable
                             compressed air solutions for modern industries. As a trusted Screw Air Compressor
-                            Supplier, we provide VAYU Air Compressors designed to support productivity while
+                            Supplier, we provide VAYU (ELGi) Air Compressors designed to support productivity while
                             helping manufacturers manage operating costs.
                         </p>
                     </div>
