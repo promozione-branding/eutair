@@ -16,19 +16,19 @@ const items = [
     { src: '/gallery/7.webp', title: 'Industrial Utility Infrastructure', category: 'Projects' },
     { src: '/gallery/8.webp', title: 'Preventive Maintenance', category: 'Service' },
 ];
-
+ 
 const categories = ['All', 'Compressors', 'Installations', 'Service', 'Projects'];
-
-const MIN_RING = 8;
-
+ 
+const MIN_RING = 10;
+ 
 export default function Gallery() {
     const [activeCat, setActiveCat] = useState('All');
     const [active, setActive] = useState(0); // index of the card currently at the front of the ring
     const [lightbox, setLightbox] = useState(null);
-
+ 
     const filtered = useMemo(() => (activeCat === 'All' ? items : items.filter((i) => i.category === activeCat)), [activeCat]);
     const n = filtered.length;
-
+ 
     const ringItems = useMemo(() => {
         const repeats = Math.max(1, Math.ceil(MIN_RING / n));
         return Array.from({ length: n * repeats }, (_, i) => {
@@ -36,25 +36,28 @@ export default function Gallery() {
             return { src: item.src, alt: item.title, title: item.title, subtitle: item.category };
         });
     }, [filtered, n]);
-
+ 
     const front = filtered[active % n] ?? filtered[0];
-
+ 
     const changeCategory = (cat) => {
         setActiveCat(cat);
         setActive(0);
     };
-
+ 
     const handleItemClick = useCallback(
         (_item, index) => {
+            // Clicking a side card only rotates it to the front (handled by the carousel);
+            // clicking the front card opens the lightbox.
             if (index === active) setLightbox(index % n);
         },
         [active, n]
     );
-
+ 
+    // Lightbox helpers
     const close = useCallback(() => setLightbox(null), []);
     const lbNext = useCallback(() => setLightbox((i) => (i === null ? i : (i + 1) % n)), [n]);
     const lbPrev = useCallback(() => setLightbox((i) => (i === null ? i : (i - 1 + n) % n)), [n]);
-
+ 
     useEffect(() => {
         if (lightbox === null) return;
         const onKey = (e) => {
@@ -70,11 +73,12 @@ export default function Gallery() {
             document.body.style.overflow = original;
         };
     }, [lightbox, close, lbNext, lbPrev]);
-
+ 
     return (
         <Reveal>
             <section className="relative overflow-hidden bg-gradient-to-b from-white via-sky-50/60 to-white py-8 md:py-14">
-                <div className="mx-auto w-full px-4 sm:px-6 lg:px-12 xl:px-16">
+                <div className="mx-auto w-full px-2 sm:px-4 lg:px-6">
+                    {/* Heading */}
                     <p className="mb-2 text-center text-xs font-semibold tracking-[2px] text-sky-600 uppercase sm:text-sm md:tracking-[3px]">
                         Our Gallery
                     </p>
@@ -85,7 +89,8 @@ export default function Gallery() {
                     <p className="mx-auto mb-8 max-w-2xl text-center text-sm leading-7 text-slate-600 md:text-base">
                         A look at our compressors, installations and projects delivered across India and abroad.
                     </p>
-
+ 
+                    {/* Filter tabs */}
                     <div className="mb-4 flex flex-wrap justify-center gap-2 md:mb-6">
                         {categories.map((cat) => (
                             <button
@@ -102,16 +107,16 @@ export default function Gallery() {
                         ))}
                     </div>
 
-                    <div className="relative mx-auto h-[380px] w-full max-w-[1600px] sm:h-[460px] md:h-[560px]">
+                    <div className="relative mx-auto h-[380px] w-full max-w-none sm:h-[460px] md:h-[560px]">
                         <CircularCarousel
-                            key={activeCat} 
+                            key={activeCat}
                             items={ringItems}
                             preset="cylinder"
                             tilt={-1}
                             intro="rise"
-                            cardWidth={340}
+                            cardWidth={280}
                             aspectRatio={4 / 5}
-                            gap={25}
+                            gap={60}
                             autoplay="step"
                             interval={3.5}
                             pauseOnHover
@@ -125,8 +130,7 @@ export default function Gallery() {
                             style={{ width: '100%', height: '100%', position: 'relative' }}
                         />
                     </div>
-
-                    {/* Caption for the card at the front */}
+ 
                     {front && (
                         <div className="mx-auto mt-2 flex max-w-md flex-col items-center text-center">
                             <span className="mb-2 inline-block rounded-full bg-sky-600 px-3 py-0.5 text-[10px] font-semibold tracking-wider text-white uppercase">
@@ -139,7 +143,8 @@ export default function Gallery() {
                         </div>
                     )}
                 </div>
-
+ 
+                {/* Lightbox */}
                 {lightbox !== null && filtered[lightbox] && (
                     <div
                         className="fixed inset-0 z-[300] flex items-center justify-center bg-blue-950/95 p-4 backdrop-blur-sm"
@@ -154,7 +159,7 @@ export default function Gallery() {
                         >
                             <X size={20} />
                         </button>
-
+ 
                         <button
                             onClick={(e) => {
                                 e.stopPropagation();
@@ -165,7 +170,7 @@ export default function Gallery() {
                         >
                             <ChevronLeft size={22} />
                         </button>
-
+ 
                         <div className="w-full max-w-4xl" onClick={(e) => e.stopPropagation()}>
                             <div className="relative h-[60vh] w-full overflow-hidden rounded-xl bg-slate-900 sm:h-[70vh]">
                                 <Image
@@ -187,7 +192,7 @@ export default function Gallery() {
                                 </span>
                             </div>
                         </div>
-
+ 
                         <button
                             onClick={(e) => {
                                 e.stopPropagation();
