@@ -10,7 +10,7 @@ const Bestseller = () => {
                     <div className="relative order-1 lg:order-2">
                         <div className="overflow-hidden rounded-2xl shadow-xl lg:rounded-3xl">
                             <Image
-                                                           src="/vayu_theme_.png"
+                                                           src="/industrial_vayu_compress.png"
                                                            alt="Chicago Pneumatic Supplier"
                                                            width={800}
                                                            height={800}

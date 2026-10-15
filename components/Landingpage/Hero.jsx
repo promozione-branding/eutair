@@ -34,12 +34,12 @@ const slides = [
 
         alt: 'Air Compressor',
 
-        title: 'PORTABLE AIR\nCOMPRESSOR',
+        title: 'High-Performance Screw Compressors',
 
         pdf: '/pdf/DiselEutair.pdf',
 
         description:
-            'Energy efficient, low maintenance and reliable air solutions for every industry.',
+            'Choose the right screw compressor to meet your performance and productivity goals.',
 
         features: [
             {
@@ -68,6 +68,7 @@ const slides = [
                 desc: 'Service Support',
             },
         ],
+        cornerText: 'Best of both the Worlds',
     },
     {
         bg: '/slide2.png',          
@@ -75,10 +76,48 @@ const slides = [
         machine: '/hero2.webp',
         tagline: 'ENERGY EFFICIENT SOLUTIONS',
         alt: 'Stationary Air Compressor',
-        title: 'STATIONARY AIR\nCOMPRESSOR',
+        title: 'Engineered for Industrial Power',
         pdf: '/pdf/Slide2.pdf',
         description:
-            'Reliable compressed air systems built for continuous industrial use.',
+            'Explore high-performance screw air compressors designed for demanding applications.',
+                features: [
+            {
+                icon: Cog,
+                title: '5 HP - 500 HP',
+                desc: 'Power Range',
+            },
+            {
+                icon: Zap,
+                title: 'Portable',
+                desc: 'Available',
+            },
+            {
+                icon: Shield,
+                title: 'Energy Efficient',
+                desc: 'Technology',
+            },
+            {
+                icon: Volume2,
+                title: 'Low Noise',
+                desc: 'Operation',
+            },
+            {
+                icon: BadgeCheck,
+                title: 'Best-In-Class',
+                desc: 'Service Support',
+            },
+        ],
+    },
+        {
+        bg: '/slide3.png',          
+        mobileBg: '/slide2-mobile.jpeg',
+        machine: '/hero2.webp',
+        tagline: 'ENERGY EFFICIENT SOLUTIONS',
+        alt: 'Stationary Air Compressor',
+        title: 'Reliable Industrial Air Compressors',
+        pdf: '/pdf/Slide2.pdf',
+        description:
+            'Choose dependable equipment engineered for productivity, durability, and performance.',
                 features: [
             {
                 icon: Cog,
@@ -219,7 +258,7 @@ export default function HeroSlider() {
                                 "
                             />
                             */}
-
+<CornerText text={slide.cornerText} />
                             {/* =================================================
                                 CONTENT WRAPPER
                             ================================================= */}
@@ -596,10 +635,6 @@ export default function HeroSlider() {
                     </SwiperSlide>
                 ))}
             </Swiper>
-
-            {/* =================================================
-                CONTACT FORM
-            ================================================= */}
             {open && (
                 <ContactForm
                     isOpen={open}
@@ -610,10 +645,56 @@ export default function HeroSlider() {
     );
 }
 
+function CornerText({ text }) {
+    const { isActive } = useSwiperSlide();
 
-/* =========================================================
-   TYPEWRITER TITLE
-========================================================= */
+    if (!text) return null;
+
+    return (
+        <motion.div
+            initial={{ opacity: 0, y: -20 }}
+            animate={isActive ? { opacity: 1, y: 0 } : { opacity: 0, y: -20 }}
+            transition={{ duration: 0.8, delay: isActive ? 0.3 : 0 }}
+            className="
+                absolute
+                top-4
+                right-4
+                z-30
+                max-w-[220px]
+                rounded-4xl
+                border
+                border-white/40
+                bg-gradient-to-br
+                from-white/30
+                to-white/10
+                px-4
+                py-3
+                text-right
+                shadow-[0_8px_32px_rgba(0,0,0,0.25)]
+                backdrop-blur-md
+
+                sm:top-6
+                sm:right-6
+                sm:max-w-[300px]
+                sm:px-5
+                sm:py-3
+
+                md:top-8
+                md:right-8
+                md:max-w-[320px]
+                md:px-6
+                md:py-4
+
+                lg:right-12
+                xl:right-16
+            "
+        >
+            <p className="text-base leading-snug font-bold text-white [text-shadow:0_2px_10px_rgba(0,0,0,0.6)] sm:text-lg md:text-2xl">
+                {text}
+            </p>
+        </motion.div>
+    );
+}
 
 function TypewriterTitle({ title }) {
     const { isActive } = useSwiperSlide();
@@ -685,7 +766,7 @@ function TypewriterTitle({ title }) {
                 sm:text-[40px]
                 md:px-8
                 md:py-5
-                md:text-[52px]
+                md:text-[42px]
             "
         >
             {/* invisible full title reserves the final box size */}

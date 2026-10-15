@@ -212,23 +212,36 @@ const MarkClient = () => {
 
             <section className="bg-slate-50 px-6 py-8 md:py-12">
                 <div className="container mx-auto md:px-6">
-                    <div className="mb-6 text-center lg:mb-8">
-                        <h2 className="text-3xl font-bold md:text-4xl">Our VAYU Compressor Range</h2>
-                        <ul className="mt-5 flex flex-wrap justify-center gap-3">
-                            {compressorRange.map((item) => (
-                                <li
-                                    key={item}
-                                    className="rounded-full border border-sky-200 bg-white px-4 py-2 text-sm font-medium text-slate-700 shadow-sm md:text-base"
-                                >
-                                    {item}
-                                </li>
-                            ))}
-                        </ul>
-                    </div>
+                  <div className="mb-6 text-center lg:mb-8">
+    <h2
+        style={{ fontFamily: 'inherit' }}
+        className="text-3xl font-bold text-slate-900 md:text-4xl"
+    >
+        Our VAYU Compressor Range
+    </h2>
 
-                    <h3 className="mb-6 text-center text-2xl font-bold text-slate-900">
-                        VAYU Screw Air Compressors
-                    </h3>
+    <div
+        role="list"
+        className="mx-auto mt-5 flex max-w-5xl flex-wrap items-center justify-center gap-3"
+    >
+        {compressorRange.map((item) => (
+            <span
+                key={item}
+                role="listitem"
+                className="rounded-full border border-sky-200 bg-white px-4 py-2 text-sm font-medium whitespace-nowrap text-slate-700 shadow-sm md:text-base"
+            >
+                {item}
+            </span>
+        ))}
+    </div>
+</div>
+
+<h3
+    style={{ fontFamily: 'inherit' }}
+    className="mb-6 text-center text-2xl font-bold text-slate-900"
+>
+    VAYU Screw Air Compressors
+</h3>
 
                     <div className="mt-5 grid gap-5 md:grid-cols-2 lg:mt-8 lg:grid-cols-5 xl:mt-12">
                         {products.map((item, index) => (

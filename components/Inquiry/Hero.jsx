@@ -237,7 +237,7 @@ export default function HeroSlider() {
                                                 sizes="
                           (max-width: 640px) 90vw,
                           (max-width: 768px) 80vw,
-                          (max-width: 1024px) 500px,
+                          (max-width: 1024px) 600px,
                           650px
                         "
                                                 className="h-auto max-h-[100%] w-[280px] object-contain drop-shadow-[0_40px_80px_rgba(0,0,0,.45)] sm:w-[380px] md:w-[500px] lg:w-[650px]"
