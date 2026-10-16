@@ -25,7 +25,7 @@ import { useEffect, useState } from 'react';
 const slides = [
     {
         bg: '/eutair.png',
-        mobileBg: '/mbm.jpeg',
+        mobileBg: '/mbm_1.png',
         machine: '/hero1.webp',
         tagline: 'ELECTRIC/DIESEL HIGH PERFORMANCE',
         alt: 'Air Compressor',
@@ -44,7 +44,7 @@ const slides = [
     },
     {
         bg: '/slide2.png',
-        mobileBg: '/slide2-mobile.jpeg',
+        mobileBg: '/mbm_2.png',
         machine: '/hero2.webp',
         tagline: '',
         alt: 'Stationary Air Compressor',
@@ -62,7 +62,7 @@ const slides = [
     },
     {
         bg: '/slide3_.png',
-        mobileBg: '/slide2-mobile.jpeg',
+        mobileBg: '/mbm_3.png',
         machine: '/hero2.webp',
         tagline: '',
         alt: 'Stationary Air Compressor',
@@ -239,7 +239,7 @@ function CornerText({ text }) {
             initial={{ opacity: 0, y: -20 }}
             animate={isActive ? { opacity: 1, y: 0 } : { opacity: 0, y: -20 }}
             transition={{ duration: 0.8, delay: isActive ? 0.3 : 0 }}
-            className="absolute right-4 top-4 z-30 max-w-[220px] px-4 py-3 text-right sm:right-6 sm:top-6 sm:max-w-[300px] sm:px-5 sm:py-3 md:right-8 md:top-8 md:max-w-[320px] md:px-6 md:py-4 lg:right-12 xl:right-16"
+            className="relative z-30 px-4 pt-4 text-center sm:px-6 md:absolute md:right-8 md:top-8 md:max-w-[320px] md:px-6 md:py-4 md:text-right lg:right-12 xl:right-16"
         >
             <p className="text-base font-bold leading-snug text-white [text-shadow:0_2px_10px_rgba(0,0,0,0.6)] sm:text-lg md:text-2xl">
                 {text}
