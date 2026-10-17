@@ -25,7 +25,7 @@ import { useEffect, useState } from 'react';
 const slides = [
     {
         bg: '/eutair.webp',
-        mobileBg: '/mbm_1.webp',
+        mobileBg: '/mbm_1_.webp',
         machine: '/hero1.webp',
         tagline: 'ELECTRIC/DIESEL HIGH PERFORMANCE',
         alt: 'Air Compressor',
@@ -44,7 +44,7 @@ const slides = [
     },
     {
         bg: '/slide2.webp',
-        mobileBg: '/mbm2.webp',
+        mobileBg: '/mbm_2_.webp',
         machine: '/hero2.webp',
         tagline: '',
         alt: 'Stationary Air Compressor',
@@ -62,7 +62,7 @@ const slides = [
     },
     {
         bg: '/slide3_.webp',
-        mobileBg: '/mbm_3.webp',
+        mobileBg: '/mbm_3_.webp',
         machine: '/hero2.webp',
         tagline: '',
         alt: 'Stationary Air Compressor',
