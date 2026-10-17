@@ -48,9 +48,7 @@ export default function ContactForm({ isOpen: isOpenProp, onClose }) {
 
             if (data?.success) {
                 setStatus('✅ Your enquiry has been submitted successfully!');
-
                 toast.success('Form Submitted Successfully');
-
                 const whatsappText = `Hi, I am ${name}.
 Email: ${email}
 Product: ${product}

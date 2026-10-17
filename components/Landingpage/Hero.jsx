@@ -24,8 +24,8 @@ import { useEffect, useState } from 'react';
 
 const slides = [
     {
-        bg: '/eutair.png',
-        mobileBg: '/mbm_1.png',
+        bg: '/eutair.webp',
+        mobileBg: '/mbm_1.webp',
         machine: '/hero1.webp',
         tagline: 'ELECTRIC/DIESEL HIGH PERFORMANCE',
         alt: 'Air Compressor',
@@ -43,8 +43,8 @@ const slides = [
         cornerText: 'Best of both the Worlds',
     },
     {
-        bg: '/slide2.png',
-        mobileBg: '/mbm_2.png',
+        bg: '/slide2.webp',
+        mobileBg: '/mbm2.webp',
         machine: '/hero2.webp',
         tagline: '',
         alt: 'Stationary Air Compressor',
@@ -61,8 +61,8 @@ const slides = [
         ],
     },
     {
-        bg: '/slide3_.png',
-        mobileBg: '/mbm_3.png',
+        bg: '/slide3_.webp',
+        mobileBg: '/mbm_3.webp',
         machine: '/hero2.webp',
         tagline: '',
         alt: 'Stationary Air Compressor',
@@ -104,7 +104,13 @@ export default function HeroSlider() {
                     <SwiperSlide key={index} className="relative">
                         <div className="absolute inset-0 z-10 bg-gradient-to-r from-black/90 via-black/20 to-transparent" />
 
-                        <div className="relative min-h-[580px] w-full md:h-[580px]">
+                       <div
+    className={`relative min-h-[580px] w-full md:h-[580px] ${
+        index !== 0
+            ? 'flex flex-col justify-center md:block'
+            : ''
+    }`}
+>
                             <Image
                                 src={slide.bg}
                                 alt="Eutair"
@@ -125,7 +131,11 @@ export default function HeroSlider() {
 
                             <CornerText text={slide.cornerText} />
 
-                            <div className="relative z-30 mx-auto h-full w-full max-w-[1800px] px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16">
+<div
+    className={`relative z-30 mx-auto w-full max-w-[1800px] px-4 sm:px-6 md:h-full md:px-8 lg:px-12 xl:px-16 ${
+        index === 0 ? 'h-full' : ''
+    }`}
+>
                                 <div className="grid h-full items-center gap-8 py-7 lg:grid-cols-2 lg:gap-8 lg:py-0 xl:grid-cols-[1fr_1fr_280px] 2xl:grid-cols-[1fr_1fr_320px]">
                                     <motion.div
                                         initial={{ opacity: 0, x: -80 }}
