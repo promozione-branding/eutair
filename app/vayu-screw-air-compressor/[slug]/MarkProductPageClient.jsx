@@ -10,6 +10,7 @@ import { FaDownload, FaWhatsapp } from 'react-icons/fa';
 
 import markData from '@/lib/Data2';
 import Enquiry from '@/components/Enquiry';
+import { handleCallClick, handleWhatsappClick } from '@/lib/tracking';
 
 export default function ProductPage() {
     const params = useParams();
@@ -153,10 +154,11 @@ export default function ProductPage() {
                                     Request a Quote
                                 </button>
 
-                                <a
-                                    href="https://wa.link/o8l7fy"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
+                              <a
+    href="https://wa.link/o8l7fy"
+    target="_blank"
+    rel="noopener noreferrer"
+    onClick={() => handleWhatsappClick({ obj: { name: product.title }, source: 'Website' })}
                                     className="flex h-16 items-center gap-2 rounded-2xl bg-gradient-to-r from-green-500 to-emerald-600 px-6 font-semibold text-white shadow-[0_10px_30px_rgba(34,197,94,.35)] transition hover:-translate-y-1"
                                 >
                                     <FaWhatsapp size={24} />
@@ -381,14 +383,16 @@ export default function ProductPage() {
                             <a
                                 href="tel:+919717159766"
                                 className="inline-flex h-14 items-center justify-center rounded-2xl bg-black px-8 font-bold text-white shadow-xl transition hover:scale-105"
-                            >
+                           onClick={() => handleCallClick({ source: 'Website' })}
+                           >
                                 Get Best Price
                             </a>
 
-                            <a
-                                href="https://wa.link/o8l7fy"
-                                target="_blank"
-                                rel="noopener noreferrer"
+<a
+    href="https://wa.link/o8l7fy"
+    target="_blank"
+    rel="noopener noreferrer"
+    onClick={() => handleWhatsappClick({ obj: { name: product.title }, source: 'Website' })}
                                 className="inline-flex h-14 items-center justify-center gap-2 rounded-2xl bg-green-500 px-8 font-bold text-white shadow-xl transition hover:scale-105"
                             >
                                 <FaWhatsapp size={20} />

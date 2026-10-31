@@ -4,6 +4,7 @@ import Enquiry from '@/components/Enquiry';
 import { useState } from 'react';
 import React from 'react';
 import Link from 'next/link';
+import { handleCallClick } from '@/lib/tracking';
 const benefits = [
     'Supports effective wastewater treatment planning',
     'Improves opportunities for water reuse and recovery',
@@ -134,7 +135,7 @@ export default function WastewaterEngineering() {
                             Request Quote
                         </button>
 
-                        <Link href="tel:+919717159766">
+                        <Link href="tel:+919717159766" onClick={() => handleCallClick({ source: 'Website' })}>
                             <button className="rounded-lg border border-white px-6 py-3 font-medium transition hover:bg-white hover:text-slate-900">
                                 Discuss Wastewater Requirement
                             </button>

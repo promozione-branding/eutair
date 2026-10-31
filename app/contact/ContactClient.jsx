@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import axios from 'axios';
 import { Phone, Mail, MapPin } from 'lucide-react';
+import { handleCallClick } from '@/lib/tracking';
 
 export default function ContactPage() {
     const [loading, setLoading] = useState(false);
@@ -91,10 +92,10 @@ export default function ContactPage() {
                                 title: 'Call Us',
                                 value: (
                                     <>
-                                        <a href="tel:+919717159766" className="block transition hover:text-cyan-700">
+                                        <a href="tel:+919717159766" className="block transition hover:text-cyan-700" onClick={() => handleCallClick({ source: 'Website' })}>
                                             +91 9717159766
                                         </a>
-                                        <a href="tel:+919582911766" className="block transition hover:text-cyan-700">
+                                        <a href="tel:+919582911766" className="block transition hover:text-cyan-700" onClick={() => handleCallClick({ source: 'Website' })}>
                                             +91 9582911766
                                         </a>
                                     </>

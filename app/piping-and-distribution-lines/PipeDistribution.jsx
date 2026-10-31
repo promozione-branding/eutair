@@ -7,6 +7,7 @@ import { Network, Route, Workflow } from 'lucide-react';
 
 import { useState } from 'react';
 import Enquiry from '@/components/Enquiry';
+import { handleCallClick } from '@/lib/tracking';
 
 const whyPoints = [
     'Ensures Efficient Compressed Air Distribution Across the Facility',
@@ -115,6 +116,7 @@ export default function PipeDistribution() {
                             <Link
                                 href="tel:+919717159766"
                                 className="flex w-full items-center justify-center gap-2 rounded-xl bg-[#00AEEF] px-6 py-4 font-semibold text-white transition hover:bg-cyan-500 sm:w-auto"
+                            onClick={() => handleCallClick({ source: 'Website' })}
                             >
                                 Talk to Eutair
                                 <Phone size={18} />

@@ -3,6 +3,7 @@ import { useState } from 'react';
 import Link from 'next/link';
 import { CheckCircle, Wrench, ShieldCheck, Factory, ArrowRight } from 'lucide-react';
 import Enquiry from '@/components/Enquiry';
+import { handleCallClick } from '@/lib/tracking';
 export default function AMC() {
     const [isOpen, setOpen] = useState(false);
 
@@ -120,6 +121,7 @@ export default function AMC() {
                             <Link
                                 href="tel:+919717159766"
                                 className="rounded-xl border border-white px-7 py-4 font-semibold transition hover:bg-white hover:text-slate-900"
+                               onClick={() => handleCallClick({ source: 'Website' })}
                             >
                                 Request AMC Discussion
                             </Link>
@@ -252,7 +254,7 @@ export default function AMC() {
                             Request Quote <ArrowRight size={18} />
                         </button>
 
-                        <Link href="tel:+919717159766" className="rounded-xl border border-white px-8 py-4 font-semibold">
+                        <Link href="tel:+919717159766" className="rounded-xl border border-white px-8 py-4 font-semibold" onClick={() => handleCallClick({ source: 'Website' })}>
                             Schedule a Consultation
                         </Link>
                     </div>

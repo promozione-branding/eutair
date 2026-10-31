@@ -10,6 +10,7 @@ import 'swiper/css';
 import 'swiper/css/effect-fade';
 
 import ContactForm from './PopupForm';
+import { handleWhatsappClick } from '@/lib/tracking';
 
 const slides = [
     {
@@ -215,6 +216,7 @@ export default function HeroSlider() {
                                                     target="_blank"
                                                     rel="noopener noreferrer"
                                                     aria-label="WhatsApp Now"
+                                                    onClick={() => handleWhatsappClick({ source: 'Website' })}
                                                     className="inline-flex h-[58px] items-center justify-center rounded-xl border border-white/30 bg-white/10 px-7 font-semibold tracking-wide text-white backdrop-blur-md transition-all duration-300 hover:border-white hover:bg-white hover:text-slate-900 hover:shadow-lg"
                                                 >
                                                     WhatsApp Now

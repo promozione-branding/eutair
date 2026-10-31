@@ -3,6 +3,7 @@
 import Enquiry from '@/components/Enquiry';
 import { useState } from 'react';
 import Link from 'next/link';
+import { handleCallClick } from '@/lib/tracking';
 export default function AirAudit() {
     const [isOpen, setOpen] = useState(false);
 
@@ -112,7 +113,7 @@ export default function AirAudit() {
                                 Request Air Audit Support
                             </button>
 
-                            <Link href="tel:+919717159766" className="rounded-xl border border-slate-300 px-8 py-4 text-slate-700 transition hover:bg-slate-50">
+                            <Link href="tel:+919717159766" className="rounded-xl border border-slate-300 px-8 py-4 text-slate-700 transition hover:bg-slate-50" onClick={() => handleCallClick({ source: 'Website' })}>
                                 Call Us
                             </Link>
                         </div>
@@ -294,7 +295,7 @@ export default function AirAudit() {
                                 Request Quote
                             </button>
 
-                            <Link href="tel:+919717159766">
+                            <Link href="tel:+919717159766" onClick={() => handleCallClick({ source: 'Website' })}>
                                 <button className="rounded-xl border border-white/20 px-8 py-4 text-white">Request Air Audit Support</button>
                             </Link>
                         </div>

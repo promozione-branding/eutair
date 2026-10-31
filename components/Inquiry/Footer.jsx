@@ -6,6 +6,7 @@ import { FaWhatsapp } from 'react-icons/fa';
 import Image from 'next/image';
 import ContactForm from './PopupForm';
 import { useState } from 'react';
+import { handleCallClick, handleWhatsappClick } from '@/lib/tracking';
 
 export default function Footer() {
     const [open, setOpen] = useState(false);
@@ -123,7 +124,7 @@ export default function Footer() {
                                     <Phone className="mt-1 shrink-0 text-cyan-500" size={20} />
                                     <div>
                                         <p className="font-semibold text-white">Phone</p>
-                                        <a href="tel:+919582911766" className="text-slate-300 transition-colors hover:text-cyan-400">
+                                        <a href="tel:+919582911766" className="text-slate-300 transition-colors hover:text-cyan-400" onClick={() => handleCallClick({ source: 'Website' })}>
                                             +91 9582911766
                                         </a>
                                     </div>
@@ -134,7 +135,7 @@ export default function Footer() {
                                     <FaWhatsapp className="mt-1 shrink-0 text-cyan-500" size={20} />
                                     <div>
                                         <p className="font-semibold text-white">WhatsApp</p>
-                                        <a href="https://wa.link/rntibs" className="text-slate-300 transition-colors hover:text-cyan-400">
+                                        <a href="https://wa.link/rntibs" className="text-slate-300 transition-colors hover:text-cyan-400" onClick={() => handleWhatsappClick({ source: 'Website' })}>
                                             +91 9582911766
                                         </a>
                                     </div>

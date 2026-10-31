@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { Phone, Mail, MapPin, ArrowRight, MessageCircle } from 'lucide-react';
 import { FaWhatsapp } from 'react-icons/fa';
 import Image from 'next/image';
+import { handleCallClick, handleWhatsappClick } from '@/lib/tracking';
 
 export default function Footer() {
     return (
@@ -16,7 +17,7 @@ export default function Footer() {
                         <p className="mt-2 text-slate-300">Talk to our experts and find the right compressed air solution for your business.</p>
                     </div>
 
-                    <a href="tel:919717159766" className="rounded-full bg-cyan-600 px-8 py-4 font-semibold transition hover:bg-cyan-700">
+                    <a href="tel:919717159766" className="rounded-full bg-cyan-600 px-8 py-4 font-semibold transition hover:bg-cyan-700" onClick={() => handleCallClick({ source: 'Website' })}>
                         Get Instant Price
                     </a>
                 </div>
@@ -113,7 +114,7 @@ export default function Footer() {
                                 <Phone className="mt-1 shrink-0 text-cyan-500" size={20} />
                                 <div>
                                     <p className="font-semibold text-white">Phone</p>
-                                    <a href="tel:+919717159766" className="text-slate-300 transition-colors text-[14px] hover:text-cyan-400">
+                                    <a href="tel:+919717159766" className="text-slate-300 transition-colors text-[14px] hover:text-cyan-400" onClick={() => handleCallClick({ source: 'Website' })}>
                                         +91 9717159766
                                     </a>
                                 </div>
@@ -124,7 +125,7 @@ export default function Footer() {
                                 <FaWhatsapp className="mt-1 shrink-0 text-cyan-500" size={20} />
                                 <div>
                                     <p className="font-semibold text-white">WhatsApp</p>
-                                    <a href="https://wa.link/o8l7fy" className="text-slate-300 transition-colors text-[14px] hover:text-cyan-400">
+                                    <a href="https://wa.link/o8l7fy" className="text-slate-300 transition-colors text-[14px] hover:text-cyan-400" onClick={() => handleWhatsappClick({ source: 'Website' })}> 
                                         +91 958 2911766
                                     </a>
                                 </div>

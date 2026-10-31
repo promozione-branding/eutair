@@ -5,6 +5,7 @@ import Link from 'next/link';
 import Enquiry from '@/components/Enquiry';
 import React from 'react';
 import { useState } from 'react';
+import { handleCallClick } from '@/lib/tracking';
 const benefits = [
     'Single-window project execution support',
     'Reduced project management burden for plant teams',
@@ -159,7 +160,7 @@ export default function TurnkeyProjectExecution() {
                             Request Qoute
                         </button>
 
-                        <Link href="tel:+919717159766">
+                        <Link href="tel:+919717159766" onClick={() => handleCallClick({ source: 'Website' })}>
                             <button className="rounded-lg border border-white px-6 py-3 font-medium transition hover:bg-white hover:text-slate-900">
                                 Start Turnkey Discussion
                             </button>

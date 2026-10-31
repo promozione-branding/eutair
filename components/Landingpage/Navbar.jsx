@@ -1,3 +1,4 @@
+'use client';
 import Link from 'next/link';
 import { Phone, Mail, Building2, Linkedin, Facebook, Instagram, Youtube, MapPin } from 'lucide-react';
 import Image from 'next/image';
@@ -6,6 +7,7 @@ import { FaWhatsapp } from 'react-icons/fa';
 import { useState } from 'react';
 import Enquiry from '@/components/Enquiry';
 import { Menu, X } from 'lucide-react';
+import { handleCallClick, handleWhatsappClick } from '@/lib/tracking';
 
 export default function Navbar() {
     const [mobileMenu, setMobileMenu] = useState(false);
@@ -89,7 +91,7 @@ export default function Navbar() {
 
                                 <div className="flex items-center gap-2">
                                     <Phone className="h-4 w-4 text-blue-600" />
-                                    <a href="tel:+919717159766" className="transition-colors hover:text-blue-600">
+                                    <a href="tel:+919717159766" className="transition-colors hover:text-blue-600" onClick={() => handleCallClick({ source: 'Website' })}> 
                                         Phone +91 9717159766
                                     </a>
                                 </div>
@@ -122,7 +124,7 @@ export default function Navbar() {
 
                                 <a
                                     href="https://wa.link/o8l7fy
-"
+"onClick={() => handleWhatsappClick({ source: 'Website' })}
                                     target="_blank"
                                     rel="noopener noreferrer"
                                 >
@@ -420,13 +422,15 @@ export default function Navbar() {
                                         <Facebook className="h-5 w-5 text-blue-600" />
                                     </a>
                                     <a
-                                        href="https://wa.me/919582911766
-"
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                    >
-                                        <FaWhatsapp className="h-5 w-5 text-green-600" />
-                                    </a>
+                    href="https://wa.me/919717159766"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    onClick={() => handleWhatsappClick({ source: 'Website' })}
+                    className="flex flex-col items-center justify-center bg-[#54D3F1] text-white transition hover:bg-blue-700"
+                >
+                    <MessageSquare size={20} />
+                    <span className="mt-1 text-xs font-semibold">Get Quote</span>
+                </a>
                                     <a href="https://www.instagram.com/eutairequipments">
                                         {' '}
                                         <Instagram className="h-5 w-5 text-pink-500" />

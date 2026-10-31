@@ -1,6 +1,8 @@
+'use client';
 import React from 'react';
 import Link from 'next/link';
 import { Phone } from 'lucide-react';
+import { handleCallClick } from '@/lib/tracking';
 const Cta = () => {
     return (
         <div>
@@ -12,7 +14,7 @@ const Cta = () => {
                         <p className="mt-3 text-cyan-100">Browse our extensive range of industrial equipment and filtration products.</p>
 
                         <div className="mt-6 flex flex-col items-center justify-center gap-4 sm:flex-row">
-                            <a href="tel:+919717159766" className="inline-flex items-center gap-2 rounded-full bg-white px-10 py-4 font-semibold text-cyan-700">
+                            <a href="tel:+919717159766" className="inline-flex items-center gap-2 rounded-full bg-white px-10 py-4 font-semibold text-cyan-700" onClick={() => handleCallClick({ source: 'Website' })}>
                                 <Phone size={18} />
                                 Get Instant Price
                             </a>

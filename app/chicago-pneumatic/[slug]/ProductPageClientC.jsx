@@ -7,6 +7,7 @@ import { FaWhatsapp, FaPhoneAlt, FaDownload } from 'react-icons/fa';
 import { useState } from 'react';
 import axios from 'axios';
 import toast from 'react-hot-toast';
+import { handleCallClick, handleWhatsappClick } from '@/lib/tracking';
 export default function ProductPageClientC() {
     const params = useParams();
 
@@ -139,6 +140,7 @@ export default function ProductPageClientC() {
                                 </button>
                                 <a
                                     href="https://wa.link/o8l7fy"
+                                    onClick={() => handleWhatsappClick({ source: 'Website' })}
                                     className="group flex h-16 items-center gap-1 rounded-2xl bg-gradient-to-r from-green-500 to-emerald-600 px-3 font-semibold text-white shadow-[0_10px_30px_rgba(34,197,94,.35)] transition-all duration-300 hover:-translate-y-1 xl:px-8"
                                 >
                                     <FaWhatsapp size={24} />
@@ -260,7 +262,7 @@ export default function ProductPageClientC() {
 
                                         <p className="leading-relaxed text-white/90">{product.cta?.description}</p>
 
-                                        <a href="tel:+919717159766">
+                                        <a href="tel:+919717159766" onClick={() => handleCallClick({ source: 'Website' })}>
                                             <button className="mt-5 h-16 animate-pulse rounded-2xl bg-black px-10 text-lg font-semibold text-white shadow-lg transition hover:scale-105">
                                                 Get Best Price
                                             </button>

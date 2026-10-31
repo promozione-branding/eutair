@@ -1,3 +1,6 @@
+'use client';
+
+import { handleCallClick, handleWhatsappClick } from '@/lib/tracking';
 import { Phone, MessageCircle, ArrowRight } from 'lucide-react';
 
 export default function CTA() {
@@ -30,6 +33,7 @@ export default function CTA() {
                                 href="https://wa.link/rntibs"
                                 target="_blank"
                                 rel="noopener noreferrer"
+                                onClick={() => handleWhatsappClick({ source: 'Website' })}
                                 className="group relative flex items-center justify-center gap-3 rounded-2xl bg-green-500 px-8 py-4 text-lg font-semibold text-white shadow-lg shadow-green-500/25 transition-all duration-300 hover:-translate-y-1 hover:bg-green-600 hover:shadow-xl hover:shadow-green-500/30 active:translate-y-0"
                             >
                                 <span className="relative flex h-5 w-5 items-center justify-center">
@@ -44,6 +48,7 @@ export default function CTA() {
                             <a
                                 href="tel:+919582911766"
                                 className="group flex items-center justify-center gap-3 rounded-2xl border border-blue-100 bg-white px-8 py-4 text-lg font-semibold text-blue-700 shadow-lg shadow-blue-500/10 transition-all duration-300 hover:-translate-y-1 hover:bg-blue-50 hover:shadow-xl hover:shadow-blue-500/20 active:translate-y-0"
+                            onClick={() => handleCallClick({ source: 'Website' })}
                             >
                                 <Phone size={20} className="transition-transform duration-300 group-hover:rotate-12" />
                                 Call now

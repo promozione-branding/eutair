@@ -5,6 +5,7 @@ import Image from 'next/image';
 import { FaWhatsapp } from 'react-icons/fa';
 import { useState } from 'react';
 import ContactForm from './PopupForm';
+import { handleCallClick, handleWhatsappClick } from '@/lib/tracking';
 
 export default function Navbar() {
     const [mobileMenu, setMobileMenu] = useState(false);
@@ -35,7 +36,7 @@ export default function Navbar() {
 
                                 <div className="flex items-center gap-2">
                                     <Phone className="h-4 w-4 text-blue-600" />
-                                    <a href="tel:+919582911766" className="transition-colors hover:text-blue-600">
+                                    <a href="tel:+919582911766" className="transition-colors hover:text-blue-600" onClick={() => handleCallClick({ source: 'Website' })}>
                                         Phone +91 9582911766
                                     </a>
                                 </div>
@@ -149,6 +150,7 @@ export default function Navbar() {
                                 href="https://wa.link/rntibs"
                                 target="_blank"
                                 rel="noopener noreferrer"
+                                onClick={() => handleWhatsappClick({ source: 'Website' })}
                                 className="flex items-center justify-center gap-2 rounded-full bg-green-600 px-3 py-3 text-white shadow-lg transition-all hover:bg-green-700"
                             >
                                 <FaWhatsapp className="h-6 w-6" /> WhatsApp
@@ -175,6 +177,7 @@ export default function Navbar() {
                                 href="https://wa.link/rntibs"
                                 target="_blank"
                                 rel="noopener noreferrer"
+                                onClick={() => handleWhatsappClick({ source: 'Website' })}
                                 className="flex items-center justify-center rounded-full bg-green-600 px-3 py-3 text-white shadow-lg transition-all hover:bg-green-700"
                             >
                                 <FaWhatsapp className="h-6 w-6" /> WhatsApp
@@ -249,8 +252,8 @@ export default function Navbar() {
                                         <Facebook className="h-5 w-5 text-blue-600" />
                                     </a>
                                     <a
-                                        href="https://wa.link/rntibs
-"
+                                        href="https://wa.link/rntibs"
+                                        onClick={() => handleWhatsappClick({ source: 'Website' })}
                                         target="_blank"
                                         rel="noopener noreferrer"
                                     >

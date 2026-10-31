@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { PhoneCall, FileText, MessageCircleMore } from 'lucide-react';
 import ContactForm from './PopupForm';
 import { useState } from 'react';
+import { handleCallClick } from '@/lib/tracking';
 
 export default function MobileFooter() {
     const [open, setOpen] = useState(false);
@@ -24,6 +25,7 @@ export default function MobileFooter() {
                             href="tel:+919717159766"
                             aria-label="Call us"
                             className="group flex h-full flex-col items-center justify-center gap-1 border-r border-slate-200 text-[#155dfc] transition-all duration-200 active:scale-[0.98] active:bg-blue-50"
+                        onClick={() => handleCallClick({ source: 'Website' })}
                         >
                             <div className="flex h-9 w-9 items-center justify-center rounded-2xl bg-[#155dfc]/10 transition-colors duration-200 group-active:bg-[#155dfc]/20">
                                 <PhoneCall className="h-5 w-5 text-[#155dfc]" strokeWidth={2.2} />

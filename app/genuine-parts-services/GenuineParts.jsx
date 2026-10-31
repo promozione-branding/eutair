@@ -3,6 +3,7 @@
 import { ShieldCheck, Wrench, Cog, Settings, Gauge, BarChart3, ArrowRight, CheckCircle2 } from 'lucide-react';
 import Enquiry from '@/components/Enquiry';
 import { useState } from 'react';
+import { handleCallClick } from '@/lib/tracking';
 
 export default function GenuineParts() {
     const [open, setOpen] = useState(false);
@@ -26,7 +27,7 @@ export default function GenuineParts() {
                         </p>
 
                         <div className="mt-10 flex flex-wrap gap-4">
-                            <a href="tel:+919717159766" className="rounded-xl bg-blue-600 px-8 py-4 font-semibold text-white transition hover:bg-blue-700">
+                            <a href="tel:+919717159766" className="rounded-xl bg-blue-600 px-8 py-4 font-semibold text-white transition hover:bg-blue-700" onClick={() => handleCallClick({ source: 'Website' })}>
                                 Request Service Support
                             </a>
 

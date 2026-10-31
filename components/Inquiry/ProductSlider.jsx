@@ -13,6 +13,7 @@ import 'swiper/css/pagination';
 import { useState } from 'react';
 import ContactForm from './PopupForm';
 import { FaWhatsapp } from 'react-icons/fa';
+import { handleCallClick, handleWhatsappClick } from '@/lib/tracking';
 
 export default function ProductSlider() {
     const [open, setOpen] = useState(false);
@@ -224,6 +225,7 @@ export default function ProductSlider() {
                                 <a
                                     href="tel:+919717159766"
                                     className="inline-flex items-center justify-center gap-2 rounded-xl bg-red-500 px-6 py-3 font-semibold text-white transition hover:bg-red-600"
+                                onClick={() => handleCallClick({ source: 'Website' })}
                                 >
                                     <Phone size={20} />
                                     Call Now
@@ -234,6 +236,7 @@ export default function ProductSlider() {
                                     href="https://wa.link/rntibs"
                                     target="_blank"
                                     rel="noopener noreferrer"
+                                    onClick={() => handleWhatsappClick({ source: 'Website' })}
                                     className="inline-flex items-center justify-center gap-2 rounded-xl bg-[#25D366] px-6 py-3 font-semibold text-white transition hover:bg-[#1ebe5d]"
                                 >
                                     <FaWhatsapp size={25} />

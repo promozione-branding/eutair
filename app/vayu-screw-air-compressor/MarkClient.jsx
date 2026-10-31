@@ -8,6 +8,7 @@ import { Autoplay, Pagination } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import Enquiry from '@/components/Enquiry';
+import { handleCallClick } from '@/lib/tracking';
 
 const MarkClient = () => {
     const [isOpen, setOpen] = useState(false);
@@ -320,6 +321,7 @@ const MarkClient = () => {
                             <a
                                 href="tel:+919717159766"
                                 className="mt-7 inline-block rounded-2xl bg-white px-10 py-4 font-semibold text-sky-600 transition-all hover:scale-105"
+                            onClick={() => handleCallClick({ source: 'Website' })}
                             >
                                 Get a Free Quote Today
                             </a>

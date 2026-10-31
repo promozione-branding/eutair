@@ -13,6 +13,7 @@ import 'swiper/css/pagination';
 import ContactForm from './PopupForm';
 import { useState } from 'react';
 import { FaWhatsapp } from 'react-icons/fa';
+import { handleCallClick, handleWhatsappClick } from '@/lib/tracking';
 
 export default function Category() {
     const [open, setOpen] = useState(false);
@@ -131,6 +132,7 @@ export default function Category() {
                                 href="tel:+919717159766"
                                 aria-label="Call Now"
                                 className="inline-flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-red-500 text-white transition hover:bg-red-600 sm:h-14 sm:w-14"
+                            onClick={() => handleCallClick({ source: 'Website' })}
                             >
                                 <Phone size={24} />
                             </a>
@@ -149,7 +151,9 @@ export default function Category() {
                                 href="https://wa.link/rntibs"
                                 target="_blank"
                                 rel="noopener noreferrer"
+                                onClick={() => handleWhatsappClick({ source: 'Website' })}
                                 aria-label="WhatsApp"
+                                
                                 className="inline-flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-[#25D366] text-white transition hover:bg-[#1ebe5d] sm:h-14 sm:w-14"
                             >
                                 <FaWhatsapp size={28} />

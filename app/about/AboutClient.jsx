@@ -4,6 +4,8 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { useState } from 'react';
 import Enquiry from '@/components/Enquiry';
+import { handleCallClick } from '@/lib/tracking';
+
 export default function AboutPage() {
     const [isOpen, setOpen] = useState(false);
 
@@ -179,9 +181,13 @@ export default function AboutPage() {
                                 Request a Quote
                             </button>
 
-                            <Link href="tel:+919717159766">
-                                <button className="h-14 rounded-2xl border border-white px-5 font-bold text-white md:px-8">Contact Us</button>
-                            </Link>
+<a
+    href="tel:+919717159766"
+    onClick={() => handleCallClick({ source: 'Website' })}
+    className="inline-flex h-14 items-center justify-center rounded-2xl border border-white px-5 font-bold text-white md:px-8"
+>
+    Contact Us
+</a>
                         </div>
                     </div>
                 </div>

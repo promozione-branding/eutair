@@ -8,6 +8,7 @@ import { CheckCircle2, Boxes, ArrowRight } from 'lucide-react';
 import Link from 'next/link';
 
 import { useState } from 'react';
+import { handleCallClick } from '@/lib/tracking';
 
 export default function SpareConsumable() {
     const benefits = [
@@ -86,6 +87,7 @@ export default function SpareConsumable() {
                                 <Link
                                     href="tel:+919717159766"
                                     className="rounded-xl bg-cyan-500 px-7 py-4 font-semibold text-white transition hover:bg-cyan-600"
+                                onClick={() => handleCallClick({ source: 'Website' })}
                                 >
                                     Talk to Eutair
                                 </Link>
@@ -202,7 +204,8 @@ export default function SpareConsumable() {
                             <Link
                                 href="tel:+919717159766"
                                 className="rounded-xl bg-white px-5 py-4 font-semibold text-slate-900 transition hover:scale-105 md:px-8"
-                            >
+                           onClick={() => handleCallClick({ source: 'Website' })}
+                           >
                                 Contact Us
                             </Link>
 

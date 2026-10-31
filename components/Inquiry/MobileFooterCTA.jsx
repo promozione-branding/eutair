@@ -2,13 +2,14 @@
 
 import Link from 'next/link';
 import { Phone, FileText, MessageSquare } from 'lucide-react';
+import { handleCallClick, handleWhatsappClick } from '@/lib/tracking';
 
 export default function MobileFooterCTA() {
     return (
         <div className="fixed right-0 bottom-0 left-0 z-50 bg-white shadow-lg md:hidden">
             <div className="grid h-14 grid-cols-3">
                 {/* Call */}
-                <a href="tel:+919717159766" className="flex flex-col items-center justify-center text-blue-700 transition hover:bg-blue-50">
+                <a href="tel:+919717159766" className="flex flex-col items-center justify-center text-blue-700 transition hover:bg-blue-50" onClick={() => handleCallClick({ source: 'Website' })}>
                     <Phone size={20} />
                     <span className="mt-1 text-xs font-semibold">Call</span>
                 </a>
@@ -18,6 +19,7 @@ export default function MobileFooterCTA() {
                     href="https://wa.me/919717159766"
                     target="_blank"
                     rel="noopener noreferrer"
+                    onClick={() => handleWhatsappClick({ source: 'Website' })}
                     className="flex flex-col items-center justify-center bg-[#54D3F1] text-white transition hover:bg-blue-700"
                 >
                     <MessageSquare size={20} />
