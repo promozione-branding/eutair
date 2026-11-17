@@ -1,10 +1,8 @@
 import Category from '@/components/Inquiry/Category';
 import Certificates from '@/components/Inquiry/Certificates';
 import CTA from '@/components/Inquiry/CTA';
-import Footer from '@/components/Inquiry/Footer';
 import HeroSlider from '@/components/Inquiry/Hero';
 import Industries from '@/components/Inquiry/Industries';
-import Navbar from '@/components/Inquiry/Navbar';
 import ProductSlider from '@/components/Inquiry/ProductSlider';
 import Testimonials from '@/components/Inquiry/Testimonials';
 import TrustSection from '@/components/Inquiry/TrustSection';
@@ -15,7 +13,6 @@ import React from 'react';
 export default function Inquiry() {
     return (
         <>
-            <Navbar />
             <HeroSlider />
             <Clients />
             <ProductSlider />
@@ -78,7 +75,6 @@ export default function Inquiry() {
             
             <Testimonials />
             <CTA />
-            <Footer />
         </>
     );
 }
