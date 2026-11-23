@@ -118,19 +118,20 @@ export default function RootLayout({ children }) {
                 </Script>
 
 
-{/* Microsoft Clarity */}
-<Script id="clarity" strategy="afterInteractive">
+{/* Google Tag Manager (GTM-WPC8B5C8) */}
+<Script
+    src="https://www.googletagmanager.com/gtm.js?id=GTM-WPC8B5C8"
+    strategy="afterInteractive"
+/>
+
+<Script
+    id="gtm-wpc8b5c8-init"
+    strategy="afterInteractive"
+>
     {`
-        (function(c,l,a,r,i,t,y){
-            c[a]=c[a]||function(){
-                (c[a].q=c[a].q||[]).push(arguments)
-            };
-            t=l.createElement(r);
-            t.async=1;
-            t.src="https://www.clarity.ms/tag/"+i;
-            y=l.getElementsByTagName(r)[0];
-            y.parentNode.insertBefore(t,y);
-        })(window, document, "clarity", "script", "zejl1myr7x");
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
     `}
 </Script>
                 {/* Google Ads */}
