@@ -4,7 +4,7 @@ import { useState } from 'react';
 import Image from 'next/image';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, EffectFade } from 'swiper/modules';
-import { ArrowRight, Zap, Shield, Volume2, Cog, BadgeCheck } from 'lucide-react';
+import { ArrowRight, Zap, Shield, Volume2, Cog, BadgeCheck, Phone } from 'lucide-react';
 
 import 'swiper/css';
 import 'swiper/css/effect-fade';
@@ -15,16 +15,16 @@ import { handleWhatsappClick } from '@/lib/tracking';
 const slides = [
     {
         bg: '/bghero1.webp',
-        machine: '/hero1.webp',
+        machine: '/inquiry0.webp',
 
-        tagline: 'PORTABLE HIGH PERFORMANCE',
+         tagline: 'POWERING INDUSTRIES WITH RELIABLE AIR SOLUTIONS',
+  title: 'CHICAGO PNEUMATIC & VAYU SCREW AIR COMPRESSORS',
+  description: 'Discover energy-efficient, high-performance air compressors engineered for continuous operation, low maintenance and reliable compressed air solutions across diverse industrial applications.',
 
-        title: 'CHICAGO PNEUMATIC',
-
-        description: 'Energy efficient, low maintenance and reliable air solutions for every industry.',
-
-        logo: '/chicago-pneumatic-logo.png',
-        logoAlt: 'Chicago Pneumatic',
+        logos: [
+            { src: '/chicago-pneumatic-logo.png', alt: 'Chicago Pneumatic' },
+            { src: '/vayuinquiry.png', alt: 'Vayu' },
+        ],
 
         features: [
             {
@@ -108,7 +108,7 @@ export default function HeroSlider() {
 
     return (
         <>
-            <section className="relative h-[550px] w-full overflow-hidden bg-[#001938] lg:h-[680px]">
+            <section className="relative h-[550px] w-full overflow-hidden bg-[#001938] md:h-[580px]">
                 <Swiper
                     modules={[Autoplay, EffectFade]}
                     effect="fade"
@@ -157,22 +157,22 @@ export default function HeroSlider() {
                                         {/* LEFT CONTENT */}
                                         {/* ================================================= */}
 
-                                        <div className="mx-auto flex h-full w-full max-w-[620px] flex-col justify-center pt-1 text-center lg:mx-0 lg:pt-0 lg:text-left">
+                                        <div className="mx-auto flex h-full w-full max-w-[720px] flex-col justify-center pt-1 text-center lg:mx-0 lg:pt-0 lg:text-left">
                                             {/* TAGLINE */}
 
-                                            <span className="text-xs font-semibold tracking-[0.18em] text-white/90 uppercase sm:text-sm md:text-base lg:text-[18px]">
+                                            <span className="text-xs mb-10 font-semibold tracking-[0.18em] text-white/90 uppercase sm:text-sm md:text-base ">
                                                 {slide.tagline}
                                             </span>
 
                                             {/* TITLE */}
 
-                                            <h1 className="mt-2 text-[30px] leading-[0.98] font-black tracking-[-0.04em] text-white uppercase drop-shadow-[0_10px_40px_rgba(255,255,255,.15)] sm:text-[44px] md:text-[56px] lg:mt-4 lg:text-[70px]">
+                                            <h1 className="mt-2 text-[29px] leading-[0.98] font-black tracking-[-0.04em] text-white uppercase drop-shadow-[0_10px_40px_rgba(255,255,255,.15)] sm:text-[44px] ">
                                                 {slide.title}
                                             </h1>
 
                                             {/* DESCRIPTION */}
 
-                                            <p className="mx-auto mt-2 max-w-[600px] text-xs leading-relaxed text-white/80 sm:text-base md:text-lg lg:mx-0 lg:mt-4 lg:text-[19px]">
+                                            <p className="hidden mt:block mx-auto mt-2 max-w-[600px] text-xs leading-relaxed text-white/80 sm:text-base md:text-lg lg:mx-0 lg:mt-4 lg:text-[19px]">
                                                 {slide.description}
                                             </p>
 
@@ -180,17 +180,19 @@ export default function HeroSlider() {
                                             {/* BRAND LOGO */}
                                             {/* ================================================= */}
 
-                                            <div className="mt-3 flex items-center justify-center sm:mt-5 lg:mt-6 lg:justify-start">
-                                                <div className="flex items-center justify-center rounded-full border border-white/60 bg-white/90 px-4 py-2 shadow-[0_8px_25px_rgba(0,0,0,0.15)] backdrop-blur-md sm:px-5 sm:py-3">
-                                                    <Image
-                                                        src={slide.logo}
-                                                        alt={slide.logoAlt}
-                                                        width={110}
-                                                        height={50}
-                                                        sizes="110px"
-                                                        className="object-contain"
-                                                    />
-                                                </div>
+                                            <div className="mt-3 flex items-center justify-center gap-3 sm:mt-5 lg:mt-6 lg:justify-start">
+                                                {slide.logos.map((logo) => (
+                                                    <div key={logo.alt} className="flex items-center justify-center rounded-full border border-white/60 bg-white/90 px-4 py-2 shadow-[0_8px_25px_rgba(0,0,0,0.15)] backdrop-blur-md sm:px-5 sm:py-3">
+                                                        <Image
+                                                            src={logo.src}
+                                                            alt={logo.alt}
+                                                            width={110}
+                                                            height={50}
+                                                            sizes="110px"
+                                                            className="object-cover"
+                                                        />
+                                                    </div>
+                                                ))}
                                             </div>
 
                                             <div className="mt-7 hidden flex-wrap justify-center gap-4 md:flex lg:justify-start">
@@ -212,7 +214,7 @@ export default function HeroSlider() {
                                                 {/* WHATSAPP */}
 
                                                 <a
-                                                    href="https://wa.link/rntibs"
+                                                   href="https://wa.me/919582911766"
                                                     target="_blank"
                                                     rel="noopener noreferrer"
                                                     aria-label="WhatsApp Now"
@@ -228,12 +230,12 @@ export default function HeroSlider() {
                                         {/* RIGHT PRODUCT IMAGE */}
                                         {/* ================================================= */}
 
-                                        <div className="mt-0 flex h-full w-full items-center justify-center lg:h-full">
+                                        <div className="mt-2 md:mt-0 flex h-fit w-full items-center justify-center lg:h-full">
                                             <Image
                                                 src={slide.machine}
                                                 alt={slide.title}
-                                                width={800}
-                                                height={700}
+                                                width={100}
+                                                height={100}
                                                 priority={index === 0}
                                                 quality={index === 0 ? 85 : 75}
                                                 sizes="
@@ -242,7 +244,7 @@ export default function HeroSlider() {
                           (max-width: 1024px) 600px,
                           650px
                         "
-                                                className="h-auto max-h-[100%] w-[280px] object-contain drop-shadow-[0_40px_80px_rgba(0,0,0,.45)] sm:w-[380px] md:w-[500px] lg:w-[650px]"
+                                                className="h-auto max-h-[100%] w-[480px] object-cover drop-shadow-[0_40px_80px_rgba(0,0,0,.45)] md:w-[5000px]"
                                             />
                                         </div>
 
@@ -250,22 +252,36 @@ export default function HeroSlider() {
                                         {/* MOBILE CTA - DIRECTLY BELOW IMAGE */}
                                         {/* ================================================= */}
 
-                                        <div className="flex h-full w-full items-start justify-center px-4 pt-0 md:hidden">
-                                            <button
-                                                type="button"
-                                                onClick={() => setOpen(true)}
-                                                className="group relative inline-flex h-[50px] items-center justify-center overflow-hidden rounded-xl bg-gradient-to-r from-[#0A63FF] to-[#1D8FFF] px-7 text-sm font-semibold text-white shadow-[0_15px_40px_rgba(10,99,255,.4)] transition active:scale-95"
-                                            >
-                                                <span className="relative z-10 flex items-center gap-3">
-                                                    GET INSTANT QUOTE
-                                                    <ArrowRight size={18} className="transition-transform duration-300 group-hover:translate-x-1" />
-                                                </span>
+                                       <div className="flex h-full w-full items-start justify-center gap-1 px-4 pt-0 md:hidden">
 
-                                                {/* Shine */}
+    {/* Call Button */}
+    <a
+        href="tel:+919717159766"
+        className="inline-flex h-[50px] items-center justify-center gap-2 rounded-xl border border-[#0A63FF] bg-white px-5 text-sm font-semibold text-[#0A63FF] shadow-md transition active:scale-95"
+    >
+        <Phone size={18} />
+        
+    </a>
 
-                                                <span className="absolute inset-0 -translate-x-full -skew-x-12 bg-gradient-to-r from-transparent via-white/20 to-transparent transition-transform duration-700 group-hover:translate-x-full" />
-                                            </button>
-                                        </div>
+    {/* Get Quote Button */}
+    <button
+        type="button"
+        onClick={() => setOpen(true)}
+        className="group relative inline-flex h-[50px] items-center justify-center overflow-hidden rounded-xl bg-gradient-to-r from-[#0A63FF] to-[#1D8FFF] px-6 text-sm font-semibold text-white shadow-[0_15px_40px_rgba(10,99,255,.4)] transition active:scale-95"
+    >
+        <span className="relative z-10 flex text-xs flex items-center gap-2">
+            GET INSTANT QUOTE
+            <ArrowRight
+                size={18}
+                className="transition-transform duration-300 group-hover:translate-x-1"
+            />
+        </span>
+
+        {/* Shine */}
+        <span className="absolute inset-0 -translate-x-full -skew-x-12 bg-gradient-to-r from-transparent via-white/20 to-transparent transition-transform duration-700 group-hover:translate-x-full" />
+    </button>
+
+</div>
                                     </div>
                                 </div>
                             </div>

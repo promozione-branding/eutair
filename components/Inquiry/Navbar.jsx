@@ -147,7 +147,7 @@ export default function Navbar() {
 
                         <div className="flex items-center gap-3 lg:hidden">
                             <a
-                                href="https://wa.link/rntibs"
+                                href="https://wa.me/919582911766"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 onClick={() => handleWhatsappClick({ source: 'Website' })}
@@ -174,7 +174,7 @@ export default function Navbar() {
                             </a>
 
                             <a
-                                href="https://wa.link/rntibs"
+                               href="https://wa.me/919582911766"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 onClick={() => handleWhatsappClick({ source: 'Website' })}
@@ -252,7 +252,7 @@ export default function Navbar() {
                                         <Facebook className="h-5 w-5 text-blue-600" />
                                     </a>
                                     <a
-                                        href="https://wa.link/rntibs"
+                                       href="https://wa.me/919582911766"
                                         onClick={() => handleWhatsappClick({ source: 'Website' })}
                                         target="_blank"
                                         rel="noopener noreferrer"

@@ -59,7 +59,7 @@ export default function ContactForm({ isOpen, onClose }) {
                 toast.success('Form Submitted Successfully');
 
                 setTimeout(() => {
-                    window.open(`https://wa.link/rntibs`, '_blank');
+                    window.open(`https://wa.me/919582911766`, '_blank');
                 }, 1000);
 
                 // Reset Form

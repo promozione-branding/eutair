@@ -19,6 +19,12 @@ export default function Category() {
     const [open, setOpen] = useState(false);
 
     const products = [
+          {
+            title: 'VAYU SL Series Fixed-Speed Screw Air Compressors',
+            image: '/products/Industrial Orange VAYU Compressor Cabinet (1).png',
+            link:  '/inquiry',
+            desc: 'VAYU SL Series Fixed-Speed Screw Air Compressors',
+        },
         {
             title: 'Chicago Pneumatic',
             image: '/hero1.webp',
@@ -49,12 +55,7 @@ export default function Category() {
             link: '/inquiry',
             desc: 'Customized air distribution networks engineered for maximum flow efficiency, reduced leakage, and optimal system performance.',
         },
-        {
-            title: 'VAYU SL Series Fixed-Speed Screw Air Compressors',
-            image: '/products/Industrial Orange VAYU Compressor Cabinet (1).png',
-            link:  '/inquiry',
-            desc: 'VAYU SL Series Fixed-Speed Screw Air Compressors',
-        },
+      
           
     ];
 
@@ -155,7 +156,7 @@ export default function Category() {
 
                             {/* WhatsApp */}
                             <a
-                                href="https://wa.link/rntibs"
+                               href="https://wa.me/919582911766"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 onClick={() => handleWhatsappClick({ source: 'Website' })}

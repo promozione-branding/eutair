@@ -123,8 +123,7 @@ export default function Navbar() {
                                 </a>
 
                                 <a
-                                    href="https://wa.link/o8l7fy
-"onClick={() => handleWhatsappClick({ source: 'Website' })}
+                                 href="https://wa.me/919582911766" onClick={() => handleWhatsappClick({ source: 'Website' })}
                                     target="_blank"
                                     rel="noopener noreferrer"
                                 >

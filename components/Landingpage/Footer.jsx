@@ -125,7 +125,7 @@ export default function Footer() {
                                 <FaWhatsapp className="mt-1 shrink-0 text-cyan-500" size={20} />
                                 <div>
                                     <p className="font-semibold text-white">WhatsApp</p>
-                                    <a href="https://wa.link/o8l7fy" className="text-slate-300 transition-colors text-[14px] hover:text-cyan-400" onClick={() => handleWhatsappClick({ source: 'Website' })}> 
+                                    <a href="https://wa.me/919582911766" className="text-slate-300 transition-colors text-[14px] hover:text-cyan-400" onClick={() => handleWhatsappClick({ source: 'Website' })}> 
                                         +91 958 2911766
                                     </a>
                                 </div>

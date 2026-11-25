@@ -11,24 +11,26 @@ import 'swiper/css/pagination';
 import ContactForm from './PopupForm';
 
 const testimonials = [
+   
+
     {
+        name: 'Amit Verma',
+        company: 'Metal Manufacturing',
+        image: '/products/Industrial Orange VAYU Compressor Cabinet (1).png',
+        review: 'Excellent compressor cabinet with a robust build, reliable performance, and professional finishing. Perfect for our industrial requirements.',
+    },
+     {
         name: 'Rahul Sharma',
         company: 'Automobile Industries',
-        image: '/products/MSS 75 - Oil-Injected Screw Compressor.jpg', // Rename image to avoid spaces
-        review: 'Excellent product quality and very fast delivery. Their support team guided us perfectly in selecting the right air compressor.',
+        image: '/products/Hydraulic Power Packs.webp',
+        review: 'Reliable hydraulic power packs with excellent build quality and consistent performance. A great choice for industrial operations.',
     },
-   {
-    name: 'Amit Verma',
-    company: 'Metal Manufacturing',
-    image: '/products/Industrial Orange VAYU Compressor Cabinet (1).png',
-    review: 'Excellent compressor cabinet with a robust build and reliable performance. Great product quality for industrial applications.',
-},
-{
-    name: 'Neha Gupta',
-    company: 'Steel Works Ltd.',
-    image: '/products/Hydraulic Power Packs.webp',
-    review: 'Reliable hydraulic power packs with excellent build quality and consistent performance. A great choice for industrial operations.',
-},
+    {
+        name: 'Neha Gupta',
+        company: 'Steel Works Ltd.',
+        image: '/products/CFM10001350BAR19293PSI275425.webp',
+        review: 'We use this driver for solar fencing and earthing projects. The build quality is exceptional.',
+    },
 ];
 
 export default function Testimonials() {

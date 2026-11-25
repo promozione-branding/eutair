@@ -34,6 +34,17 @@ export default function ProductSlider() {
         //     image: '/products/MDS 35 CFM - 1000 CFM Refrigerated Dryers.jpg',
         //     href: '/mark-compressor/mds-35-cfm-1000-cfm-refrigerated-dryers',
         // },
+           {
+            title: 'VAYU SL Series Fixed-Speed Screw Air Compressors',
+            image: '/products/Industrial Orange VAYU Compressor Cabinet (1).png',
+            href: '/inquiry',
+        },
+          {
+            title: 'VAYU SL Series Variable-Speed Screw Air Compressors (VFD)',
+            image:  '/products/Industrial Orange and Black Air Compressor (1).png',
+            href: '/inquiry',
+        },
+
         {
             title: 'Chicago Pneumatic CFM: 81 - 187, BAR: 7 - 12, PSI: 100 – 175',
             image: '/hero1.png',
@@ -50,50 +61,9 @@ export default function ProductSlider() {
             href: '/chicago-pneumatic/cfm-1060-1200',
         },
 
-          {
-            title: 'VAYU SL Series Fixed-Speed Screw Air Compressors',
-            image: '/products/Industrial Orange VAYU Compressor Cabinet (1).png',
-            href: '/inquiry',
-        },
-          {
-            title: 'VAYU SL Series Variable-Speed Screw Air Compressors (VFD)',
-            image:  '/products/Industrial Orange and Black Air Compressor (1).png',
-            href: '/inquiry',
-        },
-
+       
     ];
     const products2 = [
-        {
-            title: 'G-C-V 45 CFM - 1500 CFM Compressed Air Filters',
-            image: '/products/G-C-V 45 CFM - 1500 CFM Compressed Air Filters.jpg',
-            href: '/mark-compressor/mss-75-oil-injected-screw-compressors',
-        },
-        {
-            title: 'CFM: 370 - 475 (6 model)',
-            image:  '/products/KW 5575PSI100175CFM370475.webp',
-            href: '/mark-compressor/mss-variable-speed-screw-compressors',
-        },
-        {
-            title: 'Hydraulic Power Packs',
-            image:  '/products/Hydraulic Power Packs.webp',
-            href: '/mark-compressor/mds-35-cfm-1000-cfm-refrigerated-dryers',
-        },
-        {
-            title: 'KW: upto 45, PSI: 100, CFM: 300 (1 model)',
-            image: '/products/KWupto45PSI100CFM300.webp',
-            href: '/chicago-pneumatic/cfm-81-187',
-        },
-        {
-            title: 'Hydraulic Core Drills',
-            image: '/products/Hydraulic Core Drills.webp',
-            href: '/chicago-pneumatic/cfm-455-650',
-        },
-        {
-            title: 'CFM: 1060 - 1200, BAR: 16 - 25, PSI: 232 – 355',
-            image: '/products/CFM10601200BAR1625PSI232355.webp',
-            href: '/chicago-pneumatic/cfm-1060-1200',
-        },
-
           {
             title: 'VAYU SL Series Fixed-Speed Screw Air Compressors',
             image: '/products/Industrial Orange VAYU Compressor Cabinet (1).png',
@@ -120,6 +90,34 @@ export default function ProductSlider() {
             image:  '/products/VAYU Industrial Pressure Tank (1).png',
             href: '/inquiry',
         },
+        {
+            title: 'G-C-V 45 CFM - 1500 CFM Compressed Air Filters',
+            image: '/products/G-C-V 45 CFM - 1500 CFM Compressed Air Filters.jpg',
+            href: '/mark-compressor/mss-75-oil-injected-screw-compressors',
+        },
+        {
+            title: 'CFM: 370 - 475 (6 model)',
+            image:  '/products/KW 5575PSI100175CFM370475.webp',
+            href: '/mark-compressor/mss-variable-speed-screw-compressors',
+        },
+        {
+            title: 'Hydraulic Power Packs',
+            image:  '/products/Hydraulic Power Packs.webp',
+            href: '/mark-compressor/mds-35-cfm-1000-cfm-refrigerated-dryers',
+        },
+        {
+            title: 'KW: upto 45, PSI: 100, CFM: 300 (1 model)',
+            image: '/products/KWupto45PSI100CFM300.webp',
+            href: '/chicago-pneumatic/cfm-81-187',
+        },
+       
+        {
+            title: 'CFM: 1060 - 1200, BAR: 16 - 25, PSI: 232 – 355',
+            image: '/products/CFM10601200BAR1625PSI232355.webp',
+            href: '/chicago-pneumatic/cfm-1060-1200',
+        },
+
+        
 
     ];
 
@@ -273,7 +271,7 @@ export default function ProductSlider() {
 
                                 {/* WhatsApp */}
                                 <a
-                                    href="https://wa.link/rntibs"
+                                    href="https://wa.me/919582911766"
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     onClick={() => handleWhatsappClick({ source: 'Website' })}

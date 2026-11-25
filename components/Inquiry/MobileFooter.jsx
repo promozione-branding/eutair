@@ -53,7 +53,7 @@ export default function MobileFooter() {
 
                         {/* ================= WHATSAPP / INQUIRY ================= */}
                         <Link
-                            href="https://wa.link/rntibs"
+                            href="https://wa.me/919582911766"
                             target="_blank"
                             rel="noopener noreferrer"
                             aria-label="Send an inquiry on WhatsApp"

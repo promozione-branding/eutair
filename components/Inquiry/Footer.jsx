@@ -135,7 +135,7 @@ export default function Footer() {
                                     <FaWhatsapp className="mt-1 shrink-0 text-cyan-500" size={20} />
                                     <div>
                                         <p className="font-semibold text-white">WhatsApp</p>
-                                        <a href="https://wa.link/rntibs" className="text-slate-300 transition-colors hover:text-cyan-400" onClick={() => handleWhatsappClick({ source: 'Website' })}>
+                                        <a href="https://wa.me/919582911766" className="text-slate-300 transition-colors hover:text-cyan-400" onClick={() => handleWhatsappClick({ source: 'Website' })}>
                                             +91 9582911766
                                         </a>
                                     </div>
@@ -202,7 +202,7 @@ export default function Footer() {
                             <div>
                                 <p className="font-semibold text-white">Office Address</p>
                                 <p className="leading-relaxed text-slate-300">
-                                    T-3, Third Floor, Ansal Utility Tower, A2 Block, Paschim Vihar, New Delhi, Delhi - 110063
+                                   Xu1, Greater Noida, Ghaziabad, Uttar Pradesh 201308
                                 </p>
                             </div>
                         </div>

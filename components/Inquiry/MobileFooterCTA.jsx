@@ -16,7 +16,7 @@ export default function MobileFooterCTA() {
 
                 {/* Get Quote */}
                 <a
-                    href="https://wa.me/919717159766"
+                    href="https://wa.me/919582911766"
                     target="_blank"
                     rel="noopener noreferrer"
                     onClick={() => handleWhatsappClick({ source: 'Website' })}

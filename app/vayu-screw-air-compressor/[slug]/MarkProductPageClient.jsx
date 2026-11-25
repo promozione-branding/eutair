@@ -155,7 +155,7 @@ export default function ProductPage() {
                                 </button>
 
                               <a
-    href="https://wa.link/o8l7fy"
+   href="https://wa.me/919582911766"
     target="_blank"
     rel="noopener noreferrer"
     onClick={() => handleWhatsappClick({ obj: { name: product.title }, source: 'Website' })}
@@ -389,7 +389,7 @@ export default function ProductPage() {
                             </a>
 
 <a
-    href="https://wa.link/o8l7fy"
+   href="https://wa.me/919582911766"
     target="_blank"
     rel="noopener noreferrer"
     onClick={() => handleWhatsappClick({ obj: { name: product.title }, source: 'Website' })}

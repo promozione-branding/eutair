@@ -7,7 +7,7 @@ const Whatsapp = () => {
     return (
         <>
             <a
-                href="https://wa.link/o8l7fy"
+                href="https://wa.me/919582911766"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Chat on WhatsApp with sangam plastic "

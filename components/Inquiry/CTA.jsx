@@ -30,7 +30,7 @@ export default function CTA() {
                         <div className="flex w-full flex-col gap-4 sm:w-auto sm:flex-row">
                             {/* WhatsApp CTA */}
                             <a
-                                href="https://wa.link/rntibs"
+                               href="https://wa.me/919582911766"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 onClick={() => handleWhatsappClick({ source: 'Website' })}

@@ -82,7 +82,7 @@ export default function ProductRange() {
                                         View Product →
                                     </button>
                                 </Link>
-                                <Link href="https://wa.link/o8l7fy" className="flex cursor-pointer items-center justify-center group gap-1 text-sm font-semibold tracking-wide whitespace-nowrap text-green-600 uppercase transition group-hover:text-cyan-600" onClick={() => handleWhatsappClick({ obj: { name: item.title }, source: 'Website' })}>
+                                <Link href="https://wa.me/919582911766" className="flex cursor-pointer items-center justify-center group gap-1 text-sm font-semibold tracking-wide whitespace-nowrap text-green-600 uppercase transition group-hover:text-cyan-600" onClick={() => handleWhatsappClick({ obj: { name: item.title }, source: 'Website' })}>
                                     WhatsApp <FaWhatsapp size={25} className="text-green-600 group-hover:text-cyan-600" />
                                 </Link>
                             </div>

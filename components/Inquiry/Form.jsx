@@ -54,7 +54,7 @@ Requirement: ${form.requirement}`,
             if (data?.success) {
                 toast.success('Enquiry submitted successfully!');
 
-                window.open(`https://wa.link/rntibs`, '_blank');
+                window.open(`https://wa.me/919582911766`, '_blank');
 
                 setForm({
                     name: '',
