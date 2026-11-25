@@ -160,7 +160,7 @@ export default function HeroSlider() {
                                         <div className="mx-auto flex h-full w-full max-w-[720px] flex-col justify-center pt-1 text-center lg:mx-0 lg:pt-0 lg:text-left">
                                             {/* TAGLINE */}
 
-                                            <span className="text-xs mb-10 font-semibold tracking-[0.18em] text-white/90 uppercase sm:text-sm md:text-base ">
+                                            <span className="hidden mt:block text-xs mb-10 font-semibold tracking-[0.18em] text-white/90 uppercase sm:text-sm md:text-base ">
                                                 {slide.tagline}
                                             </span>
 
@@ -259,7 +259,7 @@ export default function HeroSlider() {
         href="tel:+919717159766"
         className="inline-flex h-[50px] items-center justify-center gap-2 rounded-xl border border-[#0A63FF] bg-white px-5 text-sm font-semibold text-[#0A63FF] shadow-md transition active:scale-95"
     >
-        <Phone size={18} />
+        <Phone size={21} />
         
     </a>
 

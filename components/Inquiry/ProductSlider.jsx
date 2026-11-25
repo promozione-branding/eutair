@@ -249,13 +249,17 @@ export default function ProductSlider() {
                     <div className="mt-4 text-center md:mt-12">
                         <div className="flex flex-col items-center justify-center gap-4 md:flex-row">
                             {/* View All Products */}
-                            <Link
-                                href="/mark-compressor"
+                            <button
+                                   onClick={(e) => {
+                                        e.preventDefault(); // Prevent Link navigation
+                                        e.stopPropagation(); // Stop event bubbling
+                                        setOpen(true);
+                                    }}
                                 className="flex w-auto items-center justify-center gap-3 rounded-xl bg-blue-600 px-3 py-4 font-semibold text-white transition hover:bg-blue-700 sm:w-auto md:px-8"
                             >
                                 VIEW ALL PRODUCTS
                                 <ArrowRight size={20} />
-                            </Link>
+                            </button>
 
                             {/* Call & WhatsApp */}
                             <div className="flex w-full flex-row items-center justify-center gap-4 sm:w-auto">

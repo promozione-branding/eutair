@@ -6,6 +6,8 @@ import { FaWhatsapp } from 'react-icons/fa';
 import { useState } from 'react';
 import ContactForm from './PopupForm';
 import { handleCallClick, handleWhatsappClick } from '@/lib/tracking';
+import { SiGoogledocs } from "react-icons/si";
+
 
 export default function Navbar() {
     const [mobileMenu, setMobileMenu] = useState(false);
@@ -146,15 +148,19 @@ export default function Navbar() {
                         </nav>
 
                         <div className="flex items-center gap-3 lg:hidden">
-                            <a
-                                href="https://wa.me/919582911766"
+                            <button
+                                onClick={() => {
+                                        setOpen(true);
+                                        // setMobileMenu(false);
+                                        // setopen(true)
+                                    }}
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                onClick={() => handleWhatsappClick({ source: 'Website' })}
-                                className="flex items-center justify-center gap-2 rounded-full bg-green-600 px-3 py-3 text-white shadow-lg transition-all hover:bg-green-700"
+                                
+                                className="flex items-center justify-center gap-2 rounded-full bg-blue-600 px-3 py-3 text-white shadow-lg transition-all hover:bg-blue-800"
                             >
-                                <FaWhatsapp className="h-6 w-6" /> WhatsApp
-                            </a>
+                                <SiGoogledocs  className="h-6 w-6" /> Free Quote
+                            </button>
 
                            
                         </div>

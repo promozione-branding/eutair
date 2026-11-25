@@ -34,7 +34,7 @@ export default function TrustedBrands() {
     ];
 
     return (
-        <section id="industries" className="relative overflow-hidden border-y border-cyan-200 bg-white py-6 md:py-10">
+        <section id="industries" className="relative overflow-hidden border-y  md:border-cyan-200 bg-[#e6e7e8] md:bg-white py-6 md:py-10">
             <div className="mx-auto w-full px-10">
                 <h3 className="mb-5 text-center text-sm font-bold tracking-[0.25em] text-blue-950 md:mb-10">TRUSTED BY LEADING INDUSTRIES</h3>
 
