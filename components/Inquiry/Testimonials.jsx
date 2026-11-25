@@ -17,18 +17,18 @@ const testimonials = [
         image: '/products/MSS 75 - Oil-Injected Screw Compressor.jpg', // Rename image to avoid spaces
         review: 'Excellent product quality and very fast delivery. Their support team guided us perfectly in selecting the right air compressor.',
     },
-    {
-        name: 'Amit Verma',
-        company: 'Metal Manufacturing',
-        image: '/products/MDS 35 CFM - 1000 CFM Refrigerated Dryers.jpg',
-        review: 'Professional team, genuine spare parts, and excellent after-sales support. Highly recommended.',
-    },
-    {
-        name: 'Neha Gupta',
-        company: 'Steel Works Ltd.',
-        image: '/products/CFM10001350BAR19293PSI275425.webp',
-        review: 'We use this driver for solar fencing and earthing projects. The build quality is exceptional.',
-    },
+   {
+    name: 'Amit Verma',
+    company: 'Metal Manufacturing',
+    image: '/products/Industrial Orange VAYU Compressor Cabinet (1).png',
+    review: 'Excellent compressor cabinet with a robust build and reliable performance. Great product quality for industrial applications.',
+},
+{
+    name: 'Neha Gupta',
+    company: 'Steel Works Ltd.',
+    image: '/products/Hydraulic Power Packs.webp',
+    review: 'Reliable hydraulic power packs with excellent build quality and consistent performance. A great choice for industrial operations.',
+},
 ];
 
 export default function Testimonials() {

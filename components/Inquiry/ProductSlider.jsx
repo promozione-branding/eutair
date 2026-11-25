@@ -49,6 +49,18 @@ export default function ProductSlider() {
             image: '/products/CFM10601200BAR1625PSI232355.webp',
             href: '/chicago-pneumatic/cfm-1060-1200',
         },
+
+          {
+            title: 'VAYU SL Series Fixed-Speed Screw Air Compressors',
+            image: '/products/Industrial Orange VAYU Compressor Cabinet (1).png',
+            href: '/inquiry',
+        },
+          {
+            title: 'VAYU SL Series Variable-Speed Screw Air Compressors (VFD)',
+            image:  '/products/Industrial Orange and Black Air Compressor (1).png',
+            href: '/inquiry',
+        },
+
     ];
     const products2 = [
         {
@@ -81,6 +93,34 @@ export default function ProductSlider() {
             image: '/products/CFM10601200BAR1625PSI232355.webp',
             href: '/chicago-pneumatic/cfm-1060-1200',
         },
+
+          {
+            title: 'VAYU SL Series Fixed-Speed Screw Air Compressors',
+            image: '/products/Industrial Orange VAYU Compressor Cabinet (1).png',
+            href: '/inquiry',
+        },
+          {
+            title: 'VAYU SL Series Variable-Speed Screw Air Compressors (VFD)',
+            image:  '/products/Industrial Orange and Black Air Compressor (1).png',
+            href: '/inquiry',
+        },
+        
+          {
+            title: 'VAYU Refrigerated Air Dryers',
+            image:  '/products/VAYU Industrial Cabinet with Emergency Stop (1).png',
+            href: '/inquiry',
+        },
+          {
+            title: 'VAYU Air Receivers',
+            image:  '/products/Industrial VAYU Separator Filter Unit (1).png',
+            href: '/inquiry',
+        },
+          {
+            title: 'VAYU Downstream Line Filters',
+            image:  '/products/VAYU Industrial Pressure Tank (1).png',
+            href: '/inquiry',
+        },
+
     ];
 
     return (

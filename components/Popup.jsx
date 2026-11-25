@@ -160,6 +160,7 @@ Contact: ${phone}`;
                             >
                                 <option value="">Select Product</option>
                                 <option value="Chicago Pneumatic">Chicago Pneumatic</option>
+                                 <option value="VAYU Screw Air Compressor">VAYU Screw Air Compressor</option>
                                 <option value="Air Treatment">Air Treatment</option>
                                 <option value="Spares and Consumables">Spares and Consumables</option>
                                 <option value="Piping and Distribution Lines">Piping and Distribution Lines</option>

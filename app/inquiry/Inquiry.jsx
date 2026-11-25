@@ -20,6 +20,7 @@ export default function Inquiry() {
             <Category />
             <WhyChoose />
             <Industries />
+            
            
             <Certificates />
              <div className="w-full bg-blue-600">

@@ -49,6 +49,13 @@ export default function Category() {
             link: '/inquiry',
             desc: 'Customized air distribution networks engineered for maximum flow efficiency, reduced leakage, and optimal system performance.',
         },
+        {
+            title: 'VAYU SL Series Fixed-Speed Screw Air Compressors',
+            image: '/products/Industrial Orange VAYU Compressor Cabinet (1).png',
+            link:  '/inquiry',
+            desc: 'VAYU SL Series Fixed-Speed Screw Air Compressors',
+        },
+          
     ];
 
     return (
