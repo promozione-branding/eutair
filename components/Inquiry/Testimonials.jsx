@@ -8,7 +8,9 @@ import Image from 'next/image';
 
 import 'swiper/css';
 import 'swiper/css/pagination';
-import ContactForm from './PopupForm';
+import dynamic from 'next/dynamic';
+
+const ContactForm = dynamic(() => import('./PopupForm'));
 
 const testimonials = [
    

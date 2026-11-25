@@ -2,15 +2,12 @@
 
 import { useState } from 'react';
 import Image from 'next/image';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { Autoplay, EffectFade } from 'swiper/modules';
 import { ArrowRight, Zap, Shield, Volume2, Cog, BadgeCheck, Phone } from 'lucide-react';
 
-import 'swiper/css';
-import 'swiper/css/effect-fade';
-
-import ContactForm from './PopupForm';
+import dynamic from 'next/dynamic';
 import { handleWhatsappClick } from '@/lib/tracking';
+
+const ContactForm = dynamic(() => import('./PopupForm'));
 
 const slides = [
     {
@@ -105,28 +102,12 @@ const slides = [
 
 export default function HeroSlider() {
     const [open, setOpen] = useState(false);
+    const slide = slides[0];
 
     return (
         <>
             <section className="relative h-[550px] w-full overflow-hidden bg-[#001938] md:h-[580px]">
-                <Swiper
-                    modules={[Autoplay, EffectFade]}
-                    effect="fade"
-                    fadeEffect={{
-                        crossFade: true,
-                    }}
-                    autoplay={{
-                        delay: 5000,
-                        disableOnInteraction: false,
-                        pauseOnMouseEnter: true,
-                    }}
-                    loop={true}
-                    speed={700}
-                    className="h-full"
-                >
-                    {slides.map((slide, index) => (
-                        <SwiperSlide key={slide.title}>
-                            <div className="relative h-full w-full">
+                <div className="relative h-full w-full">
                                 {/* ================================================= */}
                                 {/* BACKGROUND */}
                                 {/* ================================================= */}
@@ -135,8 +116,8 @@ export default function HeroSlider() {
                                     src={slide.bg}
                                     alt=""
                                     fill
-                                    priority={index === 0}
-                                    quality={index === 0 ? 80 : 70}
+                                    priority
+                                    quality={65}
                                     sizes="100vw"
                                     className="object-cover object-center"
                                 />
@@ -236,15 +217,14 @@ export default function HeroSlider() {
                                                 alt={slide.title}
                                                 width={100}
                                                 height={100}
-                                                priority={index === 0}
-                                                quality={index === 0 ? 85 : 75}
+                                                priority
+                                                quality={75}
                                                 sizes="
                           (max-width: 640px) 90vw,
-                          (max-width: 768px) 80vw,
-                          (max-width: 1024px) 600px,
-                          650px
+                          (max-width: 1024px) 45vw,
+                          500px
                         "
-                                                className="h-auto max-h-[100%] w-[480px] object-cover drop-shadow-[0_40px_80px_rgba(0,0,0,.45)] md:w-[5000px]"
+                                                className="h-auto max-h-[100%] w-full max-w-[480px] object-contain drop-shadow-[0_40px_80px_rgba(0,0,0,.45)] md:max-w-[500px]"
                                             />
                                         </div>
 
@@ -284,10 +264,7 @@ export default function HeroSlider() {
 </div>
                                     </div>
                                 </div>
-                            </div>
-                        </SwiperSlide>
-                    ))}
-                </Swiper>
+                </div>
             </section>
 
             {/* ================================================= */}

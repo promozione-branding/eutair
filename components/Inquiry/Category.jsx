@@ -10,10 +10,12 @@ import { Autoplay, Navigation, Pagination } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
-import ContactForm from './PopupForm';
+import dynamic from 'next/dynamic';
 import { useState } from 'react';
 import { FaWhatsapp } from 'react-icons/fa';
 import { handleCallClick, handleWhatsappClick } from '@/lib/tracking';
+
+const ContactForm = dynamic(() => import('./PopupForm'));
 
 export default function Category() {
     const [open, setOpen] = useState(false);

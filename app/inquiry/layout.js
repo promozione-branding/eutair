@@ -1,36 +1,9 @@
-import { Roboto, Poppins, Inter, Playfair_Display } from 'next/font/google';
 import Script from 'next/script';
 import Navbar from '@/components/Inquiry/Navbar';
 import Footer from '@/components/Inquiry/Footer';
 import MobileFooter from '@/components/Inquiry/MobileFooter';
 import Whatsapp from '@/components/Whatsapp';
 import '../globals.css'; // adjust path to your global stylesheet
-
-const roboto = Roboto({
-    subsets: ['latin'],
-    weight: ['400', '500', '700'],
-    variable: '--font-roboto',
-    display: 'swap',
-});
-
-const poppins = Poppins({
-    subsets: ['latin'],
-    weight: ['400', '500', '600', '700'],
-    variable: '--font-poppins',
-    display: 'swap',
-});
-
-const inter = Inter({
-    subsets: ['latin'],
-    variable: '--font-inter',
-    display: 'swap',
-});
-
-const playfair = Playfair_Display({
-    subsets: ['latin'],
-    variable: '--font-playfair',
-    display: 'swap',
-});
 
 export const metadata = {
     title: 'Get a Quote | Screw Air Compressors & Air Treatment | Eutair',
@@ -40,10 +13,7 @@ export const metadata = {
 
 export default function InquiryLayout({ children }) {
     return (
-        <html
-            lang="en"
-            className={`${roboto.variable} ${poppins.variable} ${inter.variable} ${playfair.variable}`}
-        >
+        <html lang="en">
             <head>
 
                 {/* Microsoft Clarity */}

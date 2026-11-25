@@ -11,9 +11,11 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import { useState } from 'react';
-import ContactForm from './PopupForm';
+import dynamic from 'next/dynamic';
 import { FaWhatsapp } from 'react-icons/fa';
 import { handleCallClick, handleWhatsappClick } from '@/lib/tracking';
+
+const ContactForm = dynamic(() => import('./PopupForm'));
 
 export default function ProductSlider() {
     const [open, setOpen] = useState(false);

@@ -3,9 +3,11 @@
 
 import Link from 'next/link';
 import { PhoneCall, FileText, MessageCircleMore } from 'lucide-react';
-import ContactForm from './PopupForm';
+import dynamic from 'next/dynamic';
 import { useState } from 'react';
 import { handleCallClick } from '@/lib/tracking';
+
+const ContactForm = dynamic(() => import('./PopupForm'));
 
 export default function MobileFooter() {
     const [open, setOpen] = useState(false);

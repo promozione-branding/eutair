@@ -4,9 +4,11 @@ import Link from 'next/link';
 import { Phone, Mail, MapPin } from 'lucide-react';
 import { FaWhatsapp } from 'react-icons/fa';
 import Image from 'next/image';
-import ContactForm from './PopupForm';
+import dynamic from 'next/dynamic';
 import { useState } from 'react';
 import { handleCallClick, handleWhatsappClick } from '@/lib/tracking';
+
+const ContactForm = dynamic(() => import('./PopupForm'));
 
 export default function Footer() {
     const [open, setOpen] = useState(false);

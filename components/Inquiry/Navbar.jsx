@@ -4,10 +4,11 @@ import { Phone, Mail, Building2, MapPin, Linkedin, Facebook, Instagram, Youtube 
 import Image from 'next/image';
 import { FaWhatsapp } from 'react-icons/fa';
 import { useState } from 'react';
-import ContactForm from './PopupForm';
+import dynamic from 'next/dynamic';
 import { handleCallClick, handleWhatsappClick } from '@/lib/tracking';
 import { SiGoogledocs } from "react-icons/si";
 
+const ContactForm = dynamic(() => import('./PopupForm'));
 
 export default function Navbar() {
     const [mobileMenu, setMobileMenu] = useState(false);
